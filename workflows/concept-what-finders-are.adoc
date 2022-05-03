@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: 「尋找工具」是一或多個篩選器的組合、可用來識別常見結果。您可以在工作流程中使用搜尋工具、選取執行工作流程所需的資源。 
+---
+= 什麼是金融工具
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「尋找工具」是一或多個篩選器的組合、可用來識別常見結果。您可以在工作流程中使用搜尋工具、選取執行工作流程所需的資源。
+
+金融公司可能會套用排序順序來區分適用的結果。根據選擇條件和排序、資料尋找工具會傳回最佳資源。
+
+資料尋找工具會傳回單一結果或無結果、因此可用來驗證特定儲存元件是否存在。但是、當使用搜尋器做為重複列定義的一部分時、結果集會用來形成群組中的成員清單。在資料尋找工具中使用的篩選器會至少傳回該字典類型的自然索引鍵、但可能會傳回其他欄位、其值可以參照。排序順序可套用至篩選器SQL查詢的任何傳回欄位。
+
+您可以測試搜尋器的結果。測試發現者時、您可以檢視所有WFA篩選器的一般結果、結果中會強調顯示該搜尋器的有效結果。在工作流程中使用搜尋器時、您可以建立自訂的錯誤訊息、將有意義的資訊傳達給儲存操作員。

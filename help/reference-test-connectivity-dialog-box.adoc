@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: 「測試連線能力」對話方塊可讓您測試與認證相關之系統的連線。測試連線作業會觸發搜尋路徑、然後先尋找完全相符的項目、再尋找模式相符的項目、最後是LDAP服務驗證。 
+---
+= 測試連線能力對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「測試連線能力」對話方塊可讓您測試與認證相關之系統的連線。測試連線作業會觸發搜尋路徑、然後先尋找完全相符的項目、再尋找模式相符的項目、最後是LDAP服務驗證。
+
+網際網路控制訊息傳輸協定（ICMP）用於在測試連線之前檢查系統是否正在執行。
+
+
+
+== 測試連線參數
+
+* *類型*
++
+可讓您從下拉式清單中選取認證類型。
+
+* *名稱/IP*
++
+可讓您指定認證的主機名稱或IP位址。
+
+
+
+
+
+== 命令按鈕
+
+* *測試*
++
+開啟與主機名稱或IP位址的連線嘗試。
+
+* *關閉*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+

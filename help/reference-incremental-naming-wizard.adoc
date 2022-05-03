@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: 「遞增命名精靈」可讓您根據搜尋現有參數來定義屬性的值。 
+---
+= 遞增命名精靈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「遞增命名精靈」可讓您根據搜尋現有參數來定義屬性的值。
+
+* *現有<dictionary object>*的搜尋條件
++
+開啟*資源選擇*對話方塊、可讓您指定字典物件的搜尋條件。
+
+* *如果沒有<dictionary object>符合上述搜尋條件*、請輸入<attribute>的值
++
+可讓您使用指定的搜尋條件找不到<dictionary object>時、指定<attribute>的值。
+
+* *如果使用上述搜尋條件找到<dictionary object>、請設定<attribute> by *的值
++
+可讓您使用指定的搜尋條件找不到<dictionary object>時、指定<attribute>的值。
+
+* *如果沒有<dictionary object>符合上述搜尋條件*、請輸入<attribute>的值
++
+如果使用指定的搜尋條件找到<dictionary object>、則可讓您選取設定<attribute>值的方法。
+
++
+** *提供增量值和後置字元*
++
+可讓您輸入增量的數值、並選擇性地輸入屬性名稱的後置字元。
+
+** *提供自訂運算式*
++
+可讓您輸入屬性值的自訂運算式。您可以使用MVFlex運算式語言（MVEL）語法來指定值。
+
+
+
+

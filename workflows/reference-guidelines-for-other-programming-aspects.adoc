@@ -1,0 +1,129 @@
+---
+permalink: workflows/reference-guidelines-for-other-programming-aspects.html 
+sidebar: sidebar 
+keywords: aware, certain, important, considerations, convert, powershell, commands, perl, different, capabilities 
+summary: 將PowerShell命令轉換為Perl時、您必須注意某些重要考量、因為PowerShell和Perl的功能不同。 
+---
+= 將PowerShell命令轉換為Perl時的考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+將PowerShell命令轉換為Perl時、您必須注意某些重要考量、因為PowerShell和Perl的功能不同。
+
+
+
+== 命令輸入類型
+
+藉由使用者可在定義命令時、將陣列和雜湊當作命令的輸入內容。OnCommand Workflow Automation使用Perl定義命令時、無法使用這些輸入類型。如果您想要Perl命令接受陣列和雜湊輸入、可以在設計工具中將輸入定義為字串。然後命令定義可以剖析輸入、並視需要傳遞以建立陣列或雜湊。輸入說明說明預期輸入的格式。
+
+[listing]
+----
+my @input_as_array  = split(',', $InputString); #Parse the input string of format val1,val2 into an array
+
+my %input_as_hash = split /[;=]/, $InputString; #Parse the input string of format key1=val1;key2=val2 into a hash.
+----
+
+
+== PowerShell聲明
+
+下列範例顯示如何將陣列輸入內容傳遞至PowerShell和Perl。這些範例說明輸入CronMonth、指定cron工作排程執行的月份。有效值為1到11的整數。值-1表示排程每月執行一次。任何其他值均代表特定月份、0代表一月、11代表十二月。
+
+[listing]
+----
+[parameter(Mandatory=$false, HelpMessage="Months in which the schedule executes. This is a comma separated list of values from 0 through 11. Value -1 means all months.")]
+  [ValidateRange(-1, 11)]
+  [array]$CronMonths,
+----
+
+
+== Perl聲明
+
+[listing]
+----
+GetOptions(
+    "Cluster=s"         => \$Cluster,
+    "ScheduleName=s"    => \$ScheduleName,
+    "Type=s"            => \$Type,
+    "CronMonths=s"      => \$CronMonths,
+) or die 'Illegal command parameters\n';
+
+sub get_cron_months {
+    return get_cron_input_hash('CronMonths', $CronMonths, 'cron-month', -1,
+        11);
+}
+
+sub get_cron_input_hash {
+    my $input_name   = shift;
+    my $input_value  = shift;
+    my $zapi_element = shift;
+    my $low          = shift;
+    my $high         = shift;
+    my $exclude      = shift;
+
+    if (!defined $input_value) {
+        return undef;
+    }
+
+    my @values = split(',', $input_value);
+
+    foreach my $val (@values) {
+        if ($val !~ /^[+-]?\d+$/) {
+            die
+                "Invalid value '$input_value' for $input_name: $val must be an integer.\n";
+        }
+        if ($val < $low || $val > $high) {
+            die
+                "Invalid value '$input_value' for $input_name: $val must be from $low to $high.\n";
+        }
+        if (defined $exclude && $val == $exclude) {
+            die
+                "Invalid value '$input_value' for $input_name: $val is not valid.\n";
+        }
+    }
+    # do something
+}
+----
+
+
+== 命令定義
+
+使用pipe運算子的PowerShell中的單行表示式、可能必須在Perl中擴充成多個陳述區塊、才能達到相同的功能。下表顯示其中一個wait命令的範例。
+
+[cols="2*"]
+|===
+| PowerShell聲明 | Perl聲明 
+
+
+ a| 
+[listing]
+----
+# Get the latest job which moves the specified volume to the specified
+ aggregate.
+$job = Get-NcJob -Query $query | where
+{$_.JobDescription -eq "Split" + $VolumeCloneName} | Select-Object -First 1
+---- a| 
+[listing]
+----
+my $result = $server->job_get_iter(
+	'query' => {'job-type' => 'VOL_CLONE_SPLIT'},
+	'desired-attributes' => {
+		'job-type' => '',
+		'job-description' => '',
+		'job-progress' => '',
+		'job-state' => ''
+	}
+);
+my @jobarray;
+for my $job (@{ $result->{'attributes-list'}})
+{
+	my $description = $job->{'job-description'};
+	if($description =~ /$VolumeCloneName/)
+	{
+		push(@jobarray, $job)
+	}
+}
+----
+|===

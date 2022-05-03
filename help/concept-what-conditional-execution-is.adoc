@@ -1,0 +1,38 @@
+---
+permalink: help/concept-what-conditional-execution-is.html 
+sidebar: sidebar 
+keywords: condition, execution, help, design, workflow, commands, specified, conditions 
+summary: 條件式執行可協助您設計工作流程、以便在符合指定條件時執行命令。 
+---
+= 什麼是條件式執行
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+條件式執行可協助您設計工作流程、以便在符合指定條件時執行命令。
+
+在工作流程中執行命令可以是動態的。您可以指定在工作流程中執行每個命令或一列命令的條件。例如、您可能只希望在找到特定資料集時執行「Add volume to DataSet」命令、如果找不到資料集、則不希望工作流程失敗。在這種情況下、您可以啟用「Add volume to DataSet」命令來搜尋特定資料集、如果找不到、則可在工作流程中停用命令。
+
+有條件執行命令的選項可在「安全性物件」索引標籤和「命令參數」對話方塊的「進階」索引標籤中找到。
+
+您可以中止工作流程或停用工作流程中的特定命令。此外、您也可以使用下列其中一個選項來設定要執行的命令：
+
+* 無任何條件
+* 找到您指定的變數時
+* 找不到您指定的變數
+* 當您指定的運算式為true時
+
+
+您也可以設定命令、等待特定時間間隔。
+
+
+
+== 預先定義工作流程中的條件式執行範例
+
+您可以在Designer中開啟下列預先定義工作流程的命令詳細資料、以瞭解命令的條件執行方式：
+
+* 建立基本的叢集Data ONTAP 式功能
+* 建立叢集Data ONTAP 式的SFC NFS Volume
+

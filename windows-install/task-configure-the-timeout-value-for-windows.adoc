@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 您可以設定Workflow Automation（WFA）Web GUI的逾時值、而非使用預設的逾時值。 
+---
+= 設定Workflow Automation的逾時值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定Workflow Automation（WFA）Web GUI的逾時值、而非使用預設的逾時值。
+
+WFA Web GUI的預設逾時值為180分鐘。您可以透過CLI設定逾時值、以符合您的需求。您無法從WFA Web GUI設定逾時值。
+
+
+NOTE: 您所設定的逾時值為絕對逾時、而非與閒置相關的逾時。例如、如果您將此值設為30分鐘、則即使您在此時間結束時處於作用中狀態、30分鐘後仍會登出。
+
+.步驟
+. 以管理員身分登入WFA主機機器。
+. 設定逾時值：
++
+"installdir bin/wFA -S=timeout value in Minutes"（安裝目錄BIM/WFA -S=timeout值（以分鐘
+
+

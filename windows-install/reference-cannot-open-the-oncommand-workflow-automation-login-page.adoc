@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-cannot-open-the-oncommand-workflow-automation-login-page.html 
+sidebar: sidebar 
+keywords: cannot, oncommand, workflow, automation, login page 
+summary: 如果您已安裝.Net 3.5、則會隨附Internet Information Services（IIS）。該IIS佔用的連接埠80是WFA所使用的連接埠。 
+---
+= 無法開啟OnCommand Workflow Automation 此功能登入頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您已安裝.Net 3.5、則會隨附Internet Information Services（IIS）。該IIS佔用的連接埠80是WFA所使用的連接埠。
+
+請確定在WFA伺服器中移除了IIS角色或停用了IIS。

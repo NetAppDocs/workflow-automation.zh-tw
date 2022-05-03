@@ -1,0 +1,36 @@
+---
+permalink: workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, validation, scripts, use, test, remote, system, define, oncommand, workflow, automation 
+summary: 您必須瞭解建立驗證指令碼的準則、這些指令碼可用來測試OnCommand Workflow Automation 您在WFA（WFA）中定義的遠端系統類型。 
+---
+= 建立遠端系統類型驗證指令碼的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解建立驗證指令碼的準則、這些指令碼可用來測試OnCommand Workflow Automation 您在WFA（WFA）中定義的遠端系統類型。
+
+* 您建立的Perl指令碼必須類似於驗證指令碼視窗中提供的範例指令碼。
+* 驗證指令碼的輸出必須與範例指令碼類似。
+
+
+
+
+== 驗證指令碼範例
+
+[listing]
+----
+# Check connectivity.
+# Return 1 on success.
+# Return 0 on failure and set $message
+sub checkCredentials {
+my ($host, $user, $passwd, $protocol, $port, $timeout) = @_;
+#
+# Please add the code to check connectivity to $host using $protocol here.
+#
+return 1;
+}
+----

@@ -1,0 +1,158 @@
+---
+permalink: help/reference-data-source-types-window.html 
+sidebar: sidebar 
+keywords: data, source, types, window, display, available, manage 
+summary: 「資料來源類型」視窗會顯示可用的資料來源類型。您可以從此視窗管理資料來源類型。 
+---
+= 資料來源類型視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「資料來源類型」視窗會顯示可用的資料來源類型。您可以從此視窗管理資料來源類型。
+
+資料來源類型是用來定義資料來源、其中包含特定資料庫中資料來源的資訊、以及從資料來源取得資料所使用的方法。例如、資料來源可以是Active IQ Unified Manager 包含儲存環境相關資訊的VMware資料庫、也可以是包含資料中心相關資訊的VMware資料庫。
+
+
+
+== 資料來源類型表格
+
+「資料來源類型」表格會列出可用的資料來源類型。每個項目均識別為下列其中一項：
+
+* image:../media/community_certification.gif[""] -使用者建立的內容
+* image:../media/ps_certified_icon_wfa.gif[""] 由專業服務（PS）開發的內容、僅適用於PS所製作的自訂安裝
+* image:../media/community_certification.gif[""] -由使用者開發的套件
+* image:../media/lock_icon_wfa.gif[""] -由鎖定的使用者所建立的內容
+* image:../media/netapp_certified.gif[""] - NetApp認證內容
+
+
+您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。
+
+* image:../media/filter_icon_wfa.gif["篩選圖示"] 啟用或停用整個表格的篩選。如果停用篩選功能、圖示上會出現紅色的「x」。
+* 按兩下 image:../media/filter_icon_wfa.gif["篩選圖示"] 清除並重設篩選選項。
+* image:../media/wfa_filter_icon.gif["篩選圖示"] 在每個欄標題上、您都可以根據欄的內容進行篩選。按一下 image:../media/wfa_filter_icon.gif["篩選圖示"] 欄中的可讓您篩選下拉式清單或所有可用項目的特定項目。
+* 按一下欄標題、即可切換遞增或遞減排序順序。您可以使用排序箭頭來識別套用的排序順序（image:../media/wfa_sortarrow_up_icon.gif["排序圖示"] 用於遞增和 image:../media/wfa_sortarrow_down_icon.gif["向下排序圖示"] 降序）。
+* 若要重新排列欄位的位置、您可以拖放欄位、以任何所需的順序排列欄位。不過、您無法隱藏或刪除這些欄。
+* 按一下「*搜尋*篩選」文字方塊、即可搜尋特定內容。此外、您也可以使用支援的運算子來搜尋適用的欄類型、字母或數字。
+
+
+「資料來源類型」表格包含下列欄位：
+
+* *認證*
++
+指出資料來源類型是否為使用者建立的（image:../media/community_certification.gif[""]）、PS（image:../media/ps_certified_icon_wfa.gif[""]）、社群（image:../media/community_certification.gif[""]）、使用者鎖定（image:../media/lock_icon_wfa.gif[""]）、或NetApp認證的（image:../media/netapp_certified.gif[""]）。
+
+* *資料來源*
++
+顯示資料來源類型的名稱。
+
+* *方案*
++
+顯示與資料來源類型相關的配置。方案代表系統的資料模型。例如、某個虛擬機器配置包含與虛擬環境相關的資料、例如虛擬機器、主機和資料存放區。
+
++
+以下是預設選取的預設配置：
+
++
+** CM_Performance
+** CM_storage
+** 效能
+** 儲存設備
+** vc
+
+
+* *實體版本*
++
+以「major.m2.m輕.reversion」格式顯示物件的版本編號、例如1.1.0。
+
+* *作業系統相容性*
++
+指出資料來源類型是否與主機作業系統相容。
+
+* *上次更新日期*
++
+顯示上次更新資料來源類型的日期和時間。
+
+* *更新者*
++
+顯示更新資料來源類型的使用者。
+
+* *資料來源版本*
++
+顯示與資料來源類型相關聯的資料來源版本。
+
+* *資料來源驅動程式*
++
+顯示用於從資料來源取得資料的驅動程式類型。
+
+* *方法*
++
+顯示用於從資料來源取得資料的方法、例如SQL和指令碼。
+
+* *指令碼語言*
++
+顯示資料來源類型所使用的指令碼語言。
+
+
+
+
+
+== 工具列
+
+工具列位於欄標題上方。您可以使用工具列中的圖示來執行各種動作。您也可以從視窗中的滑鼠右鍵功能表存取這些動作。
+
+* *image:../media/new_wfa_icon.gif["新圖示"] （新版）*
++
+開啟「新資料來源類型」視窗、可讓您建立新的資料來源類型。
+
+* *image:../media/edit_wfa_icon.gif["編輯圖示"] （編輯）*
++
+開啟所選資料來源類型的資料來源類型< EntryName>視窗、讓您編輯資料來源類型。
+
+* *image:../media/clone_wfa_icon.gif["複製圖示"] （複製）*
++
+開啟「New Data Source Type（新資料來源類型）」視窗、可讓您建立所選資料來源類型的複本。
+
+* *image:../media/lock_wfa_icon.gif["鎖定圖示"] （鎖定）*
++
+開啟鎖定資料來源類型確認對話方塊、可讓您鎖定選取的使用者建立來源資料類型。
+
+* *image:../media/unlock_wfa_icon.gif["解除鎖定圖示"] （解除鎖定）*
++
+開啟「解除鎖定資料來源類型」確認對話方塊、可讓您解除鎖定選取的資料來源類型。此選項只會針對您鎖定的資料來源類型啟用。系統管理員可以解除鎖定其他使用者鎖定的資料來源類型。
+
+* *image:../media/delete_wfa_icon.gif["刪除圖示"] （刪除）*
++
+開啟「刪除資料來源類型」確認對話方塊、可讓您刪除選取的使用者建立資料來源類型。
+
++
+
+NOTE: 您無法刪除WFA或PS資料來源類型。
+
+* *image:../media/export_wfa_icon.gif["匯出圖示"] （匯出）*
++
+可讓您匯出選取的使用者建立資料來源類型。
+
++
+
+NOTE: 您無法匯出WFA或PS資料來源類型。
+
+* *image:../media/add_to_pack.png["新增至套件圖示"] （新增至套件）*
++
+開啟「新增至套件資料來源類型」對話方塊、可讓您將資料來源類型及其可靠實體新增至可編輯的套件。
+
++
+
+NOTE: 「新增至套件」功能只會針對認證設為「無」的資料來源類型啟用。
+
+* *image:../media/remove_from_pack.png["從套件移除圖示"] （從套件中移除）*
++
+開啟所選資料來源類型的「從Pack資料來源移除」對話方塊、可讓您從套件中刪除或移除資料來源類型。
+
++
+
+NOTE: 「從套件移除」功能只會針對認證設為「無」的資料來源類型啟用。
+
+

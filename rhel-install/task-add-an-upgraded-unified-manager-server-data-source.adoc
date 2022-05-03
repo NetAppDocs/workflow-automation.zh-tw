@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html 
+sidebar: sidebar 
+keywords: add, upgraded, unified manager, server, data source 
+summary: 如果Unified Manager伺服器（5.x或6.x）新增為WFA的資料來源、則Unified Manager伺服器會升級、 您必須將升級後的Unified Manager伺服器新增為資料來源、因為除非手動新增為資料來源、否則與升級版本相關的資料不會填入WFA中。 
+---
+= 新增升級的Unified Manager伺服器做為資料來源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果Unified Manager伺服器（5.x或6.x）新增為WFA的資料來源、則Unified Manager伺服器會升級、 您必須將升級後的Unified Manager伺服器新增為資料來源、因為除非手動新增為資料來源、否則與升級版本相關的資料不會填入WFA中。
+
+.步驟
+. 以管理員身分登入WFA Web GUI。
+. 按一下「*設定*」、然後在「*設定*」下、按一下「*資料來源*」。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「新增資料來源」對話方塊中、選取所需的資料來源類型、然後輸入資料來源名稱和主機名稱。
++
+根據選取的資料來源類型、連接埠、使用者名稱、密碼和逾時欄位可能會自動填入預設資料（如果有）。您可以視需要編輯這些項目。
+
+. 按一下「 * 儲存 * 」。
+. 選取舊版Unified Manager伺服器、然後按一下 image:../media/delete_wfa_icon.gif["刪除圖示"] 在工具列上。
+. 在刪除資料來源類型確認對話方塊中、按一下*是*。
+. 在「資料來源」表格中、選取資料來源、然後按一下 image:../media/acquire_now_wfa_icon.gif["立即取得圖示"] 在工具列上。
+. 在History（歷史記錄）表中驗證資料擷取狀態。
+

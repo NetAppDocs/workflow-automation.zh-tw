@@ -1,0 +1,121 @@
+---
+permalink: help/reference-new-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: new, data, source, dialog box, enable, add 
+summary: 「新增資料來源」對話方塊可讓您新增資料來源。 
+---
+= 「新增資料來源」對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「新增資料來源」對話方塊可讓您新增資料來源。
+
+
+
+== 資料來源組態內容
+
+* *名稱*
++
+可讓您指定資料來源的名稱。
+
+* *資料來源類型*
++
+可讓您選取資料來源類型、例如Active IQ Unified Manager ：《支援資訊》- 6.0（MySQL）。
+
++
+當您選取資料來源類型時、連接埠、配置、使用者名稱、密碼、 時間間隔（分鐘）和逾時（秒）欄位會填入資料。
+
++
+
+NOTE: 如果您想OnCommand Workflow Automation 從Active IQ Unified Manager 某個伺服器執行資料保護工作流程、必須在Active IQ Unified Manager 該伺服器上設定WFA。
+
++
+如需詳細資訊、請參閱_ OnCommand 《_》統一化管理器線上說明_。
+
+* *主機名稱*
++
+可讓您指定資料來源的主機名稱或IP位址（IPv4或IPv6）。
+
++
+
+NOTE: 不支援IPv6位址的支援來源類型。Active IQ Unified Manager
+
+* *連接埠*
++
+顯示所選資料來源類型的相關連接埠號碼（如果有）。
+
++
+您可以變更預設連接埠、並為資料來源指定不同的連接埠。
+
+* *方案*
++
+顯示與所選資料來源類型相關的配置、例如_cm_storage for Active IQ Unified Manager the Se-6.0（MySQL）。
+
++
+無法修改此屬性。
+
+* *使用者名稱*
++
+顯示所選資料來源類型的相關使用者名稱（若有）。
+
++
+您必須為此資料來源指定適當的使用者名稱、才能覆寫預設的使用者名稱：
+
++
+** 對於6.0之前的版本、您必須輸入使用者名稱、以便在執行ocsetup時覆寫預設認證。Active IQ Unified Manager
+** 對於更新版本的版本、您必須輸入您在該伺服器上建立的資料庫使用者帳戶使用者名稱。Active IQ Unified Manager Active IQ Unified Manager
+** 對於Performance Advisor、您必須輸入Active IQ Unified Manager 角色最低為GlobalRead的使用者名稱。
+
+
+* *密碼*
++
+可讓您指定所選資料來源類型的密碼。
+
++
+您必須指定密碼、以覆寫此資料來源使用者名稱的預設密碼：
+
++
+** 對於6.0之前的版本、您必須輸入密碼、以便在執行ocsetup時覆寫預設認證。Active IQ Unified Manager
+** 對於更新版本的版本、您必須輸入您在該伺服器上建立的資料庫使用者帳戶密碼。Active IQ Unified Manager Active IQ Unified Manager
+** 在Performance Advisor中、您必須輸入Active IQ Unified Manager 角色最低為GlobalRead的某位使用者密碼。
+
+
+* *資料庫*
+* *時間間隔（分鐘）*
++
+可讓您按一下值、然後使用向上和向下箭頭選取時間間隔（以分鐘為單位）。
+
++
+
+NOTE: 如果時間間隔設為零（0）、則會停用自動取樣。
+
++
+資料取樣的預設時間間隔為：
+
++
+** 指令碼型資料來源類型：1440（效能與虛電路）
+** SQL型資料來源類型：30（cm_storage、storage和cm_Performance）
+
+
+* *請參閱設定說明指南*
++
+開啟「設定指示指南」對話方塊、可讓您指定設定資料來源的指示。
+
+
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存組態設定並關閉對話方塊。
+
+* *取消*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+

@@ -1,0 +1,33 @@
+---
+permalink: windows-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 還原OnCommand Workflow Automation 功能（WFA）資料庫包括還原系統組態設定和快取資訊、包括遊樂場資料庫。 
+---
+= 還原OnCommand Workflow Automation 此資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原OnCommand Workflow Automation 功能（WFA）資料庫包括還原系統組態設定和快取資訊、包括遊樂場資料庫。
+
+* 還原WFA資料庫會清除目前的WFA資料庫。
+* 您只能將WFA資料庫備份還原至執行相同版本或更新版本WFA的系統。
++
+例如、如果您在執行WFA 4.2的系統上建立備份、則只能將備份還原至執行WFA 4.2或更新版本的系統。
+
+* 還原作業完成後、WFA SSL憑證會以備份檔案中的SSL憑證取代。
+
+
+[NOTE]
+====
+* 災難恢復期間需要全面還原WFA資料庫和組態、可用於獨立式和高可用度環境。
+* 無法使用Web UI建立完整的備份。
++
+災難恢復期間、您只能使用CLI命令或REST API來完整備份及還原WFA資料庫。
+
+
+
+====

@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-customize-predefined-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, automation, suitable, requirement 
+summary: 如果沒有適合您需求的預先定義工作流程、您可以自訂預先定義的Workflow Automation（WFA）工作流程。 
+---
+= 自訂預先定義的工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果沒有適合您需求的預先定義工作流程、您可以自訂預先定義的Workflow Automation（WFA）工作流程。
+
+您必須已識別出預先定義工作流程所需的修改。
+
+下列問題與支援要求必須直接提交給WFA社群：
+
+* 從WFA社群下載的任何內容
+* 自訂您所建立的WFA內容
+* 您已修改的WFA內容
+
+
+.步驟
+. 按一下*工作流程設計*>*工作流程*。
+. 選取與您需求完全相符的預先定義工作流程、然後按一下 image:../media/clone_wfa_icon.gif["複製圖示"] 在工具列上。
+. 在工作流程設計工具中、於適當的索引標籤中進行必要的變更、例如編輯說明、新增或刪除命令、修改命令詳細資料、以及修改使用者輸入。
+. 按一下「*預覽*」、輸入所需的使用者輸入來預覽工作流程執行、然後按一下「*預覽*」來檢視工作流程的規劃詳細資料。
+. 按一下「*確定*」以關閉預覽視窗。
+. 按一下「 * 儲存 * 」。
+
+
+
+
+== 完成後
+
+您可以測試您在測試環境中修改的工作流程、然後將工作流程標記為「準備好正式作業」。

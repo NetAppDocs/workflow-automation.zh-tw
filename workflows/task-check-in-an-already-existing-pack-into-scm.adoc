@@ -1,0 +1,28 @@
+---
+permalink: workflows/task-check-in-an-already-existing-pack-into-scm.html 
+sidebar: sidebar 
+keywords: check, existing, packs, source, control, management, scm server, oncommand, workflow, automation 
+summary: 您可以從OnCommand Workflow Automation 下列位置將現有的套件存回來源控制管理（SCM）伺服器：WFA（英文）。 
+---
+= 將現有的WFA工作流程套件存回SCM伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從OnCommand Workflow Automation 下列位置將現有的套件存回來源控制管理（SCM）伺服器：WFA（英文）。
+
+必須設定SCM、而且您必須擁有系統管理或架構認證資料。
+
+.步驟
+. 透過網頁瀏覽器登入* WFA *視窗。
+. 按一下*內容管理*>*套件*。
+. 按一下*匯出至伺服器*圖示。
+. 在「*匯出至伺服器資料夾*」對話方塊的*伺服器系統*資料夾位置欄位中、輸入儲存套件的伺服器資料夾位置。
++
+這會在建立SCM用戶端的檔案系統中、以爆炸形式匯出套件。
+
+. 在SCM用戶端位置、將套件內容存回SCM伺服器。
+. 使用SCM提供的比較工具、對照SCM版本的套件來驗證變更。
+

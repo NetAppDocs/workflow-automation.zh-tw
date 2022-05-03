@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html 
+sidebar: sidebar 
+keywords: configure, database, user, run, ocsetup, windows 
+summary: 您可以在DataFabric Manager 5.x伺服器上執行ocsetup檔案、將DataFabric Manager 5.x資料庫的唯讀存取設定為OnCommand Workflow Automation 還原。 
+---
+= 在Windows上執行ocsetup來設定資料庫使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在DataFabric Manager 5.x伺服器上執行ocsetup檔案、將DataFabric Manager 5.x資料庫的唯讀存取設定為OnCommand Workflow Automation 還原。
+
+.步驟
+. 從下列位置將wfa_ocsetup.exe檔案下載至DataFabric Manager 5.x伺服器的目錄：_https_//WFA_Server_ip/download/WFA_ocsetup.exe。
++
+_WFA_Server_IP_是WFA伺服器的IP位址（IPV4或IPv6位址）。
+
++
+如果您已為WFA指定非預設連接埠、則必須包含下列連接埠號碼：_https_//WFA_server_ip:port/download/WFA_ocsetup.exe。
+
++
+_port_是您在安裝期間用於WFA伺服器的TCP連接埠號碼。
+
++
+如果要指定IPv6位址、則必須以方括弧括住。
+
+. 按兩下wfa_ocsetup.exe檔案。
+. 閱讀安裝精靈中的資訊、然後按「*下一步*」。
+. 瀏覽或鍵入OpenJDK*位置、然後按「*下一步*」。
+. 輸入使用者名稱和密碼以覆寫預設認證。
++
+系統會建立新的資料庫使用者帳戶、以存取DataFabric Manager 5.x資料庫。
+
++
+
+NOTE: 如果您未建立使用者帳戶、則會使用預設認證資料。為了安全起見、您必須建立使用者帳戶。
+
+. 單擊* Next*（下一步）並查看結果。
+. 按一下「*下一步*」、然後按一下「*完成*」以完成精靈。
+

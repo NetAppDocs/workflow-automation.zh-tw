@@ -1,0 +1,102 @@
+---
+permalink: workflows/reference-powershell-and-perl-wfa-modules.html 
+sidebar: sidebar 
+keywords: aware, powershell, perl, modules, oncommand, workflow, automation, write, scripts 
+summary: 您必須知道適用於OnCommand Workflow Automation 還原（WFA）的PowerShell或Perl模組、才能為工作流程撰寫指令碼。 
+---
+= PowerShell與Perl WFA模組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須知道適用於OnCommand Workflow Automation 還原（WFA）的PowerShell或Perl模組、才能為工作流程撰寫指令碼。
+
+
+
+== PowerShell模組
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+只要工具套件可供使用、就使用Data ONTAP 「支援服務工具套件」來叫用API。
+ a| 
+「Add VLAN」命令會使用以下工具組：
+
+「Add-NaNetVlan-Interface $Interface-vlan$VlanID」
+
+
+
+ a| 
+如果Data ONTAP 無法在《Sfuse Toolkit》中找到Cmdlet、請使用「Invoke -SSH」命令、在Data ONTAP Sfuse上叫用CLI。
+ a| 
+「Invoke-NaSsh-Name $ArrayName-Command "ifconfig-a""-認證$Credentials'」
+
+|===
+
+
+== Perl模組
+
+Na伺服器模組用於WFA命令。NavServer模組可叫用Data ONTAP 用於動態管理Data ONTAP 的功能完善的資訊技術API。
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+只要NetApp Manageability SDK可供使用、即可使用NavServer模組來叫用API。
+ a| 
+以下範例顯示如何使用Na伺服器模組來執行恢復SnapMirror作業：
+
+[listing]
+----
+  eval {
+
+    $wfa_util->sendLog('INFO',
+        "Connecting to the cluster: $DestinationCluster"
+    );
+    my $server
+        = $wfa_util->connect($DestinationClusterIp, $DestinationVserver);
+
+    my $sm_info = $server->snapmirror_get(
+        'destination-vserver' => $DestinationVserver,
+        'destination-volume'  => $DestinationVolume
+    );
+
+    my $sm_state  = $sm_info->{'attributes'}->{'snapmirror-info'}->{'mirror-state'};
+    my  $sm_status = $sm_info->{'attributes'}->{'snapmirror-info'}->{'relationship-status'};
+
+    $wfa_util->sendLog('INFO',
+        "SnapMirror relationship is $sm_state ($sm_status)");
+
+    if ($sm_status ne 'quiesced') {
+        $wfa_util->sendLog('INFO',
+            'The status needs to be quiesced to resume transfer.');
+    } else {
+        my $result = $server->snapmirror_resume(
+            'destination-vserver' => $DestinationVserver,
+            'destination-volume'  => $DestinationVolume
+        );
+        $wfa_util->sendLog('INFO', "Result of resume:  $result");
+        $wfa_util->sendLog('INFO', 'Resume operation started successfully.');
+    }
+}
+----
+
+
+ a| 
+如果Data ONTAP 無法使用某個API、請Data ONTAP 使用executeSystemCli公用程式方法來叫用該程式。
+
+[NOTE]
+====
+不支援執行系統Cli、目前僅適用於Data ONTAP 以7-Mode運作的執行。
+
+==== a| 
+無
+
+|===

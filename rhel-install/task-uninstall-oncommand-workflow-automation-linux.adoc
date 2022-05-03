@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/task-uninstall-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: uninstall, oncommand, workflow, automation 
+summary: 您可以OnCommand Workflow Automation 使用單一命令、從Red Hat Enterprise Linux機器上解除安裝物件（WFA）。 
+---
+= 解除安裝OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 使用單一命令、從Red Hat Enterprise Linux機器上解除安裝物件（WFA）。
+
+您必須擁有root使用者存取權、才能存取想要解除安裝WFA的Red Hat Enterprise Linux機器。
+
+.步驟
+. 以root使用者身分登入您要解除安裝WFA的Red Hat Enterprise Linux機器。
+. 在Shell提示字元下、輸入下列命令：
++
+"rpm -e wfa"
+
++
+如果預設安裝位置已變更、則當您解除安裝WFA時、不會刪除MySQL資料目錄。您必須手動刪除目錄。
+
+

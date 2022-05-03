@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: 「工作流程」視窗會顯示標示為「準備就緒」的工作流程。您可以編輯或執行您擁有授權的工作流程。您可以按一下「工作流程」索引標籤來存取此視窗。 
+---
+= 工作流程視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「工作流程」視窗會顯示標示為「準備就緒」的工作流程。您可以編輯或執行您擁有授權的工作流程。您可以按一下「工作流程」索引標籤來存取此視窗。
+
+
+
+== 類別窗格
+
+類別窗格可讓您依類別搜尋工作流程。未指派給任何類別的工作流程列在「無類別」下。類別標題右側會顯示該類別中的工作流程總數。此數字包括標示為「準備就緒」的工作流程。例如、「DATA Protection（7）」表示「DATA Protection（DATA保護）」類別中有七個工作流程可供正式作業。
+
+
+
+== 方案
+
+「配置」功能表可讓您選取配置。
+
+顯示的配置是根據系統管理員在「顯示配置內容」選項的「*設定*>*設定*>*工作流程設定*」下所做的選擇而定。您可以選取或清除核取方塊、以選取要顯示的配置。此選擇僅對目前工作階段有效。
+
+
+
+== 工作流程窗格
+
+標示為「準備就緒」的工作流程會在「工作流程」窗格中顯示為灰色方塊。工作流程方塊包含工作流程名稱和圖示、表示工作流程支援此模式。您可以按一下工作流程方塊來執行工作流程。
+
+如果您是系統管理員或架構設計師、可以按一下來編輯工作流程 image:../media/portal_edit_object_wfa_icon.gif[""] 圖示。。 image:../media/info_icon_execute_wfa.gif[""] 圖示提供工作流程的詳細資訊。

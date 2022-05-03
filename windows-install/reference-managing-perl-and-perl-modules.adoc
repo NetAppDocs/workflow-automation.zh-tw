@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-managing-perl-and-perl-modules.html 
+sidebar: sidebar 
+keywords: manage, perl, perl modules 
+summary: 支援Perl命令的工作流程作業。OnCommand Workflow Automation當您安裝WFA時、會在WFA伺服器上安裝並設定ActivePerl 5.26.3。您可以安裝及設定偏好的Perl發佈與Perl模組。 
+---
+= 管理Perl和Perl模組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援Perl命令的工作流程作業。OnCommand Workflow Automation當您安裝WFA時、會在WFA伺服器上安裝並設定ActivePerl 5.26.3。您可以安裝及設定偏好的Perl發佈與Perl模組。
+
+除了ActivePerl之外、當您安裝WFA時、也會安裝NetApp Manageability SDK所需的Perl模組。成功執行Perl命令需要NetApp Manageability SDK Perl模組。

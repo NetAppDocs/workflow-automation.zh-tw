@@ -1,0 +1,59 @@
+---
+permalink: help/task-create-local-users.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, enable, create, manage, local, users, specific, permissions, roles, guest, operator, approver, architect, admin, backup 
+summary: 利用NetApp（WFA）、您可以建立及管理具有各種角色特定權限的本機WFA使用者、例如來賓、營運者、核准者、架構設計師、OnCommand Workflow Automation 管理與備份： 
+---
+= 建立本機使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用NetApp（WFA）、您可以建立及管理具有各種角色特定權限的本機WFA使用者、例如來賓、營運者、核准者、架構設計師、OnCommand Workflow Automation 管理與備份：
+
+*您需要的是什麼*
+
+您必須安裝WFA並以管理員身分登入。
+
+*關於此工作*
+
+WFA可讓您為下列角色建立使用者：
+
+* *來賓*
++
+此使用者可檢視入口網站及工作流程執行狀態、並可收到工作流程執行狀態變更的通知。
+
+* *營運者*
++
+此使用者可預覽及執行使用者有權存取的工作流程。
+
+* *核准人*
++
+此使用者可預覽、執行、核准及拒絕使用者有權存取的工作流程。
+
++
+
+NOTE: 建議提供核准者的電子郵件ID。如果有多位核准者、您可以在*電子郵件*欄位中提供群組電子郵件ID。
+
+* *架構設計師*
++
+此使用者擁有建立工作流程的完整存取權、但受到限制、無法修改全域WFA伺服器設定。
+
+* *管理*
++
+此使用者可完整存取WFA伺服器。
+
+* *備份*
++
+這是唯一能夠遠端產生WFA伺服器備份的使用者。但是、使用者受到限制、無法存取所有其他存取。
+
+
+
+.步驟
+. 按一下「*設定*」、然後在「*管理*」下按一下「*使用者*」。
+. 按一下以建立新使用者 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新使用者*」對話方塊中輸入必要資訊。
+. 按一下「 * 儲存 * 」。
+

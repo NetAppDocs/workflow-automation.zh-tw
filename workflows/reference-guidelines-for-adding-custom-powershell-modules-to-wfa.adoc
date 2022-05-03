@@ -1,0 +1,24 @@
+---
+permalink: workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, adding, custom, powershell, perl, modules, oncommand, workflow, automation, enable, commands, create 
+summary: 在OnCommand Workflow Automation 將自訂PowerShell和Perl模組新增至還原（WFA）之前、您必須注意某些考量事項。自訂PowerShell和Perl模組可讓您使用自訂命令來建立工作流程。 
+---
+= 新增自訂PowerShell和Perl模組的考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在OnCommand Workflow Automation 將自訂PowerShell和Perl模組新增至還原（WFA）之前、您必須注意某些考量事項。自訂PowerShell和Perl模組可讓您使用自訂命令來建立工作流程。
+
+* 在執行WFA命令期間、會自動將所有自訂PowerShell模組新增至WFA安裝目錄「/奢侈/模組」。
+* 所有新增至「WFA/perl」目錄的自訂Perl模組、都會包含在_@Inc_程式庫中。
+* 自訂PowerShell和Perl模組不會在WFA備份作業中備份。
+* 自訂PowerShell和Perl模組不會在WFA還原作業中還原。
+
+
+您必須手動備份自訂PowerShell和Perl模組、才能將它們複製到新的WFA安裝。
+
+模組目錄中的資料夾名稱必須與模組名稱相同。

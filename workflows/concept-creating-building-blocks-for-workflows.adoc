@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-building-blocks-for-workflows.html 
+sidebar: sidebar 
+keywords: workflow, automation, include, several, building, blocks, use, construct, workflow, create, require 
+summary: 工作流程自動化（WFA）包含數個建置區塊、用於建構工作流程。您可以建立工作流程所需的WFA建置區塊。 
+---
+= 建立工作流程的建置區塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流程自動化（WFA）包含數個建置區塊、用於建構工作流程。您可以建立工作流程所需的WFA建置區塊。

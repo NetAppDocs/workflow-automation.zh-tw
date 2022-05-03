@@ -1,0 +1,22 @@
+---
+permalink: workflows/reference-wfa-powershell-functions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, several, powershell, cmdlets, perl, function, use, wfa commands 
+summary: 支援各種PowerShell指令程式、以及可在WFA命令中使用的PowerShell和Perl功能。OnCommand Workflow Automation 
+---
+= WFA Cmdlet與功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援各種PowerShell指令程式、以及可在WFA命令中使用的PowerShell和Perl功能。OnCommand Workflow Automation
+
+您可以使用下列PowerShell命令來檢視WFA伺服器所提供的所有PowerShell Cmdlet和功能：
+
+* 「Get-Command -模組WFAWrapper」
+* 「Get-Command - Module WFA」
+
+
+您可以在「WFAutil.pPM」模組中檢視WFA伺服器提供的所有Perl功能。WFA說明模組支援連結的說明區段、WFA PowerShell Cmdlet說明及WFA Perl方法說明、可讓您存取所有PowerShell Cmdlet和功能、以及Perl功能。

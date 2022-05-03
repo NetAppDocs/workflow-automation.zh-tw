@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: 「執行工作流程」對話方塊可讓您指定工作流程所需的使用者輸入、執行時間及執行註解。 
+---
+= 執行工作流程對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「執行工作流程」對話方塊可讓您指定工作流程所需的使用者輸入、執行時間及執行註解。
+
+
+
+== 使用者輸入
+
+可讓您指定工作流程的輸入。必填屬性會以星號（*）標示、方塊的框線則會以紅色標示。
+
+
+
+== 選項
+
+可讓您指定執行工作流程的時間。
+
+* *立即執行*
++
+可讓您立即執行工作流程。
+
+* *重複執行*
++
+可讓您將工作流程設定為定期重複。此選項僅會在建立排程時顯示。
+
+* *執行一次*
++
+可讓您排程工作流程的執行。
+
+
+
+
+
+== 執行意見
+
+可讓您指定工作流程執行的註解。此註解會顯示在「執行狀態」視窗中。

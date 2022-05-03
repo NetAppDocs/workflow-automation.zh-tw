@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, perform, regular backup, wfa database, rest apis 
+summary: 您可以OnCommand Workflow Automation 使用REST API、定期備份靜態（WFA）資料庫。在一般備份中、只會備份WFA資料庫。 
+---
+= 使用REST API定期備份WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 使用REST API、定期備份靜態（WFA）資料庫。在一般備份中、只會備份WFA資料庫。
+
+您必須擁有管理、架構或備份認證資料。
+
+.步驟
+. 在網頁瀏覽器中輸入下列URL：「+https://IP」的WFA伺服器/ REST /備份+位址
++
+如需詳細資訊、請參閱REST文件。
+
+

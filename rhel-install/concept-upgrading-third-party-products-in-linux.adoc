@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/concept-upgrading-third-party-products-in-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, third-party, products 
+summary: 您可以在Workflow Automation（WFA）上升級協力廠商產品、例如Linux中的OpenJDK/MySQL。 
+---
+= 升級協力廠商產品
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Workflow Automation（WFA）上升級協力廠商產品、例如Linux中的OpenJDK/MySQL。

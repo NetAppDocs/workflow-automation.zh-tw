@@ -1,0 +1,26 @@
+---
+permalink: windows-install/task-uninstall-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: uninstall, oncommand, workflow, automation 
+summary: 您可以OnCommand Workflow Automation 使用Microsoft Windows程式和功能來解除安裝更新（WFA）。 
+---
+= 解除安裝OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 使用Microsoft Windows程式和功能來解除安裝更新（WFA）。
+
+.步驟
+. 使用具有管理權限的帳戶登入Windows。
+. 按一下*所有程式*>*控制台**控制台*>*程式與功能*。
+. 請選擇下列其中一個選項來解除安裝WFA：
++
+** 選擇「* NetApp WFA *」、然後按一下「*解除安裝*」。
+** 右鍵單擊* NetApp WFA *並選擇*卸載*。
+
+
+. 如果解除安裝程序在完成之前停止回應、請從Windows服務主控台停止* NetApp WFA Database*服務、然後再次嘗試解除安裝。
+

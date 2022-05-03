@@ -1,0 +1,44 @@
+---
+permalink: rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html 
+sidebar: sidebar 
+keywords: enable, disable, remote access, oncommand, workflow, automation, database 
+summary: 根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端才能存取更新（WFA）資料庫。如果您想要從遠端系統存取WFA資料庫、可以變更預設設定。 
+---
+= 啟用或停用OnCommand Workflow Automation 對此資料庫的遠端存取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端才能存取更新（WFA）資料庫。如果您想要從遠端系統存取WFA資料庫、可以變更預設設定。
+
+* 您必須以root使用者身分登入WFA主機系統。
+* 如果WFA主機系統上安裝了防火牆、您必須設定防火牆設定、才能從遠端系統存取MySQL連接埠（3306）。
+
+
+此程序使用預設的WFA安裝路徑。如果您在安裝期間變更預設位置、則必須使用變更的WFA安裝路徑。
+
+.步驟
+. 瀏覽至WFA伺服器上的下列目錄：WFA_install_LOUSE/WFA/BIN/。
+. 執行下列其中一項動作：
++
+[cols="2*"]
+|===
+| 至... | 輸入下列命令... 
+
+
+ a| 
+啟用遠端存取
+ a| 
+「/WFA --db-access=public--recovery」
+
+
+
+ a| 
+停用遠端存取
+ a| 
+「/WFA --db-access=Default --recovery」
+
+|===
+

@@ -1,0 +1,95 @@
+---
+permalink: windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, system requirements, install 
+summary: 在安裝WFA之前、您必須瞭解OnCommand Workflow Automation 到有關硬體和軟體的需求。 
+---
+= 安裝OnCommand Workflow Automation 過程中的系統需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝WFA之前、您必須瞭解OnCommand Workflow Automation 到有關硬體和軟體的需求。
+
+
+
+== 安裝WFA的硬體需求
+
+下表列出WFA伺服器的最低硬體需求和建議硬體規格。
+
+[cols="3*"]
+|===
+| 元件 | 最低要求 | 建議規格 
+
+
+ a| 
+CPU
+ a| 
+2.27 GHz或更快、4核心、64位元
+ a| 
+2.27 GHz或更快、4核心、64位元
+
+
+
+ a| 
+RAM
+ a| 
+4 GB
+ a| 
+8 GB
+
+
+
+ a| 
+可用磁碟空間
+ a| 
+5 GB
+ a| 
+20 GB
+
+|===
+如果您要在虛擬機器（VM）上安裝WFA、則應保留所需的記憶體和CPU、以便VM擁有足夠的資源。安裝程式不會驗證CPU速度。
+
+
+
+== 安裝WFA的軟體需求
+
+WFA在64位元Windows作業系統上執行、應安裝在專屬的實體機器或VM上。您不得在執行WFA的伺服器上安裝任何其他應用程式。
+
+WFA從Microsoft Windows Server 2012企業版執行至Microsoft Windows Server 2016（所有版本）。企業版是建議使用的Windows作業系統。
+
+對於Windows 2012伺服器、Windows系統上必須安裝.NET Framework 4.5.2版。如果未安裝.NET Framework 4.5.2版、則WFA 5.1安裝會失敗。
+
+* 下列支援的瀏覽器之一：
++
+** Mozilla Firefox
+** Microsoft Internet Explorer
+** Google Chrome
+
+
+* PowerShell 3.0
+* VMware PowerCLI第5版
++
+
+NOTE: 僅當您使用WFA在VMware vSphere上執行工作流程時、才需要VMware API的PowerShell擴充功能。
+
+
+
+
+NOTE: 防毒應用程式可能會使WFA服務無法啟動。
+
+若要避免此問題、請針對下列WFA目錄設定防毒掃描排除項目：
+
+* 您安裝WFA的目錄
+* 安裝Perl的目錄
+* 您安裝OpenJDK.的目錄
+* MySQL資料目錄
+
+
+如需詳細資訊、請參閱互通性對照表工具。
+
+*相關資訊*
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]

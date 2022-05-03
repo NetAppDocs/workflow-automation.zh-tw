@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 撰寫OnCommand Workflow Automation 適用於還原（WFA）的PowerShell或Perl指令碼時、您必須瞭解縮排準則。 
+---
+= 縮排準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+撰寫OnCommand Workflow Automation 適用於還原（WFA）的PowerShell或Perl指令碼時、您必須瞭解縮排準則。
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+索引標籤等於四個空格。
+ a| 
+
+
+
+ a| 
+使用定位點和大括弧來顯示區塊的開頭和結尾。
+ a| 
+PowerShell指令碼
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Perl指令碼
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+在作業集或程式碼區塊之間新增空白行。
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

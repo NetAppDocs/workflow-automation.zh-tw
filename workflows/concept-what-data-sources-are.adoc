@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: 資料來源是建立其他系統、檔案和資料庫連線以擷取資料的方法。例如、資料來源可以是Active IQ Unified Manager 連接到某Active IQ Unified Manager 個包含示例9.4資料來源類型的還原資料庫。 
+---
+= 什麼是資料來源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資料來源是建立其他系統、檔案和資料庫連線以擷取資料的方法。例如、資料來源可以是Active IQ Unified Manager 連接到某Active IQ Unified Manager 個包含示例9.4資料來源類型的還原資料庫。
+
+您可以OnCommand Workflow Automation 將快取配置、所需連接埠和擷取方法與資料來源類型建立關聯、在定義所需的資料來源類型之後、將自訂資料來源新增至WFA（WFA）以進行資料擷取。
+
+WFA會透過各種資料來源快取資訊。WFA會從資料來源收集資源資訊、並將其格式化以供快取配置使用。快取表是快取配置中的表格、其格式設定為符合字典項目物件。當您在工作流程中使用finder時、它會傳回一個dictionary物件、而且會從快取表格填入該dictionary物件的資料。從資料來源擷取資料的程序稱為_DATA來源擷取_。您可以使用指令碼型方法或驅動程式型方法來擷取資料來源。來源可能彼此不同、而資料來源擷取可能會在不同的時間間隔進行取樣。然後WFA會將該資訊合併到資料庫中、並將保留資料疊加、以在資料庫中維護更新的資源資訊。
+
+WFA資料庫包含數種不同的快取配置。快取配置是一組資料表、每個資料表都包含來自特定字典項目類型的資訊；不過、這些資料表可能包含來自特定資料來源類型之多個來源的合併資訊。WFA會使用資料庫資訊來瞭解資源的狀態、執行計算、以及執行資源命令。

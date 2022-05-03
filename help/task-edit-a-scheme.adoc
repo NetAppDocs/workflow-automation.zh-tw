@@ -1,0 +1,32 @@
+---
+permalink: help/task-edit-a-scheme.html 
+sidebar: sidebar 
+keywords: edit, display, name, description, entity, version, scheme, create 
+summary: 您可以編輯所建立方案的顯示名稱、說明和實體版本。 
+---
+= 編輯方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯所建立方案的顯示名稱、說明和實體版本。
+
+*您需要的是什麼*
+
+* 您必須已安裝WFA。
+* 您必須擁有WFA的系統管理員權限或架構認證。
+
+
+*關於此工作*
+
+您無法修改預先定義的配置。
+
+.步驟
+. 以系統管理員或架構設計師的身分、透過網頁瀏覽器登入WFA。
+. 按一下*資料來源設計*>*配置*。
+. 選取您要修改的配置、然後按一下 image:../media/edit_wfa_icon.gif["編輯圖示"] 在工具列上。
+. 在「*方案<架構名稱>*」對話方塊中修改必要資訊。
+. 按一下「 * 儲存 * 」。
+

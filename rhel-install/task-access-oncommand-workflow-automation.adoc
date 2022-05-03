@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/task-access-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: access, oncommand, workflow, automation 
+summary: 您可以OnCommand Workflow Automation 從任何可存取WFA伺服器的系統、透過網頁瀏覽器存取功能。 
+---
+= 存取OnCommand Workflow Automation 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 從任何可存取WFA伺服器的系統、透過網頁瀏覽器存取功能。
+
+您必須安裝適用於網頁瀏覽器的Adobe Flash Player。
+
+.步驟
+. 開啟網頁瀏覽器、然後在網址列中輸入下列其中一項：
++
+** https://wfa_server_ip+`
++
+WFA_server_IP是WFA伺服器的IP位址（IPv4或IPv6位址）或完整網域名稱（FQDN）。
+
+** 如果您正在WFA伺服器上存取WFA：`+https://localhost/wfa+`如果您已為WFA指定非預設連接埠、則必須包含下列連接埠號碼：
+** https://wfa_server_ip:port+`
+** https://localhost:port+`連接埠是您在安裝期間用於WFA伺服器的TCP連接埠號碼。
+
+
+. 在「登入」區段中、輸入您在安裝期間輸入的管理員使用者認證。
+. 在*設定*>*設定*功能表中、設定認證資料和資料來源。
+. 將WFA Web GUI加入書籤、以方便存取。
+

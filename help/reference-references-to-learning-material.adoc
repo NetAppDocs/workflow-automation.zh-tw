@@ -1,0 +1,174 @@
+---
+permalink: help/reference-references-to-learning-material.html 
+sidebar: sidebar 
+keywords: aware, certain, scripting, programming, practices, advanced, workflow, automation, reference, material, learn, required, options, building blocks 
+summary: 您應該瞭解建立進階工作流程自動化（WFA）工作流程的特定指令碼和程式設計實務做法。您可以在建立WFA建置區塊或工作流程之前、先使用參考資料來瞭解所需的選項。 
+---
+= 參考學習教材
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該瞭解建立進階工作流程自動化（WFA）工作流程的特定指令碼和程式設計實務做法。您可以在建立WFA建置區塊或工作流程之前、先使用參考資料來瞭解所需的選項。
+
+
+
+== Windows PowerShell
+
+WFA使用PowerShell指令碼進行工作流程作業。下表包含PowerShell學習資料的參考資料：
+
+[cols="2*"]
+|===
+
+
+ a| 
+Windows PowerShell快速入門
+ a| 
+http://msdn.microsoft.com/en-us/library/windows/desktop/aa973757(v=vs.85).aspx[]
+
+
+
+ a| 
+PowerShell開發-整合式指令碼環境（ISE）
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/introducing-the-windows-powershell-ise?view=powershell-7.2[]
+
+
+
+ a| 
+_.NET架構命名準則_
+ a| 
+http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
+
+
+
+ a| 
+PowerShell程式碼樣式
+ a| 
+http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+
+
+
+ a| 
+PowerShell試用/鎖定終於實現
+ a| 
+http://technet.microsoft.com/en-us/library/dd315350.aspx[]
+
+
+
+ a| 
+PowerShell自動變數
+ a| 
+http://technet.microsoft.com/en-us/library/dd347675.aspx[]
+
+
+
+ a| 
+PowerShell錯誤報告
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/error-reporting-concepts?view=powershell-7.2[]
+
+
+
+ a| 
+PowerShell通用參數
+ a| 
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.2[]
+
+|===
+
+
+== PowerShell工具套件Data ONTAP
+
+此解決方案Data ONTAP 隨附於WFA中。您可以使用PowerShell工具組Cmdlet從Data ONTAP PowerShell指令碼叫用各種功能。如需更多資訊、請參閱「_SesfPowerShell Data ONTAP Toolkit Help_」、您可從下列位置存取：「wfa_install_stitation\wfa\lapped\Modules\Dataontap\WebHelp\index.html」
+
+'_wfa_install_directory_'是WFA安裝目錄、而'C:\Program Files\NetApp'是預設的安裝目錄。
+
+下表包含Data ONTAP 有關推薦使用者使用的資訊：
+
+[cols="2*"]
+|===
+
+
+ a| 
+《ShellPowerShell Toolkit文章》ONTAP
+ a| 
+https://community.netapp.com/t5/Tech-OnTap-Articles/The-Data-ONTAP-PowerShell-Toolkit/ta-p/85933[]
+
+
+
+ a| 
+NetApp社群：NetApp PowerShell Toolkit ONTAP
+ a| 
+https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cloud-and-virtualization-discussions/label-name/powershell%20toolkit[]
+
+|===
+
+
+== Perl
+
+WFA支援Perl命令以執行工作流程作業。當您安裝WFA時、所需的Perl和Perl模組會安裝在WFA伺服器上。
+
+https://docs.activestate.com/activeperl/5.26/perl/["ActivePerl使用指南"^]
+
+您也可以從下列位置存取_ActivePerl使用指南_：「wfa_install_station\wfa\Perl64\html\index.html」
+
+'_wfa_install_directory_'是WFA安裝目錄、而'C:\Program Files\NetApp是預設的安裝目錄 WFA使用Perl指令碼來執行工作流程作業。下表包含Perl學習資料的參考資料：
+
+[cols="2*"]
+|===
+
+
+ a| 
+現代Perl：2014
+ a| 
+http://modernperlbooks.com/books/modern_perl_2014/index.html[]
+
+
+
+ a| 
+Perl程式設計文件
+ a| 
+http://perldoc.perl.org/[]
+
+
+
+ a| 
+Perl程式設計語言
+ a| 
+http://www.perl.org/[]
+
+|===
+
+
+== NetApp Manageability SDK
+
+NetApp Manageability SDK所需的Perl模組與WFA一起搭售。在WFA中使用Perl命令需要這些Perl模組。如需詳細資訊、請參閱NetApp Manageability SDK文件、您可從下列位置存取：「wfa_install_location：wfa\perl\NMSdk\html。」
+
+「WFA_install_location」是WFA安裝目錄、「C:\Program Files\NetApp」是預設安裝目錄。
+
+
+
+== 結構化查詢語言（SQL）
+
+SQL選取語法用於篩選器和填入使用者輸入。
+
+http://dev.mysql.com/doc/refman/5.1/en/select.html["MySQL選擇語法"^]
+
+
+
+== MVFlex運算式語言（MVEL）
+
+您可以在WFA工作流程中使用VEL運算式語法、例如在函數和變數中。
+
+如需詳細資訊、請參閱_MVEL Language Guide_。
+
+
+
+== 規則運算式
+
+您可以在WFA中使用規則運算式（regex）。
+
+https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/RegExp.html["使用規則運算式的ActionScript 3.0"^]

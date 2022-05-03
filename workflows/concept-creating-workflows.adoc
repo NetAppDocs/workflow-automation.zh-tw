@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: 如果預先定義的工作流程不符合您的需求、您可以建立所需的工作流程。在建立工作流程之前、您應該先瞭解WFA設計工具中的可用功能、然後建立工作流程檢查清單。 
+---
+= 建立工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果預先定義的工作流程不符合您的需求、您可以建立所需的工作流程。在建立工作流程之前、您應該先瞭解WFA設計工具中的可用功能、然後建立工作流程檢查清單。

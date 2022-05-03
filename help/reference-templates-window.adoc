@@ -1,0 +1,147 @@
+---
+permalink: help/reference-templates-window.html 
+sidebar: sidebar 
+keywords: template, window, display, available, alphabetical, order, collection, settings, workflows, quickly 
+summary: 範本視窗會依字母順序顯示可用的範本。範本是可在建立工作流程時使用的設定集合。您可以使用範本快速建立工作流程。 
+---
+= 範本視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+範本視窗會依字母順序顯示可用的範本。範本是可在建立工作流程時使用的設定集合。您可以使用範本快速建立工作流程。
+
+
+NOTE: 視您的角色和帳戶權限而定、可能不會顯示此視窗。
+
+* 範本表格
+* 工具列
+
+
+
+
+== 範本表格
+
+範本表格列出可用的範本。每個項目均識別為下列其中一項：
+
+* image:../media/community_certification.gif[""] -使用者建立的內容
+* image:../media/ps_certified_icon_wfa.gif[""] 由專業服務（PS）開發的內容、僅適用於PS所製作的自訂安裝
+* image:../media/community_certification.gif[""] -由使用者開發的套件
+* image:../media/lock_icon_wfa.gif[""] -由鎖定的使用者所建立的內容
+* image:../media/netapp_certified.gif[""] - NetApp認證內容
+
+
+您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。
+
+* image:../media/filter_icon_wfa.gif["篩選圖示"] 啟用或停用整個表格的篩選。如果停用篩選功能、圖示上會出現紅色的「x」。
+* 按兩下 image:../media/filter_icon_wfa.gif["篩選圖示"] 清除並重設篩選選項。
+* image:../media/wfa_filter_icon.gif["篩選圖示"] 在每個欄標題上、您都可以根據欄的內容進行篩選。按一下 image:../media/wfa_filter_icon.gif["篩選圖示"] 欄中的可讓您篩選下拉式清單或所有可用項目的特定項目。
+* 按一下欄標題、即可切換遞增或遞減排序順序。您可以使用排序箭頭來識別套用的排序順序（image:../media/wfa_sortarrow_up_icon.gif["排序圖示"] 用於遞增和 image:../media/wfa_sortarrow_down_icon.gif["向下排序圖示"] 降序）。
+* 若要重新排列欄位的位置、您可以拖放欄位、以任何所需的順序排列欄位。不過、您無法隱藏或刪除這些欄。
+* 按一下「*搜尋*篩選」文字方塊、即可搜尋特定內容。此外、您也可以使用支援的運算子來搜尋適用的欄類型、字母或數字。
+
+
+範本表格包含下列欄位：
+
+* *認證*
++
+指出範本是否為使用者建立的（image:../media/community_certification.gif[""]）、PS（image:../media/ps_certified_icon_wfa.gif[""]）、社群（image:../media/community_certification.gif[""]）、使用者鎖定（image:../media/lock_icon_wfa.gif[""]）、或NetApp認證的（image:../media/netapp_certified.gif[""]）。
+
++
+您可以從篩選清單中選取所需的核取方塊、以搜尋範本。
+
+* *名稱*
++
+顯示範本名稱。
+
+* *方案*
++
+顯示與範本相關的配置。方案代表系統的資料模型。例如、某個虛擬機器配置包含與虛擬環境相關的資料、例如虛擬機器、主機和資料存放區。
+
+* *類型*
++
+顯示範本的字典物件類型、例如Volume和Snapshot原則。
+
+* *實體版本*
++
+以「major.m2.m輕.reversion」格式顯示物件的版本編號、例如1.1.0。
+
+* *說明*
++
+顯示範本的說明。
+
+* *上次更新日期*
++
+顯示上次更新範本的日期和時間。
+
+* *更新者*
++
+顯示更新範本的使用者名稱。
+
+* *鎖定者*
++
+顯示鎖定範本的使用者名稱。
+
+
+
+
+
+== 工具列
+
+工具列位於欄標題上方。您可以使用工具列中的圖示來執行各種動作。您也可以從視窗中的滑鼠右鍵功能表存取這些動作。
+
+* *image:../media/new_wfa_icon.gif["新圖示"] （新版）*
++
+開啟「新增範本」對話方塊、可讓您建立新範本。
+
+* *image:../media/edit_wfa_icon.gif["編輯圖示"] （編輯）*
++
+開啟「範本」對話方塊、可讓您修改所選範本的設定。您也可以按兩下範本以開啟「範本」對話方塊。
+
+* *image:../media/clone_wfa_icon.gif["複製圖示"] （複製）*
++
+開啟「New Template」（新範本）-「Copy」（複製）對話方塊、可讓您建立所選範本的複本或複本。
+
+* *image:../media/lock_wfa_icon.gif["鎖定圖示"] （鎖定）*
++
+開啟鎖定範本確認對話方塊、可讓您鎖定選取的範本。此選項只會針對您所建立的範本啟用。
+
+* *image:../media/unlock_wfa_icon.gif["解除鎖定圖示"] （解除鎖定）*
++
+開啟「解除鎖定範本」確認對話方塊、可讓您解除鎖定選取的範本。此選項只會針對您鎖定的範本啟用。不過、系統管理員可以解除鎖定其他使用者鎖定的範本。
+
+* *image:../media/delete_wfa_icon.gif["刪除圖示"] （刪除）*
++
+開啟刪除範本確認對話方塊、可讓您刪除選取的使用者建立範本。
+
++
+
+NOTE: 您無法刪除範例範本。
+
+* *image:../media/export_wfa_icon.gif["匯出圖示"] （匯出）*
++
+可讓您匯出選取的使用者建立範本。
+
++
+
+NOTE: 您無法匯出範例範本。
+
+* *image:../media/add_to_pack.png["新增至套件圖示"] （新增至套件）*
++
+開啟「新增至套件範本」對話方塊、可讓您將範本及其可靠的實體新增至可編輯的套件。
+
++
+
+NOTE: 「新增至套件」功能僅會針對認證設為*無的範本啟用。*
+
+* *image:../media/remove_from_pack.png["從套件移除圖示"] （從套件中移除）*
++
+開啟所選範本的「從套件範本中移除」對話方塊、可讓您刪除或移除範本。
+
++
+
+NOTE: 「從套件移除」功能只會針對認證設定為*無的範本啟用。*
+
+

@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-coding-guidelines-for-wfa.html 
+sidebar: sidebar 
+keywords: understand, general, oncommand, workflow, automation, coding, guidelines, naming, conventions, recommendations, creating, various, building, blocks, filters, functions, commands 
+summary: 您應該瞭解OnCommand Workflow Automation 有關建立各種建置區塊（例如篩選器、功能、命令和工作流程）的一般資訊（WFA）編碼準則、命名慣例和建議。 
+---
+= WFA的編碼準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該瞭解OnCommand Workflow Automation 有關建立各種建置區塊（例如篩選器、功能、命令和工作流程）的一般資訊（WFA）編碼準則、命名慣例和建議。

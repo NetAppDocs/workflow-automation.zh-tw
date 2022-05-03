@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: 當OnCommand Workflow Automation 資料來源擷取失敗時、您可以控制在WFA（WFA）中產生的通知。您可以設定通知的臨界值和時間間隔係數。 
+---
+= 設定資料來源擷取失敗的電子郵件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當OnCommand Workflow Automation 資料來源擷取失敗時、您可以控制在WFA（WFA）中產生的通知。您可以設定通知的臨界值和時間間隔係數。
+
+*您需要的是什麼*
+
+您必須已在OnCommand Workflow Automation 功能區（WFA）中設定電子郵件通知。
+
+.步驟
+. 以系統管理員身分透過網頁瀏覽器登入WFA。
+. 設定通知臨界值：
++
+.. 按一下「*設定*」、然後在「*設定*」下按一下「*工作流程設定*」。
+.. 向下捲動至*進階*區段。
+.. 在*擷取通知臨界值*欄位中、輸入所需的值。
++
+預設值為2。
+
++
+如果指定的值為2、則WFA會在傳送電子郵件通知之前、等待兩次連續的資料來源擷取失敗。
+
+
+
+. 按一下「 * 儲存 * 」。
+. 設定通知時間間隔因素：
++
+.. 按一下「*設定*」、然後在「*設定*」下按一下「*資料來源*」。
+.. 請注意為所需資料來源指定的時間間隔。
++
+預設值為30。您可以編輯資料來源以修改時間間隔。
+
+.. 按一下「*設定*」、然後在「*設定*」下按一下「*工作流程設定*」。
+.. 向下捲動至*進階*區段。
+.. 在*擷取通知時間間隔係數*欄位中、輸入所需的值。
++
+預設值為6。
+
++
+如果為資料來源指定的時間間隔為30分鐘、且乘係數為6、則當資料來源的資料來源擷取時間不超過180分鐘時、就會傳送電子郵件通知。
+
++
+
+NOTE: 如果您指定12小時以上作為資料來源的擷取時間間隔、WFA會將時間間隔係數視為1、並在資料來源的指定擷取時間間隔之後傳送通知。
+
+
+
+. 按一下「 * 儲存 * 」。
+

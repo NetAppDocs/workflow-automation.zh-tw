@@ -1,0 +1,20 @@
+---
+permalink: rhel-install/concept-backing-up-the-wfa-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, database, back up, rest apis 
+summary: 您OnCommand Workflow Automation 可以使用REST API來備份Isfa（WFA）資料庫。如果WFA在高可用度環境中處於容錯移轉模式、您可以使用REST API來建立排程備份。您無法在容錯移轉期間使用命令列介面（CLI）建立備份。 
+---
+= 使用REST API備份WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您OnCommand Workflow Automation 可以使用REST API來備份Isfa（WFA）資料庫。如果WFA在高可用度環境中處於容錯移轉模式、您可以使用REST API來建立排程備份。您無法在容錯移轉期間使用命令列介面（CLI）建立備份。
+
+以下是兩種備份類型：
+
+* 完整備份
+* 定期備份
+

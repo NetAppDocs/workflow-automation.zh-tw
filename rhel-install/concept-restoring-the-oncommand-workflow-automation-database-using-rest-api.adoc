@@ -1,0 +1,20 @@
+---
+permalink: rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, database, rest, apis 
+summary: 您可以OnCommand Workflow Automation 使用REST API來還原Isf（WFA）資料庫。在容錯移轉期間、您無法使用命令列介面（CLI）還原WFA資料庫。 
+---
+= 使用REST API還原WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 使用REST API來還原Isf（WFA）資料庫。在容錯移轉期間、您無法使用命令列介面（CLI）還原WFA資料庫。
+
+以下是兩種類型的還原：
+
+* 完整還原
+* 定期還原
+

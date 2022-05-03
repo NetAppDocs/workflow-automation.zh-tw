@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 字典項目是OnCommand Workflow Automation 其中一個功能（WFA）建置區塊。您可以使用字典項目來表示物件類型及其在儲存設備和儲存設備相關環境中的關係。然後您可以在工作流程中使用篩選器、傳回該字典項目的自然索引鍵值。 
+---
+= 什麼是字典項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+字典項目是OnCommand Workflow Automation 其中一個功能（WFA）建置區塊。您可以使用字典項目來表示物件類型及其在儲存設備和儲存設備相關環境中的關係。然後您可以在工作流程中使用篩選器、傳回該字典項目的自然索引鍵值。
+
+字典項目是指WFA支援的物件類型定義。每個字典項目都代表物件類型及其在支援的儲存設備和儲存設備相關環境中的關係。「目錄」物件包含一個屬性清單、可以檢查類型。包含完整值的字典物件會說明類型的物件執行個體。此外、參考屬性也會說明物件與環境的關係；例如、Volume dictionary物件有許多屬性、例如名稱、Size_MB和Volume _mure.此外、Volume dictionary物件也會以array_id和Aggregate_id的形式、包含對Aggregate和包含Volume的陣列的參照。
+
+物件的快取表是一個資料庫、其中包含一些或所有的已標記為快取的字典項目屬性。若要讓某個字典項目包含快取表、至少必須將其中一個字典項目的屬性標示為快取。字典項目包括自然金鑰、這些金鑰是物件的唯一識別碼；例如、7-Mode磁碟區會以其名稱和包含這些磁碟區的陣列IP位址來唯一識別。qtree是以qtree名稱、磁碟區名稱和陣列IP位址來識別。在建立字典項目時、您必須識別屬於該字典項目自然金鑰一部分的字典屬性。

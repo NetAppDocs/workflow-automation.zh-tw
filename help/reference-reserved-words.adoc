@@ -1,0 +1,95 @@
+---
+permalink: help/reference-reserved-words.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, reserved, words, use, attribute, parameters, variable name, user, input, constants, return parameters 
+summary: 包含一些保留字詞的部門。OnCommand Workflow Automation您不得在工作流程中使用任何屬性或參數的保留字詞、例如變數名稱、使用者輸入、常量及傳回參數。 
+---
+= 保留字
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+包含一些保留字詞的部門。OnCommand Workflow Automation您不得在工作流程中使用任何屬性或參數的保留字詞、例如變數名稱、使用者輸入、常量及傳回參數。
+
+以下是WFA中保留字的清單：
+
+[cols="3*"]
+|===
+
+
+ a| 
+* 和
+* 陣列
+* 斷言
+* 布林值
+* 布林值
+* 位元組
+* 位元組
+* 字元
+* 字元
+* 圖表順序
+* 類別
+* 類加載程式
+* 編譯器
+* 包含
+* 可轉換的目標
+* 定義
+* 做到
+* 雙
+* 雙
+* 否則
+* 空白
+* 錯
+
+ a| 
+* 浮動
+* 浮動
+* 適用於
+* foreach
+* 功能
+* 如果
+* 匯入
+* import_static
+* 在中
+* 安裝
+* 內部
+* 整數
+* 是
+* isdef
+* 長
+* 長
+* 數學
+* 新功能
+* null
+* 數量
+* 物件
+* 或
+
+ a| 
+* 產品
+* 退貨
+* 執行時間
+* Security Manager
+* 簡短
+* 簡短
+* 聽起來很像
+* StrictMath
+* 字串
+* 擷取緩衝區
+* StringBuilder
+* strsim
+* 交換器
+* 系統
+* 執行緒
+* ThreadLock
+* 是的
+* 直到
+* VAR
+* 無效
+* 而
+* 與
+
+
+|===

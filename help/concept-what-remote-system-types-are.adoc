@@ -1,0 +1,26 @@
+---
+permalink: help/concept-what-remote-system-types-are.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, communicate, remote, system, types, remote, specify, configure, example, data, ontap, system 
+summary: WFA（WFA）可與遠端系統類型進行通訊。OnCommand Workflow Automation遠端系統類型會指定WFA可以與之通訊的遠端系統類型。您可以在WFA中設定遠端系統類型。例如Data ONTAP 、可以將故障系統設定為遠端系統類型。 
+---
+= 什麼是遠端系統類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA（WFA）可與遠端系統類型進行通訊。OnCommand Workflow Automation遠端系統類型會指定WFA可以與之通訊的遠端系統類型。您可以在WFA中設定遠端系統類型。例如Data ONTAP 、可以將故障系統設定為遠端系統類型。
+
+遠端系統類型具有下列屬性：
+
+* 名稱
+* 說明
+* 版本
+* 傳輸協定
+* 連接埠
+* 逾時
+
+
+您可以為每種遠端系統類型設定Perl指令碼、以驗證遠端系統的認證。您可以儲存在WFA上設定之遠端系統的認證資料。您可以新增或編輯新的自訂遠端系統類型。您也可以複製現有的遠端系統類型。只有在沒有與遠端系統類型相關聯的情況下、您才能刪除該系統類型。

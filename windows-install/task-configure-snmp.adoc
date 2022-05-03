@@ -1,0 +1,23 @@
+---
+permalink: windows-install/task-configure-snmp.html 
+sidebar: sidebar 
+keywords: configure, snmp 
+summary: 您可以設定OnCommand Workflow Automation 功能區（WFA）、針對工作流程作業的狀態、傳送簡單網路管理傳輸協定（SNMP）陷阱。 
+---
+= 設定SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 功能區（WFA）、針對工作流程作業的狀態、傳送簡單網路管理傳輸協定（SNMP）陷阱。
+
+WFA現在支援SNMP v1和SNMP v3傳輸協定。SNMP v3提供額外的安全功能。
+
+WFA .mib檔案提供WFA伺服器所傳送之設陷的相關資訊。MIBA檔案位於WFA伺服器上的<WFA_install_location>\WFA\BIN\WFA.mib目錄中。
+
+
+NOTE: WFA伺服器會以一般物件識別碼（1.3.6.1.4.1.789.1.12.0）傳送所有陷阱通知。
+
+您無法使用SNMP社群字串、例如commune_string@SNMP主機來進行SNMP組態。

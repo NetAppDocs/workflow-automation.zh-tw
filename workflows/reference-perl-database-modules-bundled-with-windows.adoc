@@ -1,0 +1,49 @@
+---
+permalink: workflows/reference-perl-database-modules-bundled-with-windows.html 
+sidebar: sidebar 
+keywords: perl, modules, bundle, windows, active, state, distribution, oncommand, workflow, automation, use, code, writing, commands 
+summary: 有些Perl模組與Windows Active狀態Perl發佈for OnCommand Workflow Automation the WFA（WFA）搭售。您可以在Perl程式碼中使用這些Perl模組來撰寫命令、只有在這些模組與Windows搭售時才適用。 
+---
+= Windows隨附的Perl模組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有些Perl模組與Windows Active狀態Perl發佈for OnCommand Workflow Automation the WFA（WFA）搭售。您可以在Perl程式碼中使用這些Perl模組來撰寫命令、只有在這些模組與Windows搭售時才適用。
+
+下表列出Windows for WFA隨附的Perl資料庫模組。
+
+[cols="2*"]
+|===
+| 資料庫模組 | 說明 
+
+
+ a| 
+DBD：mysql
+ a| 
+可讓您連線至MySQL資料庫的Perl5資料庫介面驅動程式。
+
+
+
+ a| 
+試用：極小
+ a| 
+利用評估區塊將常見錯誤減至最低。
+
+
+
+ a| 
+XML：：libxml
+ a| 
+與提供XML與HTML剖析器的libxml2介面、其中包含了DOM、SAX及XmlReader介面。
+
+
+
+ a| 
+DBD：Cassandra
+ a| 
+適用於使用QL3查詢語言之Cassandra的Perl5資料庫介面驅動程式。
+
+|===

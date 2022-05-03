@@ -1,0 +1,462 @@
+---
+permalink: help/reference-supported-workflows-in-clustered-data-ontap.html 
+sidebar: sidebar 
+keywords: aware, workflow, supported, oncommand, workflow, automation, paired, different, version, unified manager, server 
+summary: 當將支援的工作流程OnCommand Workflow Automation 與不同版本的Unified Manager伺服器配對時、您必須注意。 
+---
+= 支援的工作流程ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當將支援的工作流程OnCommand Workflow Automation 與不同版本的Unified Manager伺服器配對時、您必須注意。
+
+下表列出支援不同Unified Manager伺服器版本的工作流程。
+
+[cols="3*"]
+|===
+| 工作流程名稱 | Unified Manager Server 6.3及更高版本均支援 | Unified Manager伺服器5.x支援 
+
+
+ a| 
+中止SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+新增或擴充容量儲存類別至Infinite Volume
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+新增或擴充效能儲存類別至Infinite Volume
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+打破SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+CIFS/SMB伺服器組態
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+HA配對的控制器和機櫃升級
+ a| 
+是的
+ a| 
+是的
+
+僅支援執行Data ONTAP 版本早於支援版本的叢集。
+
+
+
+ a| 
+建立基本的叢集Data ONTAP 式功能
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+建立叢集Data ONTAP 式的SFC NFS Volume
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+建立叢集Data ONTAP 式的叢集式功能區樹狀CIFS共用
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+建立叢集Data ONTAP 式的流通量
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+建立叢集Data ONTAP 式的「叢集式功能」CIFS共用區
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+使用Data ONTAP QoS原則群組建立叢集式的SQVolume
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立Cron排程
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+建立並設定具有無限Volume的儲存虛擬機器
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立及設定NAS儲存虛擬機器
+ a| 
+是的
+ a| 
+是的
+
+僅支援執行Data ONTAP 版本早於支援版本的叢集。
+
+
+
+ a| 
+建立及設定SAN儲存虛擬機器
+ a| 
+是的
+ a| 
+是的
+
+僅支援執行Data ONTAP 版本早於支援版本的叢集。
+
+
+
+ a| 
+在Data ONTAP 8.1.x上建立叢集式的SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立排程和原則
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立排程和原則
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+然後建立SnapMirror、再建立SnapMirror串聯
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立SnapMirror、然後SnapVault 再建立不含資訊的串聯
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立SnapVault 不一樣的關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+然後建立SnapVault SnapMirror串聯
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+在叢集Data ONTAP 式的VMware Infrastructure儲存設備上建立VMware NFS資料存放區
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+利用Data ONTAP SnapMirror關係建立、對應及保護叢集式的SnapMirror LUN
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+建立叢集對等關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+展開「無限Volume」而不使用儲存類別
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+修改SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+移動叢集Data ONTAP 式的「叢集式」功能
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+多重傳輸協定檔案存取
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+多重傳輸協定伺服器組態
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+NFSv3檔案存取
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+NFSv3伺服器組態
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+利用SnapMirror關係保護Volume
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+利用不受資料保護的關係來保護Volume SnapVault
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+靜止SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+移除叢集Data ONTAP 式的「叢集式」功能
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+移除SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+恢復SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+重新同步SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+反轉重新同步SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+設定Infinite Volume的資料保護
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+SMB檔案存取
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+儲存虛擬機器對等
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+儲存虛擬機器根磁碟區促銷活動
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+儲存虛擬機器根磁碟區保護
+ a| 
+是的
+ a| 
+否
+
+
+
+ a| 
+傳輸SnapMirror關係
+ a| 
+是的
+ a| 
+否
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具"^]

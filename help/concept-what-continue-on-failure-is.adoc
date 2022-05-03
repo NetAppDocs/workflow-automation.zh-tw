@@ -1,0 +1,25 @@
+---
+permalink: help/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, access, file, icon 
+summary: 「失敗時繼續」功能可協助您設定工作流程中的步驟、以便即使步驟失敗也能繼續執行工作流程。您可以存取wfa.log檔案或按一下圖示來解決導致步驟失敗的失敗步驟、並解決此問題。 
+---
+= 故障時繼續的運作方式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「失敗時繼續」功能可協助您設定工作流程中的步驟、以便即使步驟失敗也能繼續執行工作流程。您可以存取「wfa.log」檔案、或按一下、來解決導致步驟失敗的問題 image:../media/info_icon_execute_wfa.gif[""] 圖示。
+
+執行完成後、具有一或多個此類失敗步驟的工作流程會處於「部分成功」狀態。您可以設定步驟、以便即使步驟失敗、仍能繼續執行工作流程、方法是在「參數」對話方塊的「進階」索引標籤中選取所需的選項。
+
+如果未將步驟設定為失敗時繼續、則當步驟失敗時、工作流程執行將會中止。
+
+如果設定為在失敗時繼續的步驟失敗、您可以使用下列其中一個選項來設定要執行的工作流程：
+
+* 中止工作流程執行（預設選項）
+* 從下一步繼續執行
+* 從下一列繼續執行
+

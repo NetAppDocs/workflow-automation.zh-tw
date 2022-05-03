@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/task-configure-your-preferred-perl-distribution-linux.html 
+sidebar: sidebar 
+keywords: configure, preferred, perl distribution 
+summary: 安裝在您系統上的Perl套件是OnCommand Workflow Automation 由NetApp使用的。如果您想要使用另一個Perl發佈版本、可以設定偏好的Perl發佈來搭配WFA使用。 
+---
+= 設定您偏好的Perl發佈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝在您系統上的Perl套件是OnCommand Workflow Automation 由NetApp使用的。如果您想要使用另一個Perl發佈版本、可以設定偏好的Perl發佈來搭配WFA使用。
+
+您必須在WFA伺服器上安裝所需的Perl發佈版本。
+
+.步驟
+. 在Shell提示下、瀏覽至WFA伺服器上的下列目錄：WFA_install_LOWS/WFA/BIN/
+. 輸入下列命令：
++
+/`wFA --custom-perl[=perl_path]--ret=wfa'
+
++
+「/wFA」-自訂perl=/usr/local/perl5-11/bin/perl -重新啟動=wfa
+
+

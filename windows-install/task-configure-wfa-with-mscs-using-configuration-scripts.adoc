@@ -1,0 +1,151 @@
+---
+permalink: windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, mscs 
+summary: 在Microsoft叢集伺服器（MSCS）中安裝Workflow Automation（WFA）之後、您必須使用組態指令碼、在MSCS中設定WFA的高可用度。 
+---
+= 使用MSCS設定Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Microsoft叢集伺服器（MSCS）中安裝Workflow Automation（WFA）之後、您必須使用組態指令碼、在MSCS中設定WFA的高可用度。
+
+您必須已建立WFA的備份。
+
+
+NOTE: 在開始組態之前、請確定兩個MSCS叢集節點上的WFA加密金鑰設定一致。如果未在兩個節點上設定、則當發生容錯移轉時、無法在第二個節點上解密認證、導致工作流程失敗。
+
+.步驟
+. 登入至MSCS叢集的第一個節點、然後執行下列步驟：
++
+[cols="2*"]
+|===
+| 適用於... | 執行此動作... 
+
+
+ a| 
+Windows 2012、Windows 2016、Windows 2019
+ a| 
+.. 在容錯移轉叢集管理員中、於*服務角色*上按一下滑鼠右鍵。
+.. 選取*建立空白服務角色*、然後將角色重新命名為「'WFA」。
+.. 將IP位址資源新增至新建立的「WFA」角色：
++
+... 在容錯移轉叢集管理員中、以滑鼠右鍵按一下新建立的「WFA」角色。
+... 選擇*資源*>*更多資源*>* IP位址*。
+... 設定叢集IP位址。
+
+
+
+
+|===
+. 編輯「mSCS_data_parameters.xml」檔案、並設定MySQL資料目錄的相對路徑：
++
+[listing]
+----
+<dir>
+    <description>Data directory</description>
+    <srcpath>..\..\..\..\..\ProgramData\MySQL\MySQLServerData</srcpath>
+    <destpath>wfa</destpath>
+</dir>
+----
+. 編輯「mSCS_resource_properties.xml」檔案、並進行下列更新：
++
+.. 執行「NA_WFA_DB」服務名稱的「尋找/取代」、並將其更新為「MoYSQL57」。
+.. 將「vip_res <prettyname>」設定為虛擬IP位址名稱：
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>vip_res</id>
+    <prettyname>WFA IP address</prettyname>
+</resource>
+----
+.. 將「data_res <prettyname>」設定為指派給共用磁碟資源的磁碟名稱：
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>datadisk_res</id>
+    <prettyname>Cluster Disk 2</prettyname>
+</resource>
+----
+.. 將XML檔案從第一個節點複製到第二個節點：
++
+複製「\node1\D$\Program Files\NetApp\WFA \bin \ha\* XML」「D：\Program Files\NetApp\WFA \bin \ha」
+
+.. 執行命令、將第二個節點加入叢集：
++
+「d:\Program Files\NetApp\WFA\BIN\ha>perl ha_setup.pl --join -t sSCs- f E：\」
+
+
+
+. 在命令提示字元下、執行ha_setup.pl指令碼、將WFA資料移至共享位置、並使用MSCS設定WFA進行容錯移轉。此指令碼可從WFA_install_LOUSE\WFA\bin\ha\取得。
++
+「perl ha_setup.pl -首先[-t type__of_cluster _vcs][-g cluster _group名稱][-I ip_address_name][-n cluster名稱][-k shared_disk資源名稱][-f shared_drive_path]
+
++
+ha_setup.pl指令碼會要求使用IP位址資源來輸入、以用於MSCS叢集。在2016年的MSCS上安裝時、必須以名稱（而非IP位址）、「WFA IP位址」來新增資源。例如：
+
++
+「perl ha_setup.pl - first -t pSCs- g wfa -i "wFA IP address"-n wfa_cluster -k "Cluster Disk 2"-f E：\」
+
+. 檢查輸出中是否顯示「Successfully configured（已成功設定）」訊息、確認已建立了MSCS資源。
++
+[listing]
+----
+Successfully configured MSCS cluster resources on this node
+----
+. 從容錯移轉叢集管理程式停止WFA服務：
++
+[cols="2*"]
+|===
+| 適用於... | 執行此動作... 
+
+
+ a| 
+Windows 2012、Windows 2016、Windows 2019
+ a| 
+.. 選取*服務角色*、然後選取新建立的「WFA」角色。
+.. 在資源窗格中、以滑鼠右鍵按一下* MySQL57*、然後選取*離線*。
+.. 在「資源」窗格中、以滑鼠右鍵按一下「* NA_WFA_SRV*」、然後選取「*離線*」。
+
+
+|===
+
+
+WFA資料庫服務和WFA伺服器服務必須離線。不得從Windows服務停止WFA服務。
+
+. 手動將WFA資源移至次要節點。
+. 驗證共享磁碟是否可從第二個節點存取。
+. 在命令提示字元下、在叢集的次要節點上執行ha_setup.pl指令碼、以設定WFA使用來自共享位置的資料：
++
+"perl ha_setup.pl --join [-t type__of_cluster _mSCs][-f shared_drive_path]
+
++
+ha_setup.pl指令碼位於WFA_install_LOUSE\WFA\bin\ha\。
+
++
+「perl ha_setup.pl - join -t sSCs- f E：\」
+
+. 從容錯移轉叢集管理程式、將WFA資源上線：
++
+[cols="2*"]
+|===
+| 適用於... | 執行此動作... 
+
+
+ a| 
+Windows 2012、Windows 2016、Windows 2019
+ a| 
+.. 在新建立的「'WFA」角色上按一下滑鼠右鍵、然後選取*「Start role」（開始角色）*。角色必須處於執行中狀態、且個別資源必須處於「線上」狀態。
+
+
+|===
+. 手動切換至MSCS叢集的第二個節點。
+. 確認WFA服務已在叢集的第二個節點上正確啟動。
+

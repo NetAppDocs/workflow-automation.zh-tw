@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation 
+summary: 利用支援的支援功能、您可以設定各種設定、例如、功能性和通知。OnCommand Workflow Automation AutoSupport 
+---
+= 設定OnCommand Workflow Automation 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用支援的支援功能、您可以設定各種設定、例如、功能性供您選擇的功能、例如：功能性供您選擇的功能和通知。OnCommand Workflow Automation AutoSupport
+
+設定WFA時、您可以視需要設定下列一項或多項：
+
+* 將不支援的訊息傳送給技術支援部門AutoSupport AutoSupport
+* Microsoft Active Directory輕量型目錄存取傳輸協定（LDAP）伺服器、適用於WFA使用者的LDAP驗證與授權
+* 電子郵件通知工作流程作業及傳送AutoSupport 功能不正常的訊息
+* 簡單網路管理傳輸協定（SNMP）、以通知工作流程作業
+* 用於遠端資料記錄的系統記錄
+

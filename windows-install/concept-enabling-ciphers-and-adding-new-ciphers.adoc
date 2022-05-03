@@ -1,0 +1,36 @@
+---
+permalink: windows-install/concept-enabling-ciphers-and-adding-new-ciphers.html 
+sidebar: sidebar 
+keywords: enable ciphers, add new ciphers, ciphers 
+summary: 支援許多現成密碼。OnCommand Workflow Automation此外、您也可以視需要新增其他密碼。 
+---
+= 啟用密碼並新增密碼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援許多現成密碼。OnCommand Workflow Automation此外、您也可以視需要新增其他密碼。
+
+下列密碼可立即啟用：
+
+[listing]
+----
+enabled-cipher-suites=
+"TLS_DHE_DSS_WITH_AES_128_GCM_SHA256,TLS_DHE_DSS_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,
+TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,
+TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384"
+----
+您可以在「獨立式-Full.xml」檔案中新增其他密碼到此組態。此檔案位於：「<installdir>/jboss/s獨立 式/組態/獨立式-Full.xml」。
+
+可修改檔案以支援其他密碼、如下所示：
+
+[listing]
+----
+<https-listener name="https" socket-binding="https" max-post-size="1073741824" security-realm="SSLRealm"
+enabled-cipher-suites="**< --- add additional ciphers here ---\>**
+enabled-protocols="TLSv1.1,TLSv1.2"/>
+----

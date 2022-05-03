@@ -1,0 +1,135 @@
+---
+permalink: help/reference-categories-window.html 
+sidebar: sidebar 
+keywords: category, window, enable, manage, workflow 
+summary: 「類別」視窗可讓您管理工作流程類別。 
+---
+= 類別視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「類別」視窗可讓您管理工作流程類別。
+
+
+NOTE: 視您的角色和帳戶權限而定、可能不會顯示此視窗。
+
+* 類別表格
+* 工具列
+
+
+類別是一組工作流程、可讓您完成工作。您可以將一組相關的工作流程分組、以建立類別。您也可以將存取權授予特定使用者、以操作類別。
+
+
+
+== 類別表格
+
+「類別」表格會列出工作流程類別。這些類別由下列其中一項識別：
+
+* image:../media/community_certification.gif[""] -使用者建立的內容
+* image:../media/ps_certified_icon_wfa.gif[""] 由專業服務（PS）開發的內容、僅適用於PS所製作的自訂安裝
+* image:../media/community_certification.gif[""] -由使用者開發的套件
+* image:../media/lock_icon_wfa.gif[""] -由鎖定的使用者所建立的內容
+* image:../media/netapp_certified.gif[""] - NetApp認證內容
+
+
+您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。
+
+* image:../media/filter_icon_wfa.gif["篩選圖示"] 啟用或停用整個表格的篩選。如果停用篩選功能、圖示上會出現紅色的「x」。
+* 按兩下 image:../media/filter_icon_wfa.gif["篩選圖示"] 清除並重設篩選選項。
+* image:../media/wfa_filter_icon.gif["篩選圖示"] 在每個欄標題上、您都可以根據欄的內容進行篩選。按一下 image:../media/wfa_filter_icon.gif["篩選圖示"] 欄中的可讓您篩選下拉式清單或所有可用項目的特定項目。
+* 按一下欄標題、即可切換遞增或遞減排序順序。您可以使用排序箭頭來識別套用的排序順序（image:../media/wfa_sortarrow_up_icon.gif["排序圖示"] 用於遞增和 image:../media/wfa_sortarrow_down_icon.gif["向下排序圖示"] 降序）。
+* 若要重新排列欄位的位置、您可以拖放欄位、以任何所需的順序排列欄位。不過、您無法隱藏或刪除這些欄。
+* 按一下「*搜尋*篩選」文字方塊、即可搜尋特定內容。此外、您也可以使用支援的運算子來搜尋適用的欄類型、字母或數字。
+
+
+「類別」表格包含下列欄位：
+
+* *認證*
++
+指出類別是否為使用者建立的（image:../media/community_certification.gif[""]）、PS（image:../media/ps_certified_icon_wfa.gif[""]）、社群（image:../media/community_certification.gif[""]）、使用者鎖定（image:../media/lock_icon_wfa.gif[""]）、或NetApp認證的（image:../media/netapp_certified.gif[""]）。
+
+* *名稱*
++
+顯示類別名稱。
+
+* *說明*
++
+顯示類別說明。
+
+* *工作流程*
++
+顯示類別中可用的工作流程。
+
+* *用於工作流程授權*
++
+** 針對僅限特定使用者擔任營運者角色的類別、顯示「'true'」。
+** 針對所有具有營運者角色的使用者可用的類別、顯示「'假'」。
+
+
+* *使用者*
++
+顯示具有核准者或操作者角色、並有權執行類別的使用者名稱。
+
+* * Active Directory群組*
++
+指出獲授權執行類別的Active Directory群組名稱。
+
++
+您可以在*搜尋*篩選條件文字方塊中輸入群組名稱、以搜尋群組。
+
+* *上次更新日期*
++
+顯示上次更新類別的日期和時間。
+
+* *更新者*
++
+顯示更新類別的使用者名稱。
+
+
+
+
+
+== 工具列
+
+工具列位於欄標題上方。您可以使用工具列中的圖示來執行各種動作。您也可以從視窗中的滑鼠右鍵功能表存取這些動作。
+
+* *image:../media/new_wfa_icon.gif["新圖示"] （新版）*
++
+開啟「新類別」對話方塊、可讓您建立新類別。
+
+* *image:../media/edit_wfa_icon.gif["編輯圖示"] （編輯）*
++
+開啟類別對話方塊、可讓您編輯選取的類別。您也可以按兩下類別以開啟類別<CATER_Name>對話方塊。
+
+* *image:../media/clone_wfa_icon.gif["複製圖示"] （複製）*
++
+開啟「New Category（新類別）」-「Copy（複製）」對話方塊、可讓您建立所選類別的複本或複本。
+
+* *image:../media/delete_wfa_icon.gif["刪除圖示"] （刪除）*
++
+開啟「刪除類別」確認對話方塊、可讓您刪除選取的類別。
+
+* *image:../media/export_wfa_icon.gif["匯出圖示"] （匯出）*
++
+可讓您匯出選取的類別。
+
+* *image:../media/add_to_pack.png["新增至套件圖示"] （新增至套件）*
++
+開啟「新增至套件類別」對話方塊、可讓您將類別及其可靠實體新增至可編輯的套件。
+
++
+
+NOTE: 「新增至套件」功能僅適用於認證設為*無的類別。*
+
+* *image:../media/remove_from_pack.png["從套件移除圖示"] （從套件中移除）*
++
+開啟所選類別的「從套件類別中移除」對話方塊、可讓您刪除或移除套件中的類別。
+
++
+
+NOTE: 「從套件移除」功能只會針對認證設定為*無的類別啟用。*
+
+

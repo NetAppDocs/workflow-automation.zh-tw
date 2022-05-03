@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, dialog box, enable, add, oncommand, workflow, automation, predefined, meet, requirement, change, configuration 
+summary: 如果OnCommand Workflow Automation 預先定義的系統類型不符合您的需求、或您想要變更預先定義系統類型的組態、您可以在「New Remote System Type（新遠端系統類型）」對話方塊中新增新的遠端系統類型至WFA。 
+---
+= 「新增遠端系統類型」對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果OnCommand Workflow Automation 預先定義的系統類型不符合您的需求、或您想要變更預先定義系統類型的組態、您可以在「New Remote System Type（新遠端系統類型）」對話方塊中新增新的遠端系統類型至WFA。
+
+* 詳細資料索引標籤
+* 驗證指令碼索引標籤
+
+
+
+
+== 詳細資料索引標籤
+
+可讓您指定遠端系統類型的詳細資料、例如名稱、說明、版本和連線傳輸協定。
+
+* *名稱*
++
+可讓您指定遠端系統類型的名稱。您必須指定名稱、才能儲存遠端系統類型。
+
+* *說明*
++
+可讓您輸入遠端系統類型的說明。
+
+* *版本*
++
+可讓您指定遠端系統類型的版本號碼、格式為「major.m輕.remite.remition」、例如1.1.0。
+
+* *連線傳輸協定*
++
+可讓您選取下列其中一個通訊協定、以便在連線至遠端系統時使用WFA：
+
++
+** HTTPS、可回退至HTTP
++
+連線主要使用HTTPS。如果透過HTTPS連線失敗、則會使用HTTP。如果透過HTTP連線也失敗、連線嘗試就會中斷。
+
+** 僅限HTTPS
+** 僅限HTTP
+** 自訂
+
+
+
+
+選取連線傳輸協定時、會填入傳輸協定、預設連接埠和預設逾時（秒）欄位中的資料。
+
+
+
+== 驗證指令碼索引標籤
+
+可讓您使用遠端系統類型來測試所選傳輸協定的連線能力。
+
+您可以按一下*測試Perl指令碼*來執行指令碼來測試連線能力。
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存遠端系統類型的組態設定、然後關閉對話方塊。
+
+* *取消*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+

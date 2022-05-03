@@ -1,0 +1,130 @@
+---
+permalink: help/reference-remote-system-types-window.html 
+sidebar: sidebar 
+keywords: remote, system, types, windows, display, type, remote, oncommand, Workflow, automation, work, include, clustered, data, cloud manager, active, unified manager, datafabric, manager, server, e-series 
+summary: 「遠端系統類型」視窗會顯示OnCommand Workflow Automation 可搭配使用的遠端系統類型（WFA）。遠端系統包括叢集Data ONTAP 式的功能性、Cloud Manager、Active IQ Unified Manager 功能性、DataFabric Manager伺服器和E系列系統。 
+---
+= 遠端系統類型視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「遠端系統類型」視窗會顯示OnCommand Workflow Automation 可搭配使用的遠端系統類型（WFA）。遠端系統包括叢集Data ONTAP 式的功能性、Cloud Manager、Active IQ Unified Manager 功能性、DataFabric Manager伺服器和E系列系統。
+
+* 遠端系統類型表
+* 工具列
+
+
+
+
+== 遠端系統類型表
+
+遠端系統類型表格會以表格格式列出WFA可搭配使用的遠端系統。您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。
+
+* image:../media/filter_icon_wfa.gif["篩選圖示"] 啟用或停用整個表格的篩選。如果停用篩選功能、圖示上會出現紅色的「x」。
+* 按兩下 image:../media/filter_icon_wfa.gif["篩選圖示"] 清除並重設篩選選項。
+* image:../media/wfa_filter_icon.gif["篩選圖示"] 在每個欄標題上、您都可以根據欄的內容進行篩選。按一下 image:../media/wfa_filter_icon.gif["篩選圖示"] 欄中的可讓您篩選下拉式清單或所有可用項目的特定項目。
+* 按一下欄標題、即可切換遞增或遞減排序順序。您可以使用排序箭頭來識別套用的排序順序（image:../media/wfa_sortarrow_up_icon.gif["排序圖示"] 用於遞增和 image:../media/wfa_sortarrow_down_icon.gif["向下排序圖示"] 降序）。
+* 若要重新排列欄位的位置、您可以拖放欄位、以任何所需的順序排列欄位。不過、您無法隱藏或刪除這些欄。
+* 按一下「*搜尋*篩選」文字方塊、即可搜尋特定內容。此外、您也可以使用支援的運算子來搜尋適用的欄類型、字母或數字。
+
+
+遠端系統類型表包含下列欄位：
+
+* *名稱*
++
+顯示遠端系統類型的名稱。
+
++
+您可以在「*搜尋*篩選器」文字方塊中輸入遠端系統類型的名稱、以進行搜尋。
+
+* *實體版本*
++
+顯示遠端系統類型的目前版本、格式為「major.mine.reversion」、例如1.1.0。
+
++
+您可以在「*搜尋*篩選器」文字方塊中輸入版本編號、以搜尋遠端系統類型。
+
+* *說明*
++
+顯示遠端系統類型的說明。
+
++
+您可以在「*搜尋*篩選器」文字方塊中輸入遠端系統類型的說明、以進行搜尋。
+
+* *上次更新日期*
++
+顯示上次更新遠端系統類型的日期和時間。
+
++
+您可以從篩選器下拉式清單中選取所需的時間類別、以搜尋遠端系統類型。
+
+* *更新者*
++
+顯示更新遠端系統類型的使用者名稱。
+
++
+您可以在*搜尋*篩選器文字方塊中輸入使用者名稱、以搜尋遠端系統類型。
+
+* *鎖定者*
++
+顯示鎖定遠端系統類型的使用者名稱。
+
++
+您可以在*搜尋*篩選器文字方塊中輸入使用者名稱、以搜尋遠端系統類型。
+
+
+
+
+
+== 工具列
+
+工具列位於欄標題上方。您可以使用工具列中的圖示來執行各種動作。您也可以從視窗中的滑鼠右鍵功能表存取這些動作。
+
+* *image:../media/new_wfa_icon.gif["新圖示"] （新版）*
++
+開啟「新增遠端系統類型」對話方塊、可讓您輸入詳細資料、將新的遠端系統類型新增至WFA。
+
+* *image:../media/edit_wfa_icon.gif["編輯圖示"] （編輯）*
++
+開啟所選遠端系統類型的「遠端系統類型」對話方塊、可讓您編輯遠端系統類型。
+
+* *image:../media/clone_wfa_icon.gif["複製圖示"] （複製）*
++
+開啟新的遠端系統類型<RemoteSystemTypeName>-複本對話方塊、可讓您建立所選遠端系統類型的複本或複本。
+
+* *image:../media/lock_wfa_icon.gif["鎖定圖示"] （鎖定）*
++
+開啟「鎖定遠端系統類型」確認對話方塊、可讓您鎖定選取的遠端系統類型。此選項僅適用於您建立的遠端系統類型。
+
+* *image:../media/unlock_wfa_icon.gif["解除鎖定圖示"] （解除鎖定）*
++
+開啟「解除鎖定遠端系統類型」確認對話方塊、可讓您解除鎖定所選的遠端系統類型。此選項僅適用於您鎖定的遠端系統類型。系統管理員可以解除鎖定其他使用者鎖定的遠端系統類型。
+
+* *image:../media/delete_wfa_icon.gif["刪除圖示"] （刪除）*
++
+開啟「刪除遠端系統類型」確認對話方塊、可讓您刪除選取的遠端系統類型。
+
+* *image:../media/export_wfa_icon.gif["匯出圖示"] （匯出）*
++
+可讓您匯出所選的遠端系統類型。
+
+* *image:../media/add_to_pack.png["新增至套件圖示"] （新增至套件）*
++
+開啟「新增至套件遠端系統類型」對話方塊、可讓您將遠端系統類型及其可靠實體新增至可編輯的套件。
+
++
+
+NOTE: 「新增至套件」功能只會針對認證設為*無的遠端系統類型啟用。*
+
+* *image:../media/remove_from_pack.png["從套件移除圖示"] （從套件中移除）*
++
+開啟所選遠端系統類型的「從套件移除遠端系統類型」對話方塊、可讓您從套件中刪除或移除遠端系統類型。
+
++
+
+NOTE: 「從套件移除」功能只會針對認證設定為*無的遠端系統類型啟用。*
+
+

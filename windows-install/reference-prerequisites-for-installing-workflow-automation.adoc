@@ -1,0 +1,151 @@
+---
+permalink: windows-install/reference-prerequisites-for-installing-workflow-automation.html 
+sidebar: sidebar 
+keywords: prerequisites, install, workflow, automation 
+summary: 在安裝OnCommand Workflow Automation 更新（WFA）之前、您必須確保擁有所需的資訊、並且已完成某些工作。 
+---
+= 安裝Workflow Automation的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝OnCommand Workflow Automation 更新（WFA）之前、您必須確保擁有所需的資訊、並且已完成某些工作。
+
+在系統上安裝WFA之前、您必須先完成下列工作：
+
+* 從NetApp支援網站下載WFA安裝檔案、然後將檔案複製到您要安裝WFA的伺服器
++
+
+NOTE: 您必須擁有有效的認證資料、才能登入NetApp支援網站。如果您沒有有效的認證資料、可以在NetApp支援網站上註冊以取得認證資料。
+
+* 驗證系統是否可視情況存取下列項目：
++
+** 儲存控制器
+** Active IQ Unified Manager
+** VMware vCenter
+
+
+
+
+[NOTE]
+====
+如果您的環境需要安全Shell（SSH）存取能力、您必須確保目標控制器上已啟用SSH。
+
+====
+* 驗證是否已安裝PowerShell 3.0或更新版本
+* 如果您使用WFA在VMware vSphere上執行工作流程、請確保已安裝VMware Power CLI
+* 收集必要的組態資訊
+* 如果您使用Invoke-MysqlQuery Cmdlet、請確定已安裝MySQL .Net連接器
+
+
+
+
+== 必要的組態資訊
+
+[cols="3*"]
+|===
+| 單位或系統 | 詳細資料 | 目的 
+
+
+ a| 
+陣列
+ a| 
+* IP 位址
+* 使用者名稱和密碼
+
+ a| 
+在儲存系統上執行作業
+
+[NOTE]
+====
+儲存設備（陣列）需要root或admin帳戶認證。
+
+====
+
+
+ a| 
+vSphere
+ a| 
+* IP 位址
+* vCenter伺服器管理員的使用者名稱和密碼
+
+ a| 
+使用VMware API取得資料執行作業
+
+
+NOTE: 您必須安裝VMware Power CLI。
+
+
+
+ a| 
+外部儲存庫、例如OnCommand ：不均衡和自訂資料庫
+ a| 
+* IP 位址
+* 唯讀使用者帳戶的使用者名稱和密碼
+
+ a| 
+取得資料您必須建立相關的WFA內容、例如外部儲存庫的目錄項目和快取查詢、才能從外部儲存庫取得資料。
+
+
+
+ a| 
+郵件伺服器
+ a| 
+* IP 位址
+* 使用者名稱和密碼
+
+
+
+NOTE: 如果您的郵件伺服器需要驗證、則必須提供使用者名稱和密碼。
+ a| 
+透過電子郵件接收WFA通知
+
+
+
+ a| 
+伺服器AutoSupport
+ a| 
+* 郵件主機
+
+ a| 
+透過SMTP傳送AutoSupport 功能不支援的訊息如果您沒有設定郵件主機、可以使用HTTP或HTTPS來傳送AutoSupport 不支援的訊息。
+
+
+
+ a| 
+Microsoft Active Directory（AD）LDAP伺服器
+ a| 
+* IP 位址
+* 使用者名稱和密碼
+* 群組名稱
+
+ a| 
+使用AD LDAP或AD LDAPS驗證及授權
+
+
+
+ a| 
+SNMP管理應用程式
+ a| 
+* IP 位址
+* 連接埠
+
+ a| 
+接收WFA SNMP通知
+
+
+
+ a| 
+系統記錄伺服器
+ a| 
+* IP 位址
+
+ a| 
+傳送記錄資料
+
+|===
+*相關資訊*
+
+https://mysupport.netapp.com/site/["NetApp支援"^]

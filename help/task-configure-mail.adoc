@@ -1,0 +1,32 @@
+---
+permalink: help/task-configure-mail.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, email, notifications, operations, fail 
+summary: 您可以設定OnCommand Workflow Automation 將有關工作流程作業的電子郵件通知傳送給您（例如、工作流程已啟動或工作流程失敗）。 
+---
+= 設定電子郵件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 將有關工作流程作業的電子郵件通知傳送給您（例如、工作流程已啟動或工作流程失敗）。
+
+*您需要的是什麼*
+
+您必須在環境中設定郵件主機。
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下「*設定*」、然後在「*設定*」下按一下「*郵件*」。
+. 在欄位中輸入必要資訊。
+. *選用：*執行下列步驟測試郵件設定：
++
+.. 按一下*傳送測試郵件*。
+.. 在「*測試連線*」對話方塊中、輸入您要傳送電子郵件的電子郵件地址。
+.. 按一下* Test*。
+
+
+. 按一下「 * 儲存 * 」。
+

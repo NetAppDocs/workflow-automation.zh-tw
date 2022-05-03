@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, cli 
+summary: 災難發生時、在恢復資料時、您可以還原OnCommand Workflow Automation 先前使用命令列介面（CLI）備份的還原（WFA）資料庫和支援組態。支援的組態包括資料存取、HTTP逾時和SSL憑證。 
+---
+= 使用CLI還原WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+災難發生時、在恢復資料時、您可以還原OnCommand Workflow Automation 先前使用命令列介面（CLI）備份的還原（WFA）資料庫和支援組態。支援的組態包括資料存取、HTTP逾時和SSL憑證。
+
+以下是兩種類型的還原：
+
+* 完整還原
+* 定期還原
+

@@ -1,0 +1,57 @@
+---
+permalink: rhel-install/task-upgrade-mysql-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, mysql, linux 
+summary: 您可以在OnCommand Workflow Automation 安裝了此功能的Linux伺服器上升級至較新版本的MySQL、以取得安全性弱點的修正程式。 
+---
+= 升級Linux上的MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在OnCommand Workflow Automation 安裝了此功能的Linux伺服器上升級至較新版本的MySQL、以取得安全性弱點的修正程式。
+
+您必須擁有安裝WFA的Linux系統的root權限。
+
+
+NOTE: 重新安裝WFA 4.2之前、如果您已解除安裝MySQL、則必須刪除MySQL資料目錄。
+
+您只能升級至MySQL 5.7的次要更新、例如5.7.22到5.7.26。您無法升級至MySQL的主要版本、例如5.8版。
+
+.步驟
+. 以root使用者身分登入WFA主機機器。
+. 在目標系統上下載最新的MySQL Community Server .rpm套件。
+. 將套件解壓縮到目標系統上的目錄。
+. 在解包之後、您會在目錄中取得多個.rpm套件、但WFA只需要下列rpm套件：
++
+** MySQL-community用戶端-5.7.x
+** MySQL-community - lips-5.7.x
+** MySQL-community伺服器-5.7.x
+** MySQL-社群- common - 5.7.x
+** MySQL-community - lips-compat -5.7.x刪除所有其他.rpm套件。在rpm套裝組合中安裝所有套件不會造成任何問題。
+
+
+. 在Shell提示下、停止WFA資料庫和伺服器服務：
++
+「服務WFA-DB停止」
+
++
+「服務WFA伺服器停止」
+
+. 使用下列命令叫用MySQL升級：
++
+「rpm -Uvh *。rpm」
+
++
+「*。rpm」是指下載較新MySQL版本的目錄中的.rpm套件。
+
+. 啟動WFA服務：
++
+「ervice WFA-DB start」
+
++
+「服務WFA伺服器啟動」
+
+

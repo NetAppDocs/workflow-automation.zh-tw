@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-restrict-access-rights-of-oncommand-workflow-automation-on-the-host.html 
+sidebar: sidebar 
+keywords: restrict, access rights, oncommand, workflow, automation, host 
+summary: 根據預設、OnCommand Workflow Automation 功能完善（WFA）會以主機系統管理員的身分執行工作流程。您可以變更預設設定、限制主機系統上的WFA權限。 
+---
+= 限制OnCommand Workflow Automation 主機上的存取權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據預設、OnCommand Workflow Automation 功能完善（WFA）會以主機系統管理員的身分執行工作流程。您可以變更預設設定、限制主機系統上的WFA權限。
+
+您必須以管理員身分登入WFA主機系統。
+
+.步驟
+. 建立新的Windows使用者帳戶、並具有開啟套接字及寫入WFA主目錄的權限。
+. 使用services.msc開啟Windows服務主控台、然後按兩下「* NetApp WFA資料庫*」。
+. 按一下*登入*索引標籤。
+. 選取*此帳戶*並輸入您所建立之新使用者的認證資料、然後按一下*確定*。
+. 按兩下「* NetApp WFA Server*」。
+. 按一下*登入*索引標籤。
+. 選取*此帳戶*並輸入您所建立之新使用者的認證資料、然後按一下*確定*。
+. 重新啟動* NetApp WFA資料庫*和* NetApp WFA伺服器*服務。
+

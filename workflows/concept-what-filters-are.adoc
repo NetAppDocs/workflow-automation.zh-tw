@@ -1,0 +1,16 @@
+---
+permalink: workflows/concept-what-filters-are.html 
+sidebar: sidebar 
+keywords: use, filters, workflows, select, required, resources 
+summary: 您可以在工作流程中使用WFA篩選器來選取所需的資源。 
+---
+= 什麼是篩選條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流程中使用WFA篩選器來選取所需的資源。
+
+WFA篩選器是適用於WFA資料庫的SQL型查詢。每個篩選器都會傳回特定字典類型的元素清單。傳回的元素是根據SQL查詢中指定的選取條件而定。您必須注意SQL語法、才能建立或編輯篩選器。

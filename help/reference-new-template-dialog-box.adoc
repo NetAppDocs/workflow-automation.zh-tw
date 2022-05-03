@@ -1,0 +1,50 @@
+---
+permalink: help/reference-new-template-dialog-box.html 
+sidebar: sidebar 
+keywords: new, template, dialog box, enable, create, new 
+summary: 「新增範本」對話方塊可讓您建立新範本。 
+---
+= 新範本對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「新增範本」對話方塊可讓您建立新範本。
+
+* *名稱*
++
+可讓您輸入範本名稱。
+
+* *類型*
++
+可讓您從清單中選取一個字典物件。
+
+* *實體版本*
++
+可讓您以「major.mine.re版本」格式輸入範本的版本編號、例如1.1.0。
+
+* *說明*
++
+可讓您輸入範本的說明。
+
+* *屬性*
++
+顯示所選字典物件的屬性、並可讓您輸入每個屬性的值、例如enum和Function。
+
+
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存範本並關閉對話方塊。
+
+* *取消*
++
+不會儲存範本並關閉對話方塊。
+
+

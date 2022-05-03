@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html 
+sidebar: sidebar 
+keywords: manage, oncommand, workflow, automation, ssl certificate 
+summary: 您可以使用OnCommand Workflow Automation 自我簽署的憑證或由憑證授權單位（CA）簽署的憑證來取代預設的WFA（WFA）SSL憑證。 
+---
+= 管理OnCommand Workflow Automation 功能SSL憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用OnCommand Workflow Automation 自我簽署的憑證或由憑證授權單位（CA）簽署的憑證來取代預設的WFA（WFA）SSL憑證。
+
+預設的自我簽署WFA SSL憑證會在安裝WFA期間產生。升級時、先前安裝的憑證會被新的憑證取代。如果您使用非預設的自我簽署憑證或由CA簽署的憑證、則必須以憑證取代預設的WFA SSL憑證。

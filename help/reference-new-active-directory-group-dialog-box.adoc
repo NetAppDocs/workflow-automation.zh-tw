@@ -1,0 +1,87 @@
+---
+permalink: help/reference-new-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: active, directory, group, enable, create, new, oncommand, workflow, automation 
+summary: 「New Active Directory Group」（新Active Directory群組）對話方塊可讓您建立新OnCommand Workflow Automation 的「Active Directory群組」。 
+---
+= 「新Active Directory群組」對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「New Active Directory Group」（新Active Directory群組）對話方塊可讓您建立新OnCommand Workflow Automation 的「Active Directory群組」。
+
+* *群組名稱*
++
+指定群組名稱。
+
+* *角色*
++
+可讓您選取下列其中一個群組角色：
+
++
+** *來賓*
++
+此群組只能檢視工作流程執行狀態、或收到工作流程執行狀態變更通知。
+
+** *營運者*
++
+此群組可預覽及執行群組所存取的工作流程。
+
+** *核准人*
++
+此群組可預覽、執行、核准及拒絕提供群組存取權的工作流程。
+
++
+
+NOTE: 您必須提供核准者的電子郵件ID、以及要通知核准者的工作流程狀態。如果有多位核准者、您可以在*電子郵件*欄位中提供群組電子郵件ID。
+
+** *架構設計師*
++
+此群組擁有建立工作流程的完整存取權、但受到限制、無法修改全域WFA伺服器設定。
+
+** *管理*
++
+此群組可完整存取WFA伺服器。
+
++
+
+NOTE: 您必須至少設定一個管理群組。
+
+
+
+* *電子郵件*
++
+可讓您指定在選取*通知開啟*選項時、要傳送通知的群組電子郵件地址。
+
+* *通知於*
++
+可讓您選擇何時應以電子郵件通知作用中目錄群組。工作流程執行狀態通知是針對群組執行的工作流程而定。您可以選擇下列選項的任意組合：
+
++
+** 工作流程執行已開始：工作流程執行開始時通知群組。
+** 工作流程執行失敗/部分成功：在工作流程執行失敗或工作流程成功執行時通知群組、即使有一或多個步驟失敗。
++
+執行完成的原因是失敗的步驟已設定為即使步驟失敗、仍可繼續執行工作流程。
+
+** 工作流程執行成功完成：工作流程執行成功時通知群組。
+** 工作流程執行等待核准：根據WFA組態設定、通知群組工作流程執行是否等待核准人、架構設計師或操作員群組的核准。
+
+
+
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存組態設定並關閉對話方塊。
+
+* *取消*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+

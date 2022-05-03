@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-check-in-a-new-pack-to-scm.html 
+sidebar: sidebar 
+keywords: create, new, workflow, pack, oncommand, automation, check, source, control, management 
+summary: 您可以使用OnCommand Workflow Automation 下列項目來建立新的工作流程套件：使用S廳（WFA）、然後將其存回來源控制管理（SCM）。 
+---
+= 將新的工作流程套件存回SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用OnCommand Workflow Automation 下列項目來建立新的工作流程套件：使用S廳（WFA）、然後將其存回來源控制管理（SCM）。
+
+必須設定SCM、而且您必須擁有系統管理員或架構設計師認證資料。
+
+.步驟
+. 透過網頁瀏覽器登入* WFA *視窗。
+. 建立新的工作流程套件。
++
+xref:task-create-a-workflow-automation-pack.adoc[建立工作流程自動化套件]
+
+. 將實體新增至您所建立的套件。
++
+xref:task-add-entity-to-a-workflow-automation-pack.adoc[將實體新增OnCommand Workflow Automation 至一個包裹]
+
+. 按一下*匯出至伺服器*圖示。
+. 在「匯出至伺服器資料夾」對話方塊的*伺服器系統的資料夾位置*欄位中、輸入要儲存套件的檔案系統位置、該套件將儲存在包含SCM用戶端的伺服器中。
++
+若要編輯或重新匯出套件或內容、請按一下*解除鎖定*圖示。
+
+. 在SCM用戶端位置、將套件內容存回SCM伺服器。
+

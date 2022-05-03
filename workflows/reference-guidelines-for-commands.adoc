@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 您必須瞭解OnCommand Workflow Automation 在還原（WFA）中建立命令的準則。 
+---
+= 命令準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解OnCommand Workflow Automation 在還原（WFA）中建立命令的準則。
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+命令使用易於識別的名稱。
+ a| 
+「Create Qtree」
+
+
+
+ a| 
+使用空格分隔字詞、每個字詞必須以大寫字元開頭。
+ a| 
+「Create Volume」（建立Volume）
+
+
+
+ a| 
+提供說明來說明命令的功能、包括選用參數的預期結果。
+ a| 
+無
+
+
+
+ a| 
+根據預設、標準命令的逾時時間為600秒。建立命令時會設定預設的逾時時間。只有在命令可能需要較長時間才能完成時、才可變更預設值。
+ a| 
+「Create Volume」命令
+
+
+
+ a| 
+如果是長時間執行的作業、請建立兩個命令：一個叫用長時間執行的作業、另一個則定期報告作業進度。第一個命令應該是「標準執行」命令類型、第二個命令應該是「等待條件」命令類型。
+ a| 
+「Create VSM（建立VSM）」和「Wait for VSM（等待VSM）」命令
+
+
+
+ a| 
+在「Wait for Condition」命令名稱加上「wait」字首、以便輕鬆識別。
+ a| 
+「等待CM Volume搬移」
+
+
+
+ a| 
+請針對「wait for condition」命令、使用適當的等待時間間隔。指定的值會控制執行輪詢命令的時間間隔、以檢查長時間執行作業是否完成。
+ a| 
+60秒的「等待VSM」命令取樣時間間隔
+
+
+
+ a| 
+對於「等待條件」命令、請根據長時間執行作業的預期完成時間、使用適當的逾時時間。如果作業涉及透過網路傳輸資料、預期時間可能會長得多。
+ a| 
+VSM基礎傳輸可能需要數天的時間才能完成。因此、指定的逾時時間為6天。
+
+|===
+
+
+== 字串表示法
+
+命令的字串表示法會在規劃和執行期間、在工作流程設計中顯示命令的詳細資料。命令的字串表示中只能使用命令參數。
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+避免使用沒有任何值的屬性。沒有值的屬性會顯示為NA。
+ a| 
+VolName 10.68.66.212[NA] aggr1/testVol7.
+
+
+
+ a| 
+使用下列分隔符號分隔字串表示中的不同項目：[]、/：
+ a| 
+_ArrayName[ArrayIp]_'
+
+
+
+ a| 
+為字串表示的每個值提供有意義的標籤。
+ a| 
+「Volume name=Volume Name_」
+
+|===
+
+
+== 命令定義語言
+
+可使用下列支援的指令碼語言來撰寫命令：
+
+* PowerShell
+* Perl
+
+
+
+
+== 命令參數定義
+
+命令參數會依名稱、說明、類型、參數的預設值、以及參數是否為必填。參數類型可以是「字串」、「布林」、「整數」、「長」、「雙」、 列舉、日期時間、容量、陣列、橋式、 密碼或mlDocument。雖然大多數類型的值都是直覺式的、但Array和Hashtable的值應採用下表所述的特定格式：
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+確定Array輸入類型的值是以逗號分隔的值清單。
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+輸入內容傳遞方式如下：0、3、6、9
+
+
+
+ a| 
+確認「橋式」輸入類型的值是以分號分隔的索引鍵=值配對清單。
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+輸入會以下列方式傳送：Volume1=100；Volume2=250；Volume 3=50
+
+|===

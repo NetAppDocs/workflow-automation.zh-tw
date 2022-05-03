@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: workflow, automation, wfa, linux, create, certificate, sign, request 
+summary: 您可以在Linux中建立憑證簽署要求（CSR）、以便使用由憑證授權單位（CA）簽署的SSL憑證、而非Workflow Automation（WFA）的預設SSL憑證。 
+---
+= 建立Workflow Automation的憑證簽署要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Linux中建立憑證簽署要求（CSR）、以便使用由憑證授權單位（CA）簽署的SSL憑證、而非Workflow Automation（WFA）的預設SSL憑證。
+
+* 您必須擁有已安裝WFA的Linux系統的root權限。
+* 您必須更換WFA提供的預設SSL憑證。
+
+
+此程序使用預設的WFA安裝路徑。如果您在安裝期間變更了預設路徑、則必須使用自訂的WFA安裝路徑。
+
+.步驟
+. 以root使用者身分登入WFA主機機器。
+. 在WFA伺服器上開啟Shell提示字元、然後將目錄變更為下列位置：<OpenJDK_install_location>/bin
+. 建立CSR檔案：
++
+「keytool-certreq -keystore wfa_install_kite/wfa/jboss/standale/configuration / keystore / wfa.keystore -alias "SSL keystore」-file /root/file_name.csr」
+
++
+file_name是CSR檔案的名稱。
+
+. 出現提示時、請提供密碼（預設或新的）。
++
+changeit是預設密碼。如果您不想使用預設密碼、則必須從WFA_install_location / WFA/Jboss /獨立/組態位置、變更standalone-full.xml檔案中SSL元素的密碼屬性。
+
++
+[listing]
+----
+<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
+----
+. 將file_name.csr檔案傳送至CA以取得簽署的憑證。
++
+如需詳細資料、請參閱CA網站。
+
+. 從CA下載鏈結憑證、然後將鏈結憑證匯入至Keystore：「keytool-import -alias "SSL keystore CA certe"-keystore wfa_install_stite/wfa/jboss/standale/configuration / keystore /wfa.keystore」-cercacerts -file C：\chlune_cert.cer
++
+C：\chain /cert.cer是從CA接收的鏈結憑證檔案。檔案必須為X．509格式。
+
+. 匯入您從CA收到的已簽署憑證：
++
+「keytool-import -alias "SSL Keystore」-keystore wfa_install_portion/wfa/jboss/standale/configuration / keystore / wfa.keystore」-cappacerts -file C：\Certificate .cer
+
++
+C：\Certificate .cer是從CA接收的鏈結憑證檔案。
+
+. 啟動WFA服務：
++
+「/WFA --start=DB'。/WFA --start=WFA
+
+

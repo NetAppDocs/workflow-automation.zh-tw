@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-add-entity-to-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: entity, workflow, pack, oncommand, automation, storage, integration, requirements 
+summary: 您可以將一或多個實體新增OnCommand Workflow Automation 至位於的流程套件（WFA）、以滿足儲存自動化和整合需求。 
+---
+= 新增實體至WFA工作流程套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將一或多個實體新增OnCommand Workflow Automation 至位於WFA（WFA）的工作流程套件、以滿足儲存自動化和整合需求。
+
+您可以從下列實體移除套件：
+
+* 工作流程
+* 尋找者
+* 篩選器
+* 命令
+* 功能
+* 範本
+* 方案
+* 字典
+* 資料來源類型
+* 遠端系統類型
+* 快取查詢
+* 類別
+
+
+.步驟
+. 透過網頁瀏覽器登入* WFA *視窗。
+. 在*工作流程設計入口網站*中、瀏覽至您要新增的實體、然後按一下*。
+. 在*實體*視窗中、選取您要新增至套件的實體。
+. 按一下「*新增至套件*」圖示。
++
+「Add to Pack」（新增至套件）僅適用於認證設為*無的實體。*
+
+. 在「*新增至套件*」對話方塊的「*可用套件*」下拉式清單中、選取您要新增實體的套件。
+. 按一下「*確定*」。
+

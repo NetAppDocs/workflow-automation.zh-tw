@@ -1,0 +1,36 @@
+---
+permalink: help/task-create-a-scheme.html 
+sidebar: sidebar 
+keywords: create, scheme, data, cached, new, data, source, type, store, workflows, directly, database 
+summary: 當必須從新的資料來源類型快取資料、或是必須由工作流程直接儲存資料至資料庫時、您必須建立配置。 
+---
+= 建立方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當必須從新的資料來源類型快取資料、或是必須由工作流程直接儲存資料至資料庫時、您必須建立配置。
+
+*您需要的是什麼*
+
+* 您必須已安裝WFA。
+* 您必須擁有WFA的系統管理員權限或架構認證。
+
+
+*關於此工作*
+
+根據預設、WFA支援兩種方案：資料來源擷取和其他。
+
+* 資料來源擷取配置：這些配置中的表格會由定義為從遠端系統取得資料的資料來源快取。
+* 其他方案：這些方案中的表格會透過自訂的工作流程填入資料、以解決特定問題。
+
+
+.步驟
+. 以系統管理員或架構設計師的身分、透過網頁瀏覽器登入WFA。
+. 按一下*資料來源設計*>*配置*。
+. 按一下以建立新方案 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新方案*」對話方塊中輸入所需的資訊、例如方案的名稱、類型、說明和實體版本。
+. 按一下「 * 儲存 * 」。
+

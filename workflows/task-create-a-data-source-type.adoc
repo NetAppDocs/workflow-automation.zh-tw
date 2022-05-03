@@ -1,0 +1,64 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 您必須建立資料來源類型、才能從OnCommand Workflow Automation 資料來源擷取資料、而此資料來源並非在NetApp（WFA）中預先定義。 
+---
+= 建立資料來源類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須建立資料來源類型、才能從OnCommand Workflow Automation 資料來源擷取資料、而此資料來源並非在NetApp（WFA）中預先定義。
+
+.您需要的是 #8217 ；需要的是什麼
+* 如果您要建立的自訂資料來源類型並非在WFA中預先定義、則必須建立所需的字典項目和配置。
+* 您必須注意PowerShell指令碼、才能建立使用指令碼方法的資料來源類型。
+
+
+.步驟
+. 按一下*資料來源設計*>*資料來源類型*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新資料來源類型*」對話方塊中、於「*資料來源*」、「*資料來源版本*」及「*方案*」欄位中輸入或選取所需的詳細資料。
+. 在*預設連接埠*欄位中、輸入連接埠號碼。
++
+《2638》
+
++
+當您新增此資料來源類型以進行資料擷取時、會填入您輸入的連接埠號碼。根據預設、WFA會使用連接埠與資料來源進行通訊、而且資料來源伺服器上的連接埠應為開啟狀態。
+
+. 從*方法*清單中、選取WFA取得資料時必須使用的方法：
++
+[cols="2*"]
+|===
+| 如果您已選取... | 然後... 
+
+
+ a| 
+SQL
+ a| 
+從*驅動程式類型*清單中、選取適用於資料來源的下列其中一個驅動程式：
+
+** * Sybase jConnect3*
+** * MySQL Connector/J*
+** * MySQL Server Jdbc驅動程式3.0*
+** * Oracle jdbc驅動程式11.2.0.3*
+
+
+
+
+ a| 
+指令碼
+ a| 
+在「*指令碼*」欄位中、輸入用來連接及擷取資料來源資料的PowerShell指令碼。
+
+[NOTE]
+====
+在相當於CSV檔的字典項目中、資料應包含標籤做為欄位分隔符號。例如、請參閱VMware vCenter資料來源類型的PowerShell指令碼。
+
+====
+|===
+. 按一下「 * 儲存 * 」。
+

@@ -1,0 +1,14 @@
+---
+permalink: windows-install/reference-troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshoot, installation, configuration issues 
+summary: 您可以疑難排解安裝和設定OnCommand Workflow Automation VMware（WFA）時可能發生的問題。 
+---
+= 疑難排解安裝與組態問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以疑難排解安裝和設定OnCommand Workflow Automation VMware（WFA）時可能發生的問題。

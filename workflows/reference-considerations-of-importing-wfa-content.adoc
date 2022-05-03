@@ -1,0 +1,44 @@
+---
+permalink: workflows/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, import, user-created, content, exported, oncommand, workflow, automation, installation, content, downloaded, storage, store, community 
+summary: 當您匯入使用者建立的內容、從另OnCommand Workflow Automation 一個版本（WFA）安裝匯出的內容、或是從Storage Automation Store或WFA社群下載的內容時、必須注意某些考量。 
+---
+= 輸入OnCommand Workflow Automation 內容時的考量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您匯入使用者建立的內容、從另OnCommand Workflow Automation 一個版本（WFA）安裝匯出的內容、或是從Storage Automation Store或WFA社群下載的內容時、必須注意某些考量。
+
+* WFA內容會另存為「.Dar」檔案、並可包含其他系統的完整使用者建立內容、或是工作流程、資料查詢器、命令及詞彙等特定項目。
+* 從.Dar檔案匯入現有類別時、匯入的內容會與類別中的現有內容合併。
++
+例如、WFA伺服器的類別A中有兩個工作流程WF1和WF2。如果將類別A中的WF3和Wf4工作流程匯入WFA伺服器、則類別A會在匯入後包含工作流程WF1、WF2、Wf3和Wf4。
+
+* 如果".DAR"檔案包含字典項目、則對應於該字典項目的快取表格會自動更新。
++
+如果快取表未自動更新、則會在「wfa.log」檔案中記錄錯誤訊息。
+
+* 當導入對WFA伺服器中不存在的套件具有相依性的.Dar檔案時、WFA會嘗試識別是否符合實體的所有相依性。
++
+** 如果一個或多個實體遺失、或是找到實體的較低版本、則匯入會失敗、並顯示錯誤訊息。
++
+此錯誤訊息提供應安裝的套件詳細資料、以符合相依性。
+
+** 如果找到較高版本的實體、或認證已變更、則會顯示關於版本不符的一般對話方塊、並完成匯入。
++
+版本不符的詳細資料會記錄在「WFA記錄檔」中。
+
+
+
+* 對於下列項目的問題與支援要求、必須導向WFA社群：
++
+** 從WFA社群下載的任何內容
+** 自訂您所建立的WFA內容
+** 您已修改的WFA內容
+
+
+

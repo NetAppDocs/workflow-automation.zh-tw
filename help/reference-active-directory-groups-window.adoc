@@ -1,0 +1,141 @@
+---
+permalink: help/reference-active-directory-groups-window.html 
+sidebar: sidebar 
+keywords: active, directory, group, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, select, settings, management, click 
+summary: 「Active Directory Groups（Active Directory群組）」視窗可讓您檢視、建立、編輯及刪除OnCommand Workflow Automation 「列舉」（WFA）Active Directory群組。您可以選取「設定」來存取此視窗、然後在「管理」下按一下「Active Directory群組」。 
+---
+= Active Directory群組視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「Active Directory Groups（Active Directory群組）」視窗可讓您檢視、建立、編輯及刪除OnCommand Workflow Automation 「列舉」（WFA）Active Directory群組。您可以選取*設定*來存取此視窗、然後在*管理*下按一下* Active Directory群組*。
+
+
+NOTE: 視您的角色和帳戶權限而定、可能不會顯示此視窗。
+
+* Active Directory群組表格
+* 工具列
+
+
+
+
+== Active Directory群組表格
+
+「Active Directory群組」視窗會顯示現有的Active Directory群組。您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。
+
+* image:../media/filter_icon_wfa.gif["篩選圖示"] 啟用或停用整個表格的篩選。如果停用篩選功能、圖示上會出現紅色的「x」。
+* 按兩下 image:../media/filter_icon_wfa.gif["篩選圖示"] 清除並重設篩選選項。
+* image:../media/wfa_filter_icon.gif["篩選圖示"] 在每個欄標題上、您都可以根據欄的內容進行篩選。按一下 image:../media/wfa_filter_icon.gif["篩選圖示"] 欄中的可讓您篩選下拉式清單或所有可用項目的特定項目。
+* 按一下欄標題、即可切換遞增或遞減排序順序。您可以使用排序箭頭來識別套用的排序順序（image:../media/wfa_sortarrow_up_icon.gif["排序圖示"] 用於遞增和 image:../media/wfa_sortarrow_down_icon.gif["向下排序圖示"] 降序）。
+* 若要重新排列欄位的位置、您可以拖放欄位、以任何所需的順序排列欄位。不過、您無法隱藏或刪除這些欄。
+* 按一下「*搜尋*篩選」文字方塊、即可搜尋特定內容。此外、您也可以使用支援的運算子來搜尋適用的欄類型、字母或數字。
+
+
+下表列出Active Directory群組表格中字母與數字欄的支援運算子、可從*搜尋*篩選器文字方塊取得。
+
+[cols="2*"]
+|===
+| 英文字母 | 數字 
+
+
+ a| 
+* 包含
+* 不包含
+* 從開始
+* 結尾為
+* 等於
+* 不等於
+* 重設
+
+ a| 
+* 等於
+* 不等於
+* 小於
+* 大於
+* 小於或等於
+* 大於或等於
+* 兩者之間
+* 重設
+
+
+|===
+Active Directory群組表格包含下列欄位：
+
+* *群組名稱*
++
+顯示Active Directory的群組名稱。
+
+* *角色*
++
+顯示群組的指派角色。角色可包括下列任一項：
+
++
+** *來賓*
++
+此群組只能檢視工作流程執行狀態、或收到工作流程執行狀態變更通知。
+
+** *營運者*
++
+此群組可預覽及執行群組所存取的工作流程。
+
+** *核准人*
++
+此群組可預覽、執行、核准及拒絕提供群組存取權的工作流程。
+
++
+
+NOTE: 您必須提供核准者的電子郵件ID、以及要通知核准者的工作流程狀態。如果有多位核准者、您可以在*電子郵件*欄位中提供群組電子郵件ID。
+
+** *架構設計師*
++
+此群組擁有建立工作流程的完整存取權、但受到限制、無法修改全域WFA伺服器設定。
+
+** *管理*
++
+此群組可完整存取WFA伺服器。
+
+
+
+* *類別*
++
+顯示指派給操作員的工作流程類別、此類別可為指定的操作員提供工作流程授權和權限。
+
++
+您可以按一下*內容管理*>*類別*來設定此授權設定。
+
+* *電子郵件*
++
+顯示群組的電子郵件地址。您可以使用此電子郵件通知工作流程狀態。
+
+* *已啟用通知*
++
+指出群組是否可以接收電子郵件通知（真或假）、告知該群組觸發的工作流程執行狀態。
+
+
+
+
+
+== 工具列
+
+工具列位於欄標題上方。您可以使用工具列中的圖示來執行各種動作。您也可以從視窗中的滑鼠右鍵功能表存取這些動作。
+
+* *image:../media/new_wfa_icon.gif["新圖示"] （新版）*
++
+開啟「新增Active Directory群組」對話方塊、可讓您新增Active Directory群組。
+
++
+
+NOTE: 在新增Active Directory群組之前、您必須先啟用或設定Active Directory群組。
+
+* *image:../media/edit_wfa_icon.gif["編輯圖示"] （編輯）*
++
+開啟「編輯Active Directory群組」對話方塊、可讓您編輯選取的Active Directory群組。
+
+* *image:../media/delete_wfa_icon.gif["刪除圖示"] （刪除）*
++
+開啟「刪除Active Directory群組」對話方塊確認對話方塊、可讓您刪除選取的Active Directory群組。
+
+

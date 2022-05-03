@@ -1,0 +1,24 @@
+---
+permalink: windows-install/task-configure-syslog.html 
+sidebar: sidebar 
+keywords: configure, syslog 
+summary: 您可以設定OnCommand Workflow Automation 將記錄資料傳送至特定的Syslog伺服器、以供事件記錄和記錄資訊分析等用途。 
+---
+= 設定Syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 將記錄資料傳送至特定的Syslog伺服器、以供事件記錄和記錄資訊分析等用途。
+
+您必須設定Syslog伺服器、才能接受來自WFA伺服器的資料。
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下「*設定*」、然後在「*維護*」下按一下「*系統記錄*」。
+. 選取*啟用Syslog*核取方塊。
+. 輸入Syslog主機名稱、然後選取Syslog記錄層級。
+. 按一下「 * 儲存 * 」。
+

@@ -1,0 +1,52 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: 您可以建立WFA篩選器、以便在沒有適合該工作的預先定義WFA篩選器時搜尋資源。 
+---
+= 建立篩選器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立WFA篩選器、以便在沒有適合該工作的預先定義WFA篩選器時搜尋資源。
+
+您必須知道適當的SQL語法才能建立篩選器。
+
+.步驟
+. 按一下「*工作流程設計*」>「*篩選器*」。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新篩選*」對話方塊的「*內容*」索引標籤中、在「*名稱*」、「*字典類型*」和「*說明*」欄位中輸入或選取所需的詳細資料。
+. 在「*查詢*」標籤中、輸入篩選器的適當SQL查詢。
++
+您必須輸入單一SQL查詢、並選擇性使用輸入參數。您應該使用下列語法來使用輸入參數：「+$｛參數名稱｝+」。
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. 按一下「*重新整理*」以填入「*輸入參數*」表格和「*傳回屬性*」清單。
++
+此資訊是從您輸入的SQL查詢取得。例如、如果您使用上一步的SQL查詢範例、IP會顯示在傳回的屬性中、而ArrayName則會顯示在輸入參數中。您可以編輯* Label *和* Description*欄中的項目。
+
+. *可選：*單擊* Test*測試篩選器。
++
+.. 在「*測試篩選器<篩選器名稱>*」對話方塊中、輸入所需的測試參數。
+.. 如果您不想使用保留資料來測試篩選器、請清除「在test*中使用保留資料」核取方塊。
+.. 按一下* Test*。
++
+隨即顯示測試結果。
+
+.. 關閉對話方塊。
+
+
+. 按一下「 * 儲存 * 」。
+

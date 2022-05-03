@@ -1,0 +1,54 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-functions.html 
+sidebar: sidebar 
+keywords: create, functions, encapsulate, common, complex, logic, name, function, reuse, command, parameter, value, oncommand, workflow, automation 
+summary: 您可以建立函數、將常用且更複雜的邏輯封裝在命名函數中、然後將此函數重複用於命令參數值或篩選OnCommand Workflow Automation 器參數值（WFA）。 
+---
+= WFA功能準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立函數、將常用且更複雜的邏輯封裝在命名函數中、然後將此函數重複用於命令參數值或篩選OnCommand Workflow Automation 器參數值（WFA）。
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+請使用Camel Case作為函數名稱。
+ a| 
+calulatedVolume大小
+
+
+
+ a| 
+變數名稱應為純英文、並與函數的功能有關。
+ a| 
+分段分隔符號
+
+
+
+ a| 
+請勿使用縮寫。
+ a| 
+calculatedVolume大小、_not _ cVolSiz
+
+
+
+ a| 
+函數是使用MVFlex運算式語言（MVEL）定義。
+ a| 
+無
+
+
+
+ a| 
+功能定義應根據官方的Java程式設計語言準則加以指定。
+ a| 
+無
+
+|===

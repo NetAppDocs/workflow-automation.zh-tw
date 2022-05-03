@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 撰寫OnCommand Workflow Automation 適用於還原（WFA）的PowerShell或Perl指令碼時、您必須注意記錄的準則。 
+---
+= 記錄準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+撰寫OnCommand Workflow Automation 適用於還原（WFA）的PowerShell或Perl指令碼時、您必須注意記錄的準則。
+
+
+
+== PowerShell記錄
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+使用Get-WFALogger Cmdlet進行記錄。
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+記錄每個需要與Data ONTAP 內部套件（例如、VMware和PowerCLI）互動的動作。所有記錄訊息都可在工作流程執行狀態歷程記錄的「執行記錄」中找到。
+ a| 
+無
+
+
+
+ a| 
+記錄傳遞給內部套件的每個相關引數。
+ a| 
+無
+
+
+
+ a| 
+使用Get-WFALogger Cmdlet時請使用適當的記錄層級、視使用內容而定。-Info、-Error、-warn和-debug是各種可用的記錄層級。如果未指定記錄層級、則預設記錄層級為「偵錯」。
+ a| 
+無
+
+|===
+
+
+== Perl記錄
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+使用WFAUil sendlog進行記錄。
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+記錄所有需要與命令以外的任何內容互動的動作、例如Data ONTAP ：VMware和WFA。您使用WFAUil sendLog例程建立的所有記錄訊息、都會儲存在WFA資料庫中。這些記錄訊息可用於執行的工作流程和命令。
+ a| 
+無
+
+
+
+ a| 
+記錄傳遞給所呼叫例行工作的每個相關引數。
+ a| 
+無
+
+
+
+ a| 
+使用適當的記錄層級。資訊、錯誤、警告和-Debug是各種可用的記錄層級。
+ a| 
+無
+
+
+
+ a| 
+在資訊層級記錄時、請保持精確簡潔。請勿在記錄訊息中指定實作詳細資料、例如類別名稱和功能名稱。請以純英文說明確切步驟或確切錯誤。
+ a| 
+下列程式碼片段顯示良好訊息和不良訊息的範例：
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

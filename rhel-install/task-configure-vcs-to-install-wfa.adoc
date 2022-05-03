@@ -1,0 +1,58 @@
+---
+permalink: rhel-install/task-configure-vcs-to-install-wfa.html 
+sidebar: sidebar 
+keywords: configure, vcs, install, oncommand, workflow, automation 
+summary: 在OnCommand Workflow Automation Veritas Cluster Server（VCS）中安裝支援功能（WFA）之前、您必須先確保叢集節點已正確設定為支援WFA。 
+---
+= 設定VCS以安裝OnCommand Workflow Automation 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在OnCommand Workflow Automation Veritas Cluster Server（VCS）中安裝支援功能（WFA）之前、您必須先確保叢集節點已正確設定為支援WFA。
+
+* VCS必須依照_Veritas Cluster Server 6.1.1安裝指南_中的指示安裝在叢集的兩個節點上。
+* 若要接收有關叢集事件的通知、VCS軟體必須依照_Veritas Cluster Server Administrator指南_中的指示設定為SNMP和SMTP。
+* 所有設定叢集伺服器的需求與準則、都必須根據VCS文件予以滿足。
+* 如果您想要使用適用於UNIX的功能來建立LUN、則必須安裝適用於UNIX的SnapDrive SnapDrive
+* 兩個叢集節點都必須執行支援的作業系統版本。
++
+支援的最低作業系統為Red Hat Enterprise Linux 7.0和VCS 6.1.1。
+
+* 必須在兩個叢集節點上使用相同路徑安裝相同版本的WFA。
+* WFA伺服器必須透過光纖通道（FC）或iSCSI連接至儲存系統。
+* WFA伺服器與儲存系統之間的延遲時間必須最短。
+* FC連結必須處於作用中狀態、且所建立的LUN必須可供兩個叢集節點存取。
+* 每個系統至少必須設定兩個網路介面：一個用於節點對節點通訊、另一個用於節點對用戶端通訊。
+* 用於節點對用戶端通訊的網路介面名稱在兩個系統上應該相同。
+* 叢集節點之間必須建立獨立的活動訊號連結、否則會使用網路介面在叢集節點之間進行通訊。
+* 必須建立共用位置、才能獲得高可用度。
++
+您可以使用SnapDrive UNIX版的for UNIX來建立共用位置。
+
++
+您也可以使用SnapDrive 效能不整或儲存系統命令列介面來管理LUN。如SnapDrive 需詳細資訊、請參閱《UNIX版的功能表：
+
+
+
+.步驟
+. 驗證VCS是否安裝正確：「haSTATUS–Summary」（狀態–摘要）
++
+兩個節點都必須處於線上狀態、且VCS服務必須同時在兩個節點上執行。
+
+. 使用下列其中一個選項、確認兩個節點都能存取LUN：
++
+** 以原生方式管理LUN。
+** 使用適用於UNIX的功能：SnapDrive
++
+... 在SnapDrive 兩個節點上安裝適用於UNIX的功能。
+... 在SnapDrive 兩個節點上設定適用於UNIX的功能。
+... 從第一個節點、執行「SnapDrive flexunstorage create」命令來建立LUN。
+... 執行「SnapDrive show -all」命令、確認在第一個節點上建立的LUN在第二個節點上可見。
+
+
+
+
+

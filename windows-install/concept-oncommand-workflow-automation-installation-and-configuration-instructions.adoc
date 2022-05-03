@@ -1,0 +1,18 @@
+---
+permalink: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, installation, setup, overview 
+summary: 安裝OnCommand Workflow Automation 功能（WFA）包括執行各項工作、例如準備安裝、下載WFA安裝程式、以及執行安裝程式。安裝完成後、您可以設定WFA以符合需求。 
+---
+= 安裝與設定概述OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝OnCommand Workflow Automation 功能（WFA）包括執行各項工作、例如準備安裝、下載WFA安裝程式、以及執行安裝程式。安裝完成後、您可以設定WFA以符合需求。
+
+下列流程圖說明安裝與組態工作：
+
+image::../media/wfa_isg_flowchart.gif[WFA ISG流程圖]

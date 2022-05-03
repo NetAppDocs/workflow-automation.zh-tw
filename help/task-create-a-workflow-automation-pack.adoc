@@ -1,0 +1,23 @@
+---
+permalink: help/task-create-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: create, workflow, packs, oncommand, workflow, automation, storage, integration, requirements 
+summary: 您可以根據OnCommand Workflow Automation 自己的儲存自動化和整合需求、在功能（WFA）上建立工作流程套件。 
+---
+= 建立WFA工作流程套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以根據OnCommand Workflow Automation 自己的儲存自動化和整合需求、在功能（WFA）上建立工作流程套件。
+
+.步驟
+. 透過網頁瀏覽器登入* WFA *視窗。
+. 按一下*內容管理*>*套件*。
+. 按一下「*新套件*」圖示。
+. 在「*新套件*」對話方塊中、輸入「*名稱*」、「*作者*」、「*版本*」及「*說明*」欄位的值。
+. 按一下「 * 儲存 * 」。
+. 確認已在* Packs *視窗中建立新的套件。
+

@@ -1,0 +1,58 @@
+---
+permalink: rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl, certificate 
+summary: 如果憑證已過期、或您想要延長憑證的有效期間、您可以取代預設的Workflow Automation（WFA）SSL憑證。 
+---
+= 取代預設的Workflow Automation SSL憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果憑證已過期、或您想要延長憑證的有效期間、您可以取代預設的Workflow Automation（WFA）SSL憑證。
+
+您必須擁有已安裝WFA的Linux系統的root權限。
+
+此程序使用預設的WFA安裝路徑。如果您在安裝期間變更了預設位置、則必須使用自訂的WFA安裝路徑。
+
+.步驟
+. 以root使用者身分登入WFA主機機器。
+. 在Shell提示下、瀏覽至WFA伺服器上的下列目錄：WFA_install_LOWS/WFA/bin
+. 停止WFA資料庫和伺服器服務：
++
+「/WFA --停止= WFA」
+
++
+「/WFA --stop =資料庫」
+
+. 請從下列位置刪除WFA .keystore檔案：WFA安裝位置/ WFA / Jboss /獨立式/組態/ Keystore。
+. 在WFA伺服器上開啟Shell提示字元、然後將目錄變更為下列位置：<OpenJDK_install_location>/bin
+. 取得資料庫金鑰：
++
+「keytool-keysize 2048-genkey -alias "SSL Keystore」-keyalg ra -keystore「wfa_install_location / wfa/jboss/standaled/configuration / keystore/wfa.keystore」-validity xxxx'
+
++
+XXXX是新憑證有效的天數。
+
+. 出現提示時、請提供密碼（預設或新的）。
++
+changeit是預設密碼。如果您不想使用預設密碼、則必須從下列位置變更standalone-full.xml檔案中SSL元素的密碼屬性：WFA_install_location / WFA/Jboss /獨立/組態
+
++
+[listing]
+----
+<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
+----
+. 輸入憑證的必要詳細資料。
+. 檢閱顯示的資訊、然後輸入「Yes（是）」。
+. 出現下列訊息時、請按* Enter *鍵：輸入<SSL Keystore（<SSL Keystore）>的金鑰密碼（如果與Keystore密碼相同則返回）>。
+. 重新啟動WFA服務：
++
+「/WFA --start=DB」
+
++
+「/wFA --start=wfa」
+
+

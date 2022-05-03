@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa database, web portal 
+summary: 您可以OnCommand Workflow Automation 從入口網站備份支援（WFA）資料庫、並使用備份檔案進行資料恢復。您無法從Web入口網站執行完整備份。 
+---
+= 從Web入口網站備份WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 從入口網站備份支援（WFA）資料庫、並使用備份檔案進行資料恢復。您無法從Web入口網站執行完整備份。
+
+您必須擁有管理員或架構認證、才能執行此工作。
+
+具有備份角色的WFA使用者無法登入Web入口網站執行備份。具有備份角色的WFA使用者只能執行遠端或指令碼備份。
+
+.步驟
+. 以管理員身分登入WFA Web GUI。
+. 按一下「*設定*」、然後在「*維護*」下、按一下「*備份與還原*」。
+. 按一下*備份*。
+. 在開啟的對話方塊中、選取位置、然後儲存檔案。
+

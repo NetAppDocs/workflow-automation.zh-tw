@@ -1,0 +1,59 @@
+---
+permalink: workflows/task-create-a-cache-query.html 
+sidebar: sidebar 
+keywords: define, cache, query, cache, information, dictionary, object, wfa database, data source, create, associate, entry, active iq, unified manager 
+summary: 您可以定義快取查詢、以便從資料來源類型快取WFA資料庫中有關字典物件的資訊。您可以建立快取查詢、並將其與一個或多個資料來源類型（例如Active IQ Unified Manager 、NetApp 6.1）建立關聯。 
+---
+= 建立快取查詢
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以定義快取查詢、以便從資料來源類型快取WFA資料庫中有關字典物件的資訊。您可以建立快取查詢、並將其與一個或多個資料來源類型（例如Active IQ Unified Manager 、NetApp 6.1）建立關聯。
+
+您必須知道適當的SQL語法、才能建立快取查詢。
+
+.步驟
+. 按一下*資料來源設計*>*快取查詢*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新增快取查詢*」對話方塊中、選取所需的字典項目和資料來源類型。
+. 在「SQL Select query」（SQL選取查詢）區段中、輸入適當的SQL查詢。
++
+下列SQL查詢會快取Active IQ Unified Manager 有關來自於供應資料來源類型的磁碟字典物件資訊：
+
++
+[listing]
+----
+SELECT
+    disk.objId AS id,
+    disk.name AS NAME,
+    disk.uid AS uid,
+    disk.effectiveInterfaceType AS TYPE,
+    disk.rpm AS rpm,
+    disk.homeNodeId AS home_node_id,
+    disk.ownerNodeId AS owner_node_id,
+    disk.model AS model,
+    disk.serialNumber AS serial_number,
+    disk.totalBytes/1024/1024 AS size_mb,
+    disk.shelf AS shelf,
+    disk.shelfBay AS shelf_bay,
+    disk.pool AS pool,
+    disk.vendor AS vendor,
+    LOWER(disk.raidPosition) AS raid_position,
+    disk.containerTypeRaw AS container_type,
+    disk.clusterId AS cluster_id
+FROM
+    netapp_model_view.disk disk
+----
+. 如果您要測試SQL查詢、請按一下* Test*。
++
+如果您選取多種資料來源類型、「測試快取查詢」對話方塊會開啟、並可讓您選取所需的資料來源類型。
+
++
+隨即顯示測試結果。
+
+. 關閉對話方塊。
+. 按一下「 * 儲存 * 」。
+

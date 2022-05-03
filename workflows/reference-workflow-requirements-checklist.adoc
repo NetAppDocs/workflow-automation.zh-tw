@@ -1,0 +1,230 @@
+---
+permalink: workflows/reference-workflow-requirements-checklist.html 
+sidebar: sidebar 
+keywords: workflow, requirements, checklist, include, details, requirements, commands, user, input, resources, planned, workflow, identify, gap 
+summary: 工作流程需求檢查清單包含規劃工作流程的詳細需求、例如命令、使用者輸入和資源。您可以使用檢查清單來規劃工作流程、找出需求中的落差。 
+---
+= 工作流程需求檢查清單範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流程需求檢查清單包含規劃工作流程的詳細需求（例如命令、使用者輸入和資源）。您可以使用檢查清單來規劃工作流程、找出需求中的落差。
+
+
+
+== 需求檢查清單範例
+
+下列工作流程需求檢查清單範例列出「Create a Created Data ONTAP for the Created for the Created for the Workflow（建立叢集式的一套功能）」工作流程的需求。您可以使用此檢查清單範例做為範本、列出您的工作流程需求。
+
+[cols="2*"]
+|===
+| 需求 | 說明 
+
+
+ a| 
+工作流程名稱
+ a| 
+建立叢集Data ONTAP 式的流通量
+
+
+
+ a| 
+類別
+ a| 
+儲存資源配置
+
+
+
+ a| 
+說明
+ a| 
+工作流程會在特定SVM中建立新的Volume。此工作流程適用於已配置及委派磁碟區供日後使用的情況。
+
+
+
+ a| 
+工作流程運作方式的詳細說明
+ a| 
+* 包含該磁碟區的SVM是由使用者（叢集、SVM名稱）所指定。
+* 磁碟區是根據指定的大小而建立。
+* 磁碟區的組態會在範本中說明。
+
+
+
+
+ a| 
+詳細資料
+ a| 
+* 使用* Create CM Volume*命令
+* *建立CM Volume *的命令詳細資料：
++
+** 執行設定為「永遠」
+** 您可以填入Volume的屬性來指定Volume詳細資料
+** 使用*空間保證設定*範本來設定磁碟區
+** Volume名稱和大小由使用者提供。
++
+磁碟區會以「/volname」（根命名空間下）的形式掛載到SVM命名空間中。
+
+** 使用* actualVolume Siz*功能、因為SnapReserve將為5%。
+** SVM參考是以下列資源選擇邏輯來定義：
++
+*** CM SVM by key（按金鑰）-依名稱和叢集搜尋SVM（由使用者提供）
+*** CM SVM類型-僅限資料SVM（類型=叢集）
+*** SVM依狀態-（狀態=執行中）
+
+
+** Aggregate參考是以資源選擇邏輯定義為預先定義的搜尋器（CM Aggregate by space臨界值和RAID類型）：
++
+*** CM Aggregate依可用容量（容量=要配置的磁碟區大小、由使用者提供的叢集）
+*** CM Aggregate（依委派給SVM）
+*** CM Aggregate（依RAID類型）（RAID-DP）
+*** CM Aggregate不是aggr0
+*** CM Aggregate依使用大小%（臨界值= 90、空間ToBeProvisioned =提供大小、因為保證為Volume）
+*** CM Aggregate依承諾量（臨界值= 300、空間ToBeAlosed =正在配置的Volume大小）
+*** 選取具有最大可用空間的Aggregate
+
+
+
+
+
+
+|===
+[cols="3*"]
+|===
+| 名稱 | 類型 | 說明（資料值、驗證等） 
+
+
+ a| 
+叢集
+ a| 
+鎖定查詢（表格）
+ a| 
+* 裝載SVM的叢集
+* 查詢可以表格形式顯示主要位址和叢集名稱
+* 依名稱的字母順序排序
+
+
+
+
+ a| 
+SVM
+ a| 
+鎖定查詢
+ a| 
+* 配置磁碟區的SVM
+* 查詢應僅顯示屬於先前輸入中所選叢集的SVM名稱
++
+僅顯示叢集類型SVM、而非管理或節點（cm_storage、vserver類型欄）
+
+* 依字母順序排序
+
+
+
+
+ a| 
+Volume
+ a| 
+字串
+ a| 
+* 要建立的磁碟區名稱
+
+
+
+
+ a| 
+大小（單位：GB）
+ a| 
+整數
+ a| 
+* 要配置的磁碟區大小
+* 資料大小（應考慮SnapReserve）
+
+
+|===
+*命令*
+
+[cols="3*"]
+|===
+| 名稱 | 說明 | 狀態 
+
+
+ a| 
+建立CM Volume
+ a| 
+在SVM中建立磁碟區
+ a| 
+現有的
+
+|===
+*返回參數*
+
+[cols="2*"]
+|===
+| 名稱 | 價值 
+
+
+ a| 
+Volume名稱
+ a| 
+已配置磁碟區的名稱
+
+
+
+ a| 
+Aggregate名稱
+ a| 
+所選Aggregate的名稱
+
+
+
+ a| 
+節點名稱
+ a| 
+節點名稱
+
+
+
+ a| 
+叢集名稱
+ a| 
+叢集名稱
+
+|===
+*差距與問題*
+
+[cols="2*"]
+|===
+
+
+ a| 
+1.
+ a| 
+
+
+
+ a| 
+2.
+ a| 
+
+
+
+ a| 
+3.
+ a| 
+
+
+
+ a| 
+4.
+ a| 
+
+
+
+ a| 
+5.
+ a| 
+
+|===

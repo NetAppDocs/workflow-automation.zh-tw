@@ -1,0 +1,40 @@
+---
+permalink: help/reference-about-dialog-box.html 
+sidebar: sidebar 
+keywords: about, dialog, box, display, details, current, version, install, application 
+summary: 「關於」對話方塊會顯示已安裝WFA應用程式目前版本的詳細資料。 
+---
+= 關於對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「關於」對話方塊會顯示已安裝WFA應用程式目前版本的詳細資料。
+
+
+
+== WFA版本資訊
+
+* *版本*
++
+顯示已安裝WFA應用程式的目前版本編號。
+
++
+版本編號格式如下：「A.B.C」
+
++
+《A.B. C》反映了主要的、次要的維護版本號。
+
++
+例如：「2.0.0」。
+
+* *系統ID*
++
+識別WFA系統安裝、以供追蹤AutoSupport 及使用。
+
++
+這是系統產生的唯一識別碼。
+
+

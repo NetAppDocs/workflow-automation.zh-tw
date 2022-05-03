@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 如果您想OnCommand Workflow Automation 要經常備份該（WFA）資料庫、可以使用WFA安裝套件隨附的WFA命令列介面（CLI）。 
+---
+= 使用CLI備份WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想OnCommand Workflow Automation 要經常備份該（WFA）資料庫、可以使用WFA安裝套件隨附的WFA命令列介面（CLI）。
+
+以下是兩種備份類型：
+
+* 完整備份
+* 定期備份
+

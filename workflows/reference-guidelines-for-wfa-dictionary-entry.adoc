@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-dictionary-entry.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, dictionary, entries, oncommand, workflow, automation 
+summary: 您必須瞭解OnCommand Workflow Automation 在還原（WFA）中建立字典項目的準則。 
+---
+= WFA字典項目準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解OnCommand Workflow Automation 在還原（WFA）中建立字典項目的準則。
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+字典項目名稱只能包含英數字元和底線。
+ a| 
+叢集授權
+
+switch_23
+
+
+
+ a| 
+字典項目名稱必須以大寫字元開頭。名稱中的每個字詞都以大寫字元開頭、並以底線（_）分隔每個字詞。
+ a| 
+Volume
+
+Array授權
+
+
+
+ a| 
+字典項目屬性名稱不應包含該字典項目的名稱。
+ a| 
+無
+
+
+
+ a| 
+在字典項目中的屬性和參照必須為小寫字元。
+ a| 
+Aggregate、Size_MB
+
+
+
+ a| 
+以底線分隔字詞。不允許使用空格。
+ a| 
+resource_pool
+
+
+
+ a| 
+字典項目不能包含來自不同配置的參考資料。當某個字典項目需要交叉參照到不同配置中的物件時、請確定所參照物件的所有自然金鑰都存在於該字典項目中。
+ a| 
+Array_Performance字典項目要求陣列字典項目的所有自然金鑰都是其中的直接屬性。
+
+
+
+ a| 
+為屬性使用適當的資料類型。
+ a| 
+無
+
+
+
+ a| 
+使用長資料類型作為大小或空間相關屬性。
+ a| 
+Size_MB和可用的_Size_MB（儲存空間）。Volume（磁碟區）字典項目
+
+
+
+ a| 
+當屬性具有固定值集時、請使用Enum。
+ a| 
+在「儲存區」目錄項目中輸入RAID_type
+
+
+
+ a| 
+當資料來源提供該屬性或參考的值時、請將屬性或參考的「'to be Cached'」設為true。若Active IQ Unified Manager 資料來源可以提供值、請新增可快取的屬性。
+ a| 
+無
+
+
+
+ a| 
+如果提供此屬性或參考值的資料來源可以傳回空值、請將「'can be Null'」設為真。
+ a| 
+無
+
+
+
+ a| 
+為每個屬性和參考提供有意義的說明。說明會在設計工作流程時顯示在命令詳細資料中。
+ a| 
+無
+
+
+
+ a| 
+請勿在字典項目中使用「'id'」做為屬性名稱。此屬性保留供內部WFA使用。
+ a| 
+無
+
+|===
+*相關資訊*
+
+xref:reference-references-to-learning-material.adoc[參考學習教材]

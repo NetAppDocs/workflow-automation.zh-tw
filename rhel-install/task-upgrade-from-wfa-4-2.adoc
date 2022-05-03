@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-upgrade-from-wfa-4-2.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later 
+summary: 您可以從OnCommand Workflow Automation 原地升級（WFA）3.1或更新版本至最新版本的WFA、以使用新功能和增強功能。 
+---
+= 升級自OnCommand Workflow Automation 更新版本的更新版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從OnCommand Workflow Automation 原地升級（WFA）3.1或更新版本至最新版本的WFA、以使用新功能和增強功能。
+
+您必須已從NetApp支援網站下載.bin二進位檔案至WFA主機機器。
+
+您只能從WFA 5.0或4.2還原至WFA 5.1。WFA資料庫備份只能還原至執行相同版本或更新版本WFA的系統。
+
+WFA 5.1叢集連線需要接受SSL憑證。從舊版WFA更新至WFA 5.1時、您需要認證叢集連線。在原地升級後、儲存叢集連線詳細資料以供叢集認證。
+
+從舊版WFA升級時、您無法自行安裝MySQL。您可以自行安裝MySQL：
+
+* 當您從WFA 4.2升級至更新版本的WFA時。
+* 選擇下列其中一種方法、從WFA 3.1或更新版本升級：
++
+** 互動式安裝
++
+... 瀏覽至WFA主機機器中的.bin二進位檔案、然後執行該檔案。
+... 依照螢幕上的指示完成升級。
+
+
+** 無聲安裝
++
+在Shell提示符下：
+
++
+WFA-version_number-build_number.bin [-y][-u admin_user_name][-p admin_user_password]
+
++
+*範例：*
+
++
+如欲瞭解更多資訊、請參閱：WFA-3.1-Z3234343435.bin -y -u admin -p Company * 234
+
++
+在無聲升級期間、您必須包含下列所有命令選項的值：
+
++
+*** '-y'會跳過安裝確認。
+*** -u'指定管理使用者名稱。
+*** 「-p」指定管理使用者密碼。
++
+如果您尚未提供管理員使用者密碼、則必須在系統提示時輸入密碼。
+
+
+
+
+
+

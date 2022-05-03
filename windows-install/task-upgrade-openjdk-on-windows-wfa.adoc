@@ -1,0 +1,26 @@
+---
+permalink: windows-install/task-upgrade-openjdk-on-windows-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, openjdk 
+summary: 不再支援OnCommand Workflow Automation Oracle JRE.在此版本中、OpenJDK取代 適用於Windows的Oracle JRE.您可以在OnCommand Workflow Automation Windows伺服器上升級全新版本的OpenJDK for WFA（WFA）。您可以升級至較新版本的OpenJDK、以取得Windows伺服器上安全性弱點的修正程式。 
+---
+= 升級OpenJDK
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不再支援OnCommand Workflow Automation Oracle JRE.在此版本中、OpenJDK取代 適用於Windows的Oracle JRE.您可以在OnCommand Workflow Automation Windows伺服器上升級全新版本的OpenJDK for WFA（WFA）。您可以升級至較新版本的OpenJDK、以取得Windows伺服器上安全性弱點的修正程式。
+
+您必須在WFA伺服器上擁有Windows管理員權限。
+
+您可以在發行系列中更新OpenJDK版本。例如、您可以從OpenJDK 11.0.1升級至OpenJDK 11.0.2、但無法直接從OpenJDK 11更新至OpenJDK 12。
+
+.步驟
+. 以管理使用者身分登入WFA主機機器。
+. 將最新版OpenJDK 11（64位元）下載至目標系統。
+. 使用Windows服務主控台來停止WFA伺服器和WFA資料庫服務。
+. 將下載版本的OpenJDK 11解壓縮至您已安裝開啟的JDK的資料夾。
+. 使用Windows服務主控台啟動WFA服務。
+

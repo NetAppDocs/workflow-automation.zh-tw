@@ -1,0 +1,35 @@
+---
+permalink: workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html 
+sidebar: sidebar 
+keywords: customize, workflows, requirements, example, modify, predefined, create, volume, share, include, deduplication, compression 
+summary: 您可以根據需求自訂工作流程。例如、您可以修改預先定義的「建立磁碟區」和「CIFS共用」工作流程、以納入重複資料刪除和壓縮。 
+---
+= 自訂「建立Volume」和「CIFS共用」工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以根據需求自訂工作流程。例如、您可以修改預先定義的_Create a Volume和CIFS Share_工作流程、以納入重複資料刪除和壓縮。
+
+本工作中的自訂與圖例為範例、您可以根據需求修改WFA工作流程。
+
+.步驟
+. 按一下*工作流程設計*>*工作流程*。
+. 選取*建立磁碟區和CIFS Share*工作流程、然後按一下 image:../media/clone_wfa_icon.gif["複製圖示"] 在工具列上。
+. 按一下「*詳細資料*」索引標籤、然後在「*工作流程名稱*」欄位中編輯工作流程的說明。
+. 按一下「* Workflow *」（*工作流程*）索引標籤、展開「*儲存*架構」、然後在「*建立Volume *」和「*建立CIFS共享*」命令之間拖放「*設定重複資料刪除與壓縮*」命令。
+. 將滑鼠游標放在第一列的*設定重複資料刪除與壓縮*命令下方、然後按一下 image:../media/add_object_wfa_icon.gif[""]。
+. 在「設定重複資料刪除與壓縮*參數」對話方塊的* Volume *索引標籤中、使用先前定義的Volume *選項選取*、然後在*定義Volume *欄位中選取* share_volume*選項、此為工作流程中*建立Volume *命令所建立的Volume物件變數。
+. 單擊*其他參數*選項卡並執行以下步驟：
++
+.. 在* StartNow*欄位中選取* true*。
+.. 在* Compression*（壓縮）字段中選擇* Inline（內嵌）*。
+.. 在「排程*」欄位中輸入「'sun-sat@1'」運算式、該欄位會在一週中的所有時間安排上午1點的重複資料刪除和壓縮
+
+
+. 按一下「*確定*」。
+. 按一下「*預覽*」以確保工作流程的規劃順利完成、然後按一下「*確定*」。
+. 按一下「 * 儲存 * 」。
+

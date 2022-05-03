@@ -1,0 +1,133 @@
+---
+permalink: workflows/concept-how-you-map-command-parameters.html 
+sidebar: sidebar 
+keywords: parameter, workflow, automation, commands, mapped, specific, attributes, dictionary, entry, references, certain, rules, aware, map, command, create, edit 
+summary: Workflow Automation（WFA）命令中的參數會根據特定規則對應至特定屬性和字典項目參考。建立或編輯WFA命令時、您必須瞭解對應命令參數的規則。 
+---
+= 如何對應命令參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation（WFA）命令中的參數會根據特定規則對應至特定屬性和字典項目參考。建立或編輯WFA命令時、您必須瞭解對應命令參數的規則。
+
+命令參數對應可定義如何在工作流程中定義命令詳細資料。當您在工作流程中指定命令的命令詳細資料時、命令的對應命令參數會顯示在索引標籤中。這些索引標籤的名稱是根據「參數對應」索引標籤的「物件名稱」欄中所指定的群組名稱來命名。在工作流程中指定命令詳細資料時、未對應的參數會顯示在「其他參數」索引標籤中。
+
+命令參數對應的規則會根據命令類別以及命令在工作流程編輯器中的呈現方式而適用。
+
+以下是命令類別：
+
+* 建立物件的命令
+* 更新物件的命令
+* 移除物件的命令
+* 處理選用父物件和子物件的命令
+* 更新物件之間關聯的命令
+
+
+以下列出每個類別的規則：
+
+
+
+== 所有命令類別
+
+在對應命令參數時、您應該根據命令在工作流程中的使用方式、使用自然路徑。
+
+下列範例說明如何定義自然路徑：
+
+* 對於ArrayIP參數、視命令而定、您應該使用Volume dictionary項目的Aggregate、array.ip屬性、而非array.ip屬性。
++
+當工作流程建立磁碟區、然後參照建立的磁碟區來執行其他步驟時、這一點很重要。以下是類似的範例：
+
++
+** Qtree字典項目的Volume。Aggregate。array.ip
+** Volume。Aggregate。Array：LUN dipate項目的IP
+
+
+* 對於命令中使用的叢集、您應該使用下列其中一項：
++
+** Volume字典項目的Vserver.cluster。primary_address
+** Qtree字典項目的Volume。vserver。cluster。primary_address
+
+
+
+
+
+
+== 建立物件的命令
+
+此類命令用於下列其中一項：
+
+* 尋找父物件並定義新物件
+* 如果物件不存在、請搜尋物件並建立物件
+
+
+您應該針對此類別的命令使用下列參數對應規則：
+
+* 將所建立物件的相關參數對應至物件的字典項目。
+* 透過所建立的字典項目參考來對應父物件。
+* 新增參數時、請確定相關屬性存在於字典項目中。
++
+以下是此規則的例外情況：
+
++
+** 某些建立的物件沒有對應的字典項目、只有父物件對應到相關的父字典項目、例如*建立VIF*命令、其中只有陣列可以對應到陣列的字典項目。
+** 不需要參數對應
++
+例如，在*Create或resize Aggregate *命令中的Executiontimeout參數是一個未映射的參數。
+
+
+
+
+
+下列通過認證的命令是此類別的範例：
+
+* 建立Volume
+* 建立LUN
+
+
+
+
+== 更新物件的命令
+
+此命令類別可用來尋找物件並更新屬性。
+
+您應該針對此類別的命令使用下列參數對應規則：
+
+* 將更新的物件對應至字典項目。
+* 請勿對應已更新物件的參數。
++
+例如、在*設定Volume State*命令中、Volume參數會對應、但新狀態會取消對應。
+
+
+
+
+
+== 移除物件的命令
+
+此命令類別可用來尋找物件並加以刪除。
+
+您應該將命令刪除的物件對應至其字典項目。例如、在*移除Volume *命令中、要刪除的Volume會對應至Volume目錄項目的相關屬性和參照。
+
+
+
+== 處理選用父物件和子物件的命令
+
+您應該針對此類別的命令使用下列參數對應規則：
+
+* 請勿將命令的任何必要參數對應為命令選用參數的參考。
++
+當命令處理特定父物件的選用子物件時、此規則就更具關聯性。在這種情況下、子物件和父物件應明確對應。例如、在*停止重複資料刪除工作*命令中、命令會在特定磁碟區上停止執行重複資料刪除工作（與Array一起指定時）、或在指定Array的所有磁碟區上停止執行重複資料刪除工作。在此情況下、陣列參數應直接對應至陣列字典項目、而非Volume。Array、因為Volume是此命令的選用參數。
+
+* 如果邏輯層級的字典項目之間存在父與子關係、但特定命令中的實際執行個體之間沒有關係、則應分別對應這些物件。
++
+例如、在*移動Volume *命令中、Volume會從目前的父Aggregate移至新的目的地Aggregate。因此、Volume參數會對應至Volume目錄項目、而目的地Aggregate參數會分別對應至Aggregate dictionary項目、而非volume.aggregate.name。
+
+
+
+
+
+== 更新物件之間關聯的命令
+
+對於此類別的命令、您應該將關聯和物件對應至相關的字典項目。例如、在Add Volume to vFilerTM命令中、Volume和vFilerTM參數會對應至Volume和vFilerdictionary項目的相關屬性。

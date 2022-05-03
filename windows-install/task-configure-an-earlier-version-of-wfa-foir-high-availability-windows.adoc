@@ -1,0 +1,46 @@
+---
+permalink: windows-install/task-configure-an-earlier-version-of-wfa-foir-high-availability-windows.html 
+sidebar: sidebar 
+keywords: configure, earlier versions, oncommand, workflow, automation, high availability 
+summary: 您可以設定OnCommand Workflow Automation 3.1之前的版本以獲得高可用度。 
+---
+= 設定OnCommand Workflow Automation 舊版的更新版本以獲得高可用度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 3.1之前的版本以獲得高可用度。
+
+.步驟
+. 將現有的WFA版本升級至最新的WFA版本。
++
+xref:task-upgrade-oncommand-workflow-automation.adoc[升級WFA]
+
++
+此升級版本的WFA是叢集的主要節點。
+
+. 建立WFA資料庫的備份。
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["備份WFA資料庫"]
+
++
+如果手動變更任何參數、您必須建立WFA資料庫的備份、解除安裝現有的WFA安裝、安裝最新可用的WFA版本、還原備份、然後繼續執行Microsoft叢集服務（MSCS）組態。
+
+. 將MSCS設定為在主要節點上安裝WFA。
++
+link:task-configure-mscs-to-install-wfa.html["設定安裝WFA的MSCS"]
+
+. 在次要節點上安裝最新的WFA版本。
++
+link:task-install-workflow-automation-on-windows.html["安裝WFA"]
+
+. 在MSCS中設定WFA。
++
+link:task-configure-mscs-to-install-wfa.html["在MSCS中設定WFA"]
+
++
+WFA伺服器已設定為高可用度。
+
+

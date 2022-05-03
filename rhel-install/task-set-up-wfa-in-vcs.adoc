@@ -1,0 +1,19 @@
+---
+permalink: rhel-install/task-set-up-wfa-in-vcs.html 
+sidebar: sidebar 
+keywords: set up, workflow, automation, vcs, high availability 
+summary: 您必須在Veritas Cluster Server（VCS）環境中安裝及設定Workflow Automation（WFA）、以設定高可用度並提供容錯移轉。在安裝WFA之前、您必須確認所有必要的元件均已正確設定。 
+---
+= 在VCS中設定Workflow Automation以實現高可用度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在Veritas Cluster Server（VCS）環境中安裝及設定Workflow Automation（WFA）、以設定高可用度並提供容錯移轉。在安裝WFA之前、您必須確認所有必要的元件均已正確設定。
+
+高可用度設定可持續支援應用程式作業。如果其中一個元件故障、設定中的鏡射元件就會接管作業、並提供不中斷的網路資源。
+
+
+NOTE: VCS是WFA在Linux上唯一支援的叢集解決方案。

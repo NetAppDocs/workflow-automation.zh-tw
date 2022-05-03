@@ -1,0 +1,79 @@
+---
+permalink: help/task-define-filter-rules.html 
+sidebar: sidebar 
+keywords: define, set, rules, filtering, dictionary, entry, resources, vfiler, units, aggregates, virtual, machines, customize, existing, workflow, create 
+summary: 您可以定義一組規則來篩選諸如vFiler單元、集合體和虛擬機器等字典項目資源。您可以在建立現有工作流程和新工作流程時、自訂這些規則。 
+---
+= 定義篩選規則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以定義一組規則來篩選諸如vFiler單元、集合體和虛擬機器等字典項目資源。您可以在建立現有工作流程和新工作流程時、自訂這些規則。
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下*工作流程設計*>*工作流程*。
+. 在「*工作流程*」視窗中、按兩下您要修改的工作流程。
++
+此時會顯示Workflow <workflow name>（工作流程名稱）>窗口。
+
+. 選擇下列其中一個選項來定義一組規則：
++
+[cols="2*"]
+|===
+| 如果您想要... | 然後執行此動作... 
+
+
+ a| 
+當一列中的命令重複執行時、請搜尋資源
+ a| 
+.. 按一下某個列號、然後選取*重複列*。
+.. 在「列重複項目」對話方塊中、從「*重複*」下拉式清單中選取「群組*中每個資源的*」選項。
+.. 選取資源類型。
+.. 按一下*輸入搜尋條件*連結。
+
+
+
+
+ a| 
+在命令輸入中搜尋所需的資源
+ a| 
+.. 按一下 image:../media/add_object_wfa_icon.gif["新增命令的圖示"]。
+.. 在參數for <command_name>對話方塊中、從*定義<dictionary object>*下拉式清單中、搜尋現有的<dictionary object>*選項、以選取*。
+.. 按一下*輸入搜尋條件*連結。
+
+
+
+
+ a| 
+在命令輸入中搜尋變數所參照的資源
+ a| 
+.. 按一下 image:../media/add_object_wfa_icon.gif["新增命令的圖示"]。
+.. 在參數for <command_name>對話方塊中、從*定義<dictionary object>*下拉式清單中選取* by fining attributes*選項。
+.. 按一下 image:../media/ellipses.gif[""] 用於標示為的欄位 image:../media/resource_selection_icon_wfa.gif["參考物件的圖示"]。
+
+
+
+
+ a| 
+字串類型的名稱命令輸入
+ a| 
+.. 按一下 image:../media/add_object_wfa_icon.gif["新增命令的圖示"]。
+.. 在參數for <command_name>對話方塊中、從*定義<dictionary object>*下拉式清單中選取* by fining attributes*選項。
+.. 按一下 image:../media/ellipses.gif["省略符號的圖示"] 字串欄位。
+
+
+|===
+. 在「*資源選擇*」對話方塊中、選取「*定義篩選規則*」核取方塊。
++
+如果您已從資源選取對話方塊的尋找器下拉式清單中選取其中一個選項、則會停用「定義篩選規則」核取方塊。要啟用定義篩選規則、必須將finder的值設為「無」。
+
+. 輸入規則的屬性、運算子和值。
++
+此值必須以單引號提供。篩選規則可包含一或多個群組。
+
+. 按一下「*確定*」。
+

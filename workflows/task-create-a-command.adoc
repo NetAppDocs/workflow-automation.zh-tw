@@ -1,0 +1,138 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: 如果沒有適合該工作的預先定義WFA命令、您可以建立WFA命令來完成工作流程中的特定工作。 
+---
+= 建立命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果沒有適合該工作的預先定義WFA命令、您可以建立WFA命令來完成工作流程中的特定工作。
+
+您必須知道如何使用PowerShell或Perl來撰寫命令所需的程式碼。
+
+.步驟
+. 按一下*工作流程設計*>*命令*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新命令定義*」對話方塊的「*內容*」索引標籤中、於「*名稱*」、「*說明*」及「*逾時*」欄位中輸入或選取所需的詳細資料。
++
+.. 在*字串表示*欄位中、使用VEL語法輸入命令的字串表示法。
++
++' Volume名稱+"=>"+ SnapshotName+'
+
++
+命令的字串表示法可用來顯示您在規劃和執行期間想要在工作流程設計中查看的資訊。命令的字串表示必須僅使用命令的參數。
+
+.. *可選：*如果您要建立wait命令、請在*命令類型*區段中選取*等待條件*、然後在*等待時間間隔（s）*欄位中設定所需的值。
+
+
+. 在「* Code *」標籤中、執行下列步驟：
++
+.. 從*指令碼語言*清單中選取命令所需的指令碼語言。
++
+您可以按一下+、然後為命令選取其他語言。
+
+.. 在所選語言索引標籤中輸入命令的適當程式碼。
++
+如果您想在PowerShell指令碼中使用密碼類型來輸入使用者輸入、則必須為參數建立別名、並在屬性中加入「_Password」。對於Perl指令碼、您可以在*參數定義*索引標籤中指定*密碼*類型。
+
++
+
+NOTE: 命令編輯器不支援下列特殊字元："<"、"&amp"及XML標記"<>"。
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. 在*參數定義*標籤中、執行下列步驟：
++
+.. 按一下「*探索參數*」以填入參數定義表格。
++
+參數及其屬性會從程式碼擷取、並顯示在表格中。例如、Array和Volume Name參數會從下列程式碼擷取：
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. 按一下參數的說明欄、即可編輯說明。
++
+您無法在此索引標籤中編輯任何其他欄位。
+
+
+
+. 在*參數對應*索引標籤中、針對每個參數執行下列步驟：
++
+.. 從*類型*欄中、選取適當的字典物件。
+.. 在「*屬性*」欄中、輸入或從清單中選取該字典物件的適當屬性。
++
+輸入屬性後、您可以輸入句點（.）、並加入該物件的其他屬性。
+
++
+輸入「cm_storage．volume」作為類型、輸入「aggregate.name」作為AggregateName參數的屬性。
+
+.. 在「*物件名稱*」欄中、輸入物件名稱。
++
+當您在工作流程中指定命令詳細資料時、物件名稱可用於將參數分組到「參數」對話方塊的索引標籤下。
+
+
+
++
+當您在工作流程中指定命令詳細資料時、未對應的參數會顯示在「參數」對話方塊的*其他參數*索引標籤中。
+
+. 在「*保留*」索引標籤中、輸入使用SQL查詢的保留指令碼、以保留命令在排程工作流程執行期間所需的資源：
++
+.. *選用：*在*保留呈現*欄位中、使用VEL語法輸入保留的字串表示法。
++
+「新增SnapMirror標籤規則」
+
++
+SnapMirror原則的「」+ SnapMirrorLabel +「[.code]」
+
++
+「+ PolicyName +"`"
+
++
+字串表示法用於顯示保留區視窗中所保留資源的詳細資料。
+
+
+
++
+
+NOTE: 除了cm_storage、cm_perform、儲存設備、效能、vc、 和自訂配置。
+
+. *選用：*在*驗證*索引標籤中、輸入SQL查詢以驗證命令是否影響資料來源和WFA快取、以便移除保留。
++
+您輸入的SQL查詢只能包含SQL SELECT陳述式。
+
++
+.. 按一下*測試驗證*以測試驗證指令碼。
+.. 在「*驗證*」對話方塊中、輸入所需的測試參數。
+.. 如果您不想使用保留資料來測試驗證指令碼、請清除*在test*中使用*保留資料欄位。
+.. 按一下* Test*。
+.. 檢閱測試結果之後、請關閉對話方塊。
+
+
+. 按一下* Test*測試命令。
+. 在「*測試命令*」對話方塊中、按一下「*測試*」。
++
+測試結果會顯示在對話方塊的「記錄訊息」區段中。
+
+. 按一下「 * 儲存 * 」。
+

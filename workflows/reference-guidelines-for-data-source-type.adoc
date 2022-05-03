@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 您必須瞭解建立資料來源類型的準則、這些資料來源類型可用來定義OnCommand Workflow Automation for the Sof the WFA（WFA）的自訂資料來源。 
+---
+= 建立資料來源類型的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解建立資料來源類型的準則、這些資料來源類型可用來定義OnCommand Workflow Automation for the Sof the WFA（WFA）的自訂資料來源。
+
+您可以使用下列其中一種方法來定義資料來源類型：
+
+* SQL：您可以使用WFA SQL準則、根據外部資料庫、從資料來源定義選取查詢。
+* 指令碼：您可以撰寫PowerShell指令碼、為特定的字典項目配置提供資料。
+
+
+建立資料來源類型的準則如下：
+
+* 您必須使用PowerShell語言來建立指令碼。
+* PowerShell指令碼應提供目前工作目錄中每個字典項目的輸出。
+* 資料檔案應命名為「dicitnstite_enter.csv"、其中的字典項目名稱應為大小寫字元。
++
+從Performance Advisor收集資訊的預先定義資料來源類型、使用指令碼型資料來源類型。輸出檔案的名稱為「array_Performance．csv"和「Aggregate效能．csv.」
+
+* 這個「.csv'」檔案應以與該字典項目屬性相同的順序來包含內容。
++
+一個字典項目會依下列順序包含屬性：array_ip、date、Day、hour、cpm_busy、 總計_ops_per秒、disk處理量_per秒
+
++
+PowerShell指令碼會以相同順序將資料新增至「.csv"檔案。
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* 您應該使用編碼來確保指令碼的資料輸出正確載入WFA快取。
+* 您應該在「.csv'」檔案中輸入零值時使用\N。
+

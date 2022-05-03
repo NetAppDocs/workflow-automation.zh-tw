@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, vcs 
+summary: 在VCS中安裝Workflow Automation（WFA）之後、您必須使用組態指令碼在VCS中設定WFA、以達到高可用度。 
+---
+= 在VCS中設定Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在VCS中安裝Workflow Automation（WFA）之後、您必須使用組態指令碼在VCS中設定WFA、以達到高可用度。
+
+* 您必須在兩個叢集節點上安裝相同版本的WFA。
+* 兩個節點的安裝路徑必須相同。
+* 您必須建立WFA的備份。
+
+
+.步驟
+. 登入叢集的第一個節點。
+. 使用叢集管理程式來驗證兩個節點的HA狀態都在執行中。
+. 在Shell提示下、執行ha_setup.pl指令碼、將WFA資料移至共享位置、並使用VCS設定WFA以進行容錯移轉：「perl ha_setup.pl - first [-t type__of_cluster _vcs][-g cluster _group名稱][-e nic卡名稱][-I ip_address][-m netmask][-n_mount_name_][_l_k_kl_k_kitl_name
++
+如需預設安裝位置、指令碼可在/opt/NetApp/WFA / bin / ha/下載。
+
++
+「perl ha_setup.pl - first -t vcs -g wFA -e eth0 -i 10.238.170.3 -m 255．255．255．255－n wfa_cluster -f /mnt/wfa_mount/-v lun_volume -d lun_dg -l /opp/wfa」
+
+. 使用叢集管理程式驗證WFA服務、掛載點、虛擬IP、NIC和Volume群組是否已新增至叢集群組。
+. 使用叢集管理程式將WFA資源移至次要節點：
++
+.. 選取並以滑鼠右鍵按一下叢集群組。
+.. 選擇*切換至*>*次要節點*。
+
+
+. 驗證叢集的第二個節點上的資料掛載、虛擬IP、磁碟區群組和NIC卡是否正常運作。
+. 使用叢集管理程式讓WFA服務離線：
++
+.. 選擇* WFA *>* Application*>* WFA伺服器*。
+.. 按一下滑鼠右鍵並選取*離線*。
+.. 選擇* WFA *>* Application*>* WFA-db*。
+.. 按一下滑鼠右鍵並選取*離線*。
+
+
+. 在Shell提示下、在叢集的次要節點上執行ha_setup.pl指令碼、將WFA設定為使用來自共享位置的資料：「perl ha_setup.pl - join（-t type__of_cluster _vcs）」[-f mount_point_of_shared_LUN]
++
+如需預設安裝位置、指令碼可在/opt/NetApp/WFA / bin / ha/下載。
+
++
+「perl ha_setup.pl - join -t vcs -f /mnt/wfa_mount/`
+
+. 移至叢集管理程式、然後按一下*叢集群組*>*線上*>*伺服器*。
++
+叢集管理程式可能需要一段時間才能顯示應用程式資源已上線。您也可以在應用程式資源上按一下滑鼠右鍵、然後確認資源是否在線上。
+
+. 請確定可透過此組態期間使用的IP位址存取WFA。
+

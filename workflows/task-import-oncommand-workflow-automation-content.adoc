@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-import-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: import, user-created, oncommand, workflow, automation, content, finders, commands, export, installation, downloaded, storage, community, pack, data, pwershell, toolkits, perl 
+summary: 您可以匯入使用者建立OnCommand Workflow Automation 的功能區（WFA）內容、例如工作流程、檔案和命令。您也可以匯入從另一個WFA安裝匯出的內容、從Storage Automation Store或WFA社群下載的內容、以及套件、包括Data ONTAP 更新版本套件和Perl NMSDK工具套件。 
+---
+= 匯入OnCommand Workflow Automation 內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以匯入使用者建立OnCommand Workflow Automation 的功能區（WFA）內容、例如工作流程、檔案和命令。您也可以匯入從另一個WFA安裝匯出的內容、從Storage Automation Store或WFA社群下載的內容、以及套件、包括Data ONTAP 更新版本套件和Perl NMSDK工具套件。
+
+.您需要的是 #8217 ；需要的是什麼
+* 您必須能夠存取想要匯入的WFA內容。
+* 您要匯入的內容必須在執行相同版本或舊版WFA的系統上建立。
++
+例如、如果您執行的是WFA 2.2、則無法匯入使用WFA 3.0建立的內容。
+
+* 您只能將以N-2版本WFA開發的內容匯入WFA 5.1。
+* 如果.DAR'檔案參考NetApp認證的內容、則必須匯入NetApp認證的內容套件。
++
+NetApp認證的內容套件可從Storage Automation Store下載。您必須參閱套件文件、以確認是否符合所有要求。
+
+
+
+.步驟
+. 透過網頁瀏覽器登入WFA。
+. 按一下「*設定*」、然後在「*維護*」下按一下「*匯入工作流程*」。
+. 按一下*選擇檔案*以選取您要匯入的「.Dar」檔案、然後按一下*匯入*。
+. 在「*匯入成功*」對話方塊中、按一下「*確定*」。
+

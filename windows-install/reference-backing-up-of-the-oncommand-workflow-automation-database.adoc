@@ -1,0 +1,46 @@
+---
+permalink: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: back up, oncommand, workflow, automation, database 
+summary: 支援的一套支援功能包括系統組態設定和快取資訊、OnCommand Workflow Automation 包括遊樂場資料庫。您可以在同一個系統或不同的系統上使用備份進行還原。 
+---
+= 備份OnCommand Workflow Automation the支援資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援的一套支援功能包括系統組態設定和快取資訊、OnCommand Workflow Automation 包括遊樂場資料庫。您可以在同一個系統或不同的系統上使用備份進行還原。
+
+資料庫的自動備份會在每天早上2點建立並儲存為.Zip檔案、位於下列位置：WFA_install_location / WFA-Backups。
+
+WFA最多可在WFA備份目錄中儲存五個備份、並以最新的備份取代最舊的備份。卸載WFA時、不會刪除WFA備份目錄。如果您在解除安裝WFA時未建立WFA資料庫的備份、則可以使用自動建立的備份進行還原。
+
+當您必須儲存特定變更以進行還原時、也可以手動備份WFA資料庫；例如、如果您想要備份在自動備份之前所做的變更。
+
+[NOTE]
+====
+* 您只能將WFA資料庫備份還原至執行相同版本或更新版本WFA的系統。
++
+例如、如果您在執行WFA 4.2的系統上建立備份、則只能將備份還原至執行WFA 4.2或更新版本的系統。
+
+* 在高可用度設定中進行災難恢復時、您無法使用Web UI來備份WFA資料庫。
+
+
+====
+
+
+== 使用者認證資料的備份與還原
+
+WFA資料庫的備份包含WFA使用者認證資料。
+
+
+NOTE: WFA資料庫也包含在AutoSupport 資料不實的資料中、但是AutoSupport 、任何WFA使用者的密碼並不包含在資料不實的資料中。
+
+從備份還原WFA資料庫時、會保留下列項目：
+
+* 在目前WFA安裝期間建立的管理員使用者認證。
+* 如果使用者的系統管理權限不是預設的系統管理使用者、則會還原資料庫、這兩個系統管理使用者的認證資料。
+* 目前WFA安裝的所有其他使用者認證都會由備份的使用者認證取代。
+

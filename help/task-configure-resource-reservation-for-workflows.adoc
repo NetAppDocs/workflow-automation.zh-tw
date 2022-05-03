@@ -1,0 +1,34 @@
+---
+permalink: help/task-configure-resource-reservation-for-workflows.html 
+sidebar: sidebar 
+keywords: configure, resource, reservation, capability, oncommand, workflow, automation, ensure, required, available, successful, execution 
+summary: 您可以設定OnCommand Workflow Automation 資源保留功能以供使用於功能強大的功能（WFA）工作流程、以確保所需的資源能夠順利執行工作流程。 
+---
+= 設定工作流程的資源保留
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 資源保留功能以供使用於功能強大的功能（WFA）工作流程、以確保所需的資源能夠順利執行工作流程。
+
+.步驟
+. 以系統管理員身分透過網頁瀏覽器登入WFA。
+. 按一下「*設定*」、然後在「*設定*」下按一下「*工作流程設定*」。
+. 確認已選取「*啟用命令保留*」核取方塊。
+. 在*保留到期日（H）*欄位中、輸入所需的值。
++
+預設值為4。
+
+. 按一下「 * 儲存 * 」。
+. 在每個必要的工作流程中啟用資源保留：
++
+.. 按一下所需工作流程的*工作流程*>*詳細資料*。
++
+「Workflow」是需要資源保留的工作流程。
+
+.. 選擇*考慮保留的元素*。
+
+
+

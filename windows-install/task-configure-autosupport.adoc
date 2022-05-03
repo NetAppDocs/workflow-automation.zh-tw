@@ -1,0 +1,60 @@
+---
+permalink: windows-install/task-configure-autosupport.html 
+sidebar: sidebar 
+keywords: configure, autosupport 
+summary: 您可以設定數AutoSupport 種支援功能設定、例如排程、AutoSupport 支援各種資訊的內容、以及Proxy伺服器。針對您所選擇的內容、每週發送一次記錄給技術支援部門、以進行歸檔和問題分析。AutoSupport 
+---
+= 設定AutoSupport 功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定數AutoSupport 種支援功能設定、例如排程、AutoSupport 支援各種資訊的內容、以及Proxy伺服器。針對您所選擇的內容、每週發送一次記錄給技術支援部門、以進行歸檔和問題分析。AutoSupport
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下「*設定*」、然後在「*設定*」下按一下「* AutoSupport 」。
+. 確認AutoSupport 已選取「*啟用S16*」方塊。
+. 輸入所需資訊。
+. 從*內容*清單中選取下列其中一項：
++
+[cols="2*"]
+|===
+| 如果您想要包含... | 然後選擇此選項... 
+
+
+ a| 
+只有組態詳細資料、例如WFA安裝的使用者、工作流程和命令
+ a| 
+"僅結束組態資料"
+
+
+
+ a| 
+WFA組態詳細資料和WFA快取表中的資料、例如配置
+ a| 
+「End configuration and cache data」（結束組態與快取資料）（預設）
+
+
+
+ a| 
+WFA組態詳細資料、WFA快取表中的資料、以及安裝目錄中的資料
+ a| 
+「結束組態並快取延伸資料」
+
+|===
++
+
+NOTE: 任何WFA使用者的密碼都不包含在AutoSupport 畫面資料中。
+
+. 測試您是否可以下載AutoSupport 一份資訊更新訊息：
++
+.. 按一下*下載*。
+.. 在開啟的對話方塊中、選取儲存.7z檔案的位置。
+
+
+. 按一下*立即傳送*、測試AutoSupport 將資訊傳送到指定目的地的過程。
+. 按一下「 * 儲存 * 」。
+

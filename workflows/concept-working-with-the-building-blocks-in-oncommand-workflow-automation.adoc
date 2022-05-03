@@ -1,0 +1,28 @@
+---
+permalink: workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: workflow, automation, consist, several, building, blocks, include, library, predefined, provide, create, requirements, organization 
+summary: Workflow Automation（WFA）工作流程包含數個建置區塊、WFA則包含預先定義建置區塊的程式庫。您可以使用WFA提供的建置區塊來建立符合組織需求的工作流程。 
+---
+= 使用OnCommand Workflow Automation 資訊區塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation（WFA）工作流程包含數個建置區塊、WFA則包含預先定義建置區塊的程式庫。您可以使用WFA提供的建置區塊來建立符合組織需求的工作流程。
+
+WFA提供儲存自動化程序的架構。WFA的靈活度取決於使用工作流程建置區塊來建構工作流程的方式。
+
+WFA建置區塊如下：
+
+* 字典項目
+* 命令
+* 篩選器
+* 尋找者
+* 功能
+* 範本
+
+
+您應該瞭解WFA如何使用建置區塊來協助您建立工作流程。

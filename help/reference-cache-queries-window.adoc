@@ -1,0 +1,130 @@
+---
+permalink: help/reference-cache-queries-window.html 
+sidebar: sidebar 
+keywords: cache, queries, window, enable, manage, dictionary, entries, data, source, types 
+summary: 「快取查詢」視窗可讓您管理WFA字典項目及其相關資料來源類型的快取查詢。 
+---
+= 快取查詢視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「快取查詢」視窗可讓您管理WFA字典項目及其相關資料來源類型的快取查詢。
+
+快取查詢是從查詢中指定的資料表擷取所需資料的SQL查詢。快取查詢會與一個或多個資料來源類型相關聯、例如* Volume（storage）*的快取查詢、會同時與Active IQ Unified Manager 示例5.1和5.2資料來源類型相關聯。您可以定義快取查詢、以便在需要擷取資料來源Active IQ Unified Manager 的資料表中將部分資訊（例如Volume）擷取到WFA的快取中。
+
+* 快取查詢表
+* 工具列
+
+
+
+
+== 快取查詢清單
+
+「快取查詢」表會列出字典項目及其相關的資料來源類型。您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。
+
+* image:../media/filter_icon_wfa.gif["篩選圖示"] 啟用或停用整個表格的篩選。如果停用篩選功能、圖示上會出現紅色的「x」。
+* 按兩下 image:../media/filter_icon_wfa.gif["篩選圖示"] 清除並重設篩選選項。
+* image:../media/wfa_filter_icon.gif["篩選圖示"] 在每個欄標題上、您都可以根據欄的內容進行篩選。按一下 image:../media/wfa_filter_icon.gif["篩選圖示"] 欄中的可讓您篩選下拉式清單或所有可用項目的特定項目。
+* 按一下欄標題、即可切換遞增或遞減排序順序。您可以使用排序箭頭來識別套用的排序順序（image:../media/wfa_sortarrow_up_icon.gif["排序圖示"] 用於遞增和 image:../media/wfa_sortarrow_down_icon.gif["向下排序圖示"] 降序）。
+* 若要重新排列欄位的位置、您可以拖放欄位、以任何所需的順序排列欄位。不過、您無法隱藏或刪除這些欄。
+* 按一下「*搜尋*篩選」文字方塊、即可搜尋特定內容。此外、您也可以使用支援的運算子來搜尋適用的欄類型、字母或數字。
+
+
+快取查詢表包含下列欄位：
+
+* *認證*
++
+指出快取查詢是否為使用者建立的（image:../media/community_certification.gif[""]）、PS（image:../media/ps_certified_icon_wfa.gif[""]）、社群（image:../media/community_certification.gif[""]）、使用者鎖定（image:../media/lock_icon_wfa.gif[""]）、或NetApp認證的（image:../media/netapp_certified.gif[""]）。
+
+* *方案*
++
+表示配置名稱（架構）、其中包含與您環境相關的資料。例如、* cm_storage *快取配置包含與叢集Data ONTAP 式樣例相關的資料。相關方案資訊可從資料來源取得。
+
+* *《Dictionary Entry*》
++
+顯示與方案相關的字典項目。
+
+* *實體版本*
++
+以「major.m2.m輕.reversion」格式顯示物件的版本編號、例如1.1.0。
+
+* *資料來源類型*
++
+顯示與該字典項目相關聯的資料來源類型。
+
+* *上次更新日期*
++
+顯示上次更新快取查詢的日期和時間。
+
+* *更新者*
++
+顯示更新快取查詢的使用者。
+
+
+
+
+
+== 工具列
+
+工具列位於欄標題上方。您可以使用工具列中的圖示來執行各種動作。您也可以從視窗中的滑鼠右鍵功能表存取這些動作。
+
+* *image:../media/new_wfa_icon.gif["新圖示"] （新版）*
++
+開啟「新增快取查詢」對話方塊、可讓您建立快取查詢。
+
+* *image:../media/edit_wfa_icon.gif["編輯圖示"] （編輯）*
++
+開啟所選快取查詢的「編輯快取查詢」對話方塊、讓您編輯快取查詢。
+
+* *image:../media/clone_wfa_icon.gif["複製圖示"] （複製）*
++
+開啟「新增快取查詢」對話方塊、可讓您建立所選快取查詢的複本或複本。
+
+* *image:../media/lock_wfa_icon.gif["鎖定圖示"] （鎖定）*
++
+開啟確認對話方塊、可讓您鎖定選取的快取查詢。
+
+* *image:../media/unlock_wfa_icon.gif["解除鎖定圖示"] （解除鎖定）*
++
+開啟確認對話方塊、可讓您解除鎖定選取的快取查詢。此選項只會針對您鎖定的快取查詢啟用。不過、系統管理員可以解除鎖定其他使用者鎖定的快取查詢。
+
+* *image:../media/delete_wfa_icon.gif["刪除圖示"] （刪除）*
++
+開啟確認對話方塊、可讓您刪除選取的使用者建立快取查詢。
+
++
+
+NOTE: 您無法刪除WFA、PS或範例快取查詢。
+
+* *image:../media/export_wfa_icon.gif["匯出圖示"] （匯出）*
++
+開啟確認對話方塊、可讓您匯出選取的使用者建立快取查詢。
+
++
+
+NOTE: 您無法匯出WFA、PS或範例快取查詢。
+
+* *image:../media/test_wfa_icon.gif["測試圖示"] （測試）*
++
+開啟「測試快取查詢」對話方塊、可讓您測試所選的快取查詢。
+
+* *image:../media/add_to_pack.png["新增至套件圖示"] （新增至套件）*
++
+開啟「新增至套件快取查詢」對話方塊、可讓您將快取查詢及其可靠的實體新增至可編輯的套件。
+
++
+
+NOTE: 「新增至套件」功能僅會針對認證設為*無的快取查詢啟用。*
+
+* *image:../media/remove_from_pack.png["從套件移除圖示"] （從套件中移除）*
++
+開啟所選快取查詢的「從Pack快取中移除查詢」對話方塊、可讓您從套件中刪除或移除快取查詢。
+
++
+
+NOTE: 「從套件移除」功能僅會針對認證設為*無的快取查詢啟用。*
+
+

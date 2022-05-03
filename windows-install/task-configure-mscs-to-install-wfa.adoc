@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-configure-mscs-to-install-wfa.html 
+sidebar: sidebar 
+keywords: configure, mscs, install, workflow, automation 
+summary: 在Microsoft Cluster Server（MSCS）中安裝Workflow Automation（WFA）之前、您必須先設定您的MSCS環境。 
+---
+= 設定MSCS以安裝Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Microsoft Cluster Server（MSCS）中安裝Workflow Automation（WFA）之前、您必須先設定您的MSCS環境。
+
+* 必須從伺服器管理程式安裝MSCS。
+* 選用：SnapDrive 必須安裝適用於Windows的功能。
++
+支援的最低版本為Windows 2012。
+
+* 必須在兩個叢集節點上使用相同路徑安裝相同版本的WFA。
+* 兩個叢集節點都必須新增至同一個網域。
+
+
+您必須在MSCS介面中使用叢集管理程式來完成此工作。
+
+.步驟
+. 以網域管理員身分登入叢集管理程式。
+. 使用下列其中一個選項、確認兩個節點都能存取LUN：
++
+** 原生管理LUN。
+** 使用適用於Windows的功能：SnapDrive
++
+... 在SnapDrive 兩個節點上安裝並設定適用於Windows的支援功能。
+... 使用SnapDrive 適用於Windows的支援功能建立LUN、並為兩個節點設定LUN。
+
+
+
+
+. 從容錯移轉叢集管理程式、將磁碟新增至叢集。
+

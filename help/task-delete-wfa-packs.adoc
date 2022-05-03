@@ -1,0 +1,33 @@
+---
+permalink: help/task-delete-wfa-packs.html 
+sidebar: sidebar 
+keywords: delete, pack, oncommand, workflow, automation, require, delete, entities, associate 
+summary: 如果您不再需要某個套件OnCommand Workflow Automation 、可以從該套件（WFA）中刪除。如果您刪除套件、則會刪除與套件相關的所有實體。 
+---
+= 刪除OnCommand Workflow Automation 封裝
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您不再需要某個套件OnCommand Workflow Automation 、可以從該套件（WFA）中刪除。如果您刪除套件、則會刪除與套件相關的所有實體。
+
+*關於此工作*
+
+* 如果套件所包含的實體有任何相依性、則無法刪除套件。
++
+例如、如果您嘗試刪除包含屬於自訂工作流程一部分之命令的套件、則刪除作業將會失敗、因為自訂工作流程會相依於套件。您只能在刪除自訂工作流程之後刪除套件。
+
+* 屬於套件一部分的實體無法個別刪除。
++
+若要刪除屬於套件一部分的實體、您必須刪除包含該實體的套件。如果某個實體屬於多個套件、則只有刪除包含該實體的所有套件時、該實體才會從WFA伺服器中刪除。
+
+
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下*內容管理*>*套件*。
+. 選取您要刪除的套件、然後按一下 image:../media/delete_wfa_icon.gif["刪除圖示"]。
+. 在*刪除Pack *確認對話方塊中、按一下*確定*。
+

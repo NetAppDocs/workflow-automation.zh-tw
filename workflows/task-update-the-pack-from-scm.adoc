@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-update-the-pack-from-scm.html 
+sidebar: sidebar 
+keywords: update, pack, source, control, management, server, import, oncommand, workflow, automation 
+summary: 您可以更新來源控制管理（SCM）伺服器中的套件、然後將更新的套件匯入OnCommand Workflow Automation 到更新的物件（WFA）。 
+---
+= 從SCM伺服器更新WFA工作流程套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更新來源控制管理（SCM）伺服器中的套件、然後將更新的套件匯入OnCommand Workflow Automation 到更新的物件（WFA）。
+
+必須設定SCM、而且您必須擁有系統管理或架構認證資料
+
+如果您對SCM伺服器中的套件進行任何變更或更新、管理員或架構設計師需要使用SCM提供的比較工具來解決衝突（如果有）。WFA會自動調整XML差異檔案、以僅顯示相關變更。
+
+在匯入套件之前、系統會通知您WFA套件內容的變更。
+
+.步驟
+. 透過網頁瀏覽器登入WFA視窗。
+. 將更新的套件匯入WFA。
++
+link:task-import-an-oncommand-workflow-automation-pack.html["匯入WFA工作流程套件"]
+
++
+
+NOTE: 如果WFA資料庫已包含相同的套件、則會覆寫套件內容。
+
+

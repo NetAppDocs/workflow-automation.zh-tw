@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 「偏好設定」視窗可讓您檢視及修改與特定Workflow Automation（WFA）伺服器相關之所有用戶端的重新整理與記錄選項。您可以選取「設定」來存取此視窗、然後在「設定」下按一下「偏好設定」。 
+---
+= 偏好設定視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「偏好設定」視窗可讓您檢視及修改與特定Workflow Automation（WFA）伺服器相關之所有用戶端的重新整理與記錄選項。您可以選取*設定*來存取此視窗、然後在*設定*下按一下*偏好設定*。
+
+* *啟用自動重新整理*
++
+可讓您選擇由伺服器觸發的用戶端自動重新整理。此選項預設為選取狀態。選取此選項時、會自動重新整理下列WFA表格：
+
++
+** 執行狀態
+** 資料來源
+** 保留
+
+
+
+
+如果未選中，則在單擊* Refresh（刷新）*之前不會更新表。此核取方塊預設為選取狀態。
+
+* *重新整理時間間隔（秒）*
++
+可讓您選取重新整理時間間隔。預設值為3秒。
+
+* *要顯示的最大列數*
++
+可讓您按一下*最大大小*欄中的值、然後修改伺服器擷取的列數、並依清單類型顯示給使用者。
+
++
+例如、「*工作流程執行*」設定會顯示使用者過去執行記錄的次數。下列為預設值：
+
++
+** 工作流程執行：100
+** 擷取記錄：30
+** 預約：100
+** 新增庫存列：1000
++
+可讓您指定庫存應取得的最大結果數。預設值為1000。
+
+
+
+
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存組態設定。
+
+

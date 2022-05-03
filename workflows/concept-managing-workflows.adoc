@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-managing-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, create, part, managing, understand, relevant, concepts 
+summary: 您可以自訂預先定義的工作流程、或是建立新的工作流程來管理工作流程。在開始管理工作流程之前、您也必須瞭解相關概念。 
+---
+= 管理工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自訂預先定義的工作流程、或是建立新的工作流程來管理工作流程。在開始管理工作流程之前、您也必須瞭解相關概念。

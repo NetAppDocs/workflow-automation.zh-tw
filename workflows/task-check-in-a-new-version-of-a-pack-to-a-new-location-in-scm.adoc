@@ -1,0 +1,33 @@
+---
+permalink: workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html 
+sidebar: sidebar 
+keywords: update, version, pack, oncommand, workflow, automation, check, new, location, source, control, management, server 
+summary: 您可以更新OnCommand Workflow Automation 更新版本的更新套件（WFA）、然後將更新的套件存回來源控制管理（SCM）伺服器中的新位置。 
+---
+= 查看新版的WFA工作流程套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更新OnCommand Workflow Automation 更新版本的更新套件（WFA）、然後將更新的套件存回來源控制管理（SCM）伺服器中的新位置。
+
+必須設定SCM、而且您必須擁有系統管理或架構認證資料。
+
+.步驟
+. 透過網頁瀏覽器登入* WFA *視窗。
+. 按一下*內容管理*>*套件*。
+. 按一下*編輯套件*圖示。
+. 在「*套件<套件名稱>*」對話方塊的「*版本*」欄位中、更新套件的版本。
+. 按一下「 * 儲存 * 」。
+. 按一下套件層級的*匯出至伺服器*圖示。
+. 在「*匯出至伺服器資料夾*」對話方塊的「*伺服器系統的資料夾位置*」欄位中、輸入新的檔案系統位置。
++
+如果該套件先前儲存在「C：p4\cDOT \1.0.0」檔案系統位置、請將其儲存在「C：\p4\cDOT \2.0.0」位置。
+
+. 在SCM用戶端位置、將套件內容存回SCM伺服器的新位置。
++
+如果套件先前儲存在SCM伺服器的「//pot/wfa/packs/cot/1.0.0」路徑中、您可以將它儲存在其他位置、例如「//pot/wfa/packs/cot/2.0.0」
+
+

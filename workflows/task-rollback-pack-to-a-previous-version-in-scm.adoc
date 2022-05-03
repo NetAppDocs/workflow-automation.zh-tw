@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-rollback-pack-to-a-previous-version-in-scm.html 
+sidebar: sidebar 
+keywords: roll, pack, previous, version, source, control, management, import, oncommand, workflow, automation 
+summary: 您可以在來源控制管理（SCM）中將套件復原至舊版、然後將其匯入OnCommand Workflow Automation 到還原（WFA）。 
+---
+= 在SCM中將WFA工作流程套件回復至先前版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在來源控制管理（SCM）中將套件復原至舊版、然後將其匯入OnCommand Workflow Automation 到還原（WFA）。
+
+必須設定SCM、而且您必須擁有系統管理或架構認證資料。
+
+.步驟
+. 在SCM用戶端位置中、使用SCM工具將套件還原至檔案系統位置的舊版本。
++
+SCM用戶端會同步至您感興趣的確切變更編號。
+
+. 透過網頁瀏覽器登入WFA視窗。
+. 將更新的套件匯入WFA。
++
+link:task-import-an-oncommand-workflow-automation-pack.html["匯入WFA工作流程套件"]
+
++
+
+NOTE: 這會將WFA資料庫回復為舊版。
+
+

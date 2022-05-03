@@ -1,0 +1,25 @@
+---
+permalink: workflows/task-import-an-oncommand-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: import, workflow, server, oncommand, automation, storage, integration, requirements 
+summary: 您可以將工作流程套件從伺服器匯入OnCommand Workflow Automation 至物件庫（WFA）、以滿足儲存自動化和整合需求。 
+---
+= 匯入WFA工作流程套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將工作流程套件從伺服器匯入OnCommand Workflow Automation 至物件庫（WFA）、以滿足儲存自動化和整合需求。
+
+您必須能夠存取要匯入之伺服器中的WFA內容。
+
+.步驟
+. 透過網頁瀏覽器登入* WFA *視窗。
+. 按一下*內容管理*>*套件*。
+. 按一下*從伺服器匯入*圖示。
+. 在「*從伺服器資料夾匯入*」對話方塊的*伺服器系統*資料夾位置欄位中、以字串格式輸入套件在伺服器中的位置、例如「C：\work\packs\test」
+. 按一下「*確定*」。
+. 確認套件已匯入* Pack *視窗。
+

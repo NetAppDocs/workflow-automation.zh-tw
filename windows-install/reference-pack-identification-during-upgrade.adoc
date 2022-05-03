@@ -1,0 +1,27 @@
+---
+permalink: windows-install/reference-pack-identification-during-upgrade.html 
+sidebar: sidebar 
+keywords: pack, identification, during upgrade 
+summary: 在升級過程中OnCommand Workflow Automation 、更新（WFA）會將實體識別並分類為一個套件。如果您在升級之前刪除了某個套件的任何實體、則在升級期間將不會識別該套件。 
+---
+= 升級期間的套件識別
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在升級過程中OnCommand Workflow Automation 、更新（WFA）會將實體識別並分類為一個套件。如果您在升級之前刪除了某個套件的任何實體、則在升級期間將不會識別該套件。
+
+在升級過程中、WFA會將資料庫中的套件與Storage Automation Store中發行的套件清單進行比較、以識別升級前安裝的套件。因此、Pack識別功能會將資料庫中的現有套件分類。
+
+WFA會執行下列程序來識別和分類藥品包：
+
+* 維護在Storage Automation Store中發行的套件清單、以比較並識別升級前安裝的套件。
+* 如果已啟用Storage Automation Store、則會將套件中的實體歸類為Storage Automation Store同步的一部分。
+* 使用更新的清單將實體分類為套件。
+
+
+套件識別僅適用於從Storage Automation Store下載的NetApp認證套件。
+
+如果在升級期間未識別出套件、您可以重新匯入套件、以在WFA中識別套件。wfa.log檔案提供升級期間未識別為套件的實體詳細資料。

@@ -1,0 +1,49 @@
+---
+permalink: reference-legal-notices.html 
+sidebar: sidebar 
+keywords: legal, notices, copyright, trademarks, patents 
+summary: 法律聲明提供版權聲明、商標、專利等存取權限。 
+---
+= 法律聲明
+:allow-uri-read: 
+
+
+法律聲明提供版權聲明、商標、專利等存取權限。
+
+
+
+== 版權
+
+http://www.netapp.com/us/legal/copyright.aspx[]
+
+
+
+== 商標
+
+NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。
+
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
+
+
+
+== 專利
+
+如需最新的 NetApp 擁有專利清單、請參閱：
+
+https://www.netapp.com/us/media/patents-page.pdf[]
+
+
+
+== 隱私權政策
+
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
+
+
+
+== 注意
+
+通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2875136["Workflow Automation 5.1.1注意事項"^]
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2861741["Workflow Automation 5.1注意事項"^]

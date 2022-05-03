@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-functions-are.html 
+sidebar: sidebar 
+keywords: use, functions, workflows, complex, task, complete, during, planning, phase 
+summary: 您可以在工作流程中使用某項功能來處理複雜的工作、而這項工作必須在工作流程的規劃階段中完成。 
+---
+= 功能為何
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流程中使用某項功能來處理複雜的工作、而這項工作必須在工作流程的規劃階段中完成。
+
+您可以使用MVFlex運算式語言（MVEL）來寫入功能。您可以使用函數將常用的邏輯和更複雜的邏輯放在命名函數中、並將其重複使用為命令參數或篩選參數的值。您只需撰寫一次功能、就能跨越工作流程使用。您可以使用函數來處理可能很複雜的重複性工作和工作、例如定義複雜的命名慣例。
+
+函數在執行期間可能會使用其他功能。

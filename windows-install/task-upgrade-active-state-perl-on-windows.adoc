@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-upgrade-active-state-perl-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, activestate perl 
+summary: Windows上的企業版ActiveState Perl可搭配使用。OnCommand Workflow Automation您可以升級至較新版本的ActiveState Perl、以取得Windows伺服器上安全性弱點的修正程式。 
+---
+= 升級ActiveState Perl
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows上的企業版ActiveState Perl可搭配使用。OnCommand Workflow Automation您可以升級至較新版本的ActiveState Perl、以取得Windows伺服器上安全性弱點的修正程式。
+
+您必須在WFA伺服器上擁有Windows管理員權限。ActiveState Perl不支援「原地」升級。
+
+WFA 5.1使用企業版的ActiveState Perl。
+
+您可以從ActiveState Perl 5.26.3升級到更高版本。您無法升級至ActiveState Perl的主要版本。
+
+.步驟
+. 以管理使用者身分登入WFA主機機器。
+. 將64位元ActiveState Enterprise Edition 5.26.3的最新版本下載到目標系統。
+. 使用Windows服務主控台停止下列WFA服務：
++
+** WFA資料庫或MySQL57
+** WFA伺服器
+
+
+. 從控制面板解除安裝目標系統上目前版本的ActiveState Perl。
+. 執行C：\Perl64\site\Lib資料夾的備份。
+. 在目標機器上安裝新的ActiveState Enterprise Edition。
+. 還原您在步驟5中建立備份的ActiveState Enterprise Edition的\site\Lib資料夾。
+. 使用Windows服務主控台重新啟動WFA服務。
+

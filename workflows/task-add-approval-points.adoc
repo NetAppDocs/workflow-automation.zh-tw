@@ -1,0 +1,26 @@
+---
+permalink: workflows/task-add-approval-points.html 
+sidebar: sidebar 
+keywords: add, approval, point, checkpoint, workflow, pause, execution, resume, points, incremental, sections, certain condition, example, successful, validated 
+summary: 您可以在工作流程中將核准點新增為檢查點、以暫停工作流程執行、並根據您的核准而繼續執行。您可以使用核准點來遞增執行工作流程、只有在符合特定條件（例如、必須核准下一節或驗證第一節的成功執行）之後、才會執行工作流程的各個部分。 
+---
+= 新增核准點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流程中將核准點新增為檢查點、以暫停工作流程執行、並根據您的核准而繼續執行。您可以使用核准點來遞增執行工作流程、只有在符合特定條件之後才執行工作流程的各個部分、例如、必須核准下一節、或是驗證第一節的成功執行。
+
+.步驟
+. 以架構設計師或管理員的身分、透過網頁瀏覽器登入WFA。
+. 按一下*工作流程設計*>*工作流程*。
+. 在「*工作流程*」視窗中、按兩下您要修改的工作流程。
+. 在* Workflow <工作流程名稱>*視窗中、按一下 image:../media/approval_point_disabled.gif["核准點的映像"] 您要新增核准點之步驟左側的圖示。
++
+您可以為一或多個步驟新增核准點。
+
+. 在「*新的核准點*」對話方塊中、提供註解和條件詳細資料。
+. 按一下「*確定*」。
+

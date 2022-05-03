@@ -1,0 +1,50 @@
+---
+permalink: help/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, use, microsoft, active, directory, lightweight, access, protocol, server, authentication, authorization 
+summary: 您可以設定OnCommand Workflow Automation 使用Microsoft Active Directory（AD）輕量型目錄存取傳輸協定（LDAP）伺服器進行驗證和授權。 
+---
+= 設定驗證設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 使用Microsoft Active Directory（AD）輕量型目錄存取傳輸協定（LDAP）伺服器進行驗證和授權。
+
+*您需要的是什麼*
+
+您必須在環境中設定Microsoft AD LDAP伺服器。
+
+*關於此工作*
+
+WFA僅支援Microsoft AD LDAP驗證。您無法使用任何其他LDAP驗證方法、包括Microsoft AD輕量型目錄服務（AD LDS）或Microsoft通用目錄。
+
+
+NOTE: 在通訊期間、LDAP會以純文字格式傳送使用者名稱和密碼。不過、LDAPS（LDAP安全）通訊是加密且安全的。
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下「*設定*」、然後在「*設定*」下按一下「*驗證*」。
+. 選取*啟用Active Directory *核取方塊。
+. 在下列欄位中輸入必要資訊：
++
+.. *可選：*如果您想對網域使用者使用_user@domain_格式、請在*使用者名稱屬性*欄位中、以「userPrincipalName」取代「semAccountName」。
+.. *選用：*如果您的環境需要唯一值、請編輯必填欄位。
+.. 輸入AD伺服器URI如下：+範例：「LDAP//active_directory_server_address\[:port\]」
++
+「LDAP：//NB-T01.example.com[:389]`
+
++
+如果您已啟用LDAP over SSL、則可使用下列URI格式：「LDAPS：//active_directory_server_address\[:port\]」
+
+.. 新增所需角色的AD群組名稱清單。
++
+
+NOTE: 您可以在Active Directory群組視窗中、將AD群組名稱清單新增至所需的角色。
+
+
+
+. 按一下「 * 儲存 * 」。
+

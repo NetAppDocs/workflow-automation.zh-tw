@@ -1,0 +1,23 @@
+---
+permalink: windows-install/concept-known-limitations-and-enhancements.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations, enhancements 
+summary: 安裝及設定WFA之前、應先注意某些限制和不受支援的功能。OnCommand Workflow Automation 
+---
+= 已知的限制與增強功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝及設定WFA之前、應先注意某些限制和不受支援的功能。OnCommand Workflow Automation
+
+* *建立類別名稱*
++
+** 當類別名稱中使用連字號（-）時、一旦儲存類別、就會以空格取代。例如、如果提供類別名稱「abc-xyz」、則類別名稱會儲存為「abc xyz」、並移除連字號。若要避免此問題、請勿在類別名稱中使用連字號。
+** 當類別名稱中使用一個分號（：）時、一旦儲存類別、就會忽略該分號之前的文字字串。例如、如果提供類別名稱「abc：xyz」、則類別名稱會儲存為「xyz」、並移除「abc」字串。若要避免此問題、請勿在類別名稱中使用冒號。
+** 沒有核取可防止兩個類別具有相同名稱。不過、從導覽窗格選取這些類別時、會造成問題。若要避免此問題、請確定每個類別名稱都是唯一的。
+
+
+

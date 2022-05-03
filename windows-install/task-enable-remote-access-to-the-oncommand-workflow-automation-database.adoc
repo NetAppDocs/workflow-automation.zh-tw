@@ -1,0 +1,44 @@
+---
+permalink: windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: enable, remote access, oncommand, workflow, automation, database, windows 
+summary: 根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端、才能存取WFA（WFA）資料庫。若要從遠端系統存取WFA資料庫、您可以變更預設設定。 
+---
+= 可在OnCommand Workflow Automation Windows上遠端存取效能不整資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端、才能存取WFA（WFA）資料庫。若要從遠端系統存取WFA資料庫、您可以變更預設設定。
+
+* 您必須以管理使用者的身分登入WFA主機系統。
+* 如果WFA主機系統上安裝了防火牆、則您必須設定防火牆設定、以允許從遠端系統存取。
+
+
+此程序使用預設的WFA安裝路徑。如果您在安裝期間變更了預設位置、則必須使用自訂的WFA安裝路徑。
+
+.步驟
+. 開啟Windows檔案總管、然後瀏覽至下列目錄：WFA_install_directory\WFA\bin
+. 執行下列其中一項動作：
++
+[cols="2*"]
+|===
+| 至... | 輸入下列命令... 
+
+
+ a| 
+啟用遠端存取
+ a| 
+「.\WFA --db-access=public--restart」
+
+
+
+ a| 
+停用遠端存取
+ a| 
+「.\WFA --db-access=Default -重新啟動」
+
+|===
+

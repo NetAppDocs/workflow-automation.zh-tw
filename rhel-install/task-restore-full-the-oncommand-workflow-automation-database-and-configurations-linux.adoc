@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, cli 
+summary: 您可以使用OnCommand Workflow Automation 命令列介面（CLI）、完整還原先前備份的整套（WFA）資料庫和支援組態。在完整還原中、您可以還原WFA資料庫、WFA組態和金鑰。 
+---
+= 使用CLI還原（完整）WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用OnCommand Workflow Automation 命令列介面（CLI）、完整還原先前備份的整套（WFA）資料庫和支援組態。在完整還原中、您可以還原WFA資料庫、WFA組態和金鑰。
+
+* 您必須已建立WFA資料庫的備份。
+* 您必須擁有管理員或架構人員認證資料。
+
+
+.步驟
+. 在Shell提示下、瀏覽至WFA伺服器上的下列目錄：WFA_install_LOWS/WFA/bin
++
+WFA_install_location是WFA安裝目錄。
+
+. 還原WFA資料庫：
++
+「WFA --RESE還原--full --user=user_name [--password=password][--port=path]--restart」
+
++
+** user_name是管理員或架構設計師使用者的使用者名稱。
+** 密碼是使用者的密碼。
++
+如果您尚未提供密碼、則必須在系統提示時輸入密碼。
+
+** 路徑是還原檔案的完整目錄路徑。
+
+
+. 確認還原作業成功、且可存取WFA。
+

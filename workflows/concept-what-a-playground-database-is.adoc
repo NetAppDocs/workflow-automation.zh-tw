@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: Playground資料庫是MySQL資料庫、包含在Workflow Automation（WFA）伺服器安裝中。您可以將資料表新增至遊樂場資料庫以納入資訊、篩選器和SQL查詢可用於使用者輸入。 
+---
+= 什麼是遊樂場資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Playground資料庫是MySQL資料庫、包含在Workflow Automation（WFA）伺服器安裝中。您可以將資料表新增至遊樂場資料庫以納入資訊、篩選器和SQL查詢可用於使用者輸入。
+
+Playground資料庫是無法透過WFA網站存取的架構。您可以使用MySQL用戶端、例如SQLyog、Toad for MySQL、MySQL工作台或命令列介面（CLI）來存取資料庫。
+
+您必須使用下列認證資料來存取遊樂場資料庫：
+
+* 使用者名稱：WFA
+* 密碼：Wfa123
+
+
+這些認證資料可讓您完整存取遊樂場資料庫、並以唯讀方式存取WFA MySQL資料庫中定義的其他架構。您可以在Playground資料庫中建立所需的資料表。
+
+您可以將環境中用於儲存物件的標記或中繼資料新增至遊樂場資料庫中的表格。接著、WFA篩選器和使用者輸入查詢便可將標記或中繼資料與其他WFA快取表中的資訊一起使用。
+
+例如、您可以將Playground資料庫用於下列使用案例：
+
+* 標記會以業務單位（BU）名稱集合在一起、並根據這些標記將磁碟區分配給匯流排
+* 使用BU名稱標記vFiler單元
+* 新增地理區或位置詳細資料至儲存物件
+* 定義資料庫管理員對資料庫的存取
+
+
+例如、如果您使用BU名稱做為儲存物件的標記、例如Aggregate和vFilerTM單元、您可以在遊樂場資料庫中建立包含BU名稱的表格。然後、您的工作流程篩選器和使用者輸入查詢就可以使用BU名稱。
+
+以下是遊樂場資料庫表格範例（Player.Volume _BU）：
+
+[cols="3*"]
+|===
+| array_ip | Volume名稱 | 不 
+
+
+ a| 
+10.225.126.23
+ a| 
+data_11.
+ a| 
+行銷
+
+
+
+ a| 
+10.225.126.28
+ a| 
+ARCH_11
+ a| 
+人力資源
+
+|===
+以下是SQL查詢範例、可用來依BU篩選磁碟區：
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+*相關資訊*
+
+https://www.webyog.com/["SQLyog"^]
+
+http://www.mysql.com/products/workbench/["MySQL工作平台"^]
+
+http://www.quest.com/toad-for-mysql/["適用於MySQL的Toad"^]

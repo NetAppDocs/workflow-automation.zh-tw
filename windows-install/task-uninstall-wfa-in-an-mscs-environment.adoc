@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-uninstall-wfa-in-an-mscs-environment.html 
+sidebar: sidebar 
+keywords: uninstall, workflow, automation, mscs environment 
+summary: 您可以從叢集節點刪除所有WFA服務、從叢集解除安裝Workflow Automation（WFA）。 
+---
+= 在MSCS環境中解除安裝Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從叢集節點刪除所有WFA服務、從叢集解除安裝Workflow Automation（WFA）。
+
+此工作適用於Windows Server 2012。
+
+.步驟
+. 使用容錯移轉叢集管理程式使服務離線：
++
+.. 在角色上按一下滑鼠右鍵。
+.. 選擇*停止角色*。
+
+
+. 在第一個節點上解除安裝WFA、然後在第二個節點上解除安裝WFA。
++
+link:task-uninstall-oncommand-workflow-automation.html["解除安裝OnCommand Workflow Automation"]
+
+. 從容錯移轉叢集管理程式刪除叢集資源：
++
+.. 在角色上按一下滑鼠右鍵。
+.. 選擇*移除*。
+
+
+. 手動刪除共享位置中的資料。
+

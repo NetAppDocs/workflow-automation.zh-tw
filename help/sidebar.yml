@@ -1,0 +1,283 @@
+---
+section: help
+title: 線上說明
+entries:
+- title: 概述OnCommand Workflow Automation
+  url: "/help/concept-overview-of-oncommand-workflow-automation.html"
+- title: 建立本機使用者
+  url: "/help/task-create-local-users.html"
+- title: 設定OnCommand Workflow Automation 功能
+  url: "/help/concept-advanced-configuring-oncommand-workflow-automation.html"
+  entries:
+  - title: 設定驗證設定
+    url: "/help/task-configure-authentication-settings.html"
+  - title: 設定電子郵件通知
+    url: "/help/task-configure-mail.html"
+  - title: 設定SNMP
+    url: "/help/task-configure-snmp.html"
+    entries:
+    - title: 設定SNMP版本1
+      url: "/help/task-configure-snmp-version-1.html"
+    - title: 設定SNMP版本3
+      url: "/help/task-configure-snmp-version-3.html"
+  - title: 設定Syslog
+    url: "/help/task-configure-syslog.html"
+  - title: 設定AutoSupport 功能
+    url: "/help/task-configure-autosupport.html"
+  - title: 設定資料來源擷取失敗的電子郵件通知
+    url: "/help/task-configure-email-notifications-for-data-source-acquisition-failures.html"
+  - title: 設定工作流程的資源保留
+    url: "/help/task-configure-resource-reservation-for-workflows.html"
+- title: 設定目標系統的認證資料
+  url: "/help/task-configure-the-credentials-of-a-target-system.html"
+- title: 設定連接遠端系統的傳輸協定
+  url: "/help/task-configure-protocols-for-connecting-to-remote-systems.html"
+- title: 功能部件OnCommand Workflow Automation
+  url: "/help/reference-oncommand-workflow-automation-designer-features.html"
+  entries:
+  - title: 重複列的運作方式
+    url: "/help/concept-how-repeat-row-works.html"
+  - title: 哪些是核准點
+    url: "/help/concept-what-approval-points-are.html"
+  - title: 故障時繼續的運作方式
+    url: "/help/concept-what-continue-on-failure-is.html"
+  - title: 資源選擇的運作方式
+    url: "/help/concept-how-resource-selection-works.html"
+  - title: 預約如何運作
+    url: "/help/concept-how-reservation-works.html"
+  - title: 什麼是遞增命名
+    url: "/help/concept-what-incremental-naming-is.html"
+  - title: 什麼是條件式執行
+    url: "/help/concept-what-conditional-execution-is.html"
+  - title: 傳回參數的運作方式
+    url: "/help/concept-what-return-parameters-are.html"
+  - title: 有哪些方案
+    url: "/help/concept-what-schemes-are.html"
+  - title: 什麼是遠端系統類型
+    url: "/help/concept-what-remote-system-types-are.html"
+  - title: 實體版本管理的運作方式
+    url: "/help/concept-how-entity-versioning-works.html"
+- title: 如何定義工作流程
+  url: "/help/concept-how-you-define-workflows.html"
+- title: 如何對應命令參數
+  url: "/help/concept-how-you-map-command-parameters.html"
+- title: 如何定義使用者輸入
+  url: "/help/concept-how-you-define-user-input.html"
+- title: 如何定義常量
+  url: "/help/concept-how-you-define-constants.html"
+- title: REST API的使用方式
+  url: "/help/concept-how-you-use-the-rest-api.html"
+- title: 設定資料來源
+  url: "/help/task-set-up-a-data-source.html"
+  entries:
+  - title: 在Windows上執行ocsetup來設定資料庫使用者
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+  - title: 在Linux上執行ocsetup來設定資料庫使用者
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+  - title: 在Active IQ Unified Manager 上設定資料庫使用者
+    url: "/help/task-configure-a-database-user-on-active-iq-unified-manager.html"
+- title: 建立工作流程說明內容
+  url: "/help/task-create-workflow-help-content.html"
+- title: 保留字
+  url: "/help/reference-reserved-words.html"
+- title: 何處可找到有關VEL的資訊
+  url: "/help/reference-mvel-learning-material-reference.html"
+  entries:
+  - title: 支援MVEL的欄位OnCommand Workflow Automation
+    url: "/help/reference-mvel-enabled-fields-in-wfa.html"
+  - title: MVEL語法範例
+    url: "/help/reference-mvel-examples.html"
+- title: 參考學習教材
+  url: "/help/reference-references-to-learning-material.html"
+- title: 支援的工作流程ONTAP
+  url: "/help/reference-supported-workflows-in-clustered-data-ontap.html"
+- title: 匯入OnCommand Workflow Automation 內容
+  url: "/help/task-import-oncommand-workflow-automation-content.html"
+- title: 輸入OnCommand Workflow Automation 內容時的考量
+  url: "/help/reference-considerations-of-importing-wfa-content.html"
+- title: 匯出OnCommand Workflow Automation 內容
+  url: "/help/task-export-oncommand-workflow-automation-content.html"
+- title: 停用快取取得字典項目
+  url: "/help/task-disable-cache-acquisition-for-dictionary-entries.html"
+- title: 建立WFA工作流程套件
+  url: "/help/task-create-a-workflow-automation-pack.html"
+- title: 刪除OnCommand Workflow Automation 封裝
+  url: "/help/task-delete-wfa-packs.html"
+- title: 新增核准點
+  url: "/help/task-add-approval-points.html"
+- title: 定義篩選規則
+  url: "/help/task-define-filter-rules.html"
+- title: 建立方案
+  url: "/help/task-create-a-scheme.html"
+- title: 編輯方案
+  url: "/help/task-edit-a-scheme.html"
+- title: 刪除方案
+  url: "/help/task-delete-a-scheme.html"
+- title: 新增遠端系統類型
+  url: "/help/task-add-a-new-remote-system-type.html"
+- title: 記錄檢視器視窗
+  url: "/help/reference-log-viewer-directory-window.html"
+- title: 備份與還原所需時間
+  url: "/help/reference-backup-restore-window.html"
+- title: 使用者視窗
+  url: "/help/reference-user-window.html"
+  entries:
+  - title: 新使用者對話方塊
+    url: "/help/reference-new-user-dialog-box.html"
+  - title: 編輯使用者對話方塊
+    url: "/help/reference-edit-user-dialog-box.html"
+- title: 偏好設定視窗
+  url: "/help/reference-client-preferences-dialog-box.html"
+- title: Active Directory群組視窗
+  url: "/help/reference-active-directory-groups-window.html"
+  entries:
+  - title: "「新Active Directory群組」對話方塊"
+    url: "/help/reference-new-active-directory-group-dialog-box.html"
+  - title: "「編輯Active Directory群組」對話方塊"
+    url: "/help/reference-edit-active-directory-group-dialog-box.html"
+  - title: 核准入口網站視窗
+    url: "/help/reference-approval-portal.html"
+- title: 資料來源視窗
+  url: "/help/reference-data-sources-window.html"
+  entries:
+  - title: "「新增資料來源」對話方塊"
+    url: "/help/reference-new-data-source-dialog-box.html"
+  - title: 編輯資料來源對話方塊
+    url: "/help/reference-edit-data-source-dialog-box.html"
+- title: 認證資料視窗
+  url: "/help/reference-credentials-window.html"
+  entries:
+  - title: 測試連線能力對話方塊
+    url: "/help/reference-test-connectivity-dialog-box.html"
+  - title: 新認證對話方塊
+    url: "/help/reference-new-credentials-dialog-box.html"
+  - title: 編輯認證對話方塊
+    url: "/help/reference-edit-credentials-dialog-box.html"
+- title: 關於對話方塊
+  url: "/help/reference-about-dialog-box.html"
+- title: 工作流程視窗
+  url: "/help/reference-portal-workflow-window.html"
+- title: 執行時間
+  url: "/help/reference-execution-status-window.html"
+- title: 重複執行時間
+  url: "/help/reference-recurring-executions-window.html"
+- title: 保留時間
+  url: "/help/reference-reservations-window.html"
+- title: 排程時間
+  url: "/help/reference-schedules-window.html"
+  entries:
+  - title: 新排程對話方塊
+    url: "/help/reference-new-schedule-dialog-box.html"
+- title: 工作流程視窗
+  url: "/help/reference-workflows-window.html"
+  entries:
+  - title: 新工作流程視窗
+    url: "/help/reference-new-workflow-window.html"
+    entries:
+    - title: 命令參數對話方塊
+      url: "/help/reference-parameters-for-commands-dialog-box.html"
+    - title: 資源選取對話方塊
+      url: "/help/reference-resource-selection-dialog-box.html"
+    - title: 遞增命名精靈
+      url: "/help/reference-incremental-naming-wizard.html"
+    - title: 列重複詳細資料對話方塊
+      url: "/help/reference-row-repetition-details-dialog-box.html"
+  - title: 工作流程<工作流程名稱>視窗
+    url: "/help/reference-edit-workflow-window.html"
+  - title: 執行工作流程對話方塊
+    url: "/help/reference-execute-workflow-dialog-box.html"
+  - title: 編輯變數對話方塊
+    url: "/help/reference-edit-variable-dialog-box.html"
+  - title: 預覽工作流程對話方塊
+    url: "/help/reference-preview-workflow-dialog-box.html"
+  - title: 監控窗口
+    url: "/help/reference-monitoring-window.html"
+  - title: "「新增核准點」對話方塊"
+    url: "/help/reference-new-approval-point-dialog-box.html"
+  - title: "「編輯核准點」對話方塊"
+    url: "/help/reference-edit-approval-point-dialog-box.html"
+- title: 找到者窗口
+  url: "/help/reference-finders-window.html"
+  entries:
+  - title: "「新增搜尋器」對話方塊"
+    url: "/help/reference-new-finder-dialog-box.html"
+  - title: 編輯搜尋器對話方塊
+    url: "/help/reference-edit-finder-dialog-box.html"
+  - title: Clone Finder（Clone Finder）對話方塊
+    url: "/help/reference-clone-finder-dialog-box.html"
+- title: 篩選器視窗
+  url: "/help/reference-filters-window.html"
+  entries:
+  - title: "「新增篩選」對話方塊"
+    url: "/help/reference-new-filter-dialog-box.html"
+  - title: 編輯篩選對話方塊
+    url: "/help/reference-edit-filter-dialog-box.html"
+  - title: Clone Filter（複製篩選器）對話方塊
+    url: "/help/reference-clone-filter-dialog-box.html"
+- title: 命令視窗
+  url: "/help/reference-commands-window.html"
+  entries:
+  - title: 新增命令定義對話方塊
+    url: "/help/reference-new-command-definition-dialog-box.html"
+  - title: 編輯命令定義對話方塊
+    url: "/help/reference-edit-command-definition-dialog-box.html"
+  - title: Clone Command Definition（克隆命令定義）對話框
+    url: "/help/reference-clone-command-definition-dialog-box.html"
+- title: 功能視窗
+  url: "/help/reference-functions-window.html"
+- title: 範本視窗
+  url: "/help/reference-templates-window.html"
+  entries:
+  - title: 新範本對話方塊
+    url: "/help/reference-new-template-dialog-box.html"
+  - title: 編輯範本對話方塊
+    url: "/help/reference-edit-template-dialog-box.html"
+  - title: 複製範本對話方塊
+    url: "/help/reference-clone-template-dialog-box.html"
+- title: 配置視窗
+  url: "/help/reference-schemes-window.html"
+- title: "「目錄」視窗"
+  url: "/help/reference-dictionary-window.html"
+  entries:
+  - title: "「新增字典項目」對話方塊"
+    url: "/help/reference-new-dictionary-entry-dialog-box.html"
+  - title: 編輯字典項目對話方塊
+    url: "/help/reference-edit-dictionary-entry-dialog-box.html"
+  - title: 複製字典項目對話方塊
+    url: "/help/reference-clone-dictionary-entry-dialog-box.html"
+- title: 資料來源類型視窗
+  url: "/help/reference-data-source-types-window.html"
+- title: 遠端系統類型視窗
+  url: "/help/reference-remote-system-types-window.html"
+  entries:
+  - title: "「新增遠端系統類型」對話方塊"
+    url: "/help/reference-new-remote-system-type-dialog-box.html"
+  - title: "「編輯遠端系統類型」對話方塊"
+    url: "/help/reference-edit-remote-system-type-dialog-box.html"
+- title: 快取查詢視窗
+  url: "/help/reference-cache-queries-window.html"
+  entries:
+  - title: 新增快取查詢對話方塊
+    url: "/help/reference-add-cache-query-dialog-box.html"
+  - title: 編輯快取查詢對話方塊
+    url: "/help/reference-edit-cache-query-dialog-box.html"
+  - title: 複製快取查詢對話方塊
+    url: "/help/reference-clone-cache-query-dialog-box.html"
+- title: 套件視窗
+  url: "/help/reference-packs-window.html"
+  entries:
+  - title: 新增套件對話方塊
+    url: "/help/reference-new-pack-dialog-box.html"
+  - title: 編輯套件對話方塊
+    url: "/help/reference-edit-pack-dialog-box.html"
+- title: 類別視窗
+  url: "/help/reference-categories-window.html"
+  entries:
+  - title: 新類別對話方塊
+    url: "/help/reference-new-category-dialog-box.html"
+  - title: 編輯類別對話方塊
+    url: "/help/reference-edit-category-dialog-box.html"
+  - title: Clone Category（複製類別）對話方塊
+    url: "/help/reference-clone-category-dialog-box.html"
+- title: Storage Automation Store視窗
+  url: "/help/reference-wfa-store-window.html"

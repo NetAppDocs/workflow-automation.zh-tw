@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-add-active-directory-group-names.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, add, active directory groups 
+summary: 您可以將Active Directory群組新增OnCommand Workflow Automation 至功能區（WFA）。 
+---
+= 新增Active Directory群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將Active Directory群組新增OnCommand Workflow Automation 至功能區（WFA）。
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下*設定*、然後在*管理*下、按一下* Active Directory群組*。
+. 在Active Directory Groups（Active Directory組）窗口中，單擊* New*圖標。
+. 在「新Active Directory群組」對話方塊中、輸入所需的資訊。
++
+如果您從*角色*下拉式清單中選取*核准者*、建議您提供核准者的電子郵件ID。如果有多位核准者、您可以在*電子郵件*欄位中提供群組電子郵件ID。選取要傳送通知至特定Active Directory群組的工作流程不同事件。
+
+. 按一下「 * 儲存 * 」。
+

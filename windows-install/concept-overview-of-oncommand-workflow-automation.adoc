@@ -1,0 +1,52 @@
+---
+permalink: windows-install/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: overview, oncommand, workflow, automation 
+summary: 支援自動化儲存管理工作的軟體解決方案、例如資源配置、移轉、汰換、資料保護組態、OnCommand Workflow Automation 和複製儲存設備。您可以使用WFA建置工作流程、以完成流程所指定的工作。WFA支援ONTAP 以Data ONTAP 7-Mode運作的過程中使用的功能有： 
+---
+= 概述OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援自動化儲存管理工作的軟體解決方案、例如資源配置、移轉、汰換、資料保護組態、OnCommand Workflow Automation 和複製儲存設備。您可以使用WFA建置工作流程、以完成流程所指定的工作。WFA支援ONTAP 以Data ONTAP 7-Mode運作的過程中使用的功能有：
+
+工作流程是一項重複且程序性的工作、包含連續步驟、包括下列類型的工作：
+
+* 為資料庫或檔案系統配置、移轉或汰換儲存設備
+* 設定新的虛擬化環境、包括儲存交換器和資料存放區
+* 將應用程式的儲存設備設定為端點對端點協調流程的一部分
+
+
+儲存架構設計師可以定義工作流程、以遵循最佳實務做法並符合組織需求、例如：
+
+* 使用必要的命名慣例
+* 設定儲存物件的獨特選項
+* 選擇資源
+* 整合內部組態管理資料庫（CMDB）與票務應用程式
+
+
+
+
+== WFA功能
+
+* 建立工作流程的工作流程設計入口網站
++
+工作流程設計入口網站包含數個建置區塊、例如命令、範本、資料微調工具、篩選器、 和功能、用於建立工作流程。設計工具可讓您將進階功能納入工作流程、例如自動化資源選擇、列重複（循環）和核准點。
+
++
+工作流程設計入口網站也包含用於快取外部系統資料的建置區塊、例如：字典項目、快取查詢及資料來源類型。
+
+* 執行入口網站：執行工作流程、驗證工作流程執行狀態及存取記錄
+* 管理/設定選項、適用於設定WFA、連線至資料來源、以及設定使用者認證等工作
+* Web服務介面可從外部入口網站和資料中心協調軟體叫用工作流程
+* Storage Automation Store可下載WFA套件。此版本隨附於WFA 5.1。ONTAP
+
+
+
+
+== WFA授權資訊
+
+使用OnCommand Workflow Automation 此伺服器不需要授權。

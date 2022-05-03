@@ -1,0 +1,303 @@
+---
+permalink: workflows/reference-guidelines-for-variables.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, variables, oncommand, automation, create, command, data, source, type 
+summary: 建立命令或資料來源類型時、您必須瞭解OnCommand Workflow Automation 到有關PowerShell和Perl變數的準則（WFA）。 
+---
+= 變數準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+建立命令或資料來源類型時、您必須瞭解OnCommand Workflow Automation 到有關PowerShell和Perl變數的準則（WFA）。
+
+
+
+== PowerShell變數
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+對於指令碼輸入參數：
+
+* 使用Pascal案例。
+* 請勿使用底線。
+* 請勿使用縮寫。
+
+ a| 
+$' Volume名稱'
+
+「$AutoDelete選項」
+
+$'大小'
+
+
+
+ a| 
+對於指令碼內部變數：
+
+* 使用Camel Case。
+* 請勿使用底線。
+* 請勿使用縮寫。
+
+ a| 
+「$newVolume」
+
+$qtreeName'
+
+$time
+
+
+
+ a| 
+對於功能：
+
+* 使用Pascal案例。
+* 請勿使用底線。
+* 請勿使用縮寫。
+
+ a| 
+「GetVolume大小」
+
+
+
+ a| 
+變數名稱不區分大小寫。不過、為了提高讀取能力、您不應該對同一個名稱使用不同的大寫。
+ a| 
+「$variable」與「$variable」相同
+
+
+
+ a| 
+變數名稱應為純英文、並應與指令碼的功能有關。
+ a| 
+使用「$name」而非「$a」
+
+
+
+ a| 
+明確宣告每個變數的資料類型。
+ a| 
+[str]名稱
+
+[Int]大小
+
+
+
+ a| 
+請勿使用特殊字元（！@#&%、.）和空格。
+ a| 
+無
+
+
+
+ a| 
+請勿使用PowerShell保留關鍵字。
+ a| 
+無
+
+
+
+ a| 
+先放置必要參數、然後再放置選用參數、即可將輸入參數分組。
+ a| 
+[listing]
+----
+param(
+[parameter(Mandatory=$true)]
+[string]$Type,
+
+[parameter(Mandatory=$true)]
+[string]$Ip,
+
+[parameter(Mandatory=$false)]
+[string]$VolumeName
+)
+----
+
+
+ a| 
+使用「_HelpMess__」附註加上有意義的說明訊息、來註解所有輸入變數。
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="LUN to map")]
+[string]$LUNName
+----
+
+
+ a| 
+請勿使用「'Filer'」做為變數名稱；請改用「'Array」。
+ a| 
+無
+
+
+
+ a| 
+如果參數獲得列舉值、請使用「_ValidateSet_'」註解。這會自動轉譯為參數的Enum資料類型。
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume state")]
+[ValidateSet("online","offline","restricted")]
+[string]$State
+----
+
+
+ a| 
+將別名新增至以「`_Capacity」結尾的參數、以表示參數為容量類型。
+ a| 
+「Create Volume」命令使用別名如下：
+
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume increment size in MB")]
+[Alias("AutosizeIncrementSize_Capacity")]
+[int]$AutosizeIncrementSize
+----
+
+
+ a| 
+在以「`_Password」結尾的參數中新增別名、表示該參數為密碼類型。
+ a| 
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="In order to create an Active Directory machine account for the CIFS server or setup CIFS service for Storage Virtual Machine, you must supply the password of a Windows account with sufficient privileges")]  [Alias("Pwd_Password")]  [string]$ADAdminPassword
+)
+----
+|===
+
+
+== Perl變數
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+對於指令碼輸入參數：
+
+* 使用Pascal案例。
+* 請勿使用底線。
+* 請勿使用縮寫。
+
+ a| 
+$' Volume名稱'
+
+「$AutoDelete選項」
+
+$'大小'
+
+
+
+ a| 
+請勿使用指令碼內部變數的縮寫。
+ a| 
+$_new_volume
+
+$qtree名稱
+
+$time
+
+
+
+ a| 
+請勿將縮寫用於功能。
+ a| 
+"Get_Volume大小"
+
+
+
+ a| 
+變數名稱區分大小寫。為了提高讀取能力、您不應使用相同名稱的不同大寫字母。
+ a| 
+「$variable」與「$variable」不同
+
+
+
+ a| 
+變數名稱應為純英文、並應與指令碼的功能有關。
+ a| 
+使用「$name」而非「$a」
+
+
+
+ a| 
+先放置必要參數、然後再放置選用參數、即可將輸入參數分組。
+ a| 
+無
+
+
+
+ a| 
+在GetOptions函數中、明確宣告輸入參數的每個變數資料類型。
+ a| 
+[listing]
+----
+GetOptions(
+	"Name=s"=>\$Name,
+	"Size=i"=>\$Size
+)
+----
+
+
+ a| 
+請勿使用「'Filer'」做為變數名稱；請改用「'Array」。
+ a| 
+無
+
+
+
+ a| 
+Perl不包含列舉值的「_ValidateSet_」註釋。對於參數獲得列舉值的情況、請使用明確的「'if'」陳述式。
+ a| 
+[listing]
+----
+if
+(defined$SpaceGuarantee&&!($SpaceGuaranteeeq'none'||$SpaceGuaranteeeq'volume'||$SpaceGuaranteeeq'file'))
+{
+	die'Illegal SpaceGuarantee argument: \''.$SpaceGuarantee.'\'';
+}
+----
+
+
+ a| 
+所有Perl WFA命令都必須使用「嚴格」Pragma,以防止對變數、參考和子程序使用不安全的結構。
+ a| 
+[listing]
+----
+use strict;
+# the above is equivalent to
+use strictvars;
+use strictsubs;
+use strictrefs;
+----
+
+
+ a| 
+所有Perl WFA命令都必須使用下列Perl模組：
+
+* getopt
++
+這用於指定輸入參數。
+
+* WFAUtil
++
+此功能用於提供命令記錄、報告命令進度、連線至陣列控制器等公用程式功能。
+
+
+ a| 
+[listing]
+----
+use Getopt::Long;
+use NaServer;
+use WFAUtil;
+----
+|===

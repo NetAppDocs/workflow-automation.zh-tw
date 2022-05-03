@@ -1,0 +1,171 @@
+---
+permalink: rhel-install/task-install-perl-module-on-centos-and-rhel.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, perl modules, centos, rhel 
+summary: 某些Perl模組預設不會隨附於適用於Linux的Perl套件中。 
+---
+= 在CentOS和RHEL上安裝Perl模組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+某些Perl模組預設不會隨附於適用於Linux的Perl套件中。
+
+在WFA安裝期間、WFA安裝程式會驗證系統中是否有可用的所有Perl模組、然後在符合此需求時繼續執行。您必須先安裝Perl模組、才能安裝OnCommand Workflow Automation 更新（WFA）。
+
+
+NOTE: 如果Perl-modules可在系統上設定的yum儲存庫中使用、WFA安裝程式會嘗試自動安裝Perl模組。如果Perl模組無法使用、安裝程式會提示使用者手動安裝Perl模組。唯一的例外是「perl-core」模組。即使系統上設定的yum儲存庫中有此模組、系統也不會自動安裝此模組。這是已知的問題。
+
+[cols="2*"]
+|===
+| Perl模組 | RPM套件名稱 
+
+
+ a| 
+Perl核心模組
+ a| 
+Perl核心
+
+
+
+ a| 
+DBI
+ a| 
+Perl-DBI
+
+
+
+ a| 
+XML：：DOM.
+ a| 
+Perl-XML與DOM/DOM/Java
+
+
+
+ a| 
+術語：ReadKey
+ a| 
+Perl-TermReadKey
+
+
+
+ a| 
+HTTP：要求
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+XML：：libxml perl-xml
+ a| 
+Perl-XML
+
+
+
+ a| 
+DBD：mysql
+ a| 
+Perl-DBD-MySQL
+
+
+
+ a| 
+URI：URL
+ a| 
+Perl-URI
+
+
+
+ a| 
+HTTP：回應
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+HTTP：：標頭
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+net：SSLeay
+ a| 
+Perl-Net-SSLeay
+
+
+
+ a| 
+URI：逃離
+ a| 
+Perl-URI
+
+
+
+ a| 
+wlP:::Protocol：https perl-wl-Protocol：https
+ a| 
+Perl-lwP-傳輸 協定-https
+
+
+
+ a| 
+XML：剖析器
+ a| 
+Perl-XML解析器
+
+
+
+ a| 
+wlp：UserAgent
+ a| 
+Perl-libwww-perl
+
+
+
+ a| 
+網路：：LDAP
+ a| 
+Perl-LDAP
+
+
+
+ a| 
+日期：：計算
+ a| 
+Perl-Date-CalcXML
+
+|===
+.步驟
+. 以root使用者身分登入Linux伺服器。
+. 確認WFA所需的所有Perl模組均已安裝在系統上：
++
+WFA-4.2.0.0.0.bin -l'
+
+. 如果未偵測到任何Perl模組、請檢查它們是否可在設定的儲存庫中使用：
++
+「yum搜尋Perl模組名稱」
+
++
+如果未偵測到DBD::mySQL模組：
+
++
+《yum搜尋perl-DBD-MySQL》
+
+. 如果儲存庫中沒有任何Perl模組、請設定包含Perl模組的儲存庫、或從網際網路下載Perl模組。
+. 從設定的儲存庫安裝任何遺失的Perl模組：
++
+《yum -y install Perl-module-name》
+
++
+從設定的儲存庫安裝DBD::mySQL模組：
+
++
+「yum -y install perl-DBD-MySQL」
+
+

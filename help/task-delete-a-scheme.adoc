@@ -1,0 +1,31 @@
+---
+permalink: help/task-delete-a-scheme.html 
+sidebar: sidebar 
+keywords: delete, scheme, create, oncommand, workflow, automation, require 
+summary: 如果OnCommand Workflow Automation 不再需要、您可以刪除從WFA（WFA）建立的方案。 
+---
+= 刪除方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果OnCommand Workflow Automation 不再需要、您可以刪除從WFA（WFA）建立的方案。
+
+*您需要的是什麼*
+
+* 您必須已安裝WFA。
+* 您必須擁有WFA的系統管理員權限或架構認證。
+
+
+*關於此工作*
+
+您無法刪除預先定義的配置。
+
+.步驟
+. 以系統管理員或架構設計師的身分、透過網頁瀏覽器登入WFA。
+. 按一下*資料來源設計*>*配置*。
+. 選取您要刪除的配置、然後按一下 image:../media/delete_wfa_icon.gif["刪除圖示"] 在工具列上。
+. 在*刪除方案*確認對話方塊中、按一下*是*。
+

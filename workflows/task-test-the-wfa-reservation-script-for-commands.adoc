@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 您可以在OnCommand Workflow Automation 遊樂場資料庫上測試您針對WFA（WFA）命令所撰寫的保留指令碼、以確保這些指令碼運作正常、且不會影響WFA資料庫表格。 
+---
+= 測試命令的保留指令碼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在OnCommand Workflow Automation 遊樂場資料庫上測試您針對WFA（WFA）命令所撰寫的保留指令碼、以確保這些指令碼運作正常、且不會影響WFA資料庫表格。
+
+此程序使用預設的WFA安裝路徑。如果您在安裝期間變更預設位置、則必須使用變更的WFA安裝路徑。
+
+.步驟
+. 在WFA伺服器上開啟命令提示字元、並將目錄變更為下列位置：「c：\Program Files\NetApp\WFA \mysql\bin」
+. 使用下列命令建立WFA資料庫的傾印：「Sysqldump -u WFA -pWfa123 --sine-transaction --skip-add-drop-table database_Tables>dump位置」
++
+命令建立cm_storage資料庫表格的傾印：「Mysqldump -u WFA -pWfa123 --sine-transaction --skip-add-drop-table cm_storage」c：\tmp\cmSt2.SQL'
+
+. 使用下列命令將您建立的傾印還原至WFA遊樂場資料庫：「SysSQL -u WFA -pWfa123 Playground < dump位置」
++
+「Mysql-u WFA -pWfa123 Playground」< c：\tmp\cmSt2.SQL'
+
+. 建立或編輯WFA命令、並在*保留*索引標籤中寫入保留指令碼。
++
+您必須確保保留與驗證指令碼僅使用遊樂場資料庫。
+
+. 建立或編輯工作流程、在工作流程中加入命令、然後執行工作流程。
+. 確認保留與驗證指令碼是否如預期般運作。
++
+WFA資料來源取得程序不會更新Playground資料庫。您必須手動移除命令所建立的保留。
+
+

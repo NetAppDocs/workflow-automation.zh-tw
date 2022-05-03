@@ -1,0 +1,45 @@
+---
+permalink: windows-install/task-migrate-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 您可以移轉OnCommand Workflow Automation 一套安裝功能（WFA）、以維持在WFA安裝期間安裝的唯一WFA資料庫金鑰。例如、您可以將WFA安裝從Windows 2012伺服器移轉至Windows 2016伺服器。 
+---
+= 移轉OnCommand Workflow Automation 安裝的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以移轉OnCommand Workflow Automation 一套安裝功能（WFA）、以維持在WFA安裝期間安裝的唯一WFA資料庫金鑰。例如、您可以將WFA安裝從Windows 2012伺服器移轉至Windows 2016伺服器。
+
+* 只有當您想要將包含WFA資料庫金鑰的WFA安裝移轉到不同的伺服器時、才必須執行此程序。
+* WFA資料庫還原不會移轉WFA金鑰。
+* 移轉WFA安裝並不會移轉SSL憑證。
+* 此程序使用預設的WFA安裝路徑。
++
+如果您在安裝期間變更預設位置、則必須使用變更的WFA安裝路徑。
+
+
+
+.步驟
+. 以管理員身分透過網頁瀏覽器存取WFA。
+. 備份WFA資料庫。
+. 在WFA伺服器上開啟命令提示字元、並將目錄變更為下列位置：「c：\Program Files\NetApp\WFA\Bin」
+. 在命令提示字元中輸入下列命令以取得資料庫金鑰：
++
+wfa.cmd -key
+
+. 記下顯示的資料庫金鑰。
+. 解除安裝WFA。
+. 在所需的系統上安裝WFA。
+. 在新的WFA伺服器上開啟命令提示字元、並將目錄變更為下列位置：「c：\Program Files\NetApp\WFA\Bin」
+. 在命令提示字元中輸入下列命令以安裝資料庫金鑰：
++
+wfa.cmd -key=yourdatabasekey'
+
++
+您的資料庫金鑰是您從先前的WFA安裝中記下的金鑰。
+
+. 從您建立的備份還原WFA資料庫。
+

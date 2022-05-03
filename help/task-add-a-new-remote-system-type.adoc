@@ -1,0 +1,28 @@
+---
+permalink: help/task-add-a-new-remote-system-type.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, oncommand, Workflow, automation, predefined, meet, requirement, change, configuration, predefined 
+summary: 如果預先定義的系統類型不符合您的需求、或您想要變更預先定義系統類型的組態、您可以將新的遠端系統類型新增OnCommand Workflow Automation 至WFA。 
+---
+= 新增遠端系統類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果預先定義的系統類型不符合您的需求、或您想要變更預先定義系統類型的組態、您可以將新的遠端系統類型新增OnCommand Workflow Automation 至WFA。
+
+*您需要的是什麼*
+
+* 您必須已安裝WFA。
+* 您必須擁有WFA的系統管理員權限或架構認證。
+
+
+.步驟
+. 以系統管理員或架構設計師的身分、透過網頁瀏覽器登入WFA。
+. 按一下*資料來源設計*>*遠端系統類型*。
+. 按一下以建立新的遠端系統類型 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新遠端系統類型*」對話方塊中輸入所需的資訊、例如遠端系統類型的名稱、類型、說明及實體版本。
+. 按一下「 * 儲存 * 」。
+

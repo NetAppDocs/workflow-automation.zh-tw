@@ -1,0 +1,76 @@
+---
+permalink: help/reference-edit-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, remote, system, type, dialog box, enable, modify, name, description, version, protocol, default port, timeout, existing, certified 
+summary: 「編輯遠端系統類型」對話方塊可讓您修改名稱、說明、版本、傳輸協定、預設連接埠、 和現有遠端系統類型的預設逾時。您無法修改NetApp認證的遠端系統類型。 
+---
+= 「編輯遠端系統類型」對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「編輯遠端系統類型」對話方塊可讓您修改名稱、說明、版本、傳輸協定、預設連接埠、 和現有遠端系統類型的預設逾時。您無法修改NetApp認證的遠端系統類型。
+
+* 詳細資料索引標籤
+* 驗證指令碼索引標籤
+
+
+
+
+== 詳細資料索引標籤
+
+可讓您編輯遠端系統類型的詳細資料、例如名稱、說明、版本和連線傳輸協定。
+
+* *名稱*
++
+可讓您編輯遠端系統類型的名稱。
+
+* *說明*
++
+可讓您修改遠端系統類型的說明。
+
+* *版本*
++
+可讓您編輯遠端系統類型的版本編號、格式為「major.m輕.remite.remite.」、例如1.1.0。
+
+* *連線傳輸協定*
++
+可讓您選擇OnCommand Workflow Automation 下列任一種通訊協定、以便在連接至遠端系統時使用：
+
++
+** HTTPS、可回退至HTTP
++
+連線主要使用HTTPS。如果透過HTTPS連線失敗、則會使用HTTP。如果透過HTTP連線也失敗、連線嘗試就會中斷。
+
+** 僅限HTTPS
+** 僅限HTTP
+** 自訂
+
+
+
+
+選取連線傳輸協定時、會填入傳輸協定、預設連接埠和預設逾時（秒）欄位中的資料。
+
+
+
+== 驗證指令碼索引標籤
+
+可讓您提供驗證指令碼來測試遠端系統的連線能力。驗證指令碼必須以Perl撰寫、而且必須包含下列功能：ChecksCredentials（$host、$user、$password、$protocol、$port、 $timeout） 在驗證期間、WFA會以設定為遠端系統類型和連線傳輸協定的值來呼叫ChecksCredentials功能。此功能會在連線驗證成功時傳回「1」值、或在連線驗證失敗時傳回「0」值。
+
+您可以按一下*測試Perl指令碼*來執行指令碼來測試連線能力。
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存遠端系統類型的修改組態設定、然後關閉對話方塊。
+
+* *取消*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+

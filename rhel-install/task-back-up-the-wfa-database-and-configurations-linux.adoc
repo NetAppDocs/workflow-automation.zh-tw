@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html 
+sidebar: sidebar 
+keywords: back up, restore, oncommand, workflow, automation, database, configurations, linux 
+summary: 您可以備份及還原OnCommand Workflow Automation 支援的還原（WFA）資料庫和組態、以便在發生災難時恢復資料。支援的組態包括資料存取、HTTP逾時和SSL憑證。 
+---
+= 在OnCommand Workflow Automation Linux上備份及還原還原效能不均的資料庫和組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以備份及還原OnCommand Workflow Automation 支援的還原（WFA）資料庫和組態、以便在發生災難時恢復資料。支援的組態包括資料存取、HTTP逾時和SSL憑證。
+
+您必須擁有系統管理員權限或架構認證資料。
+
+您必須在安全的位置建立備份、因為還原備份可讓您存取WFA存取的所有儲存系統。
+
+[NOTE]
+====
+* 災難恢復期間需要對WFA資料庫和組態進行全方位備份、而且可在獨立式和高可用度環境中使用。
+* 在災難恢復期間、您只能使用CLI命令或REST API來進行全方位的備份與還原作業。
++
+您無法在災難恢復期間使用Web UI來備份或還原WFA資料庫。
+
+
+
+====
+.步驟
+. 備份OnCommand Workflow Automation 這個資料庫。
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["備份OnCommand Workflow Automation the支援資料庫"]
+
+. 還原OnCommand Workflow Automation 先前的還原資料庫備份。
++
+link:concept-restoring-the-wfa-database.html["還原OnCommand Workflow Automation 此資料庫"]
+
+

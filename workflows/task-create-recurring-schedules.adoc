@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: 支援WFA（WFA）的工作流程有兩種排程選項。OnCommand Workflow Automation您可以排程工作流程在特定時間執行一次、也可以建立週期性排程、並將排程與工作流程建立關聯、以便定期執行工作流程。 
+---
+= 建立週期性排程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援WFA（WFA）的工作流程有兩種排程選項。OnCommand Workflow Automation您可以排程工作流程在特定時間執行一次、也可以建立週期性排程、並將排程與工作流程建立關聯、以便定期執行工作流程。
+
+您所建立的排程可重複使用、並與多個工作流程建立關聯。
+
+.步驟
+. 按一下*執行*>*排程*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新排程*」對話方塊中、輸入或選取排程的名稱、說明和頻率。
++
+對於頻率、您必須以24小時格式輸入時間。WFA伺服器時間會套用至排程。
+
+. 按一下「*確定*」。
+
+
+
+
+== 完成後
+
+* 您可以在執行工作流程時、使用*重複執行*選項、將排程與工作流程建立關聯。
+* 您可以按一下「*執行*>*重複排程*」來檢視工作流程的詳細資料及其與排程的關聯。
++
+排程執行一次的工作流程資源與執行規劃、會在工作流程排程完成時立即完成。不過、具有週期性排程的工作流程資源與執行規劃會在排程時間進行、而非排程與工作流程相關聯時進行。
+
+

@@ -1,0 +1,46 @@
+---
+permalink: help/reference-new-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: new, pack, dialog box, enable, create 
+summary: 「新增套件」對話方塊可讓您建立新套件。 
+---
+= 新增套件對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「新增套件」對話方塊可讓您建立新套件。
+
+* *名稱*
++
+可讓您輸入名稱並儲存套件。
+
+* *版本*
++
+可讓您輸入版本並儲存套件。
+
+* *作者*
++
+可讓您輸入作者名稱並儲存套件。
+
+* *說明*
++
+可讓您輸入說明並儲存套件。
+
+
+
+
+
+== 命令按鈕
+
+* *儲存*
++
+儲存套件並關閉對話方塊。
+
+* *取消*
++
+關閉對話方塊而不儲存。
+
+

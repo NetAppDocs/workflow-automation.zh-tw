@@ -1,0 +1,21 @@
+---
+permalink: help/task-disable-cache-acquisition-for-dictionary-entries.html 
+sidebar: sidebar 
+keywords: necessary, cache, dictionary, objects, oncommand, workflow, automation, disable, reduce, time, complete, data, source, acquisition 
+summary: 如果OnCommand Workflow Automation 不需要快取功能（WFA）中的字典物件、您可以停用快取這些物件。停用快取不需要的物件、可縮短WFA完成資料來源擷取所需的時間。 
+---
+= 停用快取取得字典項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果OnCommand Workflow Automation 不需要快取功能（WFA）中的字典物件、您可以停用快取這些物件。停用快取不需要的物件、可縮短WFA完成資料來源擷取所需的時間。
+
+.步驟
+. 按一下*資料來源設計*>* Dictionary*。
+. 選取您要停用資料擷取的目錄項目。
+. 按一下 image:../media/disable_acquisition_wfa_icon.gif["停用擷取圖示"] 在工具列上、然後按一下*是*。
+. 如果您看到無法停用字典項目的錯誤訊息「_Cache s擷 取」、請停用錯誤訊息中所列之字典項目的快取擷取功能、然後重試停用目前字典物件的快取擷取功能。
+

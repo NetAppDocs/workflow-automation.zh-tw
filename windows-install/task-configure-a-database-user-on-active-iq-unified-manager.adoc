@@ -1,0 +1,24 @@
+---
+permalink: windows-install/task-configure-a-database-user-on-active-iq-unified-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, active iq unified manager 
+summary: 您必須在Active IQ Unified Manager 還原上建立資料庫使用者、才能將Active IQ Unified Manager 僅讀取的功能設定為OnCommand Workflow Automation 僅供參考。 
+---
+= 在Active IQ Unified Manager 上設定資料庫使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須在Active IQ Unified Manager 還原上建立資料庫使用者、才能將Active IQ Unified Manager 僅讀取的功能設定為OnCommand Workflow Automation 僅供參考。
+
+.步驟
+. 使用系統管理員認證登入Active IQ Unified Manager 到解決方法。
+. 按一下「*設定*>*使用者*」。
+. 按一下「*新增使用者*」。
+. 選擇*資料庫使用者*作為使用者類型。
++
+應在OnCommand Workflow Automation 使用相同使用者的情況下使用此功能、同時在Active IQ Unified Manager 功能上加入功能不一致的功能、作為OnCommand Workflow Automation 資料來源。
+
+

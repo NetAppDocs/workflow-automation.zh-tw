@@ -1,0 +1,12 @@
+---
+permalink: rhel-install/index.html 
+sidebar: sidebar 
+keywords: installation, setup, linux 
+summary: Linux安裝與設定 
+---
+= Linux安裝與設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

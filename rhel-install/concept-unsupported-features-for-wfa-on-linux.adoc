@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 安裝及設定WFA之前、應先注意某些限制和不受支援的功能。OnCommand Workflow Automation 
+---
+= 已知的侷限性OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝及設定WFA之前、應先注意某些限制和不受支援的功能。OnCommand Workflow Automation
+
+* * LDAP驗證*
++
+** 您只能使用Microsoft Active Directory輕量型目錄存取傳輸協定（LDAP）伺服器進行LDAP驗證。
+** 您必須是LDAP群組的成員、才能使用LDAP驗證。
+** 您不得使用屬於多個網域階層結構的LDAP使用者名稱進行驗證或通知。
+
+
+
+
+[NOTE]
+====
+不支援Microsoft Active Directory輕量型目錄服務（AD LDS）。
+
+====
+* * WFA資料來源類型*
++
+WFA 4.1版本中不支援使用支援的資料來源類型包括：NetApp Unified Manager 6.0、6.1和6.2、未來版本將不支援這些資料來源類型。OnCommand
+
+* *安裝在Linux上的WFA
++
+** 目前無法取得以7-Mode運作的來自VMware的認證內容Data ONTAP 。
+** 僅包含PowerShell程式碼的命令與Linux不相容。
+** 7-Mode和VMware的認證命令目前並未移轉至Perl、因此與Linux不相容。
+
+
+* *建立類別名稱*
++
+** 當類別名稱中使用連字號（-）時、一旦儲存類別、就會以空格取代。例如、如果提供類別名稱「abc-xyz」、則類別名稱會儲存為「abc xyz」、並移除連字號。若要避免此問題、請勿在類別名稱中使用連字號。
+** 當類別名稱中使用一個分號（：）時、一旦儲存類別、就會忽略該分號之前的文字字串。例如、如果提供類別名稱「abc：xyz」、則類別名稱會儲存為「xyz」、並移除「abc」字串。若要避免此問題、請勿在類別名稱中使用冒號。
+** 沒有核取可防止兩個類別具有相同名稱。不過、從導覽窗格選取這些類別時、會造成問題。若要避免此問題、請確定每個類別名稱都是唯一的。
+
+
+

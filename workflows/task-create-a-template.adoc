@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: 您可以建立範本、做為填入命令詳細資料中屬性的藍圖。 
+---
+= 建立範本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立範本、做為填入命令詳細資料中屬性的藍圖。
+
+.步驟
+. 按一下*工作流程設計*>*範本*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新範本*」對話方塊中、於「*名稱*」、「*類型*」及「*說明*」欄位中輸入或選取所需的詳細資料。
++
+「屬性」表格會根據您在「*類型*」欄位中選取的字典物件來填入。
+
+. 按一下每個屬性的「Value（值）」欄、然後執行下列其中一項：
++
+** 輸入或從清單中選取所需的值。
+** 輸入使用者輸入項目、例如「$SIZE」以供使用者輸入大小。
+
+
+. 按一下「 * 儲存 * 」。
+

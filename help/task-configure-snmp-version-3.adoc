@@ -1,0 +1,55 @@
+---
+permalink: help/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, simple, network, management, protocol, version 3, traps, about, status, operations 
+summary: 您也可以設定OnCommand Workflow Automation S廳（WFA）、針對工作流程作業的狀態、傳送簡單網路管理傳輸協定（SNMP）版本3的陷阱。 
+---
+= 設定SNMP版本3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您也可以設定OnCommand Workflow Automation S廳（WFA）、針對工作流程作業的狀態、傳送簡單網路管理傳輸協定（SNMP）版本3的陷阱。
+
+*關於此工作*
+
+第3版提供兩種額外的安全選項：
+
+* 第3版含驗證
++
+陷阱會以不加密的方式透過網路傳送。SNMP管理應用程式與SNMP設陷訊息的驗證參數相同、可接收設陷。
+
+* 第3版：驗證與加密
++
+陷阱會透過網路加密傳送。若要接收及解密這些陷阱、您必須使用與SNMP設陷相同的驗證參數和加密金鑰來設定SNMP管理應用程式。
+
+
+
+.步驟
+. 以管理使用者的身分透過網頁瀏覽器登入WFA、然後存取WFA伺服器。
+. 按一下「*設定*」、然後在「*設定*」下按一下「* SNMP *」。
+. 選中* Enable SNMP（啓用SNMP）*複選框。
+. 在*版本*下拉式清單中、選取下列其中一個選項：
++
+** 版本3
+** 第3版含驗證
+** 第3版：驗證與加密
+
+
+. 選取對應於您在步驟4中選擇的特定SNMP版本3選項的SNMP組態選項。
+. 輸入IPv4或IPv6位址或主機名稱、以及管理主機的連接埠號碼。WFA會將SNMP設陷傳送至指定的連接埠號碼。預設連接埠號碼為162。
+. 在*通知時間*區段中、選取下列一個或多個核取方塊：
++
+** 工作流程規劃已開始/失敗/已完成
+** 工作流程執行已開始
+** 工作流程執行成功完成
+** 工作流程執行失敗/部分成功
+** 工作流程執行等待核准
+** 擷取失敗
+
+
+. 按一下*傳送測試通知*以驗證設定。
+. 按一下「 * 儲存 * 」。
+

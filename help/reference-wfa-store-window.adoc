@@ -1,0 +1,16 @@
+---
+permalink: help/reference-wfa-store-window.html 
+sidebar: sidebar 
+keywords: storage, automation, store, cotains, netapp-certified, workflow, pack, developed, use, oncommand, download, import, execute 
+summary: Storage Automation Store包含NetApp認證的自動化儲存工作流程套件、是專為OnCommand Workflow Automation 搭配使用而開發的。您可以下載套件、然後將其匯入WFA以執行。 
+---
+= Storage Automation Store視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage Automation Store包含NetApp認證的自動化儲存工作流程套件、是專為OnCommand Workflow Automation 搭配使用而開發的。您可以下載套件、然後將其匯入WFA以執行。
+
+自動化工作流程可在中使用 https://automationstore.netapp.com["儲存自動化儲存區"^]

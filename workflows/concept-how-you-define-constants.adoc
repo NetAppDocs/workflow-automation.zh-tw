@@ -1,0 +1,40 @@
+---
+permalink: workflows/concept-how-you-define-constants.html 
+sidebar: sidebar 
+keywords: create, use, constants, define, value, across, single, window, workflow, level 
+summary: 您可以建立及使用常量來定義值、以便在單一工作流程中使用。常量是在工作流程層級定義。 
+---
+= 如何定義常量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立及使用常量來定義值、以便在單一工作流程中使用。常量是在工作流程層級定義。
+
+工作流程中使用的常量及其值會在規劃與執行期間顯示在工作流程的監控視窗中。您必須為常量使用唯一名稱。
+
+您可以使用下列命名慣例來定義常量：
+
+* 大寫表示每個字的第一個字母、且字詞之間不含底線或空格
++
+所有術語和縮寫都應該使用大寫字母、例如「ActualVolume SizeInMB」。
+
+* 所有字母皆為大寫
++
+您可以使用底線分隔字詞、例如「Aggregate、USed_space_threshold」。
+
+
+
+您可以將下列項目納入工作流程常量的值：
+
+* 數字
+* 字串
+* VEL運算式
++
+運算式會在工作流程的規劃和執行階段進行評估。在運算式中、您不得參照迴圈中定義的變數。
+
+* 使用者輸入
+* 變數
+

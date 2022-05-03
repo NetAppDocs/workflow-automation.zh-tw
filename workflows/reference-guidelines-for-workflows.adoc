@@ -1,0 +1,304 @@
+---
+permalink: workflows/reference-guidelines-for-workflows.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, modify, predefined, workflow, oncommand, workflow, automation 
+summary: 您必須瞭解建立或修改預先定義OnCommand Workflow Automation 之for the WFA（WFA）工作流程的準則。 
+---
+= 工作流程準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解建立或修改預先定義OnCommand Workflow Automation 之for the WFA（WFA）工作流程的準則。
+
+
+
+== 一般準則
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+將工作流程命名為反映儲存操作員執行的作業。
+ a| 
+「Create a CIFS Share」（建立CIFS共用）
+
+
+
+ a| 
+對於工作流程名稱、請將第一個字詞的開頭字母和每個物件字詞大寫。縮寫和縮略字的英文字母大寫。
+ a| 
+Volume
+
+qtree
+
+建立叢集Data ONTAP 式的叢集式功能區樹狀CIFS共用
+
+
+
+ a| 
+如需工作流程說明、請納入工作流程的所有重要步驟、包括任何先決條件、工作流程結果或執行條件等。
+ a| 
+請參閱Data ONTAP 範例工作流程「Create VMware NFS Datastore on the叢集式VMware vCenter Storage」（在叢集式VMware vCenter Storage上建立VMware NFS資料存放區）的說明、其中包含先決條件。
+
+
+
+ a| 
+只有當工作流程已準備就緒可供正式作業時、才能將「Ready for Production」設為「true」、並可顯示在入口網站頁面中。
+ a| 
+無
+
+
+
+ a| 
+根據預設、將「考慮保留元素」設為true。預覽工作流程以供執行時、WFA規劃人員會考量所有保留的物件、以及快取資料庫中的現有物件。如果此選項設為「true」、則在規劃特定工作流程時、會考慮其他排程工作流程或平行執行的工作流程的影響
+ a| 
+* 案例1
++
+工作流程1會建立Volume、排定在一週後執行。工作流程2會在要搜尋的磁碟區中建立qtree或LUN、如果工作流程2是在一天左右執行、您應該關閉工作流程2的「考慮保留元素」、以避免考慮在一週內建立的磁碟區。
+
+* 案例2
++
+工作流程1使用「Create Volume」命令。如果排程工作流程2的Aggregate佔用100 GB空間、則工作流程1在規劃期間必須考量工作流程2的需求。
+
+
+
+
+
+ a| 
+預設情況下、「Enable Element共存validation」（啟用元素存在驗證）設為「true」
+ a| 
+* 案例1
++
+如果您建立的工作流程只有在磁碟區存在時、才會使用「移除磁碟區」命令、依名稱移除磁碟區、然後使用「建立磁碟區」或「Clone Volume」等命令重新建立磁碟區、則工作流程不應使用此旗標。移除Volume的效果無法用於「Create volume」命令、因此工作流程會失敗。
+
+* 案例2
++
+「Create Volume」命令用於特定名稱為「'vol198'」的工作流程。
+
++
+如果此選項設為true、則WFA規劃人員會在規劃期間檢查指定陣列中是否存在名稱為該名稱的磁碟區。如果Volume存在、則工作流程在規劃期間會失敗。
+
+
+
+
+
+ a| 
+在工作流程中選取相同的命令一次以上時、請為命令執行個體提供適當的顯示名稱。
+ a| 
+「Create、map and Protect LUNs with SnapVault the示例工作流程」使用「Create Volume」命令兩次。不過、它會使用「Create Primary Volume」（建立主磁碟區）和「Create Secondary Volume」（建立次磁碟區）的顯示名稱、以適當地用於主磁碟區和鏡射目的地磁碟區。
+
+|===
+
+
+== 使用者輸入
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+名稱：
+
+* 以「$$」字元開頭。
+* 在每個字的開頭使用大寫字母。
+* 所有詞彙和縮寫均使用大寫字母。
+* 請勿使用底線。
+
+ a| 
+$Array
+
+$' Volume名稱'
+
+
+
+ a| 
+顯示名稱：
+
+* 在每個字的開頭使用大寫字母。
+* 以空格分隔字詞。
+* 如果輸入具有特定單位、請直接在顯示名稱中以方括弧指定單位。
+
+ a| 
+「Volume Name」（磁碟區名稱）
+
+「Volume size（MB）（磁碟區大小（MB））」
+
+
+
+ a| 
+說明：
+
+* 為每個使用者輸入提供有意義的說明。
+* 視需要提供範例。
++
+您應該特別是在使用者輸入預期為特定格式時執行此動作。
+
+
+
+使用者輸入說明會在工作流程執行期間顯示為使用者輸入的工具提示。
+ a| 
+要新增至「iGroup」的啟動器。例如啟動器的IQN或WWPN。
+
+
+
+ a| 
+類型：如果您要將輸入限制為特定的值集、請選取「Enum」作為類型。
+ a| 
+傳輸協定：「iSCSI」、「FCP」、「mithed」
+
+
+
+ a| 
+類型：選取查詢作為使用者可從WFA快取中可用的值中選取的類型。
+ a| 
+$Array：查詢類型如下：
+
+[listing]
+----
+SELECT
+	ip, name
+FROM
+	storage.array
+----
+
+
+ a| 
+類型：當使用者輸入應限制為從查詢取得的值、或應僅限於支援的Enum類型時、請將使用者輸入標記為「鎖定」。
+ a| 
+$Array：鎖定查詢類型：只能選取快取中的陣列。$Protocol：鎖定的Enum類型、有效值為iSCSI、FCP、混合。不支援有效值以外的其他值。
+
+
+
+ a| 
+類型：查詢類型在查詢中新增其他欄做為傳回值、以協助儲存設備操作員做出正確的使用者輸入選擇。
+ a| 
+$Aggregate：提供名稱、總大小、可用大小、以便操作員在選取Aggregate之前先知道這些屬性。
+
+
+
+ a| 
+類型：查詢類型SQL查詢的使用者輸入內容可參照其前的任何其他使用者輸入。這可用來限制其他使用者輸入的查詢結果、例如陣列的vFiler單元、集合體的磁碟區、儲存虛擬機器（SVM）中的LUN。
+ a| 
+在範例工作流程「建立叢集Data ONTAP 式的流通量」中、VserverName的查詢如下：
+
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.cluster cluster,
+    cm_storage.vserver vserver
+WHERE
+    vserver.cluster_id = cluster.id
+    AND cluster.name = '${ClusterName}'
+    AND vserver.type = 'cluster'
+ORDER BY
+    vserver.name ASC
+----
+查詢是指$\{clustername}、其中$clustername是$VserverName使用者輸入前的使用者輸入名稱。
+
+
+
+ a| 
+類型：對於屬於布林型態的使用者輸入、請使用布林類型、值為「'true、fals'」。這有助於在工作流程設計中直接使用使用者輸入內容來撰寫內部運算式。例如、$UserIntutName而非$UserIntutName ='Yes。
+ a| 
+$'CreCIFSShare'：布林類型、有效值為「true」或「假」
+
+
+
+ a| 
+類型：如果是字串和數字類型、當您要使用特定格式驗證值時、請在「值」欄中使用規則運算式。
+
+使用規則運算式輸入IP位址和網路遮罩。
+ a| 
+特定位置的使用者輸入可表示為「」（「A-Z」）[A-Z]\-0[1-9]」。此使用者輸入內容接受「US-01」、「NB-02」等值、但不接受「'NB-00'」等值。
+
+
+
+ a| 
+類型：針對數字類型、可在「值」欄位中指定範圍型驗證。
+ a| 
+對於要建立的LUN數目、「值」欄位中的項目為1-20。
+
+
+
+ a| 
+群組：將相關的使用者輸入分組至適當的儲存區、並命名群組。
+ a| 
+所有儲存設備相關使用者輸入的「儲存設備詳細資料」。所有與VMware相關的使用者輸入內容均為「詳細資料」。
+
+
+
+ a| 
+必填：如果工作流程必須執行任何使用者輸入的值、請將使用者輸入標示為必填。如此可確保使用者輸入畫面以資料方式接受使用者的輸入。
+ a| 
+「Create NFS Volume」（建立NFS Volume）工作流程中的「'$Volume Name'」。
+
+
+
+ a| 
+預設值：如果使用者輸入的預設值可用於大部分的工作流程執行、請提供這些值。這有助於讓使用者在執行期間提供較少的輸入（如果預設值符合此目的）。
+ a| 
+無
+
+|===
+
+
+== 常量、變數及傳回參數
+
+|===
+
+
+| 準則 | 範例 
+
+
+ a| 
+常量：使用通用值定義多個命令的參數時、請定義常量。
+ a| 
+_Aggregate、overimention_dthreshold_、位於「Create、map and Protect LUNs with SnapVault the SURF樣本workflow」（建立、對應及保護LUN）中。
+
+
+
+ a| 
+常量：名稱
+
+* 在每個字的開頭使用大寫字母。
+* 所有詞彙和縮寫均使用大寫字母。
+* 請勿使用底線。
+* 所有固定名稱的字母都使用大寫字母。
+
+ a| 
+_Aggregate使用空間臨界值_
+
+_ActualVolume SizeInMB_
+
+
+
+ a| 
+變數：為其中一個命令參數方塊中定義的物件提供名稱。變數是自動產生的名稱、可以變更。
+ a| 
+無
+
+
+
+ a| 
+變數：名稱使用小寫字元做為變數名稱。
+ a| 
+Volume1.
+
+CIFs_Share
+
+
+
+ a| 
+傳回參數：當工作流程規劃與執行在規劃期間應傳回某些已計算或選取的值時、請使用傳回參數。這些值也會在從Web服務執行工作流程時、以預覽模式提供。
+ a| 
+Aggregate：如果使用資源選擇邏輯選取Aggregate、則實際選取的Aggregate可定義為傳回參數。
+
+|===

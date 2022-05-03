@@ -1,0 +1,39 @@
+---
+permalink: windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, regular, wfa, database, cli 
+summary: 您OnCommand Workflow Automation 可以使用REST API定期還原Isfa（WFA）資料庫。在一般還原中、您只能備份WFA資料庫。 
+---
+= 使用CLI還原（一般）WFA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您OnCommand Workflow Automation 可以使用REST API定期還原Isfa（WFA）資料庫。在一般還原中、您只能備份WFA資料庫。
+
+* 您必須已建立WFA資料庫的備份。
+* 您必須擁有系統管理認證、架構認證或備份使用者認證。
+
+
+.步驟
+. 在Shell提示字元中、瀏覽至WFA伺服器上的下列目錄：WFA_install_LOUSE\WFA\bin
++
+WFA_install_location是WFA安裝目錄。
+
+. 執行還原作業：
++
+「wfa.cmd --restore --user=user_name [--password=password][--portation=path]」
+
++
+** user_name是管理員或架構設計師使用者的使用者名稱。
+** 密碼是使用者的密碼。
++
+如果您尚未提供密碼、則必須在系統提示時輸入密碼。
+
+** 路徑是還原檔案的完整目錄路徑。
+
+
+. 確認還原作業成功、且可存取WFA。
+

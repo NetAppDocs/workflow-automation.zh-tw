@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html 
+sidebar: sidebar 
+keywords: cannot, view, performance, advisor, data, wfa 
+summary: 如果您無法在WFA中檢視Performance Advisor資料、或是Performance Advisor資料來源的資料擷取程序失敗、您應該執行某些動作來疑難排解問題。 
+---
+= 無法在WFA中檢視Performance Advisor資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您無法在WFA中檢視Performance Advisor資料、或是Performance Advisor資料來源的資料擷取程序失敗、您應該執行某些動作來疑難排解問題。
+
+* 在Active IQ Unified Manager WFA中將Performance Advisor設定為資料來源時、請確定您已指定具有GlobalRead最低角色的驗證使用者身分證明。
+* 在WFA中將Performance Advisor設定為資料來源時、請確定您已指定正確的連接埠。
++
+根據預設Active IQ Unified Manager 、將連接埠8088用於HTTP連線、將連接埠8488用於HTTPS連線。
+
+* 確保Active IQ Unified Manager 由VMware伺服器收集效能資料。
+

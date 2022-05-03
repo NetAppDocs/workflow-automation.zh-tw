@@ -1,0 +1,156 @@
+---
+permalink: workflows/reference-guidelines-for-error-handling.html 
+sidebar: sidebar 
+keywords: aware, guidelines, error, handling, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 撰寫OnCommand Workflow Automation 適用於WFA（WFA）的PowerShell或Perl指令碼時、您必須瞭解錯誤處理的準則。 
+---
+= 錯誤處理準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+撰寫OnCommand Workflow Automation 適用於WFA（WFA）的PowerShell或Perl指令碼時、您必須瞭解錯誤處理的準則。
+
+
+
+== PowerShell錯誤處理
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+PowerShell執行時間新增至Cmdlet的一般參數包括錯誤處理參數、例如錯誤動作和警告動作：
+
+* 錯誤動作參數決定Cmdlet應如何回應命令中的非終止錯誤。
+* WarningAction參數決定Cmdlet應如何回應命令的警告。
+* Stop、SilentlyContinue、Inquire和Continue是錯誤行動和警告行動參數的有效值。
+
+
+如需詳細資訊、您可以在PowerShell CLI中使用「Get-Help關於_CommonParameters」命令。
+ a| 
+錯誤動作：下列範例顯示如何將非終止錯誤當作終止錯誤處理：
+
+[listing]
+----
+New-NcIgroup-Name $IgroupName-Protocol $Protocol-Type$OSType-ErrorActionstop
+----
+WarningAction
+
+[listing]
+----
+New-VM-Name $VMName-VM $SourceVM-DataStore$DataStoreName-VMHost$VMHost-WarningActionSilentlyContinue
+----
+
+
+ a| 
+如果傳入例外的類型不明、請使用一般的「try/catch」陳述式。
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+----
+
+
+ a| 
+如果已知傳入例外的類型、請使用特定的「try/catch」陳述式。
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch[System.Net.WebExceptional], [System.IO.
+IOException]
+{
+"Got exception"
+}
+----
+
+
+ a| 
+使用「finally」聲明來釋出資源。
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+finally
+{
+"Release resources"
+}
+----
+
+
+ a| 
+使用PowerShell自動變數來存取例外狀況的相關資訊。
+ a| 
+[listing]
+----
+try
+{
+Get-WFALogger -Info -message $("Creating
+Ipspace: " + $Ipspace)
+New-NaNetIpspace-Name $Ipspace
+}
+catch
+{
+Throw "Failed to create Ipspace. Message:
+" + $_.Exception.Message;
+}
+----
+|===
+
+
+== Perl錯誤處理
+
+[cols="2*"]
+|===
+| 準則 | 範例 
+
+
+ a| 
+Perl不包含試用/攔截區塊的原生語言支援。使用評估區塊來檢查及處理錯誤。盡量將評估區塊保持在最小的位置。
+ a| 
+[listing]
+----
+eval {
+
+$wfa_util->sendLog('INFO',
+"Quiescing the relationship :
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume"
+    );
+$server->snapmirror_quiesce(
+'destination-vserver' => $DestinationVserver,
+'destination-volume'  => $DestinationVolume
+    );
+$wfa_util->sendLog('INFO', 'Quiesce operation
+started successfully.');
+};
+
+$wfa_util->checkEvalFailure(
+"Failed to quiesce the SnapMirror relationship
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume",
+    $@
+);
+----
+|===

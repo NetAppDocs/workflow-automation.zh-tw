@@ -1,0 +1,22 @@
+---
+permalink: windows-install/concept-wfa-data-sources.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, data sources 
+summary: WFA（WFA）可針對從資料來源取得的資料運作。OnCommand Workflow Automation各種版本Active IQ Unified Manager 的VMware vCenter Server均以預先定義的WFA資料來源類型提供。在設定資料來源進行資料擷取之前、您必須先瞭解預先定義的資料來源類型。 
+---
+= 資料來源OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA（WFA）可針對從資料來源取得的資料運作。OnCommand Workflow Automation各種版本Active IQ Unified Manager 的VMware vCenter Server均以預先定義的WFA資料來源類型提供。在設定資料來源進行資料擷取之前、您必須先瞭解預先定義的資料來源類型。
+
+資料來源是唯讀的資料結構、可作為特定資料來源類型之資料來源物件的連線。例如、資料來源可以是Active IQ Unified Manager 連接到Active IQ Unified Manager 某個含有還原6.3資料來源類型的還原資料庫。您可以在定義所需的資料來源類型之後、將自訂資料來源新增至WFA。
+
+如需預先定義資料來源類型的詳細資訊、請參閱互通性對照表。
+
+*相關資訊*
+
+https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]

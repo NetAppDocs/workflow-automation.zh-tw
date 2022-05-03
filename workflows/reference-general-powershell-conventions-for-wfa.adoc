@@ -1,0 +1,34 @@
+---
+permalink: workflows/reference-general-powershell-conventions-for-wfa.html 
+sidebar: sidebar 
+keywords: must, understand, certain, powershell, perl, conventions, use, create, scripts, consistent, existing, script 
+summary: 您必須瞭解WFA中使用的特定PowerShell和Perl慣例、才能建立與現有指令碼一致的指令碼。 
+---
+= WFA的一般PowerShell與Perl慣例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解WFA中使用的特定PowerShell和Perl慣例、才能建立與現有指令碼一致的指令碼。
+
+* 使用有助於釐清指令碼內容的變數。
+* 撰寫可讀取的程式碼、無需註解即可理解。
+* 盡量簡化指令碼和命令。
+* PowerShell指令碼：
++
+** 盡可能使用Cmdlet。
+** 在沒有可用的Cmdlet時叫用.NET程式碼。
+
+
+* Perl指令碼：
++
+** 請務必以換行字元結束「die」陳述。
++
+如果沒有換行字元、則會列印指令碼行編號、這對於偵錯WFA執行的Perl命令並不有用。
+
+** 在「'getopt'」模組中、將命令的字串引數設定為必填。
+
+
+

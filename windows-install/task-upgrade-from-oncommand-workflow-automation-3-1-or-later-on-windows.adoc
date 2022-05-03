@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later versions 
+summary: 您可以從OnCommand Workflow Automation 原地升級、從更新版本的更新版本到最新版本的WFA、以使用新功能和增強功能。 
+---
+= 從OnCommand Workflow Automation 更新版本升級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從OnCommand Workflow Automation 原地升級、從更新版本的更新版本到最新版本的WFA、以使用新功能和增強功能。
+
+您必須從NetApp支援網站下載.exe二進位檔案至WFA主機機器。
+
+WFA 5.1叢集連線需要接受SSL憑證。從舊版WFA更新至WFA 5.1時、您需要認證叢集連線。在原地升級後、儲存叢集連線詳細資料以供叢集認證。
+
+從舊版WFA升級時、您無法自行安裝MySQL。不過、您可以自行安裝MySQL：
+
+* 在全新安裝WFA 4.2及更新版本或期間
+* 當您從WFA 4.2升級至更新版本的WFA時。
+
+
+.步驟
+. 選擇下列其中一種方法、從WFA 3.1或更新版本升級：
++
+** 互動式安裝
++
+... 瀏覽至WFA主機電腦中的.exe二進位檔案、然後執行該檔案。
+... 依照精靈的螢幕上指示完成升級。
+
+
+** 無聲安裝
++
+在命令提示字元中輸入下列命令：
+
++
+「WFA-version_number-build_number.exe /s /v"WFA_admin_username_up = WFA使用者名稱WFA_admin_password_up =密碼/QR /l* v C：\upgrade．log」
+
++
+*範例*：
+
++
+「WFA-x64-v4.2.0.0.0-B2973881.exe /s /v"wfa_admin_username_up = admin wfa_admin_password_up =密碼* 123 /qr/l* v C：\upgrade．log」
+
++
+
+NOTE: WFA不支援/qn選項。
+
++
+如果您要執行無聲升級、則必須包含所有命令參數的值：
+
++
+*** WFA_admin_username_up是WFA使用者的使用者名稱、該使用者具有建立WFA資料庫備份的權限。
+*** WFA_admin_password_up是使用者的密碼。
+
+
+
+
+

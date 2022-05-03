@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 您可以在Workflow Automation（WFA）設計工具中、使用建置區塊（例如資料夾、篩選器和命令）來建立工作流程。在您開始建立工作流程之前、瞭解建置區塊和工作流程建立程序非常重要。 
+---
+= 瞭解Workflow Automation設計工具
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Workflow Automation（WFA）設計工具中、使用建置區塊（例如資料夾、篩選器和命令）來建立工作流程。在您開始建立工作流程之前、瞭解建置區塊和工作流程建立程序非常重要。

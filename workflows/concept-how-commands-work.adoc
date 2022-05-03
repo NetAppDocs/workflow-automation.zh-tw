@@ -1,0 +1,71 @@
+---
+permalink: workflows/concept-how-commands-work.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, commands, execution, blocks, step 
+summary: 執行工作流程的執行區塊是指使用者執行的指令。OnCommand Workflow Automation您可以針對工作流程中的每個步驟使用命令。 
+---
+= 命令的運作方式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+執行工作流程的執行區塊是指使用者執行的指令。OnCommand Workflow Automation您可以針對工作流程中的每個步驟使用命令。
+
+WFA命令是使用PowerShell和Perl指令碼來撰寫。PowerShell命令會使用Data ONTAP VMware Powershell工具套件和VMware PowerCLI（如果已安裝套件）。Perl命令使用WFA伺服器上安裝的Perl發佈和Perl模組。如果您在命令中包含多種指令碼語言（例如PowerShell和Perl）、WFA會根據安裝指令碼的作業系統以及您在WFA組態功能表中指定的慣用語言順序、來選擇適當的指令碼。
+
+WFA命令的指令碼包含數個參數。這些參數可能會對應至字典項目屬性。
+
+請注意、每個WFA命令都可以包含數Data ONTAP 個flexiCommand。
+
+某些WFA命令稱為wait命令、因為它們可能會等待長時間執行的作業並定期輪詢、例如*等待多個Volume Moves *命令。執行輪詢命令的等待時間間隔可設定為檢查作業是否已完成。
+
+WFA命令是由WFA在工作流程執行階段啟動。WFA會以從左到右和從上到下的順序連續執行命令。工作流程的規劃可確認提供給命令之參數的可用度和有效性。WFA伺服器會在執行命令之前提供命令所需的所有參數。
+
+命令參數會在工作流程規劃期間完成。然後工作流程會在執行期間將這些參數傳遞給命令。這些命令無法將參數傳回工作流程。不過、如果您想要在工作流程中的命令之間交換執行期間取得的資訊、可以使用指定的WFA PowerShell Cmdlet或Perl功能。
+
+WFA PowerShell命令不會針對PowerShell Cmdlet使用-ErrorAction Stop旗標；因此即使Cmdlet因為錯誤而失敗、仍會繼續執行工作流程。如果您想要在特定命令中包含-ErrorAction Stop旗標、可以複製命令並修改PowerShell指令碼以新增旗標。
+
+以下是WFA中包含的PowerShell Cmdlet和Perl功能、可在命令之間交換資訊：
+
+[cols="2*"]
+|===
+| PowerShell Cmdlet | Perl功能 
+
+
+ a| 
+AD-WfaWorkFlowParer
+ a| 
+AddWfaWorkFlowParer
+
+
+
+ a| 
+Get-WfaWorkFlowParer
+ a| 
+getWfaWorkFlowParer
+
+|===
+「'add'」Cmdlet或函數新增至命令的參數可由隨後執行的命令擷取、並使用「'Get'」Cmdlet或函數。例如、在PowerShell WFA命令中、您可以使用程式碼中的下列項目來新增名為volumeId的參數：「Add-WfaWorkFlowParameter -Name「Volume UUID」-Value「12345」-AddAsReturnParer$true」。然後、您可以在後續命令中使用下列命令、來擷取volumeId的值：「$volumeId = Get-WfaWorkFlowParameter -Name volumeId」。
+
+WFA命令可查詢WFA資料庫、並取得所需的結果。如此一來、您就能建構命令、而不需使用篩選器和資料查詢器。您可以使用下列函數查詢資料庫：
+
+[cols="2*"]
+|===
+| PowerShell Cmdlet | Perl功能 
+
+
+ a| 
+叫用MySqlQuery例如：「Invoke-MySqlQuery - Query」「從cm_storage．cluster選取cluster.name作為「叢集名稱」」
+ a| 
+已建立的新功能
+
+|===
+*相關資訊*
+
+xref:task-create-a-filter.adoc[建立篩選器]
+
+xref:task-create-a-finder.adoc[建立搜尋工具]
+
+xref:task-create-a-command.adoc[建立命令]

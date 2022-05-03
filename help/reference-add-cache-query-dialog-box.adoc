@@ -1,0 +1,66 @@
+---
+permalink: help/reference-add-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: add, cache, query, dialog, enable, create, new, dictionary, entry, associate, data, provide, type, specific, unified manager, version 
+summary: 「新增快取查詢」對話方塊可讓您建立新的快取查詢、以查詢與資料提供類型（例如特定Active IQ Unified Manager 的版本）建立關聯。 
+---
+= 新增快取查詢對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「新增快取查詢」對話方塊可讓您建立新的快取查詢、以查詢與資料提供類型（例如特定Active IQ Unified Manager 的版本）建立關聯。
+
+* *《Dictionary Entry*》
++
+可讓您選取要建立快取查詢的字典項目。
+
+* *實體版本*
++
+可讓您輸入快取查詢的版本編號、格式為「major.m次要.re修訂」、例如1.1.0。
+
+* *資料來源類型*
++
+可讓您選取要與快取查詢建立關聯的資料來源類型、例如Active IQ ：《統一化管理程式6.0版」。
+
+
+
+
+
+== 表結構
+
+* *屬性選項卡*
++
+顯示與該字典項目相關的屬性。
+
+* *建立表格SQL索引標籤*
++
+顯示該字典項目的「建立表格」指令碼。
+
+
+
+
+
+== SQL選取查詢
+
+可讓您輸入SQL選取查詢、從指定資料提供者的資料表擷取資料。
+
+
+
+== 命令按鈕
+
+* *測試*
++
+可讓您測試在* SQL SELECT query*欄位中輸入的SQL查詢。
+
+* *儲存*
++
+儲存快取查詢並關閉對話方塊。
+
+* *取消*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+

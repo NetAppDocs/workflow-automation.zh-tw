@@ -1,0 +1,72 @@
+---
+permalink: help/task-export-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: save, user-created, oncommand, workflow, automation, content, file, share, users, include, entire, specific, items, workflows, finders, comands, dictionary 
+summary: 您可以將使用者建立OnCommand Workflow Automation 的功能區（WFA）內容儲存為.Dar檔案、並與其他使用者分享內容。WFA內容可包含使用者建立的完整內容或特定項目、例如工作流程、資料查詢器、命令和字典字詞。 
+---
+= 匯出OnCommand Workflow Automation 內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將使用者建立OnCommand Workflow Automation 的功能區（WFA）內容儲存為「.Dar」檔案、並與其他使用者分享內容。WFA內容可包含使用者建立的完整內容或特定項目、例如工作流程、資料查詢器、命令和字典字詞。
+
+*您需要的是什麼*
+
+* 您必須能夠存取想要匯出的WFA內容。
+* 如果要匯出的內容含有認證內容的參考資料、則匯入內容時、系統上必須提供相應的認證內容套件。
++
+這些套件可從Storage Automation Store下載。
+
+
+
+*關於此工作*
+
+* 您無法匯出下列類型的認證內容：
++
+** image:../media/netapp_certified.gif[""] - NetApp認證內容
+** image:../media/ps_certified_icon_wfa.gif[""] 由專業服務（PS）開發的內容、僅適用於PS所製作的自訂安裝
+** image:../media/community_certification.gif[""] -由使用者開發的套件
+
+
+* 也會匯出與匯出物件相依的所有物件。
++
+例如、匯出工作流程也會匯出工作流程的相依命令、篩選器和尋找工具。
+
+* 您可以匯出鎖定的物件。
++
+當其他使用者匯入物件時、物件會維持鎖定狀態。
+
+
+
+.步驟
+. 透過網頁瀏覽器登入WFA。
+. 匯出必要內容：
++
+[cols="2*"]
+|===
+| 如果您想要... | 執行此動作... 
+
+
+ a| 
+將所有使用者建立的內容匯出為單一.Dar檔案
+ a| 
+.. 按一下「*設定*」、然後在「*維護*」下按一下「*匯出所有工作流程*」。
+.. 指定".DAR"檔案的檔案名稱、然後按一下「*匯出*」。
+
+
+
+
+ a| 
+匯出特定內容
+ a| 
+.. 瀏覽至您要從中匯出內容的視窗。
+.. 從視窗中選取一或多個項目、然後按一下 image:../media/export_wfa_icon.gif["匯出圖示"]。
+.. 在「匯出為」對話方塊中、為「.Dar」檔案指定檔案名稱、然後按一下「*匯出*」。
+
+
+|===
+. 在「另存新檔」對話方塊中、指定您要儲存「.Dar」檔案的位置、然後按一下「*儲存*」。
+

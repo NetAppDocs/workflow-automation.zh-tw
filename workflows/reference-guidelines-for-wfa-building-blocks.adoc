@@ -1,0 +1,14 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-building-blocks.html 
+sidebar: sidebar 
+keywords: aware, guidelines, workflow, automation, building, blocks 
+summary: 您必須瞭解使用Workflow Automation建置區塊的準則。 
+---
+= WFA建置區塊準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解使用Workflow Automation建置區塊的準則。

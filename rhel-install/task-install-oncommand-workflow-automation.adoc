@@ -1,0 +1,188 @@
+---
+permalink: rhel-install/task-install-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, linux 
+summary: 您可以OnCommand Workflow Automation 使用命令列介面（CLI）來安裝功能區（WFA）。 
+---
+= 在OnCommand Workflow Automation Linux上安裝
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以OnCommand Workflow Automation 使用命令列介面（CLI）來安裝功能區（WFA）。
+
+* 您必須已檢閱安裝先決條件。
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[安裝先決條件]
+
+* 您必須從NetApp支援網站下載WFA安裝程式。
+
+
+如果您要在虛擬機器（VM）上安裝WFA、則VM名稱不得包含底線（_）字元。
+
+您可以在Shell提示字元：「./WFA-version_number.bin（-I WFA_install_ddirectory][-d mysql_data_directory]）變更預設安裝位置
+
+如果您變更預設安裝位置、則當您解除安裝WFA時、不會刪除MySQL資料目錄。您必須手動刪除目錄。
+
+
+NOTE: 重新安裝WFA 4.2或更新版本之前、如果您已解除安裝MySQL、則必須刪除MySQL資料目錄。
+
+.步驟
+. 以root使用者身分登入Linux伺服器。
+. 瀏覽至可執行檔.bin檔案所在的目錄。
+. 選擇下列其中一種方法來安裝WFA：
++
+** 互動式安裝
++
+... 啟動互動式工作階段：「/wfA-version _number.bin」
+... 輸入預設管理員使用者的認證資料、然後按Enter。
++
+您必須記下管理使用者的認證資料、並確保密碼符合下列條件：
+
++
+**** 至少八個字元
+**** 一個大寫字元
+**** 一個小寫字元
+**** 一個數字
+**** 一個特殊字元
+**** 密碼不支援下列特殊字元、導致安裝失敗：
++
+「」；<、=&｛caret｝|
+
+
+
+... 接受WFA組態的預設連接埠、或提供自訂連接埠、然後按Enter。
+... 指定您的公司名稱和站台名稱、然後按Enter。
++
+網站名稱可包含WFA安裝位置、例如、PA匹茲堡。
+
+... 選擇下列其中一項動作、確認WFA已成功安裝：
++
+**** 透過網頁瀏覽器存取WFA。
+**** 確認NetApp WFA伺服器服務和NetApp WFA資料庫服務正在執行：
++
+....
+service wfa-server status
+service wfa-db status
+....
+
+
+
+
+** 無聲安裝
++
+在Shell提示符下：
+
++
+WFA-version_number.bin [-u admin_user_ name][-p admin_user_password][-m https_port][-n https_port][-c compety_name][-s site_name][-i install_ddirectory][-d mysql_data_directory][-y][-b]
+
++
+如果您要執行無聲安裝、則必須為所有命令選項指定值。命令選項如下：
+
++
+[cols="2*"]
+|===
+| 選項 | 說明 
+
+
+ a| 
+-y
+ a| 
+跳過跳過跳過安裝確認的選項
+
+
+
+ a| 
+b
+ a| 
+在升級期間跳過Skips建立WFA資料庫備份的選項
+
+
+
+ a| 
+-u
+ a| 
+管理使用者名稱
+
+
+
+ a| 
+-p
+ a| 
+管理使用者密碼管理使用者密碼必須符合下列條件：
+
+*** 至少八個字元
+*** 一個大寫字元
+*** 一個小寫字元
+*** 一個數字
+*** 一個特殊字元
+*** 不允許使用下列字元、並導致密碼輸入失敗：
++
+「」；<、=&｛caret｝|
+
+
+
+
+
+ a| 
+-m
+ a| 
+HTTPS連接埠
+
+
+
+ a| 
+-n
+ a| 
+HTTP連接埠
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+-s
+ a| 
+站台名稱
+
+
+
+ a| 
+-c
+ a| 
+公司名稱
+
+
+
+ a| 
+-I
+ a| 
+安裝目錄路徑
+
+
+
+ a| 
+-d
+ a| 
+MySQL資料目錄
+
+
+
+ a| 
+-h
+ a| 
+顯示選項會顯示「說明」
+
+|===
+
+
+
+
+*相關資訊*
+
+https://mysupport.netapp.com/site/["NetApp支援"^]

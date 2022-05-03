@@ -1,0 +1,48 @@
+---
+permalink: workflows/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, virtual, environment, machines, hosts, datastores 
+summary: 方案代表系統的資料模型。資料模型是一組字典項目。您可以定義方案、然後定義資料來源類型。資料來源會定義如何擷取資料及填入配置。例如、某個虛擬機器配置會擷取虛擬環境的相關資料、例如虛擬機器、主機和資料存放區。 
+---
+= 有哪些方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+方案代表系統的資料模型。資料模型是一組字典項目。您可以定義方案、然後定義資料來源類型。資料來源會定義如何擷取資料及填入配置。例如、某個虛擬機器配置會擷取虛擬環境的相關資料、例如虛擬機器、主機和資料存放區。
+
+您也可以透過自訂的工作流程、直接填入資料、以解決特定問題。
+
+在建立字典項目時、會將字典項目與現有的配置相關聯。字典項目也會與快取查詢相關聯、而快取查詢則包含SQL查詢。
+
+配置可以使用指令碼型資料來源類型或SQL資料來源類型來擷取資料。指令碼是在建立資料來源類型時定義、而SQL查詢則是在快取查詢中定義。
+
+WFA包含下列方案：
+
+* * 7-Mode（儲存設備）*
++
+透過Active IQ Unified Manager 以Data ONTAP 7-Mode運作的支援功能、從支援功能中取得資料的架構。
+
+* *叢集Data ONTAP 式功能（cm_storage）*
++
+透過Active IQ Unified Manager 從叢集Data ONTAP 式的功能集群獲取資料的方案。
+
+* * 7-Mode Performance（效能）*
++
+透過Data ONTAP Performance Advisor取得以7-Mode運作的效能資料。
+
+* *叢集Data ONTAP 式的效能（cm_Performance）*
++
+透過Data ONTAP Performance Advisor取得叢集式VMware效能資料的方案。
+
+* * VMware vCenter（vc）*
++
+從VMware vCenter取得資料的方案。
+
+* *遊樂場（遊樂場）*
++
+可直接填入資料的配置。
+
+

@@ -1,0 +1,16 @@
+---
+permalink: help/reference-mvel-learning-material-reference.html 
+sidebar: sidebar 
+keywords: use, language, guide, learn, expression 
+summary: 您可以使用「MVEL Language Guide（VEL語言指南）」深入瞭解VFlex運算式語言（VEL）。 
+---
+= 何處可找到有關VEL的資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用_MVEL Language Guide_來深入瞭解MVFlex運算式語言（MVEL）。
+
+VEL是以Java語法為基礎的運算式語言。您可以在OnCommand Workflow Automation 諸如函數和變數等方面的動作流程中使用VEL運算式語法。

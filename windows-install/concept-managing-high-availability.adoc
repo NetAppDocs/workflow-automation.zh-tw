@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: 您可以設定高可用度設定、以持續支援網路作業。如果其中一個元件故障、安裝中的鏡射元件就會接管作業、並提供不中斷的網路資源。您也可以備份WFA資料庫和支援的組態、以便在發生災難時恢復資料。 
+---
+= 管理高可用度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定高可用度設定、以持續支援網路作業。如果其中一個元件故障、安裝中的鏡射元件就會接管作業、並提供不中斷的網路資源。您也可以備份WFA資料庫和支援的組態、以便在發生災難時恢復資料。

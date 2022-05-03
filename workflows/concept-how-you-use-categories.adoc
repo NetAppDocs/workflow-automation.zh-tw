@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-categories.html 
+sidebar: sidebar 
+keywords: categorize, workflows, better, organize, apply, access, control, capability 
+summary: 您可以將工作流程分類、以便更妥善地組織工作流程、並在工作流程中套用存取控制功能。 
+---
+= 類別的使用方式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將工作流程分類、以便更妥善地組織工作流程、並在工作流程中套用存取控制功能。
+
+您可以將工作流程分類、使其顯示在WFA入口網站的特定群組中。您也可以在工作流程類別上套用存取控制功能。例如、您只能允許特定的儲存操作員或核准者檢視特定類別的工作流程。儲存設備操作員或核准者只能執行其已獲授予存取權限之類別內的工作流程。
+
+Active Directory群組也可用於類別的存取控制。

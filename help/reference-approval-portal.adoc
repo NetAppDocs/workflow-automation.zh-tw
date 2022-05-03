@@ -1,0 +1,46 @@
+---
+permalink: help/reference-approval-portal.html 
+sidebar: sidebar 
+keywords: approval, portal, window, enable, reject, workflow 
+summary: 「核准入口網站」視窗可讓您核准或拒絕工作流程。 
+---
+= 核准入口網站視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「核准入口網站」視窗可讓您核准或拒絕工作流程。
+
+您可以從電子郵件通知中提供的連結登入「核准入口網站」視窗、以核准工作流程。
+
+* *返回WFA *
++
+從「核准入口網站」視窗返回WFA應用程式。
+
+
+
+
+
+== 核准入口網站
+
+* *輸入意見*
++
+可讓您輸入意見以核准或拒絕工作流程。
+
+
+
+
+
+== 命令按鈕
+
+* *核准與恢復*
++
+可讓您核准恢復工作流程的工作流程。
+
+* *拒絕與中止*
++
+可讓您拒絕中止工作流程的工作流程。
+
+

@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, setting, oncommand, workflow, automation 
+summary: 根據預設、還原（WFA）資料庫交易會在300秒內逾時。OnCommand Workflow Automation從備份還原大型WFA資料庫時、您可以延長預設的逾時時間、以避免資料庫還原可能發生故障。 
+---
+= 修改OnCommand Workflow Automation 資訊的交易逾時設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據預設、還原（WFA）資料庫交易會在300秒內逾時。OnCommand Workflow Automation從備份還原大型WFA資料庫時、您可以延長預設的逾時時間、以避免資料庫還原可能發生故障。
+
+您必須以root使用者身分登入WFA主機系統。
+
+此程序使用預設的WFA安裝路徑。如果您在安裝期間變更預設位置、則必須使用變更的WFA安裝路徑。
+
+.步驟
+. 在Shell提示下、瀏覽至WFA伺服器上的下列目錄：WFA_install_LOWS/WFA/BIN/
+. 輸入下列命令：
++
+「/WFA --txn-timeout[=timeout]-重新啟動=WFA」
+
++
+「/wFA --txn-timeout=1000 --escal=wfa」
+
+

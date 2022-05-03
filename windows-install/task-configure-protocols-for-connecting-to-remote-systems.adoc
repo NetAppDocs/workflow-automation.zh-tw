@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-configure-protocols-for-connecting-to-remote-systems.html 
+sidebar: sidebar 
+keywords: configure, protocols, connect, remote systems 
+summary: 您可以設定OnCommand Workflow Automation 用來連接遠端系統的傳輸協定（WFA）。您可以根據組織的安全需求和遠端系統支援的傳輸協定來設定傳輸協定。 
+---
+= 設定連接遠端系統的傳輸協定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定OnCommand Workflow Automation 用來連接遠端系統的傳輸協定（WFA）。您可以根據組織的安全需求和遠端系統支援的傳輸協定來設定傳輸協定。
+
+.步驟
+. 以管理員身分透過網頁瀏覽器登入WFA。
+. 按一下*資料來源設計*>*遠端系統類型*。
+. 執行下列其中一項動作：
++
+[cols="2*"]
+|===
+| 如果您想要... | 執行此動作... 
+
+
+ a| 
+設定新遠端系統的傳輸協定
+ a| 
+.. 按一下 image:../media/new_wfa_icon.gif["新圖示"]。
+.. 在「新增遠端系統類型」對話方塊中、指定名稱、說明和版本等詳細資料。
+
+
+
+
+ a| 
+修改現有遠端系統的傳輸協定組態
+ a| 
+.. 選取並按兩下您要修改的遠端系統。
+.. 按一下 image:../media/edit_wfa_icon.gif["編輯圖示"]。
+
+
+|===
+. 從連線傳輸協定清單中、選取下列其中一項：
++
+** HTTPS搭配HTTP（預設）
+** 僅限HTTPS
+** 僅限HTTP
+** 自訂
+
+
+. 指定傳輸協定、預設連接埠和預設逾時的詳細資料。
+. 按一下「 * 儲存 * 」。
+

@@ -1,0 +1,26 @@
+---
+permalink: windows-install/reference-wfa-displays-a-blank-page-on-windows-2012.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, displays, blank page, windows 2012 
+summary: 如果您已下載並安裝與Adobe網站分開的Adobe Flash Player、可能會顯示空白頁面。您不得單獨下載及安裝Flash Player、因為它與Windows 2012中的Internet Explorer一起搭售。Flash Player的更新是透過Windows更新來安裝。 
+---
+= 在Windows 2012上顯示空白頁面（WFA）OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您已下載並安裝與Adobe網站分開的Adobe Flash Player、可能會顯示空白頁面。您不得單獨下載及安裝Flash Player、因為它與Windows 2012中的Internet Explorer一起搭售。Flash Player的更新是透過Windows更新來安裝。
+
+如果您已分別下載並安裝Flash Player、則必須執行下列步驟：
+
+.步驟
+. 解除安裝您已安裝的Flash Player。
+. 在Windows中、開啟*伺服器管理程式*>*本機伺服器*>*角色與功能*>*工作*、然後選取*新增角色與功能*。
+. 在「新增角色與功能精靈」中、按一下「*功能*>*使用者介面與基礎架構*」、選取「*桌面體驗*」、然後完成新增功能。
++
+新增桌面體驗可將Flash Player新增至Windows。
+
+. 重新啟動Windows。
+

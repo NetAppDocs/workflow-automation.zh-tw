@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-integrating-the-wfa-pack-with-scm-repository.html 
+sidebar: sidebar 
+keywords: integrate, oncommand, workflow, automation, pack, source control, management, repository 
+summary: 您可以將OnCommand Workflow Automation Sf2（WFA）套件與來源控制管理（SCM）儲存庫整合。 
+---
+= 將WFA工作流程套件與SCM儲存庫整合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將OnCommand Workflow Automation Sf2（WFA）套件與來源控制管理（SCM）儲存庫整合。
+
+您必須擁有管理員或架構人員認證資料。
+
+如GitHub、Perforce和SVN等SCM工具、需要您對應本機目錄、才能從SCM儲存庫伺服器取出程式碼。此本機目錄對應稱為_SCM用戶端位置。_您必須將SCM用戶端的檔案系統位置設定為用戶端區域。
+
+您可以在WFA伺服器系統上設定SCM用戶端。您必須擁有WFA伺服器系統的存取權、才能執行SCM作業

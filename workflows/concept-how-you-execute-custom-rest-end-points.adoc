@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 支援WFA（WFA）機制、可設定自訂REST端點來執行工作流程。OnCommand Workflow Automation自訂REST端點可協助架構設計師設定易於瞭解、直覺且統一的資源識別元（URI）、以執行工作流程、這些工作流程會根據工作流程語義、遵循其餘的POST、放置或刪除慣例。這些URI可讓用戶端開發人員輕鬆開發用戶端程式碼。 
+---
+= 如何執行自訂REST端點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援WFA（WFA）機制、可設定自訂REST端點來執行工作流程。OnCommand Workflow Automation自訂REST端點可協助架構設計師設定易於瞭解、直覺且統一的資源識別元（URI）、以執行工作流程、這些工作流程會根據工作流程語義、遵循其餘的POST、放置或刪除慣例。這些URI可讓用戶端開發人員輕鬆開發用戶端程式碼。
+
+WFA可讓您設定自訂URI路徑、以便透過API呼叫執行工作流程。URI路徑中的每個區段都可以是字串、或是使用者在方括弧中輸入工作流程的有效名稱、例如「/DevOps /」｛ProjectName｝/ Clone 此工作流程可叫用為「_https」：//WFAServer：HTTPS連接埠/ REST / DevOps /工程1/clone /工作」的呼叫
+
+驗證URI路徑如下：
+
+* 其餘路徑必須以「/」開頭。
+* 允許的字元為字母、數字和底線。
+* 使用者輸入名稱必須被「」括住。
++
+
+NOTE: 您必須檢查「」周遭的值是否為有效的使用者輸入名稱。
+
+* 不應有空白的路徑區段、例如//、/{}/等。
+* HTTP方法組態和自訂URI路徑組態應同時設定或兩者皆未設定。
+

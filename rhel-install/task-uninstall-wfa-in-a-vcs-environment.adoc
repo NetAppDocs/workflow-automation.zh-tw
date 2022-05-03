@@ -1,0 +1,34 @@
+---
+permalink: rhel-install/task-uninstall-wfa-in-a-vcs-environment.html 
+sidebar: sidebar 
+keywords: uninstall, workflow, automation, vcs, environment 
+summary: 您可以從叢集節點刪除所有WFA服務、從叢集解除安裝Workflow Automation（WFA）。 
+---
+= 在VCS環境中解除安裝Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從叢集節點刪除所有WFA服務、從叢集解除安裝Workflow Automation（WFA）。
+
+.步驟
+. 使用叢集管理程式讓服務離線：
++
+.. 在叢集群組上按一下滑鼠右鍵。
+.. 選取*離線*、然後選取節點。
+
+
+. 在第一個節點上解除安裝WFA、然後在第二個節點上解除安裝WFA。
++
+link:task-uninstall-oncommand-workflow-automation-linux.html["解除安裝OnCommand Workflow Automation"]
+
+. 從叢集管理程式刪除叢集資源：
++
+.. 在叢集群組上按一下滑鼠右鍵。
+.. 選擇*刪除*。
+
+
+. 手動刪除共享位置中的資料。
+

@@ -1,0 +1,77 @@
+---
+permalink: help/reference-mvel-enabled-fields-in-wfa.html 
+sidebar: sidebar 
+keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
+summary: 支援MVFlex運算語言（MVEL）的OnCommand Workflow Automation 幾個欄位（WFA）。您可以在設計工作流程時、在這些欄位中使用VEL語法。 
+---
+= 支援MVEL的欄位OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援MVFlex運算語言（MVEL）的幾個OnCommand Workflow Automation 字段（WFA）。您可以在設計工作流程時、在這些欄位中使用VEL語法。
+
+下表說明您可以在WFA介面中使用VEL語法的時間和位置：
+
+[cols="2*"]
+|===
+| 何時... | 使用地點... 
+
+
+ a| 
+建立或編輯工作流程
+ a| 
+* *工作流程_*>*詳細資料*>*傳回參數*>*參數值*
+* *工作流程_*>*詳細資料*>*常量*>*值*
+
+
+
+
+ a| 
+在工作流程中建立或編輯命令詳細資料
+ a| 
+* *命令*>*參數名稱*>*輸入搜尋條件*>*資源選擇*>*搜尋器*>*參數*
+* *命令*>*參數_參 數字_*>*輸入搜尋條件*>*資源選擇*>*進階*>*僅當下列運算式評估為true*時才執行搜尋
+* *命令*>*參數_參 數字_*>*進階*>*如果下列運算式為真*
+* *命令*>*參數參數_parameter_name_*>*其他參數*
+* *命令*>*參數名稱*>*屬性*
+
+
+
+
+ a| 
+建立或編輯命令
+ a| 
+* *命令*>*命令定義_command_name_*>*屬性*>*字串表示*
+
+
+
+
+ a| 
+建立或編輯功能
+ a| 
+* *函數*>*函數_Function_name_*>*函數定義*
+
+
+
+
+ a| 
+建立或編輯範本
+ a| 
+* *範本*>*參數_參 數字_*範本_範本_名稱_*>*屬性*>*值*
+
+
+
+
+ a| 
+編輯列
+ a| 
+* *_Workflow _*>* Workflow *>*重複資料列*>*重複資料*>*次數*
+* *工作流程_*>*工作流程*>*重複列*>*變數*>*初始值與運算式*的變數
+* *工作流程*>*工作流程*>*重複列*>*重複列*>*針對群組中的每個資源*>*資源搜尋條件*>*要篩選的參數*
+* *工作流程_*>*工作流程*>*新增條件*>*如果下列運算式為真*
+
+
+|===

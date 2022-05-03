@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-templates.html 
+sidebar: sidebar 
+keywords: can, use, templates, workflows, reference, adhering, usage policies 
+summary: 您可以在工作流程中使用WFA範本做為參考或遵循使用原則。 
+---
+= 使用範本的方式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流程中使用WFA範本做為參考或遵循使用原則。
+
+WFA範本可做為物件定義的藍圖。您可以加入物件的屬性和物件屬性值、來定義範本。然後、您可以使用範本在工作流程中填入物件定義的屬性。
+
+使用範本時、您無法編輯包含從範本取得之值的欄位。因此、您可以使用範本來設定使用原則和建立物件。如果您在套用範本之後移除範本與工作流程的關聯、則會保留範本中填入的值、但您可以編輯欄位。

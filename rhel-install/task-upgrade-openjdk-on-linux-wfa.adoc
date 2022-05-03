@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-upgrade-openjdk-on-linux-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, openjdk 
+summary: 不再支援OnCommand Workflow Automation Oracle JRE.在此版本中、OpenJDK取代 適用於Linux的Oracle JRE.您可以升級至OnCommand Workflow Automation 安裝了此功能的Linux伺服器上較新版本的OpenJDK、以取得安全性弱點的修正程式。 
+---
+= 升級OpenJDK
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不再支援OnCommand Workflow Automation Oracle JRE.在此版本中、OpenJDK取代 適用於Linux的Oracle JRE.您可以升級至OnCommand Workflow Automation 安裝了此功能的Linux伺服器上較新版本的OpenJDK、以取得安全性弱點的修正程式。
+
+您必須擁有安裝WFA的Linux系統的root權限。
+
+您可以在發行系列中更新OpenJDK版本。例如、您可以從OpenJDK 11.0.1升級至OpenJDK 11.0.2、但無法直接從OpenJDK 11更新至OpenJDK 12。
+
+.步驟
+. 以root使用者身分登入WFA主機機器。
+. 從目標系統上的yum儲存庫安裝最新版本的OpenJDK 11。
+. 在Shell提示下、停止WFA伺服器。
+. 重新啟動WFA伺服器。
+

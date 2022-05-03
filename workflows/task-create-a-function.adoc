@@ -1,0 +1,63 @@
+---
+permalink: workflows/task-create-a-function.html 
+sidebar: sidebar 
+keywords: create, wfa, function, use, utility, predefined, suitable, task 
+summary: 如果沒有適合您工作的預先定義WFA功能、您可以建立可用作公用程式的WFA功能。 
+---
+= 建立函數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果沒有適合您工作的預先定義WFA功能、您可以建立可用作公用程式的WFA功能。
+
+您必須知道MVFlex運算式語言（MVEL）語法才能建立功能。
+
+函數定義必須包含下列項目：
+
+* 名稱：功能名稱
++
+您不得在VEL語法中使用保留字。每個函數都必須有唯一的名稱。
+
+* VEL定義：指定函數定義之VEL語法的字串
+
+
+.步驟
+. 按一下*工作流程設計*>*功能*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新功能*」對話方塊中、於「*功能說明*」和「*功能定義*」欄位中輸入或選取所需的詳細資料。
++
+[listing]
+----
+def actualVolumeSize(data_size, snap_pct)
+{
+   if (snap_pct < 0 ) {
+        snap_pct = 0;
+   } else if (snap_pct > 99) {
+        snap_pct = 99;
+   }
+
+   div = 1 - (snap_pct/100);
+   return (int)(data_size/div);
+}
+----
++
+「*功能名稱*」欄位會從VEL語法中使用的資料填入。
+
+. *可選：*單擊* Test*測試功能：
++
+.. 在「* Test*」對話方塊的「*運算式*」區段中、輸入所需的函數運算式。
++
+「ActualVolume Size（600、1）」
+
+.. 按一下* Test*。
++
+隨即顯示測試結果。
+
+.. 關閉對話方塊。
+
+
+. 按一下「 * 儲存 * 」。
+

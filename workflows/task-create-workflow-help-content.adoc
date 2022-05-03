@@ -1,0 +1,47 @@
+---
+permalink: workflows/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, workflows, create, help, content, include 
+summary: 設計工作流程的管理員和架構設計師、可為工作流程建立說明內容、並將其納入工作流程。OnCommand Workflow Automation 
+---
+= 建立工作流程說明內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設計工作流程的管理員和架構設計師、可為工作流程建立說明內容、並將其納入工作流程。OnCommand Workflow Automation
+
+您必須瞭解如何使用HTML建立網頁。
+
+說明應提供工作流程的工作流程及使用者輸入資訊給執行工作流程的儲存操作員。
+
+.步驟
+. 建立名稱如下的資料夾：Workflow Help。
+. 使用HTML編輯器或文字編輯器撰寫說明內容、並將其儲存為「workflow -help"資料夾中的「index.htm"檔案。
++
+您不得將JavaScript檔案納入說明內容。以下是支援的副檔名：
+
++
+** .jpg
+** .JPEG
+** .gif
+** .png-
+** .xml
+** .thmx
+** htm
+** .html
+** .css
+
+
++
+您也可以加入由Windows建立的「Thumbs.db」檔案。
+
+. 驗證「workflow -help」資料夾中是否有「index. htm」檔案及其他與說明內容相關的檔案、例如影像。
+. 建立資料夾的「.Zip」檔案、並確保「.Zip」檔案的大小不超過2 MB。
++
+「Create an NFS volume-help.Zip」
+
+. 編輯您已建立說明內容的工作流程、然後按一下「*設定*>*說明內容*」>「*瀏覽*」上傳「.Zip」檔案。
+

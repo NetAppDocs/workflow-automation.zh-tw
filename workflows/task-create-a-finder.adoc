@@ -1,0 +1,39 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: 您可以建立WFA尋找工具、以便在沒有適合搜尋所需資源的預先定義WFA尋找工具時搜尋資源。 
+---
+= 建立搜尋工具
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立WFA尋找工具、以便在沒有適合搜尋所需資源的預先定義WFA尋找工具時搜尋資源。
+
+您必須已建立尋找工具中所使用的必要篩選條件。
+
+.步驟
+. 按一下*工作流程設計*>*資料夾*。
+. 按一下 image:../media/new_wfa_icon.gif["新圖示"] 在工具列上。
+. 在「*新增尋找工具*」對話方塊的「*內容*」索引標籤中、於「*名稱*」、「*類型*」及「*說明*」欄位中輸入或選取所需的詳細資料。
+. 在*篩選器*索引標籤中、從*可用篩選器*清單中選取所需的篩選器、然後按一下 image:../media/right_arrow_button.gif["向右鍵按鈕"]。
++
+您可以根據需求新增或移除篩選條件。
+
+. 在「傳回的屬性」索引標籤中、從「*可用*」清單中選取篩選所需的屬性、然後按一下 image:../media/right_arrow_button.gif["向右鍵按鈕"]。
+. *可選：*單擊* Test*測試查找器。
++
+.. 在*測試尋找器<FinderName>*對話方塊中、輸入所需的測試參數。
+.. 如果您不想使用保留資料來測試尋找者、請清除「在測試*中使用保留資料」核取方塊。
+.. 按一下* Test*。
++
+隨即顯示測試結果。
+
+.. 關閉對話方塊。
+
+
+. 按一下「 * 儲存 * 」。
+

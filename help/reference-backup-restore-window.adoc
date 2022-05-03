@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: '「備份與還原」視窗可讓您備份OnCommand Workflow Automation 包含系統組態設定、快取資訊及核心套件（包括PowerShell工具套件和Perl工具套件）的Fesch(WFA)資料庫。您也可以在升級或重新安裝WFA時還原儲存的資料庫。' 
+---
+= 備份與還原所需時間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「備份與還原」視窗可讓您備份OnCommand Workflow Automation 包含系統組態設定、快取資訊及核心套件（包括PowerShell工具套件和Perl工具套件）的Fesch(WFA)資料庫。您也可以在升級或重新安裝WFA時還原儲存的資料庫。
+
+
+
+== 備份區段
+
+您可以選取*設定*來存取此視窗、然後在*維護*下按一下*備份與還原*。
+
+* *備份*
++
+開啟「檔案下載」對話方塊、可讓您將目前的資料庫儲存為壓縮檔案、並儲存至指定位置。
+
+
+
+
+
+== 還原區段
+
+* *選擇「檔案」*
++
+可讓您搜尋備份資料庫檔案。
+
+* *還原*
++
+可讓您將組態設定和快取資訊從備份資料庫檔案恢復至目前的WFA組態（若適用）。
+
++
+還原作業完成後、即可取得最新版本的工具套件和核心套件。
+
++
+
+NOTE: 如果備份所含的套件比系統上的套件新、則可在從備份還原較新的套件之後使用。
+
++
+匯入核心套件之前、您必須先停止任何執行中的工作流程。
+
+

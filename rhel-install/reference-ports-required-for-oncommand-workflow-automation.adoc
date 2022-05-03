@@ -1,0 +1,184 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 如果您使用防火牆、則必須注意Workflow Automation（WFA）所需的連接埠。 
+---
+= Workflow Automation所需的連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用防火牆、則必須注意Workflow Automation（WFA）所需的連接埠。
+
+本節列出預設的連接埠號碼。如果您要使用非預設連接埠號碼、則必須開啟該連接埠以進行通訊。如需詳細資訊、請參閱防火牆上的文件。
+
+下表列出應在WFA伺服器上開啟的預設連接埠：
+
+[cols="4*"]
+|===
+| 連接埠 | 傳輸協定 | 方向 | 目的 
+
+
+ a| 
+80、443
+ a| 
+HTTP、HTTPS
+ a| 
+傳入
+ a| 
+開啟WFA並登入
+
+
+
+ a| 
+80、443、22
+ a| 
+HTTP、HTTPS、SSH
+ a| 
+傳出
+ a| 
+命令執行（ZAPI、PowerCLI）
+
+
+
+ a| 
+445、139、389、636
+ a| 
+Microsoft - DS、NetBios - SSN、AD LDAP、AD LDAPS
+ a| 
+傳出
+ a| 
+Microsoft Active Directory LDAP驗證
+
+
+
+ a| 
+161.
+ a| 
+SNMP
+ a| 
+傳出
+ a| 
+傳送工作流程狀態的SNMP訊息
+
+
+
+ a| 
+3306.
+ a| 
+MySQL
+ a| 
+傳入
+ a| 
+快取唯讀使用者
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+傳出
+ a| 
+郵件通知
+
+
+
+ a| 
+80、443、25
+ a| 
+HTTP、HTTPS、SMTP
+ a| 
+傳出
+ a| 
+正在傳送AutoSupport 一些資訊
+
+
+
+ a| 
+514
+ a| 
+系統記錄
+ a| 
+傳出
+ a| 
+傳送記錄到syslog伺服器
+
+|===
+下表列出Unified Manager伺服器上應開啟的預設連接埠：
+
+[cols="4*"]
+|===
+| 連接埠 | 傳輸協定 | 方向 | 目的 
+
+
+ a| 
+2638
+ a| 
+Sybase
+ a| 
+傳入
+ a| 
+快取Active IQ Unified Manager 6.0之前版本的資料
+
+
+
+ a| 
+3306.
+ a| 
+MySQL
+ a| 
+傳入
+ a| 
+快取Active IQ Unified Manager 來自於更新版本的資料
+
+
+
+ a| 
+8088、8488
+ a| 
+HTTP、HTTPS
+ a| 
+傳入
+ a| 
+從Performance Advisor快取資料、Performance Advisor是Active IQ Unified Manager 6.0之前版本的一部分
+
+|===
+下表列出應在VMware vCenter上開啟的預設連接埠：
+
+[cols="4*"]
+|===
+| 連接埠 | 傳輸協定 | 方向 | 目的 
+
+
+ a| 
+443..
+ a| 
+HTTPS
+ a| 
+傳入
+ a| 
+從VMware vCenter快取資料
+
+|===
+下表列出應在SNMP主機上開啟的預設連接埠：
+
+[cols="4*"]
+|===
+| 連接埠 | 傳輸協定 | 方向 | 目的 
+
+
+ a| 
+162%
+ a| 
+SNMP
+ a| 
+傳入
+ a| 
+接收工作流程狀態的SNMP訊息
+
+|===

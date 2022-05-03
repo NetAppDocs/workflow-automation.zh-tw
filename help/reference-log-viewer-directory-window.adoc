@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: 「記錄檢視器」視窗會列出OnCommand Workflow Automation 所有可用的記錄檔。您可以選取「設定」來存取此視窗、然後在「維護」下按一下「記錄檢視器」。 
+---
+= 記錄檢視器視窗
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「記錄檢視器」視窗會列出OnCommand Workflow Automation 所有可用的記錄檔。您可以選取*設定*來存取此視窗、然後在*維護*下按一下*記錄檢視器*。
+
+「記錄檢視器」視窗會列出記錄檔（依字母順序）、並包含每個檔案產生的檔案大小和日期。
+
+
+NOTE: Microsoft Windows Server 2003不支援此功能。

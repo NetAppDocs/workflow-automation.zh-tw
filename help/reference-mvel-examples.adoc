@@ -1,0 +1,141 @@
+---
+permalink: help/reference-mvel-examples.html 
+sidebar: sidebar 
+keywords: expression, language, syntax, several, oncommand, workflows, automation, sample, review, learn, use 
+summary: 在數OnCommand Workflow Automation 個樣例工作流程中、會使用MVFlex運算語言（MVEL）語法。您應該檢閱一些樣本VEL語法、以瞭解如何在WFA中使用VEL。 
+---
+= MVEL語法範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在數OnCommand Workflow Automation 個樣例工作流程中、會使用MVFlex運算語言（MVEL）語法。您應該檢閱一些樣本VEL語法、以瞭解如何在WFA中使用VEL。
+
+以下各節提供WFA中使用的一些MVEL語法範例。
+
+
+
+== 條件式執行
+
+當找到的磁碟區數目少於4時、下列VEL運算式可用於命令的條件式執行：
+
+[listing]
+----
+$NoOfVolumes < 4
+----
+
+
+== 遞增命名
+
+下列VEL運算式用於物件的遞增命名：
+
+[listing]
+----
+last_volume.name+last_volume.state
+----
+此VEL運算式使用上次建立的Volume名稱、以及上次建立的Volume狀態來命名。
+
+
+
+== 命令中的字串表示法
+
+下列VEL語法會做為字串表示：
+
+[listing]
+----
+DestinationCluster + ":" + DestinationVserver + "/" + DestinationVolume
+----
+
+
+== 範本
+
+範本中使用下列VEL語法：
+
+[listing]
+----
+calculateSnapReserveSize(calculateVolumeSizeFromDataSize((int)($fs_size*1.01),$snap_space),$snap_space)
+----
+此VEL語法用於計算要保留給Snapshot複本的Volume容量百分比。
+
+
+
+== 命令詳細資料
+
+下列VMEL功能用於參數的屬性區段：
+
+[listing]
+----
+actualVolumeSize($VolumeSizeInGB * 1024, volume.snapshot_reserved_percent)
+----
+下列VMEL語法用於參數的「屬性」區段：
+
+[listing]
+----
+$VolumeName+'test001'
+----
+
+
+== 工作流程常量
+
+下列VEL語法用於工作流程中的常量：
+
+[listing]
+----
+convertNullToZero(infinite_volume.max_namespace_constituent_size_mb)
+----
+[listing]
+----
+$Size_TB*1048576L
+----
+
+
+== 傳回參數
+
+下列VEL語法用於驗證是否可以分配所需的大小：
+
+[listing]
+----
+size_remaining == 0 ? '' : throwException('Not sufficient space in capacity_class_aggregate or data constituent of size less than 1 TB can not be created: Total size requested='+$Size_TB+'TB'+' ,Size remaining='+size_remaining/TB_TO_MB+'TB'+', Infinite volume name='+infinite_volume.name+', Storage class='+CAPACITY_CLASS_LABEL)
+----
+
+
+== 功能定義
+
+下列VEL語法用於函數定義、用於將null轉換為零：
+
+[listing]
+----
+def convertNullToZero (data)
+{
+  if(data == null)
+  {
+    return 0;
+  }
+  else
+  {
+    return data;
+  }
+}
+----
+
+
+== 重複特定列
+
+下列VEL運算式使用使用者輸入來指出建立LUN時必須重複執行一列的次數：
+
+[listing]
+----
+$NumberOfLunsToBeCreated
+----
+
+
+== 列的條件運算式
+
+下列VEL運算式會使用使用者輸入來指出是否要執行該列：
+
+[listing]
+----
+$SetupSnapMirror
+----

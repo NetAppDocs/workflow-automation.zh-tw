@@ -1,0 +1,58 @@
+---
+permalink: help/reference-edit-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associate, dictionary, entry 
+summary: 「編輯快取查詢」對話方塊可讓您編輯與字典項目相關的快取查詢。 
+---
+= 編輯快取查詢對話方塊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「編輯快取查詢」對話方塊可讓您編輯與字典項目相關的快取查詢。
+
+* *《Dictionary Entry*》
++
+指定與快取查詢相關的字典項目。
+
+* *實體版本*
++
+可讓您輸入快取查詢的版本編號、格式為「major.m次要.re修訂」、例如1.1.0。
+
+* *資料來源類型*
++
+指定與快取查詢相關聯的資料來源類型。
+
+
+
+
+
+== 表結構
+
+顯示與該字典項目相關聯的屬性和SQL語法。
+
+* * SQL選擇查詢*
++
+可讓您編輯與該字典項目和所選資料提供者類型相關的SQL查詢。
+
+
+
+
+
+== 命令按鈕
+
+* *測試*
++
+可讓您測試在* SQL SELECT query*欄位中輸入的SQL查詢。
+
+* *儲存*
++
+儲存快取查詢並關閉對話方塊。
+
+* *取消*
++
+取消變更（如果有）、然後關閉對話方塊。
+
+
