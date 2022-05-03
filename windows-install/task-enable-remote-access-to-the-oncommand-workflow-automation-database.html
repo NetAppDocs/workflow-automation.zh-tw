@@ -1,0 +1,4152 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head class="at-element-marker">
+  <title>可在OnCommand Workflow Automation Windows上遠端存取效能不整資料庫</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="可在OnCommand Workflow Automation Windows上遠端存取效能不整資料庫" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html" />
+	<meta property="og:description" content="根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端、才能存取WFA（WFA）資料庫。若要從遠端系統存取WFA資料庫、您可以變更預設設定。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-tw/workflow-automation/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端、才能存取WFA（WFA）資料庫。若要從遠端系統存取WFA資料庫、您可以變更預設設定。">
+  <meta name="keywords" content=" enable, remote access, oncommand, workflow, automation, database, windows"><!-- Icons -->
+  <link rel="icon" href="/zh-tw/workflow-automation/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/workflow-automation/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-tw/workflow-automation/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/workflow-automation/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/workflow-automation/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-tw/workflow-automation/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-tw/workflow-automation/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-tw/workflow-automation/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-tw/workflow-automation/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-tw/workflow-automation/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-tw/workflow-automation/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/workflow-automation/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/workflow-automation/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/workflow-automation/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-tw/workflow-automation/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-tw/workflow-automation/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-tw/workflow-automation/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/workflow-automation/js/na-search.js'></script><script src='/zh-tw/workflow-automation/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-tw/workflow-automation/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/workflow-automation/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-tw/workflow-automation/js/na-utility.js'></script>
+  <script src='/zh-tw/workflow-automation/js/clouddocs.js'></script>
+  <script src='/zh-tw/workflow-automation/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-tw/workflow-automation/js/toc.js'></script>
+  <script src='/zh-tw/workflow-automation/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/zh-tw/workflow-automation/js/custom-dropdown.js'></script>
+  <script src='/zh-tw/workflow-automation/js/FileSaver.min.js'></script>
+  <script src='/zh-tw/workflow-automation/js/jszip-utils.min.js'></script>
+  <script src='/zh-tw/workflow-automation/js/jszip.min.js'></script>
+  <script src='/zh-tw/workflow-automation/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/issues/new?body=Page%3A%20[可在OnCommand Workflow Automation Windows上遠端存取效能不整資料庫](https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/workflow-automation/images/discuss-sm.svg" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/blob/main/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/workflow-automation/images/edit-sm.svg" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/workflow-automation/images/article-sm.svg" class="github-icon" />瞭解如何作出貢獻</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此頁面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">產品與解決方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支援與訓練</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社群</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">部落格</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客戶成功案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-tw/workflow-automation/search.html"
+          data-type="widget" 
+          data-placeholder="搜尋文件" 
+          data-no-results-found="找不到符合 {query} 的相關結果。" 
+          data-did-you-mean="搜尋 {suggestion}。" 
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
+          data-results-found="找到 {hitCount} 筆結果"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">繁體中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/zh-tw/workflow-automation/pdfs/fullsite-sidebar/資訊文件OnCommand_Workflow_Automation.pdf" >
+          <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>此文件網站（PDF 格式）</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/Linux安裝與設定.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            Linux安裝與設定
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/概述OnCommand_Workflow_Automation.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            概述OnCommand Workflow Automation
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/安裝OnCommand_Workflow_Automation_過程中的系統需求.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            安裝OnCommand Workflow Automation 過程中的系統需求
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/安裝Workflow_Automation的先決條件.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            安裝Workflow Automation的先決條件
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理高可用度.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理高可用度
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/在VCS中設定Workflow_Automation以實現高可用度.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            在VCS中設定Workflow Automation以實現高可用度
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定OnCommand Workflow Automation 功能
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/資料來源OnCommand_Workflow_Automation.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            資料來源OnCommand Workflow Automation
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/在DataFabric_Manager上設定資料庫使用者.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            在DataFabric Manager上設定資料庫使用者
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定OnCommand Workflow Automation 功能
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/升級自OnCommand_Workflow_Automation_更新版本的更新版本.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            升級自OnCommand Workflow Automation 更新版本的更新版本
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/升級協力廠商產品.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            升級協力廠商產品
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/備份OnCommand_Workflow_Automation_the支援資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            備份OnCommand Workflow Automation the支援資料庫
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI備份WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用CLI備份WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API備份WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用REST API備份WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/還原OnCommand_Workflow_Automation_此資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            還原OnCommand Workflow Automation 此資料庫
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI還原WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用CLI還原WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API還原WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用REST API還原WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/匯入OnCommand_Workflow_Automation_內容.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            匯入OnCommand Workflow Automation 內容
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理OnCommand_Workflow_Automation_功能SSL憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理OnCommand Workflow Automation 功能SSL憑證
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理Perl和Perl模組.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理Perl和Perl模組
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/疑難排解安裝與組態問題.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            疑難排解安裝與組態問題
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/Windows安裝與設定.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            Windows安裝與設定
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/概述OnCommand_Workflow_Automation.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            概述OnCommand Workflow Automation
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/安裝OnCommand_Workflow_Automation_過程中的系統需求.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            安裝OnCommand Workflow Automation 過程中的系統需求
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理高可用度.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理高可用度
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/在MSCS中設定Workflow_Automation以實現高可用度.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            在MSCS中設定Workflow Automation以實現高可用度
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定OnCommand Workflow Automation 功能
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/資料來源OnCommand_Workflow_Automation.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            資料來源OnCommand Workflow Automation
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/在DataFabric_Manager上設定資料庫使用者.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            在DataFabric Manager上設定資料庫使用者
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定OnCommand Workflow Automation 功能
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定SNMP.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定SNMP
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-tw/workflow-automation/pdfs/pages/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.pdf" >
+    <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/升級OnCommand_Workflow_Automation.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            升級OnCommand Workflow Automation
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/從OnCommand_Workflow_Automation_更新版本升級.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            從OnCommand Workflow Automation 更新版本升級
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/升級協力廠商產品.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            升級協力廠商產品
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/備份OnCommand_Workflow_Automation_the支援資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            備份OnCommand Workflow Automation the支援資料庫
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI備份WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用CLI備份WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API備份WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用REST API備份WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/還原OnCommand_Workflow_Automation_此資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            還原OnCommand Workflow Automation 此資料庫
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI還原WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用CLI還原WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API還原WFA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用REST API還原WFA資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/匯入OnCommand_Workflow_Automation_內容.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            匯入OnCommand Workflow Automation 內容
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理OnCommand_Workflow_Automation_功能SSL憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理OnCommand Workflow Automation 功能SSL憑證
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理Perl和Perl模組.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理Perl和Perl模組
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/疑難排解安裝與組態問題.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            疑難排解安裝與組態問題
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/工作流程.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            工作流程
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/瞭解Workflow_Automation設計工具.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            瞭解Workflow Automation設計工具
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用OnCommand_Workflow_Automation_資訊區塊.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用OnCommand Workflow Automation 資訊區塊
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/管理工作流程.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            管理工作流程
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/自訂預先定義的工作流程.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            自訂預先定義的工作流程
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/建立工作流程.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            建立工作流程
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/建立工作流程.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            建立工作流程
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/建立WFA工作流程套件.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            建立WFA工作流程套件
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/將WFA工作流程套件與SCM儲存庫整合.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            將WFA工作流程套件與SCM儲存庫整合
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/建立工作流程的建置區塊.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            建立工作流程的建置區塊
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/建立命令.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            建立命令
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/WFA的編碼準則.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            WFA的編碼準則
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/WFA的一般PowerShell與Perl慣例.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            WFA的一般PowerShell與Perl慣例
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/WFA建置區塊準則.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            WFA建置區塊準則
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/線上說明.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            線上說明
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定OnCommand Workflow Automation 功能
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定SNMP.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定SNMP
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/功能部件OnCommand_Workflow_Automation.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            功能部件OnCommand Workflow Automation
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/設定資料來源.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            設定資料來源
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/何處可找到有關VEL的資訊.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            何處可找到有關VEL的資訊
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/使用者視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            使用者視窗
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/Active_Directory群組視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            Active Directory群組視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/資料來源視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            資料來源視窗
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/認證資料視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            認證資料視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/排程時間.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            排程時間
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/工作流程視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            工作流程視窗
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/新工作流程視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            新工作流程視窗
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/找到者窗口.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            找到者窗口
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/篩選器視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            篩選器視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/命令視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            命令視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/範本視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            範本視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/_目錄_視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            「目錄」視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/遠端系統類型視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            遠端系統類型視窗
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/快取查詢視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            快取查詢視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/套件視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            套件視窗
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/workflow-automation/pdfs/sidebar/類別視窗.pdf" 
+            
+          >
+            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            類別視窗
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-tw/workflow-automation/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/index.html">
+        5.1文件OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/reference-releasenotes.html">
+        版本資訊
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Linux安裝與設定</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-overview-of-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 概述OnCommand Workflow Automation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/concept-oncommand-workflow-automation-deployment-architecture.html">
+        部署架構OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html">
+        安裝與設定概述OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/concept-unsupported-features-for-wfa-on-linux.html">
+        已知的侷限性OnCommand Workflow Automation
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html">
+        <div class="na-navbar-padding"> 安裝OnCommand Workflow Automation 過程中的系統需求</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/reference-ports-required-for-oncommand-workflow-automation.html">
+        Workflow Automation所需的連接埠
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/reference-prerequisites-for-installing-workflow-automation.html">
+        <div class="na-navbar-padding"> 安裝Workflow Automation的先決條件</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-install-perl-module-on-centos-and-rhel.html">
+        在CentOS和RHEL上安裝Perl模組
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-managing-high-availability.html">
+        <div class="na-navbar-padding"> 管理高可用度</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/task-set-up-wfa-in-vcs.html">
+        <div class="na-navbar-padding"> 在VCS中設定Workflow Automation以實現高可用度</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-vcs-to-install-wfa.html">
+        設定VCS以安裝OnCommand Workflow Automation 功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-install-oncommand-workflow-automation.html">
+        在OnCommand Workflow Automation Linux上安裝
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html">
+        在VCS中設定Workflow Automation
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html">
+        設定OnCommand Workflow Automation 舊版的更新版本以獲得高可用度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-uninstall-wfa-in-a-vcs-environment.html">
+        在VCS環境中解除安裝Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html">
+        在OnCommand Workflow Automation Linux上備份及還原功能不完整的資料庫和組態
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-setting-up-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 設定OnCommand Workflow Automation 功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-access-oncommand-workflow-automation.html">
+        存取OnCommand Workflow Automation 功能
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-wfa-data-sources.html">
+        <div class="na-navbar-padding"> 資料來源OnCommand Workflow Automation</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html">
+        <div class="na-navbar-padding"> 在DataFabric Manager上設定資料庫使用者</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html">
+        在Windows上執行ocsetup來設定資料庫使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html">
+        在Linux上執行ocsetup來設定資料庫使用者
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-set-up-a-data-source.html">
+        設定資料來源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html">
+        新增升級的Unified Manager伺服器做為資料來源
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-create-local-users.html">
+        建立本機使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-the-credentials-of-a-target-system.html">
+        設定目標系統的認證資料
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 設定OnCommand Workflow Automation 功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-autosupport.html">
+        設定AutoSupport 功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-authentication-settings.html">
+        設定驗證設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-add-active-directory-group-names.html">
+        新增Active Directory群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-mail.html">
+        設定電子郵件通知
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-snmp.html">
+        設定SNMP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-syslog.html">
+        設定Syslog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html">
+        設定連接遠端系統的傳輸協定
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-disable-the-default-password-policy-linux.html">
+        停用預設密碼原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-modify-the-default-password-policy-linux.html">
+        修改預設密碼原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html">
+        啟用或停用OnCommand Workflow Automation 對還原資料庫的遠端存取
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html">
+        修改OnCommand Workflow Automation 資訊的交易逾時設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-the-timeout-value-for-linux.html">
+        設定Workflow Automation的逾時值
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/concept-enabling-ciphers-and-adding-new-ciphers.html">
+        啟用密碼並新增密碼
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/task-upgrade-from-wfa-4-2.html">
+        <div class="na-navbar-padding"> 升級自OnCommand Workflow Automation 更新版本的更新版本</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/reference-pack-identification-during-upgrade.html">
+        升級期間的套件識別
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-upgrading-third-party-products-in-linux.html">
+        <div class="na-navbar-padding"> 升級協力廠商產品</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-upgrade-openjdk-on-linux-wfa.html">
+        升級OpenJDK
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-upgrade-mysql-on-linux.html">
+        升級Linux上的MySQL
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html">
+        <div class="na-navbar-padding"> 備份OnCommand Workflow Automation the支援資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html">
+        從Web入口網站備份WFA資料庫
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html">
+        <div class="na-navbar-padding"> 使用CLI備份WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html">
+        使用CLI備份（完整）WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html">
+        使用CLI備份（一般）WFA資料庫
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-backing-up-the-wfa-database-using-rest-apis.html">
+        <div class="na-navbar-padding"> 使用REST API備份WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html">
+        使用REST API執行WFA資料庫的完整備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html">
+        使用REST API定期備份WFA資料庫
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-restoring-the-wfa-database.html">
+        <div class="na-navbar-padding"> 還原OnCommand Workflow Automation 此資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html">
+        還原WFA資料庫
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html">
+        <div class="na-navbar-padding"> 使用CLI還原WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html">
+        使用CLI還原（完整）WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-and-configurations-linux.html">
+        使用CLI還原（一般）WFA資料庫
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html">
+        <div class="na-navbar-padding"> 使用REST API還原WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html">
+        使用REST API還原（完整）WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html">
+        使用REST API還原（一般）WFA資料庫
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-reset-the-admin-password-created-during-installation-linux.html">
+        重設安裝期間建立的管理密碼
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/task-import-oncommand-workflow-automation-content.html">
+        <div class="na-navbar-padding"> 匯入OnCommand Workflow Automation 內容</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/reference-considerations-of-importing-wfa-content.html">
+        輸入OnCommand Workflow Automation 內容時的考量
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html">
+        移轉OnCommand Workflow Automation 安裝的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html">
+        解除安裝OnCommand Workflow Automation
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html">
+        <div class="na-navbar-padding"> 管理OnCommand Workflow Automation 功能SSL憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html">
+        取代預設的Workflow Automation SSL憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html">
+        建立Workflow Automation的憑證簽署要求
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/concept-managing-perl-and-perl-modules.html">
+        <div class="na-navbar-padding"> 管理Perl和Perl模組</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/task-configure-your-preferred-perl-distribution-linux.html">
+        設定您偏好的Perl發佈
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/rhel-install/reference-troubleshooting.html">
+        <div class="na-navbar-padding"> 疑難排解安裝與組態問題</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html">
+        無法在WFA中檢視Performance Advisor資料
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html">
+        相關文件OnCommand Workflow Automation
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows安裝與設定</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-overview-of-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 概述OnCommand Workflow Automation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/concept-oncommand-workflow-automation-deployment-architecture.html">
+        部署架構OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html">
+        安裝與設定概述OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/concept-known-limitations-and-enhancements.html">
+        已知的限制與增強功能
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html">
+        <div class="na-navbar-padding"> 安裝OnCommand Workflow Automation 過程中的系統需求</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-ports-required-for-oncommand-workflow-automation.html">
+        Workflow Automation所需的連接埠
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-prerequisites-for-installing-workflow-automation.html">
+        安裝Workflow Automation的先決條件
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-managing-high-availability.html">
+        <div class="na-navbar-padding"> 管理高可用度</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/task-set-up-wfa-in-mscs.html">
+        <div class="na-navbar-padding"> 在MSCS中設定Workflow Automation以實現高可用度</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-mscs-to-install-wfa.html">
+        設定MSCS以安裝Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-install-workflow-automation-on-windows.html">
+        在OnCommand Workflow Automation Windows上安裝
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html">
+        使用MSCS設定Workflow Automation
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-an-earlier-version-of-wfa-foir-high-availability-windows.html">
+        設定OnCommand Workflow Automation 舊版的更新版本以獲得高可用度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-uninstall-wfa-in-an-mscs-environment.html">
+        在MSCS環境中解除安裝Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html">
+        在OnCommand Workflow Automation Windows上備份及還原還原還原效能不正常的資料庫和組態
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-setting-up-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 設定OnCommand Workflow Automation 功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-access-oncommand-workflow-automation.html">
+        存取OnCommand Workflow Automation 功能
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-wfa-data-sources.html">
+        <div class="na-navbar-padding"> 資料來源OnCommand Workflow Automation</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/reference-configuring-a-database-user-on-datafabric-manager.html">
+        <div class="na-navbar-padding"> 在DataFabric Manager上設定資料庫使用者</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html">
+        在Windows上執行ocsetup來設定資料庫使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html">
+        在Linux上執行ocsetup來設定資料庫使用者
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-a-database-user-on-active-iq-unified-manager.html">
+        在Active IQ Unified Manager 上設定資料庫使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-set-up-a-data-source.html">
+        設定資料來源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-add-an-upgraded-unified-manager-server-data-source.html">
+        新增升級的Unified Manager伺服器做為資料來源
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-create-local-users.html">
+        建立本機使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-the-credentials-of-a-target-system.html">
+        設定目標系統的認證資料
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-advanced-configuring-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 設定OnCommand Workflow Automation 功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-autosupport.html">
+        設定AutoSupport 功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-authentication-settings.html">
+        設定驗證設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-add-active-directory-group-names.html">
+        新增Active Directory群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-mail.html">
+        設定電子郵件通知
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/task-configure-snmp.html">
+        <div class="na-navbar-padding"> 設定SNMP</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-snmp-version-1.html">
+        設定SNMP版本1
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-snmp-version-3.html">
+        設定SNMP版本3
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-syslog.html">
+        設定Syslog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-protocols-for-connecting-to-remote-systems.html">
+        設定連接遠端系統的傳輸協定
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-disable-the-default-password-policy.html">
+        停用預設密碼原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-modify-the-default-password-policy-windows.html">
+        修改Windows的預設密碼原則
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html">
+        可在OnCommand Workflow Automation Windows上遠端存取效能不整資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-restrict-access-rights-of-oncommand-workflow-automation-on-the-host.html">
+        限制OnCommand Workflow Automation 主機上的存取權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation.html">
+        修改OnCommand Workflow Automation 資訊的交易逾時設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-the-timeout-value-for-windows.html">
+        設定Workflow Automation的逾時值
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/concept-enabling-ciphers-and-adding-new-ciphers.html">
+        啟用密碼並新增密碼
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/task-upgrade-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 升級OnCommand Workflow Automation</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html">
+        <div class="na-navbar-padding"> 從OnCommand Workflow Automation 更新版本升級</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-pack-identification-during-upgrade.html">
+        升級期間的套件識別
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-upgrading-third-party-products-in-windows.html">
+        <div class="na-navbar-padding"> 升級協力廠商產品</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-upgrade-openjdk-on-windows-wfa.html">
+        升級OpenJDK
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-upgrade-mysql-on-windows-wfa.html">
+        升級MySQL
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-upgrade-active-state-perl-on-windows.html">
+        升級ActiveState Perl
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html">
+        <div class="na-navbar-padding"> 備份OnCommand Workflow Automation the支援資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html">
+        從Web入口網站備份WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html">
+        使用PowerShell指令碼備份WFA資料庫
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html">
+        <div class="na-navbar-padding"> 使用CLI備份WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html">
+        使用CLI備份（完整）WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html">
+        使用CLI備份（一般）WFA資料庫
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-backing-up-the-wfa-database-using-rest-apis.html">
+        <div class="na-navbar-padding"> 使用REST API備份WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html">
+        使用REST API執行WFA資料庫的完整備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html">
+        使用REST API定期備份WFA資料庫
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-restoring-the-wfa-database.html">
+        <div class="na-navbar-padding"> 還原OnCommand Workflow Automation 此資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html">
+        還原WFA資料庫
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html">
+        <div class="na-navbar-padding"> 使用CLI還原WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-fully-restore-the-oncommand-workflow-automation-database-using-clis-windows.html">
+        使用CLI還原（完整）WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html">
+        使用CLI還原（一般）WFA資料庫
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html">
+        <div class="na-navbar-padding"> 使用REST API還原WFA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html">
+        使用REST API還原（完整）WFA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html">
+        使用REST API還原（一般）WFA資料庫
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-reset-the-admin-password-created-during-installation.html">
+        重設安裝期間建立的管理密碼
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/task-import-oncommand-workflow-automation-content.html">
+        <div class="na-navbar-padding"> 匯入OnCommand Workflow Automation 內容</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-considerations-of-importing-wfa-content.html">
+        輸入OnCommand Workflow Automation 內容時的考量
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-migrate-oncommand-workflow-automation.html">
+        移轉OnCommand Workflow Automation 安裝的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-uninstall-oncommand-workflow-automation.html">
+        解除安裝OnCommand Workflow Automation
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html">
+        <div class="na-navbar-padding"> 管理OnCommand Workflow Automation 功能SSL憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-replace-the-default-workflow-automation-ssl-certificate.html">
+        取代預設的Workflow Automation SSL憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html">
+        建立Workflow Automation的憑證簽署要求
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/reference-managing-perl-and-perl-modules.html">
+        <div class="na-navbar-padding"> 管理Perl和Perl模組</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-configure-your-preferred-perl-interpreter.html">
+        設定您偏好的Perl發佈
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-manage-site-specific-perl-modules.html">
+        管理站台專屬的Perl模組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/task-repair-the-activeperl-installation.html">
+        修復ActivePerl安裝
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/windows-install/reference-troubleshooting.html">
+        <div class="na-navbar-padding"> 疑難排解安裝與組態問題</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-cannot-open-the-oncommand-workflow-automation-login-page.html">
+        無法開啟OnCommand Workflow Automation 此功能登入頁面
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-cannot-view-performance-advisor-data-in-wfa.html">
+        無法在WFA中檢視Performance Advisor資料
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-wfa-displays-a-blank-page-on-windows-2012.html">
+        在Windows 2012上顯示空白頁面（WFA）OnCommand Workflow Automation
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/windows-install/reference-related-documentation-for-oncommand-workflow-automation.html">
+        相關文件OnCommand Workflow Automation
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 工作流程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-overview-of-oncommand-workflow-automation.html">
+        概述OnCommand Workflow Automation
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-understanding-workflow-automation-designer.html">
+        <div class="na-navbar-padding"> 瞭解Workflow Automation設計工具</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 使用OnCommand Workflow Automation 資訊區塊</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-data-sources-are.html">
+        什麼是資料來源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-dictionary-entries-are.html">
+        什麼是字典項目
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-commands-work.html">
+        命令的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-filters-are.html">
+        什麼是篩選條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-finders-are.html">
+        什麼是金融工具
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-functions-are.html">
+        功能為何
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-schemes-are.html">
+        有哪些方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-remote-system-types-are.html">
+        什麼是遠端系統類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-use-templates.html">
+        使用範本的方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-use-categories.html">
+        類別的使用方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-entity-versioning-works.html">
+        實體版本管理的運作方式
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-a-playground-database-is.html">
+        什麼是遊樂場資料庫
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-managing-workflows.html">
+        <div class="na-navbar-padding"> 管理工作流程</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/task-customize-predefined-workflows.html">
+        <div class="na-navbar-padding"> 自訂預先定義的工作流程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html">
+        自訂「建立Volume」和「CIFS共用」工作流程
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-creating-workflows.html">
+        <div class="na-navbar-padding"> 建立工作流程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-tasks-involved-in-creating-workflows.html">
+        建立工作流程所涉及的工作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-define-workflows.html">
+        如何定義工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-define-user-input.html">
+        如何定義使用者輸入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-map-command-parameters.html">
+        如何對應命令參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-define-constants.html">
+        如何定義常量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-repeat-row-works.html">
+        重複列的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-resource-selection-works.html">
+        資源選擇的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-reservation-works.html">
+        預約如何運作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-incremental-naming-is.html">
+        什麼是遞增命名
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-conditional-execution-is.html">
+        什麼是條件式執行
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-return-parameters-are.html">
+        傳回參數的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-approval-points-are.html">
+        哪些是核准點
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-execute-custom-rest-end-points.html">
+        如何執行自訂REST端點
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-what-continue-on-failure-is.html">
+        故障時繼續的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-workflow-requirements-checklist.html">
+        工作流程需求檢查清單範例
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/task-create-a-workflow.html">
+        <div class="na-navbar-padding"> 建立工作流程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-workflow-help-content.html">
+        建立工作流程說明內容
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/task-create-a-workflow-automation-pack.html">
+        <div class="na-navbar-padding"> 建立WFA工作流程套件</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-add-entity-to-a-workflow-automation-pack.html">
+        新增實體至WFA工作流程套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-delete-wfa-packs.html">
+        刪除OnCommand Workflow Automation 封裝
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-export-oncommand-workflow-automation-content.html">
+        匯出OnCommand Workflow Automation 內容
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-import-oncommand-workflow-automation-content.html">
+        匯入OnCommand Workflow Automation 內容
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-import-an-oncommand-workflow-automation-pack.html">
+        匯入WFA工作流程套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-considerations-of-importing-wfa-content.html">
+        輸入OnCommand Workflow Automation 內容時的考量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-pack-identification-during-upgrade.html">
+        升級期間的套件識別
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-integrating-the-wfa-pack-with-scm-repository.html">
+        <div class="na-navbar-padding"> 將WFA工作流程套件與SCM儲存庫整合</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-check-in-a-new-pack-to-scm.html">
+        將新的工作流程套件存回SCM
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html">
+        查看新版的WFA工作流程套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-update-the-pack-from-scm.html">
+        從SCM伺服器更新WFA工作流程套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-check-in-an-already-existing-pack-into-scm.html">
+        將現有的WFA工作流程套件存回SCM伺服器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-remove-entities-from-a-pack.html">
+        從實體移除WFA工作流程套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-rollback-pack-to-a-previous-version-in-scm.html">
+        在SCM中將WFA工作流程套件回復至先前版本
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-creating-building-blocks-for-workflows.html">
+        <div class="na-navbar-padding"> 建立工作流程的建置區塊</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-data-source-type.html">
+        建立資料來源類型
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/task-create-a-command.html">
+        <div class="na-navbar-padding"> 建立命令</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-test-the-wfa-reservation-script-for-commands.html">
+        測試命令的保留指令碼
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-finder.html">
+        建立搜尋工具
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-filter.html">
+        建立篩選器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-dictionary-entry.html">
+        建立一個字典項目
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-function.html">
+        建立函數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-template.html">
+        建立範本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-a-cache-query.html">
+        建立快取查詢
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-create-recurring-schedules.html">
+        建立週期性排程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-define-filter-rules.html">
+        定義篩選規則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/task-add-approval-points.html">
+        新增核准點
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/concept-coding-guidelines-for-wfa.html">
+        <div class="na-navbar-padding"> WFA的編碼準則</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-variables.html">
+        變數準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-indentation.html">
+        縮排準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-comments.html">
+        意見準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-logging.html">
+        記錄準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-error-handling.html">
+        錯誤處理準則
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/reference-general-powershell-conventions-for-wfa.html">
+        <div class="na-navbar-padding"> WFA的一般PowerShell與Perl慣例</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-perl-database-modules-bundled-with-windows.html">
+        Windows隨附的Perl模組
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html">
+        新增自訂PowerShell和Perl模組的考量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-wfa-powershell-functions.html">
+        WFA Cmdlet與功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-powershell-and-perl-wfa-modules.html">
+        PowerShell與Perl WFA模組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-other-programming-aspects.html">
+        將PowerShell命令轉換為Perl時的考量
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-wfa-building-blocks.html">
+        <div class="na-navbar-padding"> WFA建置區塊準則</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-sql-in-wfa.html">
+        WFA中的SQL準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-wfa-functions.html">
+        WFA功能準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-wfa-dictionary-entry.html">
+        WFA字典項目準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-commands.html">
+        命令準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-workflows.html">
+        工作流程準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html">
+        建立遠端系統類型驗證指令碼的準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-guidelines-for-data-source-type.html">
+        建立資料來源類型的準則
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-reserved-words.html">
+        保留字
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/concept-how-you-use-the-rest-api.html">
+        REST API的使用方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-references-to-learning-material.html">
+        參考學習教材
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/workflows/reference-related-documentation-for-oncommand-workflow-automation.html">
+        相關文件OnCommand Workflow Automation
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 線上說明</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-overview-of-oncommand-workflow-automation.html">
+        概述OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-create-local-users.html">
+        建立本機使用者
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/concept-advanced-configuring-oncommand-workflow-automation.html">
+        <div class="na-navbar-padding"> 設定OnCommand Workflow Automation 功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-authentication-settings.html">
+        設定驗證設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-mail.html">
+        設定電子郵件通知
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/task-configure-snmp.html">
+        <div class="na-navbar-padding"> 設定SNMP</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-snmp-version-1.html">
+        設定SNMP版本1
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-snmp-version-3.html">
+        設定SNMP版本3
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-syslog.html">
+        設定Syslog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-autosupport.html">
+        設定AutoSupport 功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-email-notifications-for-data-source-acquisition-failures.html">
+        設定資料來源擷取失敗的電子郵件通知
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-resource-reservation-for-workflows.html">
+        設定工作流程的資源保留
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-the-credentials-of-a-target-system.html">
+        設定目標系統的認證資料
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-protocols-for-connecting-to-remote-systems.html">
+        設定連接遠端系統的傳輸協定
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-oncommand-workflow-automation-designer-features.html">
+        <div class="na-navbar-padding"> 功能部件OnCommand Workflow Automation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-repeat-row-works.html">
+        重複列的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-approval-points-are.html">
+        哪些是核准點
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-continue-on-failure-is.html">
+        故障時繼續的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-resource-selection-works.html">
+        資源選擇的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-reservation-works.html">
+        預約如何運作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-incremental-naming-is.html">
+        什麼是遞增命名
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-conditional-execution-is.html">
+        什麼是條件式執行
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-return-parameters-are.html">
+        傳回參數的運作方式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-schemes-are.html">
+        有哪些方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-what-remote-system-types-are.html">
+        什麼是遠端系統類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-entity-versioning-works.html">
+        實體版本管理的運作方式
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-you-define-workflows.html">
+        如何定義工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-you-map-command-parameters.html">
+        如何對應命令參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-you-define-user-input.html">
+        如何定義使用者輸入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-you-define-constants.html">
+        如何定義常量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/concept-how-you-use-the-rest-api.html">
+        REST API的使用方式
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/task-set-up-a-data-source.html">
+        <div class="na-navbar-padding"> 設定資料來源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-a-database-user-by-running-ocsetup-on-windows.html">
+        在Windows上執行ocsetup來設定資料庫使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-a-database-user-by-running-ocsetup-on-linux.html">
+        在Linux上執行ocsetup來設定資料庫使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-configure-a-database-user-on-active-iq-unified-manager.html">
+        在Active IQ Unified Manager 上設定資料庫使用者
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-create-workflow-help-content.html">
+        建立工作流程說明內容
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-reserved-words.html">
+        保留字
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-mvel-learning-material-reference.html">
+        <div class="na-navbar-padding"> 何處可找到有關VEL的資訊</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-mvel-enabled-fields-in-wfa.html">
+        支援MVEL的欄位OnCommand Workflow Automation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-mvel-examples.html">
+        MVEL語法範例
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-references-to-learning-material.html">
+        參考學習教材
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-supported-workflows-in-clustered-data-ontap.html">
+        支援的工作流程ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-import-oncommand-workflow-automation-content.html">
+        匯入OnCommand Workflow Automation 內容
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-considerations-of-importing-wfa-content.html">
+        輸入OnCommand Workflow Automation 內容時的考量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-export-oncommand-workflow-automation-content.html">
+        匯出OnCommand Workflow Automation 內容
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-disable-cache-acquisition-for-dictionary-entries.html">
+        停用快取取得字典項目
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-create-a-workflow-automation-pack.html">
+        建立WFA工作流程套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-delete-wfa-packs.html">
+        刪除OnCommand Workflow Automation 封裝
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-add-approval-points.html">
+        新增核准點
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-define-filter-rules.html">
+        定義篩選規則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-create-a-scheme.html">
+        建立方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-edit-a-scheme.html">
+        編輯方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-delete-a-scheme.html">
+        刪除方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/task-add-a-new-remote-system-type.html">
+        新增遠端系統類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-log-viewer-directory-window.html">
+        記錄檢視器視窗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-backup-restore-window.html">
+        備份與還原所需時間
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-user-window.html">
+        <div class="na-navbar-padding"> 使用者視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-user-dialog-box.html">
+        新使用者對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-user-dialog-box.html">
+        編輯使用者對話方塊
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-client-preferences-dialog-box.html">
+        偏好設定視窗
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-active-directory-groups-window.html">
+        <div class="na-navbar-padding"> Active Directory群組視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-active-directory-group-dialog-box.html">
+        「新Active Directory群組」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-active-directory-group-dialog-box.html">
+        「編輯Active Directory群組」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-approval-portal.html">
+        核准入口網站視窗
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-data-sources-window.html">
+        <div class="na-navbar-padding"> 資料來源視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-data-source-dialog-box.html">
+        「新增資料來源」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-data-source-dialog-box.html">
+        編輯資料來源對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-credentials-window.html">
+        <div class="na-navbar-padding"> 認證資料視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-test-connectivity-dialog-box.html">
+        測試連線能力對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-credentials-dialog-box.html">
+        新認證對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-credentials-dialog-box.html">
+        編輯認證對話方塊
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-about-dialog-box.html">
+        關於對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-portal-workflow-window.html">
+        工作流程視窗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-execution-status-window.html">
+        執行時間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-recurring-executions-window.html">
+        重複執行時間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-reservations-window.html">
+        保留時間
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-schedules-window.html">
+        <div class="na-navbar-padding"> 排程時間</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-schedule-dialog-box.html">
+        新排程對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-workflows-window.html">
+        <div class="na-navbar-padding"> 工作流程視窗</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-new-workflow-window.html">
+        <div class="na-navbar-padding"> 新工作流程視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-parameters-for-commands-dialog-box.html">
+        命令參數對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-resource-selection-dialog-box.html">
+        資源選取對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-incremental-naming-wizard.html">
+        遞增命名精靈
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-row-repetition-details-dialog-box.html">
+        列重複詳細資料對話方塊
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-workflow-window.html">
+        工作流程<工作流程名稱>視窗
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-execute-workflow-dialog-box.html">
+        執行工作流程對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-variable-dialog-box.html">
+        編輯變數對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-preview-workflow-dialog-box.html">
+        預覽工作流程對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-monitoring-window.html">
+        監控窗口
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-approval-point-dialog-box.html">
+        「新增核准點」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-approval-point-dialog-box.html">
+        「編輯核准點」對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-finders-window.html">
+        <div class="na-navbar-padding"> 找到者窗口</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-finder-dialog-box.html">
+        「新增搜尋器」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-finder-dialog-box.html">
+        編輯搜尋器對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-finder-dialog-box.html">
+        Clone Finder（Clone Finder）對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-filters-window.html">
+        <div class="na-navbar-padding"> 篩選器視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-filter-dialog-box.html">
+        「新增篩選」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-filter-dialog-box.html">
+        編輯篩選對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-filter-dialog-box.html">
+        Clone Filter（複製篩選器）對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-commands-window.html">
+        <div class="na-navbar-padding"> 命令視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-command-definition-dialog-box.html">
+        新增命令定義對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-command-definition-dialog-box.html">
+        編輯命令定義對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-command-definition-dialog-box.html">
+        Clone Command Definition（克隆命令定義）對話框
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-functions-window.html">
+        功能視窗
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-templates-window.html">
+        <div class="na-navbar-padding"> 範本視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-template-dialog-box.html">
+        新範本對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-template-dialog-box.html">
+        編輯範本對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-template-dialog-box.html">
+        複製範本對話方塊
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-schemes-window.html">
+        配置視窗
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-dictionary-window.html">
+        <div class="na-navbar-padding"> 「目錄」視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-dictionary-entry-dialog-box.html">
+        「新增字典項目」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-dictionary-entry-dialog-box.html">
+        編輯字典項目對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-dictionary-entry-dialog-box.html">
+        複製字典項目對話方塊
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-data-source-types-window.html">
+        資料來源類型視窗
+      </a></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-remote-system-types-window.html">
+        <div class="na-navbar-padding"> 遠端系統類型視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-remote-system-type-dialog-box.html">
+        「新增遠端系統類型」對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-remote-system-type-dialog-box.html">
+        「編輯遠端系統類型」對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-cache-queries-window.html">
+        <div class="na-navbar-padding"> 快取查詢視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-add-cache-query-dialog-box.html">
+        新增快取查詢對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-cache-query-dialog-box.html">
+        編輯快取查詢對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-cache-query-dialog-box.html">
+        複製快取查詢對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-packs-window.html">
+        <div class="na-navbar-padding"> 套件視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-pack-dialog-box.html">
+        新增套件對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-pack-dialog-box.html">
+        編輯套件對話方塊
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/workflow-automation/help/reference-categories-window.html">
+        <div class="na-navbar-padding"> 類別視窗</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-new-category-dialog-box.html">
+        新類別對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-edit-category-dialog-box.html">
+        編輯類別對話方塊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-clone-category-dialog-box.html">
+        Clone Category（複製類別）對話方塊
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/help/reference-wfa-store-window.html">
+        Storage Automation Store視窗
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/reference-legal-notices.html">
+        法律聲明
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-tw/workflow-automation/">OnCommand&nbsp;Workflow&nbsp;Automation&nbsp;5.1</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 本繁體中文版使用機器翻譯，譯文僅供參考，若與英文版本牴觸，應以英文版本為準。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">可在OnCommand Workflow Automation Windows上遠端存取效能不整資料庫</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-03 06:27:23 +0000">05/03/2022</time>
+    
+  
+
+
+</p>
+
+<div class="paragraph lead">
+<p>根據預設、OnCommand Workflow Automation 只有在WFA主機系統上執行的用戶端、才能存取WFA（WFA）資料庫。若要從遠端系統存取WFA資料庫、您可以變更預設設定。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>您必須以管理使用者的身分登入WFA主機系統。</p>
+</li>
+<li>
+<p>如果WFA主機系統上安裝了防火牆、則您必須設定防火牆設定、以允許從遠端系統存取。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>此程序使用預設的WFA安裝路徑。如果您在安裝期間變更了預設位置、則必須使用自訂的WFA安裝路徑。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步驟</div>
+<ol class="arabic">
+<li>
+<p>開啟Windows檔案總管、然後瀏覽至下列目錄：WFA_install_directory\WFA\bin</p>
+</li>
+<li>
+<p>執行下列其中一項動作：</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">至&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">輸入下列命令&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>啟用遠端存取</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>「.\WFA --db-access=public&#8212;&#8203;restart」</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>停用遠端存取</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>「.\WFA --db-access=Default -重新啟動」</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">cookie-settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">對我們的網站有任何意見或要求？</span>
+              <a target="_self" href="javascript:netapp_mailto()">請與我們聯絡</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-tw/announcements/">公告</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-tw/workflow-automation/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-tw/workflow-automation/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-tw/workflow-automation/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-tw/workflow-automation/js/www-ntap.js'></script>
+    <script src='/zh-tw/workflow-automation/js/tabbed-blocks.js'></script>
+  </body></html>
