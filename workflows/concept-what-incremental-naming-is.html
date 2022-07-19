@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/issues/new?body=Page%3A%20[什麼是遞增命名](https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-incremental-naming-is.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/workflow-automation/images/discuss-sm.svg" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/blob/main/workflows/concept-what-incremental-naming-is.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/workflow-automation/images/edit-sm.svg" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/workflow-automation/images/article-sm.svg" class="github-icon" />瞭解如何作出貢獻</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/issues/new?body=Page%3A%20[什麼是遞增命名](https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-incremental-naming-is.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/workflow-automation/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/blob/main/workflows/concept-what-incremental-naming-is.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/workflow-automation/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/workflow-automation/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此頁面上</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/zh-tw/workflow-automation/search.html"
           data-type="widget" 
-          data-placeholder="搜尋文件" 
-          data-no-results-found="找不到符合 {query} 的相關結果。" 
-          data-did-you-mean="搜尋 {suggestion}。" 
-          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
-          data-results-found="找到 {hitCount} 筆結果"  
+          data-placeholder="搜尋文件"
+          data-no-results-found="找不到符合 {query} 的相關結果。"
+          data-did-you-mean="搜尋 {suggestion}。"
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？"
+          data-results-found="找到 {hitCount} 筆結果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">繁體中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">繁體中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/workflow-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/workflow-automation/workflows/concept-what-incremental-naming-is.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/workflow-automation/workflows/concept-what-incremental-naming-is.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/workflow-automation/workflows/concept-what-incremental-naming-is.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/workflow-automation/workflows/concept-what-incremental-naming-is.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-incremental-naming-is.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-incremental-naming-is.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/workflow-automation/workflows/concept-what-incremental-naming-is.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/workflow-automation/workflows/concept-what-incremental-naming-is.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/workflow-automation/workflows/concept-what-incremental-naming-is.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/workflow-automation/workflows/concept-what-incremental-naming-is.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/zh-tw/workflow-automation/pdfs/fullsite-sidebar/資訊文件OnCommand_Workflow_Automation.pdf" >
-          <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>此文件網站（PDF 格式）</a>
+          <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>此文件網站（PDF 格式）</a>
 
 
 
@@ -376,7 +370,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/Linux安裝與設定.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             Linux安裝與設定
           </a>
           
@@ -392,7 +386,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/概述OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             概述OnCommand Workflow Automation
           </a>
           
@@ -402,8 +396,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -423,14 +415,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/安裝OnCommand_Workflow_Automation_過程中的系統需求.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             安裝OnCommand Workflow Automation 過程中的系統需求
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -450,14 +440,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/安裝Workflow_Automation的先決條件.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             安裝Workflow Automation的先決條件
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -477,7 +465,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理高可用度.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理高可用度
           </a>
           
@@ -493,7 +481,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/在VCS中設定Workflow_Automation以實現高可用度.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在VCS中設定Workflow Automation以實現高可用度
           </a>
           
@@ -503,8 +491,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -518,8 +504,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -539,7 +523,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定OnCommand Workflow Automation 功能
           </a>
           
@@ -557,7 +541,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/資料來源OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             資料來源OnCommand Workflow Automation
           </a>
           
@@ -573,7 +557,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/在DataFabric_Manager上設定資料庫使用者.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在DataFabric Manager上設定資料庫使用者
           </a>
           
@@ -581,8 +565,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -594,8 +576,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -619,7 +599,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定OnCommand Workflow Automation 功能
           </a>
           
@@ -637,8 +617,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -658,8 +636,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -679,14 +655,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/升級自OnCommand_Workflow_Automation_更新版本的更新版本.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升級自OnCommand Workflow Automation 更新版本的更新版本
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -706,7 +680,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/升級協力廠商產品.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升級協力廠商產品
           </a>
           
@@ -714,8 +688,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -735,7 +707,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/備份OnCommand_Workflow_Automation_the支援資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             備份OnCommand Workflow Automation the支援資料庫
           </a>
           
@@ -753,7 +725,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI備份WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用CLI備份WFA資料庫
           </a>
           
@@ -761,8 +733,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -782,7 +752,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API備份WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用REST API備份WFA資料庫
           </a>
           
@@ -790,8 +760,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -799,8 +767,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -820,7 +786,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/還原OnCommand_Workflow_Automation_此資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             還原OnCommand Workflow Automation 此資料庫
           </a>
           
@@ -838,7 +804,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI還原WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用CLI還原WFA資料庫
           </a>
           
@@ -846,8 +812,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -867,7 +831,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API還原WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用REST API還原WFA資料庫
           </a>
           
@@ -875,8 +839,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -884,8 +846,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -907,14 +867,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/匯入OnCommand_Workflow_Automation_內容.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             匯入OnCommand Workflow Automation 內容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -938,7 +896,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理OnCommand_Workflow_Automation_功能SSL憑證.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理OnCommand Workflow Automation 功能SSL憑證
           </a>
           
@@ -946,8 +904,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -967,14 +923,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理Perl和Perl模組.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理Perl和Perl模組
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -994,14 +948,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/疑難排解安裝與組態問題.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解安裝與組態問題
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1011,8 +963,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1032,7 +982,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/Windows安裝與設定.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             Windows安裝與設定
           </a>
           
@@ -1048,7 +998,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/概述OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             概述OnCommand Workflow Automation
           </a>
           
@@ -1058,8 +1008,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1079,14 +1027,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/安裝OnCommand_Workflow_Automation_過程中的系統需求.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             安裝OnCommand Workflow Automation 過程中的系統需求
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1108,7 +1054,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理高可用度.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理高可用度
           </a>
           
@@ -1124,7 +1070,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/在MSCS中設定Workflow_Automation以實現高可用度.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在MSCS中設定Workflow Automation以實現高可用度
           </a>
           
@@ -1134,8 +1080,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1149,8 +1093,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1170,7 +1112,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定OnCommand Workflow Automation 功能
           </a>
           
@@ -1188,7 +1130,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/資料來源OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             資料來源OnCommand Workflow Automation
           </a>
           
@@ -1204,7 +1146,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/在DataFabric_Manager上設定資料庫使用者.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在DataFabric Manager上設定資料庫使用者
           </a>
           
@@ -1212,8 +1154,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1227,8 +1167,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1252,7 +1190,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定OnCommand Workflow Automation 功能
           </a>
           
@@ -1276,7 +1214,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定SNMP.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定SNMP
           </a>
           
@@ -1284,8 +1222,17 @@
 
 
 
+        </li>
+      </ul>
+    
 
-          
+  
+
+
+
+
+
+
         </li>
       </ul>
     
@@ -1298,12 +1245,6 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -1313,15 +1254,6 @@
 
 
 
-
-
-
-
-
-
-
-
-          
         </li>
       </ul>
     
@@ -1341,7 +1273,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/升級OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升級OnCommand Workflow Automation
           </a>
           
@@ -1357,14 +1289,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/從OnCommand_Workflow_Automation_更新版本升級.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             從OnCommand Workflow Automation 更新版本升級
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1372,8 +1302,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1393,7 +1321,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/升級協力廠商產品.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升級協力廠商產品
           </a>
           
@@ -1403,8 +1331,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1424,7 +1350,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/備份OnCommand_Workflow_Automation_the支援資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             備份OnCommand Workflow Automation the支援資料庫
           </a>
           
@@ -1444,7 +1370,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI備份WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用CLI備份WFA資料庫
           </a>
           
@@ -1452,8 +1378,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1473,7 +1397,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API備份WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用REST API備份WFA資料庫
           </a>
           
@@ -1481,8 +1405,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1490,8 +1412,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1511,7 +1431,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/還原OnCommand_Workflow_Automation_此資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             還原OnCommand Workflow Automation 此資料庫
           </a>
           
@@ -1529,7 +1449,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用CLI還原WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用CLI還原WFA資料庫
           </a>
           
@@ -1537,8 +1457,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1558,7 +1476,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用REST_API還原WFA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用REST API還原WFA資料庫
           </a>
           
@@ -1566,8 +1484,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1575,8 +1491,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1598,14 +1512,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/匯入OnCommand_Workflow_Automation_內容.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             匯入OnCommand Workflow Automation 內容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1629,7 +1541,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理OnCommand_Workflow_Automation_功能SSL憑證.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理OnCommand Workflow Automation 功能SSL憑證
           </a>
           
@@ -1637,8 +1549,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1658,7 +1568,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理Perl和Perl模組.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理Perl和Perl模組
           </a>
           
@@ -1668,8 +1578,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1689,7 +1597,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/疑難排解安裝與組態問題.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解安裝與組態問題
           </a>
           
@@ -1699,8 +1607,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1710,8 +1616,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1731,7 +1635,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/工作流程.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             工作流程
           </a>
           
@@ -1749,7 +1653,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/瞭解Workflow_Automation設計工具.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             瞭解Workflow Automation設計工具
           </a>
           
@@ -1765,7 +1669,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用OnCommand_Workflow_Automation_資訊區塊.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用OnCommand Workflow Automation 資訊區塊
           </a>
           
@@ -1791,8 +1695,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1802,8 +1704,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1823,7 +1723,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/管理工作流程.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理工作流程
           </a>
           
@@ -1839,14 +1739,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/自訂預先定義的工作流程.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             自訂預先定義的工作流程
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1866,7 +1764,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/建立工作流程.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             建立工作流程
           </a>
           
@@ -1886,14 +1784,7 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/zh-tw/workflow-automation/pdfs/pages/workflows/concept-what-incremental-naming-is.pdf" >
-    <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
@@ -1921,14 +1812,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/建立工作流程.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             建立工作流程
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1936,8 +1825,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1957,7 +1844,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/建立WFA工作流程套件.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             建立WFA工作流程套件
           </a>
           
@@ -1975,8 +1862,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1996,7 +1881,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/將WFA工作流程套件與SCM儲存庫整合.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             將WFA工作流程套件與SCM儲存庫整合
           </a>
           
@@ -2012,8 +1897,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2021,8 +1904,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2042,7 +1923,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/建立工作流程的建置區塊.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             建立工作流程的建置區塊
           </a>
           
@@ -2060,14 +1941,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/建立命令.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             建立命令
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2093,8 +1972,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2114,7 +1991,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/WFA的編碼準則.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             WFA的編碼準則
           </a>
           
@@ -2140,14 +2017,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/WFA的一般PowerShell與Perl慣例.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             WFA的一般PowerShell與Perl慣例
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2175,7 +2050,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/WFA建置區塊準則.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             WFA建置區塊準則
           </a>
           
@@ -2193,8 +2068,13 @@
 
 
 
+        </li>
+      </ul>
+    
 
-          
+  
+
+
         </li>
       </ul>
     
@@ -2203,12 +2083,6 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -2216,11 +2090,6 @@
 
 
 
-
-
-
-
-          
         </li>
       </ul>
     
@@ -2240,7 +2109,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/線上說明.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             線上說明
           </a>
           
@@ -2260,7 +2129,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定OnCommand_Workflow_Automation_功能.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定OnCommand Workflow Automation 功能
           </a>
           
@@ -2280,7 +2149,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定SNMP.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定SNMP
           </a>
           
@@ -2288,8 +2157,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2305,8 +2172,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2330,7 +2195,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/功能部件OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             功能部件OnCommand Workflow Automation
           </a>
           
@@ -2356,8 +2221,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2387,7 +2250,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/設定資料來源.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             設定資料來源
           </a>
           
@@ -2397,8 +2260,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2422,7 +2283,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/何處可找到有關VEL的資訊.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             何處可找到有關VEL的資訊
           </a>
           
@@ -2430,8 +2291,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2483,7 +2342,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/使用者視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用者視窗
           </a>
           
@@ -2491,8 +2350,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2514,7 +2371,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/Active_Directory群組視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             Active Directory群組視窗
           </a>
           
@@ -2524,8 +2381,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2545,7 +2400,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/資料來源視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             資料來源視窗
           </a>
           
@@ -2553,8 +2408,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2574,7 +2427,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/認證資料視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             認證資料視窗
           </a>
           
@@ -2584,8 +2437,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2615,14 +2466,12 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/排程時間.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             排程時間
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2642,7 +2491,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/工作流程視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             工作流程視窗
           </a>
           
@@ -2658,7 +2507,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/新工作流程視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             新工作流程視窗
           </a>
           
@@ -2670,8 +2519,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2693,8 +2540,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2714,7 +2559,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/找到者窗口.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             找到者窗口
           </a>
           
@@ -2724,8 +2569,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2745,7 +2588,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/篩選器視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             篩選器視窗
           </a>
           
@@ -2755,8 +2598,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2776,7 +2617,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/命令視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             命令視窗
           </a>
           
@@ -2786,8 +2627,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2809,7 +2648,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/範本視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             範本視窗
           </a>
           
@@ -2819,8 +2658,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2842,7 +2679,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/_目錄_視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             「目錄」視窗
           </a>
           
@@ -2852,8 +2689,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2875,7 +2710,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/遠端系統類型視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             遠端系統類型視窗
           </a>
           
@@ -2883,8 +2718,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2904,7 +2737,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/快取查詢視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             快取查詢視窗
           </a>
           
@@ -2914,8 +2747,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2935,7 +2766,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/套件視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             套件視窗
           </a>
           
@@ -2943,8 +2774,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2964,7 +2793,7 @@
               href="/zh-tw/workflow-automation/pdfs/sidebar/類別視窗.pdf" 
             
           >
-            <img src="/zh-tw/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             類別視窗
           </a>
           
@@ -2974,8 +2803,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2985,21 +2812,18 @@
 
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/zh-tw/workflow-automation/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/zh-tw/workflow-automation/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -3032,7 +2856,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/index.html">
         5.1文件OnCommand Workflow Automation
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/workflow-automation/reference-releasenotes.html">
@@ -3943,6 +3767,9 @@
     
   
 
+<span>貢獻者
+</span>
+
 
 </p>
 
@@ -3998,16 +3825,16 @@
               <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">條款與條件</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a class="ot-sdk-show-settings">cookie-settings</a>
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
             </li>
           </ul>
         </div>
@@ -4125,4 +3952,5 @@
     </script>
     <script src='/zh-tw/workflow-automation/js/www-ntap.js'></script>
     <script src='/zh-tw/workflow-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-tw/workflow-automation/js/sidebar.js'></script>
   </body></html>
