@@ -153,6 +153,7 @@ entries:
 - title: 解除安裝OnCommand Workflow Automation
   url: "/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html"
 - title: 管理OnCommand Workflow Automation 功能SSL憑證
+  pdf-filename: 管理OnCommand Workflow Automation Linux版的驗證
   url: "/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html"
   entries:
   - title: 取代預設的Workflow Automation SSL憑證

@@ -38,13 +38,11 @@ XXXX是新憑證有效的天數。
 
 . 出現提示時、請提供密碼（預設或新的）。
 +
-changeit是預設密碼。如果您不想使用預設密碼、則必須從下列位置變更standalone-full.xml檔案中SSL元素的密碼屬性：WFA_install_location / WFA/Jboss /獨立/組態
+預設密碼是隨機產生的加密密碼。
 
 +
-[listing]
-----
-<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
-----
+若要取得並解密預設密碼、請使用知識庫文章中的步驟 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["如何在WFA 5.1.1.0.4上續約自我簽署的憑證"^]
+
 . 輸入憑證的必要詳細資料。
 . 檢閱顯示的資訊、然後輸入「Yes（是）」。
 . 出現下列訊息時、請按* Enter *鍵：輸入<SSL Keystore（<SSL Keystore）>的金鑰密碼（如果與Keystore密碼相同則返回）>。

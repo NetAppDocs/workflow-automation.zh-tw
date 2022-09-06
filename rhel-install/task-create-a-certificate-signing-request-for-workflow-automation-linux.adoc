@@ -31,30 +31,34 @@ file_name是CSR檔案的名稱。
 
 . 出現提示時、請提供密碼（預設或新的）。
 +
-changeit是預設密碼。如果您不想使用預設密碼、則必須從WFA_install_location / WFA/Jboss /獨立/組態位置、變更standalone-full.xml檔案中SSL元素的密碼屬性。
+預設密碼是隨機產生的加密密碼。
 
 +
-[listing]
-----
-<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
-----
+若要取得並解密預設密碼、請使用知識庫文章中的步驟 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["如何在WFA 5.1.1.0.4上續約自我簽署的憑證"^]
+
 . 將file_name.csr檔案傳送至CA以取得簽署的憑證。
 +
 如需詳細資料、請參閱CA網站。
 
-. 從CA下載鏈結憑證、然後將鏈結憑證匯入至Keystore：「keytool-import -alias "SSL keystore CA certe"-keystore wfa_install_stite/wfa/jboss/standale/configuration / keystore /wfa.keystore」-cercacerts -file C：\chlune_cert.cer
+. 從CA下載鏈結憑證、然後將鏈結憑證匯入至您的Keystore：
 +
-C：\chain /cert.cer是從CA接收的鏈結憑證檔案。檔案必須為X．509格式。
+「keytool-import -alias "SSL keystore CA certe"-keystore wfa_install_stite/wfa/jboss/sinales/configuration / keystore /wfa.keystore」-caclacerts -file chain _cert.cer
+
++
+「chain _cert.cer」是從CA收到的鏈結憑證檔案。檔案必須為X．509格式。
 
 . 匯入您從CA收到的已簽署憑證：
 +
-「keytool-import -alias "SSL Keystore」-keystore wfa_install_portion/wfa/jboss/standale/configuration / keystore / wfa.keystore」-cappacerts -file C：\Certificate .cer
+「keytool-import -alias "SSL Keystore」-keystore wfa_install_portion/wfa/jboss/standale/configuration / keystore / wfa.keystore」-cappacerts -file Certificate .cer
 
 +
-C：\Certificate .cer是從CA接收的鏈結憑證檔案。
+「Certificate .cer」是從CA收到的鏈結憑證檔案。
 
 . 啟動WFA服務：
 +
-「/WFA --start=DB'。/WFA --start=WFA
+「/WFA --start=DB」
+
++
+「/wFA --start=wfa」
 
 

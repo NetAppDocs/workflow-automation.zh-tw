@@ -2931,7 +2931,6 @@
   <block id="5c4a32f768ee405b0ef150103b7c03a1" category="paragraph">「keytool-keysize 2048-genkey -alias "SSL Keystore」-keyalg RSA -keystore「&lt;wfa_install_location）&gt;\wfa\jboss\s獨立 式\configuration \keystore \wfa.keystore」-validity xxxx'</block>
   <block id="24eb76b4a609daff4b7d34ec8fea1231" category="paragraph">XXXX是新憑證有效日期的天數。</block>
   <block id="0ba86baa537a49c243693784fe078f3a" category="list-text">出現提示時、請提供密碼（預設或新的）。</block>
-  <block id="9312759233ae7e3d8807257f39f2c937" category="paragraph">changeit是預設密碼。如果您不想使用預設密碼、則必須從下列位置變更standalone-full.xml檔案中SSL元素的密碼屬性：&lt;WFA_install_location&gt;\WFA\jboss\s獨立\組態\</block>
   <block id="49cdce6603c61a9fdaf58048badc131a" category="list-text">輸入憑證的必要詳細資料。</block>
   <block id="a7bc3b0a6af3ae4d153d1aa15dc13038" category="list-text">檢閱顯示的資訊、然後輸入「Yes（是）」。</block>
   <block id="58effb4a43109824b15167c9d51ce13d" category="list-text">出現下列訊息時、請按* Enter *鍵：輸入&lt;SSL Keystore（&lt;SSL Keystore）&gt;的金鑰密碼（如果與Keystore密碼相同則返回）&gt;。</block>
@@ -3126,7 +3125,6 @@
   <block id="8f7831df72940f33fe975294c96790d1" category="list-text">建立CSR：</block>
   <block id="7a8ab8ac2c56e6f34c324ef46934febb" category="paragraph">「keytool-certreq -keystore wfa_install_location \wfa\jboss\s獨立 式\configuration \keystore \wfa.keystore -alias "SSL keystore」-file C：\file_name.csr</block>
   <block id="1b692d8ce3a9756491906af1588b0dbb" category="paragraph">file_name是CSR檔案的名稱。</block>
-  <block id="5bd63fe363277cc90830a1ce41a120ec" category="paragraph">changeit是預設密碼。如果您不想使用預設密碼、則必須從WFA_install_location \WFA \jboss\s獨立\組態\位置、變更standalone-full.xml檔案中SSL元素的密碼屬性。</block>
   <block id="fe03521c92b31a8e81464a71fb956de3" category="list-text">將file_name.csr檔案傳送至CA以取得簽署的憑證。</block>
   <block id="b9081db92ef5ba8dd5340d434e22aa46" category="paragraph">如需詳細資料、請參閱CA網站。</block>
   <block id="dd8ea64d9da5f718f0917812d35a5441" category="list-text">從CA下載鏈結憑證、然後將鏈結憑證匯入至Keystore：「keytool-import -alias "SSL keystore CA certe"-keystore「wfa_install_portion\wfa\jboss\s獨立 式\configuration \keystore \wfa.keystore」-cacerts -file C：\chlune_cert.cer</block>
@@ -3650,7 +3648,6 @@
   <block id="9d3b93b64542c3185ef72792923a0566" category="list-text">在WFA伺服器上開啟Shell提示字元、然後將目錄變更為下列位置：&lt;OpenJDK_install_location&gt;/bin</block>
   <block id="2e36003b3ed3383918391cfc1756fb42" category="paragraph">「keytool-keysize 2048-genkey -alias "SSL Keystore」-keyalg ra -keystore「wfa_install_location / wfa/jboss/standaled/configuration / keystore/wfa.keystore」-validity xxxx'</block>
   <block id="4e25be9af98efc24491bc23eb51fe397" category="paragraph">XXXX是新憑證有效的天數。</block>
-  <block id="1385c2e0aed85120d56290938615b4f1" category="paragraph">changeit是預設密碼。如果您不想使用預設密碼、則必須從下列位置變更standalone-full.xml檔案中SSL元素的密碼屬性：WFA_install_location / WFA/Jboss /獨立/組態</block>
   <block id="fca9c78eaaf4f232ed66e16fe0b0a863" category="list-text">檢閱顯示的資訊、然後輸入「Yes（是）」。</block>
   <block id="1e2a60c38cbc5c1f05b368454bd4ec81" category="list-text">重新啟動WFA服務：</block>
   <block id="6d7d2b1c33f41da438e95176cb2d4066" category="paragraph">「/WFA --start=DB」</block>
@@ -3674,11 +3671,7 @@
   <block id="354bf06ee6e3e07537ff6dbc96cf775a" category="summary">您可以在Linux中建立憑證簽署要求（CSR）、以便使用由憑證授權單位（CA）簽署的SSL憑證、而非Workflow Automation（WFA）的預設SSL憑證。</block>
   <block id="fd185480985b4ef8b6154a1feac6f1de" category="list-text">建立CSR檔案：</block>
   <block id="a7dfb160996bda6203e920e289688735" category="paragraph">「keytool-certreq -keystore wfa_install_kite/wfa/jboss/standale/configuration / keystore / wfa.keystore -alias "SSL keystore」-file /root/file_name.csr」</block>
-  <block id="5936dd0758642a5d725f4b55781a3240" category="paragraph">changeit是預設密碼。如果您不想使用預設密碼、則必須從WFA_install_location / WFA/Jboss /獨立/組態位置、變更standalone-full.xml檔案中SSL元素的密碼屬性。</block>
-  <block id="df16dddedaadc143538f023e2bf5d825" category="list-text">從CA下載鏈結憑證、然後將鏈結憑證匯入至Keystore：「keytool-import -alias "SSL keystore CA certe"-keystore wfa_install_stite/wfa/jboss/standale/configuration / keystore /wfa.keystore」-cercacerts -file C：\chlune_cert.cer</block>
-  <block id="8dc114841258ab97b68704f3043286ea" category="paragraph">「keytool-import -alias "SSL Keystore」-keystore wfa_install_portion/wfa/jboss/standale/configuration / keystore / wfa.keystore」-cappacerts -file C：\Certificate .cer</block>
   <block id="0c9870676767a10f293515137edf1b46" category="list-text">啟動WFA服務：</block>
-  <block id="e6a734aff93b795f8c98facc0c4b08d9" category="paragraph">「/WFA --start=DB'。/WFA --start=WFA</block>
   <block id="ecdd5880f7af0b39a702d7299a9638cd" category="summary">您可以從OnCommand Workflow Automation 原地升級（WFA）3.1或更新版本至最新版本的WFA、以使用新功能和增強功能。</block>
   <block id="bd2a84415cf190b540d05f8bcc186bd5" category="doc">升級自OnCommand Workflow Automation 更新版本的更新版本</block>
   <block id="927ecc88c4efa29ef80f95a9cc6c8523" category="paragraph">您必須已從NetApp支援網站下載.bin二進位檔案至WFA主機機器。</block>
@@ -4860,4 +4853,13 @@
   <block id="5c63e687919646507b87a2d170dc2448" category="sidebar">在OnCommand Workflow Automation Linux上備份及還原功能不完整的資料庫和組態</block>
   <block id="cae3bdcda42868550dd0adf4f9e5e215" category="sidebar">啟用或停用OnCommand Workflow Automation 對還原資料庫的遠端存取</block>
   <block id="bdd5a3f80c76cd6be7561a6b8af3bab6" category="sidebar">使用REST API備份WFA資料庫</block>
+  <block id="39c8e45e8c5488974d577e97d7caf377" category="paragraph">預設密碼是隨機產生的加密密碼。</block>
+  <block id="79f8c04dcf857d037344f9d9dabdd852" category="inline-link-macro">如何在WFA 5.1.1.0.4上續約自我簽署的憑證</block>
+  <block id="87ccc6f892e2d061c66d8db893b6cf53" category="paragraph">若要取得並解密預設密碼、請使用知識庫文章中的步驟 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
+  <block id="9f795dd2a5faa77418e156a57e8b6f58" category="list-text">從CA下載鏈結憑證、然後將鏈結憑證匯入至您的Keystore：</block>
+  <block id="02247662d3b59cc3126dc9e1b18ac422" category="paragraph">「keytool-import -alias "SSL keystore CA certe"-keystore wfa_install_stite/wfa/jboss/sinales/configuration / keystore /wfa.keystore」-caclacerts -file chain _cert.cer</block>
+  <block id="1695f6295e3d5d83711e11691faea1d1" category="paragraph">「chain _cert.cer」是從CA收到的鏈結憑證檔案。檔案必須為X．509格式。</block>
+  <block id="f46bbcf0f5db88b0dfbce832f8d83da7" category="paragraph">「keytool-import -alias "SSL Keystore」-keystore wfa_install_portion/wfa/jboss/standale/configuration / keystore / wfa.keystore」-cappacerts -file Certificate .cer</block>
+  <block id="14d1486cc2546eace3658fcaa213829e" category="paragraph">「Certificate .cer」是從CA收到的鏈結憑證檔案。</block>
+  <block id="d37ffdcd23286306f4a566096ad812cb" category="sidebar">管理OnCommand Workflow Automation Linux版的驗證</block>
 </blocks>
