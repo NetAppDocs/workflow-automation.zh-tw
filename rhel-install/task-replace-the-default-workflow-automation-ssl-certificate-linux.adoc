@@ -41,7 +41,10 @@ XXXX是新憑證有效的天數。
 預設密碼是隨機產生的加密密碼。
 
 +
-若要取得並解密預設密碼、請使用知識庫文章中的步驟 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["如何在WFA 5.1.1.0.4上續約自我簽署的憑證"^]
+若要取得並解密預設密碼、請依照知識庫文章中的步驟進行 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["如何在WFA 5.1.1.0.4上續約自我簽署的憑證"^]
+
++
+若要使用新密碼、請遵循知識庫文章中的步驟 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["如何在WFA中更新Keystore的新密碼。"^]
 
 . 輸入憑證的必要詳細資料。
 . 檢閱顯示的資訊、然後輸入「Yes（是）」。
