@@ -3,7 +3,7 @@ layout: astra
 sidebar: sidebar 
 permalink: index.html 
 lead: Welcome to the OnCommand Workflow Automation 5.1 Information Library. 
-summary: 文件資料、WFA文件、OnCommand Workflow Automation 5.1.1 
+summary: 歡迎使用OnCommand Workflow Automation 《5.1資訊庫》。 
 ---
 = 資訊文件OnCommand Workflow Automation
 :hardbreaks:

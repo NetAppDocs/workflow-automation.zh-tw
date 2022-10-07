@@ -7,7 +7,6 @@
   <block id="67e906e41e25f2160dff7ec37a4025c8" category="paragraph"><block ref="67e906e41e25f2160dff7ec37a4025c8" category="inline-link-macro-rx"></block></block>
   <block id="be1eea5d445cbbf31758e65db5dba3ec" category="inline-link-macro">發行說明OnCommand Workflow Automation</block>
   <block id="2c688079bed052f6b40f9d8df8fcddc1" category="paragraph"><block ref="2c688079bed052f6b40f9d8df8fcddc1" category="inline-link-macro-rx"></block></block>
-  <block id="07884dfac557d29be5fb2167529438a5" category="summary">文件資料、WFA文件、OnCommand Workflow Automation 5.1.1</block>
   <block id="7ece5ae8480b81ef1aaa2de7d1f71262" category="doc">資訊文件OnCommand Workflow Automation</block>
   <block id="a4101e06fd1de727bda093cf6e871930" category="summary">「新工作流程」視窗會顯示新建立的工作流程及其相關命令。</block>
   <block id="08b9cdb102d5102bdd6228442a307adb" category="doc">新工作流程視窗</block>
@@ -1836,32 +1835,17 @@
   <block id="2a63efbec52d8b2e0ea549ccad861fbe" category="paragraph">還原作業完成後、即可取得最新版本的工具套件和核心套件。</block>
   <block id="bcc7c0cdb2b134eccb8e9fdc3a8bbec2" category="admonition">如果備份所含的套件比系統上的套件新、則可在從備份還原較新的套件之後使用。</block>
   <block id="42109b6698ffd636ec475442e6fe4b86" category="paragraph">匯入核心套件之前、您必須先停止任何執行中的工作流程。</block>
-  <block id="26f71037727e92c19f597ea61fa09148" category="summary">支援MVFlex運算語言（MVEL）的OnCommand Workflow Automation 幾個欄位（WFA）。您可以在設計工作流程時、在這些欄位中使用VEL語法。</block>
   <block id="8b1806050a6283e2581e71a8036235e9" category="doc">支援MVEL的欄位OnCommand Workflow Automation</block>
   <block id="02289c7b4839797a435cf30c19dd66f2" category="paragraph">支援MVFlex運算語言（MVEL）的幾個OnCommand Workflow Automation 字段（WFA）。您可以在設計工作流程時、在這些欄位中使用VEL語法。</block>
   <block id="e2914a88f4f36296dd031348150732e0" category="paragraph">下表說明您可以在WFA介面中使用VEL語法的時間和位置：</block>
   <block id="8511c4001793616e826f431d372c36ea" category="cell">何時...</block>
   <block id="54377962b50e25adb510199fd77b31aa" category="cell">使用地點...</block>
   <block id="8d58f82b81e1a97f29b99e8d5f76b413" category="paragraph">建立或編輯工作流程</block>
-  <block id="d720046d016f9ef672934f52a1f68830" category="list-text">*工作流程_*&gt;*詳細資料*&gt;*傳回參數*&gt;*參數值*</block>
-  <block id="965a147812b44e4490473f6c074d0ff9" category="list-text">*工作流程_*&gt;*詳細資料*&gt;*常量*&gt;*值*</block>
   <block id="8978b74e9bc69d7826050c861874bff7" category="paragraph">在工作流程中建立或編輯命令詳細資料</block>
-  <block id="e84ac7147bf99455f042f5f98f2fb185" category="list-text">*命令*&gt;*參數名稱*&gt;*輸入搜尋條件*&gt;*資源選擇*&gt;*搜尋器*&gt;*參數*</block>
-  <block id="c1a9b63145539065e71ea6c5d340f04c" category="list-text">*命令*&gt;*參數_參 數字_*&gt;*輸入搜尋條件*&gt;*資源選擇*&gt;*進階*&gt;*僅當下列運算式評估為true*時才執行搜尋</block>
-  <block id="fc071da2ff083e3e188bebd97decff61" category="list-text">*命令*&gt;*參數_參 數字_*&gt;*進階*&gt;*如果下列運算式為真*</block>
-  <block id="3ba0f6d5f325e082833e35ae957fccdb" category="list-text">*命令*&gt;*參數參數_parameter_name_*&gt;*其他參數*</block>
-  <block id="591288174e056862fb5a04c55a266fda" category="list-text">*命令*&gt;*參數名稱*&gt;*屬性*</block>
   <block id="45e88f295aea0d4399f95cc907b913ad" category="paragraph">建立或編輯命令</block>
-  <block id="c6a06eb9e880b44ee23a849e9f4ca45a" category="list-text">*命令*&gt;*命令定義_command_name_*&gt;*屬性*&gt;*字串表示*</block>
   <block id="e1f6cca30e155f98efa1cd5ddd6beb02" category="paragraph">建立或編輯功能</block>
-  <block id="6243fce90b7b1c591ef656da319db5a0" category="list-text">*函數*&gt;*函數_Function_name_*&gt;*函數定義*</block>
   <block id="2abb9444b1cff1e64b38fe2094ced662" category="paragraph">建立或編輯範本</block>
-  <block id="4636b0962a07f4f69bac4cead49b9e91" category="list-text">*範本*&gt;*參數_參 數字_*範本_範本_名稱_*&gt;*屬性*&gt;*值*</block>
   <block id="98a0c172ca4ee8c4f54b9c1ef7659a9c" category="paragraph">編輯列</block>
-  <block id="de1fd1898422a264949b4b3b2aa827b8" category="list-text">*_Workflow _*&gt;* Workflow *&gt;*重複資料列*&gt;*重複資料*&gt;*次數*</block>
-  <block id="40995b6430616f92c5f5a3a1d1087af7" category="list-text">*工作流程_*&gt;*工作流程*&gt;*重複列*&gt;*變數*&gt;*初始值與運算式*的變數</block>
-  <block id="8628f2d23d7b975af7b61ec323d9c1eb" category="list-text">*工作流程*&gt;*工作流程*&gt;*重複列*&gt;*重複列*&gt;*針對群組中的每個資源*&gt;*資源搜尋條件*&gt;*要篩選的參數*</block>
-  <block id="67f88baa578817506c5a7ed56d019acb" category="list-text">*工作流程_*&gt;*工作流程*&gt;*新增條件*&gt;*如果下列運算式為真*</block>
   <block id="4f32c33d57f46b5ee71d0ccf6eaa7444" category="summary">Clone Command Definition（Clone命令定義）對話方塊可讓您複製命令並編輯複製的命令。</block>
   <block id="72d39973d80590c52e2d1590fc38caf9" category="doc">Clone Command Definition（克隆命令定義）對話框</block>
   <block id="970ff5293caaf90e4fd38fdf22e83521" category="list-text">程式碼索引標籤</block>
@@ -4844,12 +4828,8 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
-  <block id="7ff4995c299eff1168d2cf4a88aff450" category="sidebar">安裝與設定</block>
-  <block id="8a0de2bf3cb50a3973ef621bd527d6e8" category="sidebar">在OnCommand Workflow Automation Linux系統上安裝</block>
   <block id="27229f9694d6bd63f4cb0106223a04bf" category="sidebar">建置及管理工作流程</block>
-  <block id="a528b31693a2bb82696535274c613fc7" category="sidebar">線上說明</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">工作流程&lt;工作流程名稱&gt;視窗</block>
-  <block id="30027cf267532429435367703cf3d996" category="sidebar">Windows安裝與設定</block>
   <block id="5c63e687919646507b87a2d170dc2448" category="sidebar">在OnCommand Workflow Automation Linux上備份及還原功能不完整的資料庫和組態</block>
   <block id="cae3bdcda42868550dd0adf4f9e5e215" category="sidebar">啟用或停用OnCommand Workflow Automation 對還原資料庫的遠端存取</block>
   <block id="bdd5a3f80c76cd6be7561a6b8af3bab6" category="sidebar">使用REST API備份WFA資料庫</block>
@@ -4864,4 +4844,67 @@
   <block id="602d16825004ce219753fcf90527ea2b" category="paragraph">若要取得並解密預設密碼、請依照知識庫文章中的步驟進行 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
   <block id="f7c31e99f63d1684df59ded2ed730939" category="inline-link-macro">如何在WFA中更新Keystore的新密碼。</block>
   <block id="6dca537f5982139dea9ab40120845f4f" category="paragraph">若要使用新密碼、請遵循知識庫文章中的步驟 <block ref="f6321aee87e47aef0fd11d8e384d0375" category="inline-link-macro-rx"></block></block>
+  <block id="c7e75af2dc15266c660fa3fa84790295" category="list-text">功能表：Workflow _[詳細資料&gt;傳回參數&gt;參數值]</block>
+  <block id="1db0c29e35ee6c5d79d9592ea2f53286" category="list-text">_功能表：Workflow _[詳細資料&gt;常量&gt;值]</block>
+  <block id="2cbb7881a3c59695b8b41fbbb297567f" category="list-text">功能表：命令[參數_parameter_name_&gt;輸入搜尋條件&gt;資源選擇&gt;搜尋器&gt;參數]</block>
+  <block id="13887deb5706e7f00f1f12189f9527cb" category="list-text">功能表：Commands[參數_parameter_name_&gt;輸入搜尋條件&gt;資源選擇&gt;進階&gt;僅當下列運算式評估為true時才執行搜尋]</block>
+  <block id="becf55e6ef81b0c725f7d4ba114db64e" category="list-text">功能表：Commands[參數_parameter_name_&gt;進階&gt;如果下列運算式為真]</block>
+  <block id="aa620521a49916f887834b541db825a7" category="list-text">功能表：命令[參數_parameter_name_&gt;其他參數]</block>
+  <block id="1209a23c199aa49eefc3c1a7a6f4a2a7" category="list-text">功能表：命令[_parameter_name_&gt;屬性]</block>
+  <block id="738e7b7f2c920db89371601ef52832f7" category="list-text">功能表：命令[命令定義_command_name_&gt;內容&gt;字串表示法]</block>
+  <block id="cccb38da73ff3f4099789936965bb60f" category="list-text">功能表：Functions [Function_Function_name_&gt;函數定義]</block>
+  <block id="306b4b7edc3ce0c945e0c87fc1c1c5c9" category="list-text">功能表：Template（範本）[參數_參數_&gt;範本_範本_範本_名稱_&gt;屬性&gt;值]</block>
+  <block id="378f2ffe9abf743b9800314f61858134" category="list-text">_功能表：Workflow _[工作流程&gt;重複列&gt;重複&gt;次數]</block>
+  <block id="8666bc51a1cc870e3888000988b65ced" category="list-text">_功能表：Workflow _[工作流程&gt;重複資料列&gt;變數&gt;_initial_value_和_expression_的變數]</block>
+  <block id="ff7e63fadbe3949bbe931dd3956edfd1" category="list-text">_功能表：Workflow _[工作流程&gt;重複列&gt;重複&gt;針對群組中的每個資源&gt;資源搜尋條件&gt;要篩選的參數]</block>
+  <block id="f5eda7302a1f97f3b71b6295177f729d" category="list-text">功能表：Workflow _[工作流程&gt;新增條件&gt;如果下列運算式為真]</block>
+  <block id="562a6d1120aee31e227b66e7502dbdb1" category="summary">歡迎使用OnCommand Workflow Automation 《5.1資訊庫》。</block>
+  <block id="2467bfc6c6cd804b03a619e2813c521d" category="sidebar">在Linux系統上安裝與設定</block>
+  <block id="d80211c60d95fc7a669027dbc95df964" category="sidebar">管理高可用度</block>
+  <block id="9fe21fedf7305d77031a6284024994ea" category="sidebar">設定OnCommand Workflow Automation 功能</block>
+  <block id="d1d620cdca4fd3ee2a7f5ba3f7d23a73" category="sidebar">備份OnCommand Workflow Automation 這個資料庫</block>
+  <block id="4cff4a2c9a1452488e559bf938b403d6" category="sidebar">還原OnCommand Workflow Automation 這個資料庫</block>
+  <block id="c0213fcd6464ab8f814b9da0e6ad4d36" category="sidebar">疑難排解安裝與組態問題</block>
+  <block id="9fcb113dfa1e09e6c2f64ea81f8a97a7" category="sidebar">在Windows系統上安裝與設定</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="sidebar">更多資訊</block>
+  <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">NetApp社群</block>
+  <block id="f85b28a0b2341fcd92cc4d1f17c30a6f" category="sidebar">Windows的安裝與設定</block>
+  <block id="f36cdb533b1a206036ca20816d6b2f6d" category="sidebar">功能概述OnCommand Workflow Automation</block>
+  <block id="5f8b1302a7ff1cfa2564f0f00b82f930" category="sidebar">安裝OnCommand Workflow Automation Windows的系統需求</block>
+  <block id="ab4072a9d7a781f74b6d7abc7b6af67d" category="sidebar">管理高可用度Windows</block>
+  <block id="8af225bab7fd87a80e44a400006df844" category="sidebar">設定OnCommand Workflow Automation Windows</block>
+  <block id="6d39d23a70b326890bb600ae4076c318" category="sidebar">Windows資料來源OnCommand Workflow Automation</block>
+  <block id="3721e05cc106e68ef49b3ed90a765573" category="sidebar">在DataFabric Manager Windows上設定資料庫使用者</block>
+  <block id="951e6a12c54f1067e62b5eff434c0ad7" category="sidebar">設定OnCommand Workflow Automation Windows</block>
+  <block id="dfa0c7624f614cee2fee36d4404e65f8" category="sidebar">設定SNMP Windows</block>
+  <block id="e403b8ccbf88a2d30f0e310368dff32e" category="sidebar">升級協力廠商產品Windows</block>
+  <block id="405062ad96ee9e6a5b38291b241d9f5f" category="sidebar">備份OnCommand Workflow Automation 功能不支援的資料庫Windows</block>
+  <block id="65fa399d8a0037afbb407df888fcec32" category="sidebar">使用CLI Windows備份WFA資料庫</block>
+  <block id="edff036622e928011488a33fab0c5122" category="sidebar">還原OnCommand Workflow Automation 整個資料庫視窗</block>
+  <block id="7d538af2a2822b3f24019f017b86432b" category="sidebar">使用CLI Windows還原WFA資料庫</block>
+  <block id="55aad635b84190dc6612067c3eb0d444" category="sidebar">使用REST API Windows還原WFA資料庫</block>
+  <block id="58a941ac8b9a1584bf1ba84718a3fd25" category="sidebar">匯入OnCommand Workflow Automation 功能Windows</block>
+  <block id="9ed898de1871da28a2ae5317dc3c252c" category="sidebar">管理Perl和Perl模組Windows</block>
+  <block id="2074288e509f3c7ce4cefe22472ec63f" category="sidebar">疑難排解Windows的安裝與組態問題</block>
+  <block id="9ca261be0541f3aee5c4d041ef411f7f" category="sidebar">管理與設定</block>
+  <block id="4c14da102137cfdc0846add51f76dd18" category="sidebar">設定OnCommand Workflow Automation 支援功能</block>
+  <block id="492ccb4e44088a9740d152295f938bfb" category="sidebar">設定SNMP說明</block>
+  <block id="ebc427c970dac2d030391a702a36f25a" category="sidebar">Linux的安裝與設定</block>
+  <block id="5d716cf3fbe5b8b27f3cacab3f49df8e" category="sidebar">概述Linux OnCommand Workflow Automation</block>
+  <block id="2051f66608681fe705d396a5b953acf2" category="sidebar">安裝OnCommand Workflow Automation Linux的系統需求</block>
+  <block id="96a55135b4b4902fb1f4eed0e954cb32" category="sidebar">管理高可用度Linux</block>
+  <block id="2e038ddcd343fb39158d859f7d760ed6" category="sidebar">設定OnCommand Workflow Automation Linux</block>
+  <block id="f1bcad00dce062e9abfb3780cf274ac7" category="sidebar">Linux資料來源OnCommand Workflow Automation</block>
+  <block id="af5875c5498ba7bd1e82a2fb759df1ce" category="sidebar">在DataFabric Manager Linux上設定資料庫使用者</block>
+  <block id="ddaa4ac23a39eaeb731b69adea63f8f9" category="sidebar">設定OnCommand Workflow Automation Linux</block>
+  <block id="27d78b21f84989c9bb73c82222583b34" category="sidebar">設定SNMP Linux</block>
+  <block id="bdb55ab47056d2a848aa7c21f29078cc" category="sidebar">升級第三方產品Linux</block>
+  <block id="596f93ad48ec568b9032d9ac03036a83" category="sidebar">備份OnCommand Workflow Automation 支援資料庫Linux</block>
+  <block id="edda537a62943aef7d5aa96001b97f1f" category="sidebar">使用CLI Linux備份WFA資料庫</block>
+  <block id="a7903a007298fced7a5893fa3d89f40e" category="sidebar">還原OnCommand Workflow Automation Oracle資料庫Linux</block>
+  <block id="d7c1ac623ffff8cf5cdda53e0c1b3b5c" category="sidebar">使用CLI Linux還原WFA資料庫</block>
+  <block id="554c099bea2e58f1586f4ba38af96840" category="sidebar">使用REST API Linux還原WFA資料庫</block>
+  <block id="b1ec5ea9940a86d6bf0a14350ec171fd" category="sidebar">匯入OnCommand Workflow Automation Linux版的內容</block>
+  <block id="01603a0b39ac003e0beb5f886b4b4d0a" category="sidebar">管理Perl和Perl模組Linux</block>
+  <block id="bc5f3059c890d2356e892a982265bfb1" category="sidebar">疑難排解Linux的安裝與組態問題</block>
 </blocks>
