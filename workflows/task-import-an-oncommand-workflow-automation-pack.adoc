@@ -13,6 +13,7 @@ summary: 您可以將工作流程套件從伺服器匯入OnCommand Workflow Auto
 [role="lead"]
 您可以將工作流程套件從伺服器匯入OnCommand Workflow Automation 至物件庫（WFA）、以滿足儲存自動化和整合需求。
 
+.您需要的產品
 您必須能夠存取要匯入之伺服器中的WFA內容。
 
 .步驟

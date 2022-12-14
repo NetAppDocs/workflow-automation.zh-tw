@@ -13,6 +13,7 @@ summary: 支援WFA（WFA）的工作流程有兩種排程選項。OnCommand Work
 [role="lead"]
 支援WFA（WFA）的工作流程有兩種排程選項。OnCommand Workflow Automation您可以排程工作流程在特定時間執行一次、也可以建立週期性排程、並將排程與工作流程建立關聯、以便定期執行工作流程。
 
+.關於這項工作
 您所建立的排程可重複使用、並與多個工作流程建立關聯。
 
 .步驟

@@ -13,6 +13,7 @@ summary: 您可以使用OnCommand Workflow Automation 下列項目來建立新�
 [role="lead"]
 您可以使用OnCommand Workflow Automation 下列項目來建立新的工作流程套件：使用S廳（WFA）、然後將其存回來源控制管理（SCM）。
 
+.您需要的產品
 必須設定SCM、而且您必須擁有系統管理員或架構設計師認證資料。
 
 .步驟

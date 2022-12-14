@@ -13,6 +13,7 @@ summary: 您可以在OnCommand Workflow Automation 遊樂場資料庫上測試�
 [role="lead"]
 您可以在OnCommand Workflow Automation 遊樂場資料庫上測試您針對WFA（WFA）命令所撰寫的保留指令碼、以確保這些指令碼運作正常、且不會影響WFA資料庫表格。
 
+.關於這項工作
 此程序使用預設的WFA安裝路徑。如果您在安裝期間變更預設位置、則必須使用變更的WFA安裝路徑。
 
 .步驟

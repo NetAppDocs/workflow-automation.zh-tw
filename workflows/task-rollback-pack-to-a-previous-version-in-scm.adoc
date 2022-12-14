@@ -13,6 +13,7 @@ summary: 您可以在來源控制管理（SCM）中將套件復原至舊版、�
 [role="lead"]
 您可以在來源控制管理（SCM）中將套件復原至舊版、然後將其匯入OnCommand Workflow Automation 到還原（WFA）。
 
+.您需要的產品
 必須設定SCM、而且您必須擁有系統管理或架構認證資料。
 
 .步驟

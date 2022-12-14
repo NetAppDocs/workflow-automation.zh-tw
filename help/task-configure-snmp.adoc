@@ -13,6 +13,7 @@ summary: 您可以設定OnCommand Workflow Automation 功能區（WFA）、針�
 [role="lead"]
 您可以設定OnCommand Workflow Automation 功能區（WFA）、針對工作流程作業的狀態、傳送簡單網路管理傳輸協定（SNMP）陷阱。
 
+.關於這項工作
 WFA現在支援SNMP v1和SNMP v3傳輸協定。SNMP v3提供額外的安全功能。
 
 WFA `.mIB'檔案提供WFA伺服器所傳送之設陷的相關資訊。mib文件位於WFA服務器上的「<wfa_install_directory>\wfa\bin\wfa.mib」目錄中。

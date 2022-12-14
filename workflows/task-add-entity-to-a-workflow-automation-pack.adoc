@@ -13,6 +13,7 @@ summary: 您可以將一或多個實體新增OnCommand Workflow Automation 至�
 [role="lead"]
 您可以將一或多個實體新增OnCommand Workflow Automation 至位於WFA（WFA）的工作流程套件、以滿足儲存自動化和整合需求。
 
+.關於這項工作
 您可以從下列實體移除套件：
 
 * 工作流程
