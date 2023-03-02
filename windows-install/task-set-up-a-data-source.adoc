@@ -13,8 +13,7 @@ summary: 您必須與OnCommand Workflow Automation 資料來源（WFA）建立�
 [role="lead"]
 您必須與OnCommand Workflow Automation 資料來源（WFA）建立連線、才能從資料來源取得資料。
 
-* 對於6.0之前的版本、您必須在Unified Manager伺服器上執行最新版本的ocsetup工具、才能啟用及設定遠端資料庫唯讀存取。Active IQ Unified Manager
-* 若為Active IQ 《統一化管理程式6.0及更新版本」、您必須在Unified Manager伺服器上建立資料庫使用者帳戶。
+* 若為Active IQ Unified Manager 更新版本的版本、您必須在Unified Manager伺服器上建立資料庫使用者帳戶。
 +
 如OnCommand 需詳細資訊、請參閱_《_》統一化管理程式線上說明_。
 
@@ -29,15 +28,6 @@ summary: 您必須與OnCommand Workflow Automation 資料來源（WFA）建立�
 [cols="3*"]
 |===
 | TCP連接埠號碼 | Unified Manager伺服器版本 | 說明 
-
-
- a| 
-2638
- a| 
-5.x
- a| 
-Sybase SQL Anywhere資料庫伺服器
-
 
 
  a| 
@@ -113,23 +103,9 @@ NOTE: 在使用WFA設定資料來源時、您必須注意Active IQ Unified Manag
 
 
  a| 
-6.0之前的版本Active IQ Unified Manager
- a| 
-輸入在執行ocsetup工具時、用來覆寫預設認證的使用者名稱和密碼。
-
-
-
- a| 
 不含更新版本Active IQ Unified Manager
  a| 
 輸入您在Unified Manager伺服器上建立的資料庫使用者帳戶認證。如OnCommand 需建立資料庫使用者帳戶的詳細資訊、請參閱_《Unified Manager線上說明》。
-
-
-
- a| 
-Performance Advisor for（Active IQ Unified Manager 6.0之前的版本）
- a| 
-輸入Active IQ Unified Manager 角色最低為GlobalRead的驗證使用者身分證明。
 
 [NOTE]
 ====

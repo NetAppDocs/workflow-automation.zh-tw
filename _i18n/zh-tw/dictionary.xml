@@ -812,7 +812,6 @@
   <block id="15a774bb49b078552ff41874e7115d94" category="list-text">在*刪除Pack *確認對話方塊中、按一下*確定*。</block>
   <block id="24856dbc0a3b9e55bf33f94ba0bc7792" category="summary">您必須與OnCommand Workflow Automation 資料來源（WFA）建立連線、才能從資料來源取得資料。</block>
   <block id="fa9021218f4bfd84ad59e7452d519f2d" category="doc">設定資料來源</block>
-  <block id="63280af4d8cba0858ac1dff86ceeed0c" category="list-text">對於6.0之前的版本、您必須在Unified Manager伺服器上執行最新版本的ocsetup工具、才能啟用及設定遠端資料庫唯讀存取。Active IQ Unified Manager</block>
   <block id="f03b31ab5e7ee797f31fba5695a8e7a4" category="list-text">若為Active IQ 《統一化管理程式6.0及更新版本」、您必須在Unified Manager伺服器上建立資料庫使用者帳戶。</block>
   <block id="731d8fd16ef341f5ba2ee8e6445885f1" category="paragraph">如OnCommand 需詳細資訊、請參閱_《_》統一化管理程式線上說明_。</block>
   <block id="1aeeceb7211593642d7ca1f8a79dde77" category="list-text">Unified Manager伺服器上傳入連線的TCP連接埠必須開啟。</block>
@@ -820,9 +819,6 @@
   <block id="1475d72dae12d2f3edff1276e81ef17a" category="paragraph">以下是預設的TCP連接埠號碼：</block>
   <block id="7d2578b5ef3fcde7596cf509d8c62bd1" category="cell">TCP連接埠號碼</block>
   <block id="b95aa9b32e368a8ea35037d171bb7505" category="cell">Unified Manager伺服器版本</block>
-  <block id="06c284d3f757b15c02f47f3ff06dc275" category="paragraph">2638</block>
-  <block id="fbb954d1cb26c988d8f75dff9ba7ee7d" category="paragraph">5.x</block>
-  <block id="6ef6d5474ca30598a3bfe534f33c9c81" category="paragraph">Sybase SQL Anywhere資料庫伺服器</block>
   <block id="16fc18d787294ad5171100e33d05d4e2" category="paragraph">3306.</block>
   <block id="4b482edf238f3e07a3e0c730e500a608" category="paragraph">6.x</block>
   <block id="df55d916b5a005baf61e609993b7a1d3" category="paragraph">MySQL資料庫伺服器</block>
@@ -845,12 +841,8 @@
   <block id="178ca761d0d2a2b23f496d084da80e04" category="paragraph">根據選取的資料來源類型、連接埠、使用者名稱、密碼和逾時欄位可能會自動填入預設資料（如果有）。您可以視需要編輯這些項目。</block>
   <block id="4bf06b7c0419db9c339b3ad9943b84d5" category="list-text">選擇適當的行動：</block>
   <block id="0ba2b3e0a887666765eb2d690768c576" category="cell">適用於...</block>
-  <block id="9b81833dee31a4fba0f609d1219a5f57" category="paragraph">6.0之前的版本Active IQ Unified Manager</block>
-  <block id="95f0b5290415893233cc34de5758d586" category="paragraph">輸入在執行ocsetup工具時、用來覆寫預設認證的使用者名稱和密碼。</block>
   <block id="667785fae0085225c5366c4a23da8190" category="paragraph">不含更新版本Active IQ Unified Manager</block>
   <block id="f4e2003dab44b20be7ebbdc4d0aca893" category="paragraph">輸入您在Unified Manager伺服器上建立的資料庫使用者帳戶認證。如OnCommand 需建立資料庫使用者帳戶的詳細資訊、請參閱_《Unified Manager線上說明》。</block>
-  <block id="8e98ef93e911e1cfc94baedd532e1d80" category="paragraph">Performance Advisor for（Active IQ Unified Manager 6.0之前的版本）</block>
-  <block id="5b7c5e612c4bc4c6daf1f284fc0eaf76" category="paragraph">輸入Active IQ Unified Manager 角色最低為GlobalRead的驗證使用者身分證明。</block>
   <block id="c4d0dc56b9499d93190e5d1eeb6a770a" category="paragraph">您不得提供Active IQ Unified Manager 使用命令列介面或ocsetup工具所建立之「現象資料庫使用者」帳戶的認證資料。</block>
   <block id="206c3362e8a122abde3266331bd8afb4" category="inline-image-macro">立即取得圖示</block>
   <block id="a913b21590da1b8c2c69dbec7984f3c6" category="list-text">*選用：*在「資料來源」表格中、選取資料來源、然後按一下 <block ref="c2776c8a16f4f4e86dfb37f8f9994a4a" category="inline-image-macro-rx" type="image"></block> 在工具列上。</block>
@@ -1146,7 +1138,6 @@
   <block id="bd1e3de570c26155c4d1e47f9fd7b533" category="list-text">指定傳輸協定、預設連接埠和預設逾時的詳細資料。</block>
   <block id="7c0452a44785f9c17bb51b522806f371" category="summary">「快取查詢」視窗可讓您管理WFA字典項目及其相關資料來源類型的快取查詢。</block>
   <block id="fe934c5c006c32e2f5a1eddc16c8312d" category="doc">快取查詢視窗</block>
-  <block id="3d6f64a6ca1bcff688912eefa7f9bbed" category="paragraph">快取查詢是從查詢中指定的資料表擷取所需資料的SQL查詢。快取查詢會與一個或多個資料來源類型相關聯、例如* Volume（storage）*的快取查詢、會同時與Active IQ Unified Manager 示例5.1和5.2資料來源類型相關聯。您可以定義快取查詢、以便在需要擷取資料來源Active IQ Unified Manager 的資料表中將部分資訊（例如Volume）擷取到WFA的快取中。</block>
   <block id="182669ed4820368e35e16bb8ff900501" category="list-text">快取查詢表</block>
   <block id="0f46985dd4907e3a7315a59939693c1a" category="section-title">快取查詢清單</block>
   <block id="dedb53beee8d0629f134068ea225f74b" category="paragraph">「快取查詢」表會列出字典項目及其相關的資料來源類型。您可以使用各欄可用的篩選和排序功能、以及重新排列欄順序、來自訂表格顯示。</block>
@@ -1227,12 +1218,10 @@
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*使用者名稱*</block>
   <block id="52b05e16a9a17b06bf497ba0b43f97f1" category="paragraph">顯示所選資料來源類型的相關使用者名稱（若有）。</block>
   <block id="fad77f4cfa7f6147e14a8144a2223548" category="paragraph">您必須為此資料來源指定適當的使用者名稱、才能覆寫預設的使用者名稱：</block>
-  <block id="94cd2dc12c886407b83df24073c3fbaf" category="list-text">對於6.0之前的版本、您必須輸入使用者名稱、以便在執行ocsetup時覆寫預設認證。Active IQ Unified Manager</block>
   <block id="6994d1382a97ce24d633fe0364fe4baa" category="list-text">對於更新版本的版本、您必須輸入您在該伺服器上建立的資料庫使用者帳戶使用者名稱。Active IQ Unified Manager Active IQ Unified Manager</block>
   <block id="c8b27eb46c2a5c0fb13ef146da5d7275" category="list-text">對於Performance Advisor、您必須輸入Active IQ Unified Manager 角色最低為GlobalRead的使用者名稱。</block>
   <block id="c19285b1dc2d9b23f090a9dcd3410350" category="paragraph">可讓您指定所選資料來源類型的密碼。</block>
   <block id="762c1006bd5346ccb3d6a361bc396180" category="paragraph">您必須指定密碼、以覆寫此資料來源使用者名稱的預設密碼：</block>
-  <block id="9ca1092f012d395fbc5dac7a2b872f58" category="list-text">對於6.0之前的版本、您必須輸入密碼、以便在執行ocsetup時覆寫預設認證。Active IQ Unified Manager</block>
   <block id="1993c51f1b9689c14f75481a9d7f5f44" category="list-text">對於更新版本的版本、您必須輸入您在該伺服器上建立的資料庫使用者帳戶密碼。Active IQ Unified Manager Active IQ Unified Manager</block>
   <block id="ff2d9c6d918b6522d94d56fa170d4144" category="list-text">在Performance Advisor中、您必須輸入Active IQ Unified Manager 角色最低為GlobalRead的某位使用者密碼。</block>
   <block id="7a8d3dc7f0e719542e9e706dbca4f3ec" category="list-text">*資料庫*</block>
@@ -2570,9 +2559,7 @@
   <block id="3d413f9381db3958c94ca72f8c2bff5c" category="paragraph">顯示所選資料來源類型的相關連接埠號碼（如果有）。您可以變更資料來源的預設連接埠號碼。</block>
   <block id="a28717973f017f375a0f9369cddf1127" category="paragraph">顯示與所選資料來源類型相關的配置、例如Unified Manager - 6.0（MySQL）的_cm_storage。</block>
   <block id="d8f291edadb7f2947fa55dd818a154e0" category="paragraph">您無法修改此屬性。</block>
-  <block id="01824cdc73f1bb9f3a0db8ad9f278350" category="list-text">對於6.0之前的Unified Manager版本、您必須輸入在執行ocsetup時、用來覆寫預設認證的使用者名稱。</block>
   <block id="1be837a80c4ac40aee1c47275a875d4e" category="list-text">對於Unified Manager 6.0及更新版本、您必須輸入您在Unified Manager伺服器上建立的資料庫使用者帳戶使用者名稱。</block>
-  <block id="d4a1a1ffb5e2a4b4635dad41af54ad29" category="list-text">對於6.0之前的Unified Manager版本、您必須輸入密碼、以便在執行ocsetup時覆寫預設認證。</block>
   <block id="072827f4a25b9a1ce3d7e6ce73b02d67" category="list-text">對於Unified Manager 6.0及更新版本、您必須輸入您在伺服器上建立的資料庫使用者帳戶密碼。</block>
   <block id="ecfba22e42f64033dc9376f578c73ffb" category="list-text">對於Performance Advisor、您必須輸入Unified Manager使用者的密碼、且其角色下限為GlobalRead。</block>
   <block id="9bd7d6c7e9bd4cb554bc98e78a24d9e4" category="paragraph">顯示所選資料來源類型的相關資料庫名稱（若有）。</block>
@@ -2834,11 +2821,7 @@
   <block id="6da6e44dc9987246944fdf9de3d4e794" category="paragraph">系統記錄</block>
   <block id="2975351d18f6b6cc0f00ab465dbb31ef" category="paragraph">傳送記錄到syslog伺服器</block>
   <block id="886093243084825f398ae29b24861ceb" category="paragraph">下表列出Unified Manager伺服器上應開啟的預設連接埠：</block>
-  <block id="4e6ac8e997ca8f5896cbc28cad3ede24" category="paragraph">Sybase</block>
-  <block id="97d22c4200c50a78603b99f64abefbd5" category="paragraph">快取Active IQ Unified Manager 6.0之前版本的資料</block>
   <block id="7fd34732c43ed1c77aa28c7cebea1acf" category="paragraph">快取Active IQ Unified Manager 來自於更新版本的資料</block>
-  <block id="c2431245e313e6c2fb21537cf8c60e15" category="paragraph">8088、8488</block>
-  <block id="7b19e159d97af652b6091979fc7173f5" category="paragraph">從Performance Advisor快取資料、Performance Advisor是Active IQ Unified Manager 6.0之前版本的一部分</block>
   <block id="42ad4e935313e6d8619faa0c109c4b92" category="paragraph">下表列出應在VMware vCenter上開啟的預設連接埠：</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443..</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
@@ -4078,7 +4061,6 @@
   <block id="7ae089fbf80f6b18bf1973d9ae3af6c8" category="cell">如果您已選取...</block>
   <block id="9778840a0100cb30c982876741b0b5a2" category="paragraph">SQL</block>
   <block id="88381311eb47da741a4d0f73ef520fb1" category="paragraph">從*驅動程式類型*清單中、選取適用於資料來源的下列其中一個驅動程式：</block>
-  <block id="5e20823f83b63582726b65a7ea629ed8" category="list-text">* Sybase jConnect3*</block>
   <block id="9985bfec1629ffdbc2501ffe2c6009aa" category="list-text">* MySQL Connector/J*</block>
   <block id="21cd4f6fe21a7a1a50297203f1801051" category="list-text">* MySQL Server Jdbc驅動程式3.0*</block>
   <block id="65b0ace1e497208f5d6fed9f4cdd1392" category="list-text">* Oracle jdbc驅動程式11.2.0.3*</block>
@@ -4907,4 +4889,6 @@
   <block id="bc5f3059c890d2356e892a982265bfb1" category="sidebar">疑難排解Linux的安裝與組態問題</block>
   <block id="639ca019cb526012d0366b7ba96c7dde" category="section-title">匯入子實體版本如何影響父實體版本的範例</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的產品</block>
+  <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">若為Active IQ Unified Manager 更新版本的版本、您必須在Unified Manager伺服器上建立資料庫使用者帳戶。</block>
+  <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">快取查詢是從查詢中指定的資料表擷取所需資料的SQL查詢。快取查詢與一個或多個資料來源類型相關聯。您可以定義快取查詢、以便在需要擷取資料來源OnCommand 的資料表中的部分資訊（例如Volume）時、將資料來源不整合管理程式6.0擷取至WFA快取。</block>
 </blocks>

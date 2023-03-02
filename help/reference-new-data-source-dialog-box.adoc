@@ -65,7 +65,6 @@ NOTE: 不支援IPv6位址的支援來源類型。Active IQ Unified Manager
 您必須為此資料來源指定適當的使用者名稱、才能覆寫預設的使用者名稱：
 
 +
-** 對於6.0之前的版本、您必須輸入使用者名稱、以便在執行ocsetup時覆寫預設認證。Active IQ Unified Manager
 ** 對於更新版本的版本、您必須輸入您在該伺服器上建立的資料庫使用者帳戶使用者名稱。Active IQ Unified Manager Active IQ Unified Manager
 ** 對於Performance Advisor、您必須輸入Active IQ Unified Manager 角色最低為GlobalRead的使用者名稱。
 
@@ -78,7 +77,6 @@ NOTE: 不支援IPv6位址的支援來源類型。Active IQ Unified Manager
 您必須指定密碼、以覆寫此資料來源使用者名稱的預設密碼：
 
 +
-** 對於6.0之前的版本、您必須輸入密碼、以便在執行ocsetup時覆寫預設認證。Active IQ Unified Manager
 ** 對於更新版本的版本、您必須輸入您在該伺服器上建立的資料庫使用者帳戶密碼。Active IQ Unified Manager Active IQ Unified Manager
 ** 在Performance Advisor中、您必須輸入Active IQ Unified Manager 角色最低為GlobalRead的某位使用者密碼。
 

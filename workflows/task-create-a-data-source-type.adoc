@@ -41,7 +41,6 @@ SQL
  a| 
 從*驅動程式類型*清單中、選取適用於資料來源的下列其中一個驅動程式：
 
-** * Sybase jConnect3*
 ** * MySQL Connector/J*
 ** * MySQL Server Jdbc驅動程式3.0*
 ** * Oracle jdbc驅動程式11.2.0.3*
