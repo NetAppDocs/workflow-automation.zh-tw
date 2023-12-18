@@ -1,0 +1,2685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-advanced-configuring-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-advanced-configuring-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-backing-up-the-wfa-database-using-rest-apis.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-backing-up-the-wfa-database-using-rest-apis.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-coding-guidelines-for-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-creating-building-blocks-for-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-creating-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-enabling-ciphers-and-adding-new-ciphers.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-enabling-ciphers-and-adding-new-ciphers.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-commands-work.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-entity-versioning-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-entity-versioning-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-repeat-row-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-repeat-row-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-reservation-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-reservation-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-resource-selection-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-resource-selection-works.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-you-define-constants.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-define-constants.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-you-define-user-input.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-define-user-input.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-you-define-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-define-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-execute-custom-rest-end-points.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-you-map-command-parameters.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-map-command-parameters.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-use-categories.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-use-templates.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-how-you-use-the-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-how-you-use-the-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-integrating-the-wfa-pack-with-scm-repository.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-known-limitations-and-enhancements.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-managing-high-availability.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-managing-high-availability.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-managing-perl-and-perl-modules.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-managing-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-oncommand-workflow-automation-deployment-architecture.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-oncommand-workflow-automation-deployment-architecture.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-overview-of-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-overview-of-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-overview-of-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-overview-of-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-restoring-the-wfa-database.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-restoring-the-wfa-database.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-setting-up-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-setting-up-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-tasks-involved-in-creating-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-understanding-workflow-automation-designer.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-unsupported-features-for-wfa-on-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-upgrading-third-party-products-in-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-upgrading-third-party-products-in-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/concept-wfa-data-sources.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/concept-wfa-data-sources.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-a-playground-database-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-approval-points-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-approval-points-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-conditional-execution-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-conditional-execution-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-continue-on-failure-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-continue-on-failure-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-data-sources-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-dictionary-entries-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-filters-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-finders-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-functions-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-incremental-naming-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-incremental-naming-is.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-remote-system-types-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-remote-system-types-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-return-parameters-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-return-parameters-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/concept-what-schemes-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-what-schemes-are.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/</loc>
+      
+      <lastmod>2023-12-18T18:25:44+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-about-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-active-directory-groups-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-add-cache-query-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-approval-portal.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-backup-restore-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-cache-queries-window.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-cannot-open-the-oncommand-workflow-automation-login-page.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-cannot-view-performance-advisor-data-in-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-categories-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-client-preferences-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-cache-query-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-category-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-command-definition-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-dictionary-entry-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-filter-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-finder-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-clone-template-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-commands-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-configuring-a-database-user-on-datafabric-manager.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-considerations-of-importing-wfa-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-considerations-of-importing-wfa-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-considerations-of-importing-wfa-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-considerations-of-importing-wfa-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-credentials-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-data-source-types-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-data-sources-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-dictionary-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-active-directory-group-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-approval-point-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-cache-query-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-category-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-command-definition-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-credentials-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-data-source-dialog-box.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-dictionary-entry-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-filter-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-finder-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-pack-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-remote-system-type-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-template-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-user-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-variable-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-edit-workflow-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-execute-workflow-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-execution-status-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-filters-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-finders-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-functions-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-general-powershell-conventions-for-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-commands.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-comments.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-data-source-type.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-error-handling.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-indentation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-logging.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-other-programming-aspects.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-sql-in-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-variables.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-wfa-building-blocks.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-wfa-dictionary-entry.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-wfa-functions.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-guidelines-for-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-incremental-naming-wizard.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/reference-legal-notices.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-log-viewer-directory-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-managing-perl-and-perl-modules.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-monitoring-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-mvel-enabled-fields-in-wfa.html</loc>
+      
+      <lastmod>2022-10-07T21:08:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-mvel-examples.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-mvel-learning-material-reference.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-active-directory-group-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-approval-point-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-category-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-command-definition-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-credentials-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-data-source-dialog-box.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-dictionary-entry-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-filter-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-finder-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-pack-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-remote-system-type-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-schedule-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-template-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-user-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-new-workflow-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-oncommand-workflow-automation-designer-features.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-pack-identification-during-upgrade.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-pack-identification-during-upgrade.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-pack-identification-during-upgrade.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-packs-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-parameters-for-commands-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-perl-database-modules-bundled-with-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-portal-workflow-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-ports-required-for-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-ports-required-for-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-powershell-and-perl-wfa-modules.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-prerequisites-for-installing-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-prerequisites-for-installing-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-preview-workflow-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-recurring-executions-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-references-to-learning-material.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-references-to-learning-material.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-related-documentation-for-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-related-documentation-for-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/reference-releasenotes.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-remote-system-types-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-reservations-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-reserved-words.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-reserved-words.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-resource-selection-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-row-repetition-details-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-schedules-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-schemes-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-supported-workflows-in-clustered-data-ontap.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-templates-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-test-connectivity-dialog-box.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/reference-troubleshooting.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-troubleshooting.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-user-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/reference-wfa-displays-a-blank-page-on-windows-2012.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-wfa-powershell-functions.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-wfa-store-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/reference-workflow-requirements-checklist.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/reference-workflows-window.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation//search.html</loc>
+      
+      <lastmod>2023-12-18T18:25:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-access-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-access-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-add-a-new-remote-system-type.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-add-active-directory-group-names.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-add-active-directory-group-names.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-add-an-upgraded-unified-manager-server-data-source.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-add-approval-points.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-add-approval-points.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-add-entity-to-a-workflow-automation-pack.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-check-in-a-new-pack-to-scm.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-check-in-an-already-existing-pack-into-scm.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-a-database-user-by-running-ocsetup-on-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-a-database-user-by-running-ocsetup-on-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-a-database-user-on-active-iq-unified-manager.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-a-database-user-on-active-iq-unified-manager.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-an-earlier-version-of-wfa-foir-high-availability-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-authentication-settings.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-authentication-settings.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-authentication-settings.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-autosupport.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-autosupport.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-autosupport.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-email-notifications-for-data-source-acquisition-failures.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-mail.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-mail.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-mail.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-mscs-to-install-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-protocols-for-connecting-to-remote-systems.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-protocols-for-connecting-to-remote-systems.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-resource-reservation-for-workflows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-snmp-version-1.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-snmp-version-1.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-snmp-version-3.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-snmp-version-3.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-snmp.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-snmp.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-snmp.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-syslog.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-syslog.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-syslog.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-configure-the-credentials-of-a-target-system.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-the-credentials-of-a-target-system.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-the-credentials-of-a-target-system.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-the-timeout-value-for-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-the-timeout-value-for-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-vcs-to-install-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-configure-your-preferred-perl-distribution-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-configure-your-preferred-perl-interpreter.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-cache-query.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html</loc>
+      
+      <lastmod>2022-10-07T16:22:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html</loc>
+      
+      <lastmod>2022-10-07T16:22:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-command.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-data-source-type.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-dictionary-entry.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-filter.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-finder.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-function.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-create-a-scheme.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-template.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-create-a-workflow-automation-pack.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-workflow-automation-pack.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-workflow.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-create-local-users.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-create-local-users.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-create-local-users.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-recurring-schedules.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-create-workflow-help-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-workflow-help-content.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-customize-predefined-workflows.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-define-filter-rules.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-define-filter-rules.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-delete-a-scheme.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-delete-wfa-packs.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-delete-wfa-packs.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-disable-cache-acquisition-for-dictionary-entries.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-disable-the-default-password-policy-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-disable-the-default-password-policy.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-edit-a-scheme.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-export-oncommand-workflow-automation-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-export-oncommand-workflow-automation-content.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-fully-restore-the-oncommand-workflow-automation-database-using-clis-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-import-an-oncommand-workflow-automation-pack.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-import-oncommand-workflow-automation-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-import-oncommand-workflow-automation-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-import-oncommand-workflow-automation-content.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-import-oncommand-workflow-automation-content.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-install-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-install-perl-module-on-centos-and-rhel.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-install-workflow-automation-on-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-manage-site-specific-perl-modules.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-migrate-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-modify-the-default-password-policy-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-modify-the-default-password-policy-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-remove-entities-from-a-pack.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-repair-the-activeperl-installation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html</loc>
+      
+      <lastmod>2022-10-07T16:22:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-replace-the-default-workflow-automation-ssl-certificate.html</loc>
+      
+      <lastmod>2022-10-07T16:22:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-reset-the-admin-password-created-during-installation-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-reset-the-admin-password-created-during-installation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-and-configurations-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-restrict-access-rights-of-oncommand-workflow-automation-on-the-host.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-rollback-pack-to-a-previous-version-in-scm.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/help/task-set-up-a-data-source.html</loc>
+      
+      <lastmod>2023-03-03T11:25:03+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-set-up-a-data-source.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-set-up-a-data-source.html</loc>
+      
+      <lastmod>2023-03-02T17:55:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-set-up-wfa-in-mscs.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-set-up-wfa-in-vcs.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-test-the-wfa-reservation-script-for-commands.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-uninstall-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-uninstall-wfa-in-a-vcs-environment.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-uninstall-wfa-in-an-mscs-environment.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-update-the-pack-from-scm.html</loc>
+      
+      <lastmod>2022-12-14T18:14:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-upgrade-active-state-perl-on-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-upgrade-from-wfa-4-2.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-upgrade-mysql-on-linux.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-upgrade-mysql-on-windows-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-upgrade-oncommand-workflow-automation.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/rhel-install/task-upgrade-openjdk-on-linux-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/workflow-automation/windows-install/task-upgrade-openjdk-on-windows-wfa.html</loc>
+      
+      <lastmod>2022-05-03T06:27:23+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
