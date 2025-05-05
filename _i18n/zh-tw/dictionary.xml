@@ -4804,7 +4804,6 @@
   <block id="48f2d384043edd3171249905336e3bba" category="list-text">在「'getopt'」模組中、將命令的字串引數設定為必填。</block>
   <block id="7a4ee3d79ff2c5789a8c44abf4b25487" category="paragraph">要匯入的.DAR'檔案中包含下列命令：</block>
   <block id="cf32bd47b8e3fc029552b5554af42628" category="paragraph">匯入此「.Dar」檔案時、「Create Volume and exporting Using NFS - Custom」（使用NFS建立Volume並匯出自訂）工作流程的次要版本會遞增至1.1.0。</block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">5.1文件OnCommand Workflow Automation</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
@@ -4891,4 +4890,5 @@
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的產品</block>
   <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">若為Active IQ Unified Manager 更新版本的版本、您必須在Unified Manager伺服器上建立資料庫使用者帳戶。</block>
   <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">快取查詢是從查詢中指定的資料表擷取所需資料的SQL查詢。快取查詢與一個或多個資料來源類型相關聯。您可以定義快取查詢、以便在需要擷取資料來源OnCommand 的資料表中的部分資訊（例如Volume）時、將資料來源不整合管理程式6.0擷取至WFA快取。</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">OnCommand Workflow Automation 文件</block>
 </blocks>
