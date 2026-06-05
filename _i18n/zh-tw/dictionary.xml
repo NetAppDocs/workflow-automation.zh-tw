@@ -658,10 +658,6 @@
   <block id="aca0f54310d317c1a932925c2e887177" category="paragraph">*遠端系統類型*選項可讓您檢視遠端系統類型的*名稱*和*實體版本*。</block>
   <block id="4c103acc19387c23725028124e527114" category="paragraph">儲存套件並關閉對話方塊。</block>
   <block id="df6f5d6db3cc12a42a3c35d15fa61fb5" category="paragraph">關閉對話方塊而不儲存。</block>
-  <block id="7f708cbf579cfb33720a3dee4b01d12a" category="summary">Storage Automation Store包含NetApp認證的自動化儲存工作流程套件、是專為OnCommand Workflow Automation 搭配使用而開發的。您可以下載套件、然後將其匯入WFA以執行。</block>
-  <block id="8d4a01616f98e4ae340eaff4fe4e8ee5" category="doc">Storage Automation Store視窗</block>
-  <block id="0479c8cefca250b39d519545313f1b42" category="inline-link">儲存自動化儲存區</block>
-  <block id="0a972f757d015f7e2a7d235f796edff5" category="paragraph">自動化工作流程可在中使用<block ref="f6a0eb706f83f492c2c35b6ee06cdf08" category="inline-link-rx"></block></block>
   <block id="aee823ba284a3a3d76801a3b4f0d5c11" category="summary">「字典」視窗會依字母順序顯示可用的字典項目。</block>
   <block id="8b81d352dcbb1ffa3083b45b27d09546" category="doc">「目錄」視窗</block>
   <block id="1d71add5c485b807dc12dff59215a4a0" category="paragraph">字典項目是OnCommand Workflow Automation 指由支援的物件類型（WFA）定義。每個字典項目都代表物件類型及其在儲存設備和儲存設備相關環境中的關係。在資料庫中、會將字典項目轉換為表格。</block>
@@ -1060,8 +1056,6 @@
   <block id="344fd3d08b8a753bb79336ff586a35bf" category="paragraph"><block ref="344fd3d08b8a753bb79336ff586a35bf" category="inline-link-rx"></block></block>
   <block id="66c9c3348ac5b112ffe4b7b49623cc8d" category="paragraph">_.NET架構命名準則_</block>
   <block id="91b02b940dd07cc66de00d6a764f898d" category="paragraph"><block ref="91b02b940dd07cc66de00d6a764f898d" category="inline-link-rx"></block></block>
-  <block id="0a5e35cd941b62c63e913a9f92c3687d" category="paragraph">PowerShell程式碼樣式</block>
-  <block id="5d338dfe4d3ddf51bc90dec3ee99b477" category="paragraph"><block ref="5d338dfe4d3ddf51bc90dec3ee99b477" category="inline-link-rx"></block></block>
   <block id="8afa48e351f3a31c1fa8007756fd80a3" category="paragraph">PowerShell試用/鎖定終於實現</block>
   <block id="8d1c69b97d5a89835f2b05eabd27ceb4" category="paragraph"><block ref="8d1c69b97d5a89835f2b05eabd27ceb4" category="inline-link-rx"></block></block>
   <block id="8a6937456d987ab411de106bbfe44717" category="paragraph">PowerShell自動變數</block>
@@ -1081,7 +1075,6 @@
   <block id="0114ad06d728f1834e36fe1a39574ef4" category="section-title">Perl</block>
   <block id="c897da42b0f175bc57bbeacb4bea82b1" category="paragraph">WFA支援Perl命令以執行工作流程作業。當您安裝WFA時、所需的Perl和Perl模組會安裝在WFA伺服器上。</block>
   <block id="b61229c78dccf475da69f2cac6d600c0" category="inline-link">ActivePerl使用指南</block>
-  <block id="2b145b62478784ba1e7fd97785e8a3e8" category="paragraph"><block ref="2b145b62478784ba1e7fd97785e8a3e8" category="inline-link-rx"></block></block>
   <block id="efb2bc95007f6681acbc99549e71a915" category="paragraph">您也可以從下列位置存取_ActivePerl使用指南_：「wfa_install_station\wfa\Perl64\html\index.html」</block>
   <block id="a840cd16314687a519be4b506df20df5" category="paragraph">'_wfa_install_directory_'是WFA安裝目錄、而'C:\Program Files\NetApp是預設的安裝目錄 WFA使用Perl指令碼來執行工作流程作業。下表包含Perl學習資料的參考資料：</block>
   <block id="6c6471c226957740be8fc6faa4c49add" category="paragraph">現代Perl：2014</block>
@@ -4895,4 +4888,7 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
+  <block id="941fd7ae4cd08576b1633f32f28cc5a7" category="paragraph">學習 PowerShell</block>
+  <block id="6e53aee4223f5f2fcc8de117d4eb8ee1" category="paragraph"><block ref="6e53aee4223f5f2fcc8de117d4eb8ee1" category="inline-link-rx"></block></block>
+  <block id="02d4497b4f8a4d93145ea6baefd3c796" category="paragraph"><block ref="02d4497b4f8a4d93145ea6baefd3c796" category="inline-link-rx"></block></block>
 </blocks>

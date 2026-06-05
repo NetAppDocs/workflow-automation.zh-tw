@@ -45,9 +45,9 @@ http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
 
 
  a| 
-PowerShell程式碼樣式
+學習 PowerShell
  a| 
-http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.6[]
 
 
 
@@ -111,7 +111,7 @@ https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cl
 
 WFA支援Perl命令以執行工作流程作業。當您安裝WFA時、所需的Perl和Perl模組會安裝在WFA伺服器上。
 
-https://docs.activestate.com/activeperl/5.26/perl/["ActivePerl使用指南"^]
+https://sanweb.lib.msu.edu/DMC/Euglena/Euglena%20Literature%20Metadata/Perl/html/index.html?page=readme.html["ActivePerl使用指南"^]
 
 您也可以從下列位置存取_ActivePerl使用指南_：「wfa_install_station\wfa\Perl64\html\index.html」
 
